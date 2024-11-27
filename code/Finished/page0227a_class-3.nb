@@ -1,0 +1,73 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1915,         65]
+NotebookOptionsPosition[      1563,         51]
+NotebookOutlinePosition[      1963,         67]
+CellTagsIndexPosition[      1920,         64]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SeedRandom", "[", 
+   RowBox[{"145", ",", 
+    RowBox[{"Method", "->", "\"\<Legacy\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"BlockRandom", "[", 
+    RowBox[{"ArrayPlot", "[", 
+     RowBox[{
+      RowBox[{"CellularAutomaton", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"1", ",", "800"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"330", ",", 
+          RowBox[{"{", 
+           RowBox[{"249", ",", "549"}], "}"}]}], "}"}]}], "]"}], ",", 
+      RowBox[{"FrameLabel", "->", 
+       RowBox[{"{", 
+        RowBox[{"None", ",", 
+         RowBox[{
+          RowBox[{"StringTemplate", "[", "\"\<rule ``\>\"", "]"}], "[", "#", 
+          "]"}]}], "}"}]}]}], "]"}], "]"}], "&"}], "/@", 
+  RowBox[{"{", 
+   RowBox[{"22", ",", "30", ",", "150", ",", "182"}], "}"}]}]}], "Input",
+ CellChangeTimes->{
+  3.869148913822996*^9},ExpressionUUID->"1855ad46-6e41-4163-8a94-\
+d3f3d96d735e"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d1b3fab8-a4a4-4043-b1dc-e7463980b600"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1001, 29, 67, "Input",ExpressionUUID->"1855ad46-6e41-4163-8a94-d3f3d96d735e"]
+}
+]
+*)
+

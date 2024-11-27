@@ -1,0 +1,370 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14078,        362]
+NotebookOptionsPosition[     13723,        348]
+NotebookOutlinePosition[     14123,        364]
+CellTagsIndexPosition[     14080,        361]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"nestgraphic", "=", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"t", ",", "x", ",", "w", ",", "h", ",", "rule"}], "}"}], ",", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"s", "=", 
+             RowBox[{"Max", "[", 
+              RowBox[{"0", ",", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"1", "+", 
+                  RowBox[{"Floor", "[", 
+                   RowBox[{"Log", "[", 
+                    RowBox[{"2", ",", "#"}], "]"}], "]"}]}], "&"}], "/@", 
+                RowBox[{"{", 
+                 RowBox[{"t", ",", "x"}], "}"}]}]}], "]"}]}], ",", "hist", 
+            ",", "td", ",", "xd"}], "}"}], ",", 
+          RowBox[{
+           RowBox[{"td", "=", 
+            RowBox[{"Reverse", "[", 
+             RowBox[{"IntegerDigits", "[", 
+              RowBox[{"t", ",", "2", ",", "s"}], "]"}], "]"}]}], ";", 
+           RowBox[{"xd", "=", 
+            RowBox[{"IntegerDigits", "[", 
+             RowBox[{"x", ",", "2", ",", "s"}], "]"}]}], ";", 
+           RowBox[{"hist", "=", 
+            RowBox[{"CellularAutomaton", "[", 
+             RowBox[{"rule", ",", 
+              RowBox[{"CenterArray", "[", 
+               RowBox[{
+                RowBox[{"Flatten", "@", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"td", "/.", 
+                    RowBox[{"<|", 
+                    RowBox[{
+                    RowBox[{"0", "->", "1"}], ",", 
+                    RowBox[{"1", "->", "3"}]}], "|>"}]}], ",", "5", ",", 
+                   RowBox[{"xd", "/.", 
+                    RowBox[{"<|", 
+                    RowBox[{
+                    RowBox[{"0", "->", "2"}], ",", 
+                    RowBox[{"1", "->", "4"}]}], "|>"}]}]}], "}"}]}], ",", 
+                "w"}], "]"}], ",", "h"}], "]"}]}], ";", 
+           RowBox[{"Show", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"ArrayPlot", "[", 
+                RowBox[{
+                 RowBox[{"hist", "/.", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"8", "->", "0"}], ",", 
+                    RowBox[{
+                    RowBox[{"n_", "/;", 
+                    RowBox[{"n", ">", "5"}]}], "->", "5"}]}], "}"}]}], ",", 
+                 RowBox[{"Mesh", "->", "True"}], ",", 
+                 RowBox[{"MeshStyle", "->", 
+                  RowBox[{"Directive", "[", 
+                   RowBox[{"Thin", ",", 
+                    RowBox[{"GrayLevel", "[", ".15", "]"}]}], "]"}]}]}], 
+                "]"}], ",", 
+               RowBox[{"Graphics", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"MapIndexed", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"#1", ">", "5"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"GrayLevel", "[", 
+                    RowBox[{
+                    RowBox[{"<|", 
+                    RowBox[{
+                    "1", ",", ".85", ",", "0", ",", ".7", ",", ".55", ",", 
+                    ".4"}], "|>"}], "\[LeftDoubleBracket]", 
+                    RowBox[{"#1", "-", "5"}], "\[RightDoubleBracket]"}], 
+                    "]"}], ",", 
+                    RowBox[{"Disk", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Last", "[", "#2", "]"}], "-", ".5"}], ",", 
+                    RowBox[{"h", "+", "1.5", "-", 
+                    RowBox[{"First", "[", "#2", "]"}]}]}], "}"}], ",", 
+                    ".25"}], "]"}]}], "}"}]}], "]"}], "&"}], ",", "hist", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"-", "1"}], "}"}]}], "]"}], ",", 
+                  RowBox[{"Inset", "[", 
+                   RowBox[{
+                    RowBox[{"ArrayPlot", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"hist", "[", 
+                    RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"Ceiling", "[", 
+                    RowBox[{"w", "/", "2"}], "]"}]}], "]"}], "]"}], "/.", " ", 
+                    RowBox[{"8", "->", "0"}]}], "}"}], "}"}], ",", 
+                    RowBox[{"Mesh", "->", "True"}], ",", 
+                    RowBox[{"MeshStyle", "->", 
+                    RowBox[{"GrayLevel", "[", ".15", "]"}]}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"w", "/", "2"}], "-", ".5"}], ",", 
+                    RowBox[{"-", "2"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Left", ",", "Bottom"}], "}"}], ",", "1"}], "]"}],
+                   ",", 
+                  RowBox[{"Inset", "[", 
+                   RowBox[{
+                    RowBox[{"ArrayPlot", "[", 
+                    RowBox[{
+                    RowBox[{"{", "td", "}"}], ",", 
+                    RowBox[{"Mesh", "->", "True"}], ",", 
+                    RowBox[{"MeshStyle", "->", 
+                    RowBox[{"GrayLevel", "[", ".15", "]"}]}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"w", "/", "2"}], "-", ".5"}], ",", 
+                    RowBox[{"h", "+", "2"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Right", ",", "Bottom"}], "}"}], ",", 
+                    RowBox[{"Length", "[", "td", "]"}]}], "]"}], ",", 
+                  RowBox[{"Inset", "[", 
+                   RowBox[{
+                    RowBox[{"ArrayPlot", "[", 
+                    RowBox[{
+                    RowBox[{"{", "xd", "}"}], ",", 
+                    RowBox[{"Mesh", "->", "True"}], ",", 
+                    RowBox[{"MeshStyle", "->", 
+                    RowBox[{"GrayLevel", "[", ".15", "]"}]}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"w", "/", "2"}], "+", ".5"}], ",", 
+                    RowBox[{"h", "+", "2"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Left", ",", "Bottom"}], "}"}], ",", 
+                    RowBox[{"Length", "[", "xd", "]"}]}], "]"}]}], "}"}], 
+                "]"}]}], "}"}], ",", 
+             RowBox[{"PlotRange", "->", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "w"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "2"}], ",", 
+                  RowBox[{"h", "+", "3.1"}]}], "}"}]}], "}"}]}]}], "]"}]}]}], 
+         "]"}]}], "]"}]}], ",", 
+     RowBox[{"rules", "=", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"60", "->", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"a", ":", 
+               RowBox[{"1", "|", "3"}]}], ",", 
+              RowBox[{"1", "|", "3"}], ",", "_"}], "}"}], ":>", "a"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"_", ",", 
+              RowBox[{"2", "|", "4"}], ",", 
+              RowBox[{"a", ":", 
+               RowBox[{"2", "|", "4"}]}]}], "}"}], ":>", "a"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"1", ",", "5", ",", "4"}], "}"}], "->", "0"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"_", ",", "5", ",", "_"}], "}"}], "->", "5"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"_", ",", "_", ",", "_"}], "}"}], "->", "0"}]}], "}"}]}],
+         ",", 
+        RowBox[{"188", "->", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"a", ":", 
+               RowBox[{"1", "|", "3"}]}], ",", 
+              RowBox[{"1", "|", "3"}], ",", "_"}], "}"}], ":>", "a"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"_", ",", 
+              RowBox[{"2", "|", "4"}], ",", 
+              RowBox[{"a", ":", 
+               RowBox[{"2", "|", "4"}]}]}], "}"}], ":>", "a"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"3", ",", 
+              RowBox[{"5", "|", "10"}], ",", "2"}], "}"}], "->", "6"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"1", ",", 
+              RowBox[{"5", "|", "7"}], ",", "4"}], "}"}], "->", "0"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"3", ",", "5", ",", "4"}], "}"}], "->", "7"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"1", ",", "6", ",", "2"}], "}"}], "->", "10"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"1", ",", 
+              RowBox[{"6", "|", "11"}], ",", "4"}], "}"}], "->", "8"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"3", ",", 
+              RowBox[{"6", "|", "8", "|", "10", "|", "11"}], ",", "4"}], 
+             "}"}], "->", "9"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"3", ",", 
+              RowBox[{"7", "|", "9"}], ",", "2"}], "}"}], "->", "11"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"1", ",", 
+              RowBox[{"8", "|", "11"}], ",", "2"}], "}"}], "->", "9"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"3", ",", "11", ",", "2"}], "}"}], "->", "8"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"1", ",", 
+              RowBox[{"9", "|", "10"}], ",", "4"}], "}"}], "->", "11"}], ",", 
+           
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"_", ",", 
+              RowBox[{"a_", "/;", 
+               RowBox[{"a", ">", "4"}]}], ",", "_"}], "}"}], ":>", "a"}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"_", ",", "_", ",", "_"}], "}"}], "->", "0"}]}], 
+          "}"}]}]}], "|>"}]}]}], "}"}], ",", 
+   RowBox[{"Column", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Row", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"ArrayPlot", "[", 
+           RowBox[{
+            RowBox[{"CellularAutomaton", "[", 
+             RowBox[{"#", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "1", "}"}], ",", "0"}], "}"}], ",", "51"}], 
+             "]"}], ",", 
+            RowBox[{"ImageSize", "->", 
+             RowBox[{"{", 
+              RowBox[{"Automatic", ",", "300"}], "}"}]}], ",", 
+            RowBox[{"PlotRangePadding", "->", "0"}], ",", 
+            RowBox[{"Mesh", "->", "True"}], ",", 
+            RowBox[{"MeshStyle", "->", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"Thin", ",", 
+               RowBox[{"GrayLevel", "[", ".15", "]"}]}], "]"}]}]}], "]"}], 
+          ",", 
+          RowBox[{"GraphicsGrid", "[", 
+           RowBox[{
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"nestgraphic", "[", 
+               RowBox[{"t", ",", "x", ",", "17", ",", "7", ",", 
+                RowBox[{"rules", "[", "#", "]"}]}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"t", ",", "48", ",", "51"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"x", ",", "32", ",", "35"}], "}"}]}], "]"}], ",", 
+            RowBox[{"ImageSize", "->", 
+             RowBox[{"{", 
+              RowBox[{"Automatic", ",", "300"}], "}"}]}]}], "]"}], ",", 
+          RowBox[{"GraphicsColumn", "[", 
+           RowBox[{
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"nestgraphic", "[", 
+               RowBox[{"t", ",", "100", ",", "39", ",", "18", ",", 
+                RowBox[{"rules", "[", "#", "]"}]}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"t", ",", 
+                RowBox[{"{", 
+                 RowBox[{"3287", ",", "12286", ",", "102285"}], "}"}]}], 
+               "}"}]}], "]"}], ",", 
+            RowBox[{"ImageSize", "->", 
+             RowBox[{"{", 
+              RowBox[{"Automatic", ",", "300"}], "}"}]}], ",", 
+            RowBox[{"PlotRangePadding", "->", "0"}], ",", 
+            RowBox[{"Spacings", "->", 
+             RowBox[{"{", 
+              RowBox[{"Automatic", ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", 
+                 RowBox[{"{", "10", "}"}], ",", "0"}], "}"}]}], "}"}]}]}], 
+           "]"}]}], "}"}], ",", 
+        RowBox[{"Spacer", "[", "10", "]"}]}], "]"}], "&"}], "/@", 
+     RowBox[{"{", 
+      RowBox[{"188", ",", "60"}], "}"}]}], "]"}]}], "]"}]], "Input",Expression\
+UUID->"fa322959-50c9-40c7-a9e2-ed89087427da"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{83, Automatic}, {86.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"57ee53df-64c6-4a98-af16-2b6b67ce9c00"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 13161, 326, 603, "Input",ExpressionUUID->"fa322959-50c9-40c7-a9e2-ed89087427da"]
+}
+]
+*)
+

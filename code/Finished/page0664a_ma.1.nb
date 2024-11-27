@@ -1,0 +1,214 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7372,        206]
+NotebookOptionsPosition[      7015,        192]
+NotebookOutlinePosition[      7418,        208]
+CellTagsIndexPosition[      7375,        205]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"CAToMA", "[", "rule_", "]"}], ":=", 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"rules", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"#", "->", 
+            RowBox[{
+             RowBox[{"CellularAutomaton", "[", 
+              RowBox[{"rule", ",", "#"}], "]"}], "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], "&"}], "/@", 
+          RowBox[{"Tuples", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"1", ",", "0"}], "}"}], ",", "3"}], "]"}]}]}], ",", 
+        RowBox[{"numbermap", "=", 
+         RowBox[{"<|", 
+          RowBox[{
+           RowBox[{"B", "\[Rule]", "0"}], ",", 
+           RowBox[{
+            RowBox[{"Y", "[", "1", "]"}], "\[Rule]", "6"}], ",", 
+           RowBox[{
+            RowBox[{"Y", "[", "0", "]"}], "\[Rule]", "1"}], ",", 
+           RowBox[{
+            RowBox[{"X", "[", 
+             RowBox[{"0", ",", "0"}], "]"}], "\[Rule]", "2"}], ",", 
+           RowBox[{
+            RowBox[{"X", "[", 
+             RowBox[{"0", ",", "1"}], "]"}], "\[Rule]", "3"}], ",", 
+           RowBox[{
+            RowBox[{"X", "[", 
+             RowBox[{"1", ",", "0"}], "]"}], "\[Rule]", "4"}], ",", 
+           RowBox[{
+            RowBox[{"X", "[", 
+             RowBox[{"1", ",", "1"}], "]"}], "\[Rule]", "5"}]}], "|>"}]}]}], 
+       "}"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "->", 
+          RowBox[{"(", 
+           RowBox[{"#", "/.", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"X", "[", 
+                  RowBox[{"a_", ",", "b_"}], "]"}], ",", 
+                 RowBox[{"Y", "[", "c_", "]"}], ",", 
+                 RowBox[{"Y", "[", "d_", "]"}]}], "}"}], "\[RuleDelayed]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"X", "[", 
+                  RowBox[{"c", ",", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"a", ",", "c", ",", "d"}], "}"}], "/.", 
+                    "rules"}]}], "]"}], ",", "1"}], "}"}]}], ",", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"X", "[", 
+                  RowBox[{"a_", ",", "b_"}], "]"}], ",", 
+                 RowBox[{"Y", "[", "c_", "]"}], ",", "B"}], "}"}], 
+               "\[RuleDelayed]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"X", "[", 
+                  RowBox[{"c", ",", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"a", ",", "c", ",", "0"}], "}"}], "/.", 
+                    "rules"}]}], "]"}], ",", "1"}], "}"}]}], ",", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"_X", ",", "B", ",", "B"}], "}"}], "\[RuleDelayed]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Y", "[", "0", "]"}], ",", 
+                 RowBox[{"-", "1"}]}], "}"}]}], ",", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"_X", ",", 
+                 RowBox[{"X", "[", 
+                  RowBox[{"_", ",", "a_"}], "]"}], ",", "_Y"}], "}"}], 
+               "\[RuleDelayed]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Y", "[", "a", "]"}], ",", 
+                 RowBox[{"-", "1"}]}], "}"}]}], ",", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"B", ",", 
+                 RowBox[{"X", "[", 
+                  RowBox[{"_", ",", "a_"}], "]"}], ",", "_Y"}], "}"}], 
+               "\[RuleDelayed]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Y", "[", "a", "]"}], ",", 
+                 RowBox[{"-", "1"}]}], "}"}]}], ",", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"B", ",", "B", ",", "_Y"}], "}"}], "\[RuleDelayed]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"X", "[", 
+                  RowBox[{"0", ",", "0"}], "]"}], ",", "1"}], "}"}]}], ",", 
+              RowBox[{"_", "\[RuleDelayed]", 
+               RowBox[{"{", 
+                RowBox[{"B", ",", "0"}], "}"}]}]}], "}"}]}], ")"}]}], "&"}], "/@", 
+        RowBox[{"Tuples", "[", 
+         RowBox[{
+          RowBox[{"Keys", "[", "numbermap", "]"}], ",", "3"}], "]"}]}], "/.", 
+       "numbermap"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ResourceFunction", "[", "\"\<MobileAutomatonPlot\>\"", "]"}], 
+    "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ResourceFunction", "[", "\"\<MobileAutomaton\>\"", "]"}], "[", 
+      
+      RowBox[{
+       RowBox[{"CAToMA", "[", "ruleN", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"CenterArray", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"1", ",", "6", ",", "1"}], "}"}], ",", "19"}], "]"}], ",",
+          "8"}], "}"}], ",", "60"}], "]"}], ",", 
+     InterpretationBox[
+      DynamicModuleBox[{Typeset`open = False}, 
+       TemplateBox[{"Expression", "SequenceIcon", 
+         GridBox[{{
+            RowBox[{
+              TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["Sequence", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["3", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Byte count: \"", "IconizedLabel"], 
+              "\[InvisibleSpace]", 
+              TagBox["352", "IconizedItem"]}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+          "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+         Dynamic[Typeset`open]},
+        "IconizedObject"]],
+      Sequence[Mesh -> True, MeshStyle -> Directive[Thin, 
+         GrayLevel[0.15]], ImageSize -> Large],
+      SelectWithContents->True,
+      Selectable->False]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ruleN", ",", 
+     RowBox[{"{", 
+      RowBox[{"90", ",", "30"}], "}"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{3.869218913634345*^9, 3.870279178645*^9, 
+  3.8703408547258987`*^9},ExpressionUUID->"c22787f8-ce72-477b-b24f-\
+fb97964a55c4"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{212.5, Automatic}, {17.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"85528c9c-c0ae-494b-b905-71cea18aa792"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6453, 170, 230, "Input",ExpressionUUID->"c22787f8-ce72-477b-b24f-fb97964a55c4"]
+}
+]
+*)
+

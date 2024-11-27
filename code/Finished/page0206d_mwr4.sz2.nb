@@ -1,0 +1,84 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2587,         76]
+NotebookOptionsPosition[      2232,         62]
+NotebookOutlinePosition[      2635,         78]
+CellTagsIndexPosition[      2592,         75]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{"Differences", "@", 
+    RowBox[{
+     RowBox[{"ResourceFunction", "[", "\"\<MultiwaySystem\>\"", "]"}], "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\"\<ABA\>\"", "\[Rule]", "\"\<ABBAB\>\""}], ",", 
+        RowBox[{"\"\<AB\>\"", "\[Rule]", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<ABABBB\>\"", "\[Rule]", "\"\<AAAAABA\>\""}]}], "}"}], 
+      ",", "\"\<ABABAB\>\"", ",", "500", ",", "\"\<StatesCountsList\>\""}], 
+     "]"}]}], ",", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", "SequenceIcon", 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["Sequence", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["7", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["736", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    Sequence[
+    Joined -> True, Filling -> Axis, Mesh -> All, AspectRatio -> 0.2, Frame -> 
+     True, FrameTicks -> {{True, False}, {True, False}}, PlotStyle -> 
+     AbsoluteThickness[1]],
+    SelectWithContents->True,
+    Selectable->False]}], "]"}]], "Input",ExpressionUUID->"2ddb0c80-95ce-4e73-\
+9d74-2326da8ac4f7"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{111.5, Automatic}, {-3.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"5d93f088-d6ce-4aa6-af54-d57061ba3292"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1670, 40, 75, "Input",ExpressionUUID->"2ddb0c80-95ce-4e73-9d74-2326da8ac4f7"]
+}
+]
+*)
+

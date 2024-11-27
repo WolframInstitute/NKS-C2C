@@ -1,0 +1,233 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8195,        225]
+NotebookOptionsPosition[      7841,        211]
+NotebookOutlinePosition[      8241,        227]
+CellTagsIndexPosition[      8198,        224]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"numbermap", "=", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"cpu", "\[Rule]", "0"}], ",", 
+        RowBox[{"inop", "\[Rule]", "1"}], ",", 
+        RowBox[{"a0", "\[Rule]", "2"}], ",", 
+        RowBox[{"a1", "\[Rule]", "11"}], ",", 
+        RowBox[{"a1d", "\[Rule]", "10"}], ",", 
+        RowBox[{"d0", "\[Rule]", "4"}], ",", 
+        RowBox[{"d1", "\[Rule]", "8"}], ",", 
+        RowBox[{"is0", "\[Rule]", "3"}], ",", 
+        RowBox[{"is1", "\[Rule]", "7"}], ",", 
+        RowBox[{"ir", "\[Rule]", "6"}], ",", 
+        RowBox[{"r0", "\[Rule]", "5"}], ",", 
+        RowBox[{"r1", "\[Rule]", "9"}]}], "}"}]}], ",", 
+     RowBox[{"pad", "=", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"cpu", ",", "inop"}], "}"}], ",", 
+         RowBox[{"{", "30", "}"}]}], "]"}], "]"}]}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ArrayPlot", "@", 
+      RowBox[{
+       RowBox[{"CellularAutomaton", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"a0", ",", 
+               RowBox[{"d0", "|", "d1"}], ",", 
+               RowBox[{"a0", "|", "a1"}], ",", "_", ",", "_"}], "}"}], 
+             "\[Rule]", "a0"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"a1", "|", "a1d"}], ",", 
+               RowBox[{"d0", "|", "d1"}], ",", 
+               RowBox[{"a0", "|", "a1"}], ",", "_", ",", "_"}], "}"}], 
+             "\[Rule]", "a1"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"a0", ",", 
+               RowBox[{"d0", "|", "d1"}], ",", "_", ",", "_", ",", "_"}], 
+              "}"}], "\[Rule]", "a1d"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"a1", "|", "a1d"}], ",", 
+               RowBox[{"d0", "|", "d1"}], ",", "_", ",", "_", ",", "_"}], 
+              "}"}], "\[Rule]", "a0"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"a0", ",", "cpu", ",", "_", ",", "_", ",", "_"}], "}"}],
+              "\[Rule]", "a0"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"a1", ",", "cpu", ",", "_", ",", "_", ",", "_"}], "}"}],
+              "\[Rule]", "a1"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"is0", "|", "is1", "|", "ir"}], ",", "_", ",", "a1d", 
+               ",", "_", ",", "_"}], "}"}], "\[Rule]", "inop"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"x", ":", 
+                RowBox[{"is0", "|", "is1", "|", "ir"}]}], ",", "_", ",", "_", 
+               ",", "_", ",", "_"}], "}"}], "\[Rule]", "x"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"_", ",", "_", ",", "ir", ",", "d0", ",", "a1d"}], 
+              "}"}], "\[Rule]", "r0"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"_", ",", "_", ",", "ir", ",", "d1", ",", "a1d"}], 
+              "}"}], "\[Rule]", "r1"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"_", ",", "is0", ",", "_", ",", "a1d", ",", "_"}], 
+              "}"}], "\[Rule]", "d0"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"_", ",", "is1", ",", "_", ",", "a1d", ",", "_"}], 
+              "}"}], "\[Rule]", "d1"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"_", ",", "_", ",", "inop", ",", "_", ",", 
+               RowBox[{"x", ":", 
+                RowBox[{"r0", "|", "r1"}]}]}], "}"}], "\[Rule]", "x"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"inop", ",", "_", ",", "_", ",", "_", ",", "_"}], "}"}],
+              "\[Rule]", "inop"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"_", ",", "_", ",", "inop", ",", "_", ",", "_"}], "}"}],
+              "\[Rule]", "inop"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"_", ",", "_", ",", "_", ",", "_", ",", "inop"}], "}"}],
+              "\[Rule]", "inop"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"_", ",", "_", ",", 
+               RowBox[{"x", ":", 
+                RowBox[{"d0", "|", "d1", "|", "cpu"}]}], ",", "_", ",", "_"}],
+               "}"}], "\[Rule]", "x"}]}], "}"}], "/.", "\[VeryThinSpace]", 
+          "numbermap"}], ",", 
+         RowBox[{
+          RowBox[{"Join", "[", 
+           RowBox[{"pad", ",", 
+            RowBox[{"Flatten", "[", 
+             RowBox[{"{", 
+              RowBox[{"cpu", ",", 
+               RowBox[{"#1", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", 
+               RowBox[{
+                RowBox[{"IntegerDigits", "[", 
+                 RowBox[{
+                  RowBox[{"#1", "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], ",", "2"}], "]"}], "/.", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"0", "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{"cpu", ",", "a0"}], "}"}]}], ",", 
+                  RowBox[{"1", "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{"cpu", ",", "a1"}], "}"}]}]}], "}"}]}]}], "}"}], 
+             "]"}], ",", "pad", ",", 
+            RowBox[{"Flatten", "[", 
+             RowBox[{
+              RowBox[{"Reverse", "[", 
+               RowBox[{"IntegerDigits", "[", 
+                RowBox[{"#2", ",", "2", ",", "40"}], "]"}], "]"}], "/.", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"1", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"d1", ",", "inop"}], "}"}]}], ",", 
+                RowBox[{"0", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"d0", ",", "inop"}], "}"}]}]}], "}"}]}], "]"}]}], 
+           "]"}], "/.", "numbermap"}], ",", "90"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", 
+         RowBox[{
+          RowBox[{"-", "160"}], ";;"}]}], "]"}], "]"}]}], "&"}], "@@@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"is1", ",", "19"}], "}"}], ",", 
+        SuperscriptBox["2", "25"]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"is1", ",", "13"}], "}"}], ",", 
+        RowBox[{
+         SuperscriptBox["2", "25"], "+", 
+         SuperscriptBox["2", "19"]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"ir", ",", "19"}], "}"}], ",", 
+        RowBox[{
+         SuperscriptBox["2", "25"], "+", 
+         SuperscriptBox["2", "19"], "+", 
+         SuperscriptBox["2", "13"]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"is0", ",", "25"}], "}"}], ",", 
+        RowBox[{
+         SuperscriptBox["2", "25"], "+", 
+         SuperscriptBox["2", "19"], "+", 
+         SuperscriptBox["2", "13"]}]}], "}"}]}], "}"}]}]}], "]"}]], "Input",Ex\
+pressionUUID->"cdc57e0e-4395-4ce5-8e24-2812eacf81a6"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1cfcd9f0-2332-4941-9e4b-9ed4c08fce92"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 7279, 189, 304, "Input",ExpressionUUID->"cdc57e0e-4395-4ce5-8e24-2812eacf81a6"]
+}
+]
+*)
+

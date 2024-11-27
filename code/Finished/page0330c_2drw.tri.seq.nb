@@ -1,0 +1,141 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4805,        133]
+NotebookOptionsPosition[      4452,        119]
+NotebookOutlinePosition[      4852,        135]
+CellTagsIndexPosition[      4809,        132]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SeedRandom", "[", 
+   RowBox[{"1220", ",", 
+    RowBox[{"Method", "->", "\"\<Legacy\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"GraphicsRow", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Graphics", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", 
+             StyleBox[
+             "\"Hex Grid\"", "IconizedCustomName", StripOnInput -> False], 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  
+                  TagBox["With", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["3728", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          With[{$CellContext`cols = 35, $CellContext`rows = 17}, {
+            GrayLevel[0.15], 
+            AbsoluteThickness[0.25], 
+            Table[{
+              Line[
+               
+               Table[{0.5 $CellContext`i, 
+                 0.866 $CellContext`j + ((1/3) 
+                   Mod[$CellContext`i + $CellContext`j + 1, 2]) 
+                  0.866}, {$CellContext`i, 
+                 If[$CellContext`j == $CellContext`rows, 
+                  Mod[$CellContext`rows + 1, 2], 0], 
+                 
+                 Switch[$CellContext`j, 0, $CellContext`cols + 1 - 
+                  Mod[$CellContext`cols + 1, 
+                   2], $CellContext`rows, $CellContext`cols + 1 - 
+                  Mod[$CellContext`cols + $CellContext`rows, 2], 
+                  Blank[], $CellContext`cols + 1]}]], 
+              If[$CellContext`j < $CellContext`rows, 
+               Table[
+                
+                Line[{{0.5 $CellContext`i, 0.866 ($CellContext`j + 1/3)}, {
+                  0.5 $CellContext`i, 
+                   0.866 ($CellContext`j + 1)}}], {$CellContext`i, 
+                 Mod[$CellContext`j, 2], $CellContext`cols + 1, 
+                 2}]]}, {$CellContext`j, 0, $CellContext`rows}]}],
+          SelectWithContents->True,
+          Selectable->False], ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Disk", "[", 
+             RowBox[{"#", ",", "0.2"}], "]"}], "&"}], ")"}], "/@", "#"}], ",", 
+         RowBox[{"Line", "[", "#", "]"}]}], "}"}], "&"}], "@", 
+      RowBox[{"FoldList", "[", 
+       RowBox[{"Plus", ",", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{".5", ",", ".866"}], "}"}], " ", 
+         RowBox[{"{", 
+          RowBox[{"30", ",", 
+           RowBox[{"7", "+", 
+            FractionBox["2", "3"]}]}], "}"}]}], ",", 
+        RowBox[{"BlockRandom", "@", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{
+           RowBox[{"N", "[", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Cos", "[", 
+                 FractionBox[
+                  RowBox[{"2", " ", "\[Pi]", " ", "i"}], "3"], "]"}], ",", 
+                RowBox[{"Sin", "[", 
+                 FractionBox[
+                  RowBox[{"2", " ", "\[Pi]", " ", "i"}], "3"], "]"}]}], "}"}],
+               ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "0", ",", "2"}], "}"}]}], "]"}], "]"}], ",", 
+           "#"}], "]"}]}]}], "]"}]}], "]"}], "&"}], "/@", 
+   RowBox[{"Range", "[", 
+    RowBox[{"100", ",", "105"}], "]"}]}], "]"}]}], "Input",ExpressionUUID->\
+"eb1df2f4-6392-4161-9d05-3db2ce4e734e"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3554067b-2658-47ff-ab35-0c43ee28dc9f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3890, 97, 188, "Input",ExpressionUUID->"eb1df2f4-6392-4161-9d05-3db2ce4e734e"]
+}
+]
+*)
+

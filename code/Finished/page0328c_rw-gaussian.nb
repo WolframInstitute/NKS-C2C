@@ -1,0 +1,97 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3063,         89]
+NotebookOptionsPosition[      2710,         75]
+NotebookOutlinePosition[      3111,         91]
+CellTagsIndexPosition[      3068,         88]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SeedRandom", "[", 
+   RowBox[{"67124", ",", 
+    RowBox[{"Method", "->", "\"\<Rule30CA\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"GraphicsGrid", "[", 
+  RowBox[{"Partition", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Histogram", "[", 
+       RowBox[{
+        RowBox[{"BlockRandom", "@", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"Total", "[", 
+            RowBox[{"RandomChoice", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"1", ",", 
+                RowBox[{"-", "1"}]}], "}"}], ",", "150"}], "]"}], "]"}], ",", 
+           "#"}], "]"}]}], ",", 
+        RowBox[{"{", "2", "}"}], ",", 
+        InterpretationBox[
+         DynamicModuleBox[{Typeset`open = False}, 
+          TemplateBox[{"Expression", "SequenceIcon", 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                 TagBox["Sequence", "IconizedItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                 TagBox["3", "IconizedItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Byte count: \"", "IconizedLabel"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["1216", "IconizedItem"]}]}}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+             "Column", 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+            Dynamic[Typeset`open]},
+           "IconizedObject"]],
+         Sequence[PlotRange -> {{-50, 50}, {0, 
+             Which[# <= 20, 0.2875 #, # <= 200, 0.115 #, True, 0.08 #]}}, 
+          Frame -> True, FrameTicks -> False],
+         SelectWithContents->True,
+         Selectable->False]}], "]"}], "&"}], "/@", 
+     RowBox[{"{", 
+      RowBox[{
+      "10", ",", "20", ",", "100", ",", "200", ",", "1000", ",", "10000", ",",
+        "100000", ",", "10"}], "}"}]}], ",", "4"}], "]"}], "]"}]}], "Input",Ex\
+pressionUUID->"4702ea61-8e27-433b-86a6-b99318f94e34"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{81, Automatic}, {Automatic, 128.5}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d2a5bd53-104e-4378-84f9-85a8cd1be193"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2148, 53, 97, "Input",ExpressionUUID->"4702ea61-8e27-433b-86a6-b99318f94e34"]
+}
+]
+*)
+

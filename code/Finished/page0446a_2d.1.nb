@@ -1,0 +1,177 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5846,        169]
+NotebookOptionsPosition[      5480,        155]
+NotebookOutlinePosition[      5892,        171]
+CellTagsIndexPosition[      5849,        168]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"BCAGasEvolveList", "[", 
+    RowBox[{"init_", ",", "t_"}], "]"}], ":=", 
+   RowBox[{"FoldList", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"RotateLeft", "[", 
+       RowBox[{
+        RowBox[{"Join", "@@", 
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"MapThread", "[", 
+             RowBox[{"Join", ",", "#"}], "]"}], "&"}], ",", 
+           RowBox[{
+            RowBox[{"Partition", "[", 
+             RowBox[{"#", ",", 
+              RowBox[{"{", 
+               RowBox[{"2", ",", "2"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"2", ",", "2"}], "}"}], ",", 
+              RowBox[{"Mod", "[", 
+               RowBox[{"#2", ",", "2", ",", "1"}], "]"}]}], "]"}], "/.", " ", 
+            
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"a_", ",", "b_"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"c_", ",", "d_"}], "}"}]}], "}"}], "/;", 
+                RowBox[{
+                 RowBox[{"Max", "[", 
+                  RowBox[{"a", ",", "b", ",", "c", ",", "d"}], "]"}], ">", 
+                 "1"}]}], "->", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"a", ",", "b"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"c", ",", "d"}], "}"}]}], "}"}]}], ",", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "0"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}]}], "}"}], "->", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "0"}], "}"}]}], "}"}]}], ",", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "0"}], "}"}]}], "}"}], "->", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "0"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"a_", ",", "b_"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"c_", ",", "d_"}], "}"}]}], "}"}], "->", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"d", ",", "c"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"b", ",", "a"}], "}"}]}], "}"}]}]}], "}"}]}]}], 
+          "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"Mod", "[", 
+          RowBox[{
+           RowBox[{"#2", "+", "1"}], ",", "2"}], "]"}], " ", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1"}], "}"}]}]}], "]"}], "&"}], ",", "init", ",", 
+     
+     RowBox[{"Range", "[", "t", "]"}]}], "]"}]}], "\n", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"#", ",", 
+     InterpretationBox[
+      DynamicModuleBox[{Typeset`open = False}, 
+       TemplateBox[{"Expression", "SequenceIcon", 
+         GridBox[{{
+            RowBox[{
+              TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["Sequence", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["2", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Byte count: \"", "IconizedLabel"], 
+              "\[InvisibleSpace]", 
+              TagBox["168", "IconizedItem"]}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+          "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+         Dynamic[Typeset`open]},
+        "IconizedObject"]],
+      Sequence[Frame -> None, Mesh -> True],
+      SelectWithContents->True,
+      Selectable->False]}], "]"}], "&"}], "/@", 
+  RowBox[{"BCAGasEvolveList", "[", 
+   RowBox[{
+    RowBox[{"CenterArray", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{"1", ",", "6", ",", "6"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"24", ",", "24"}], "}"}]}], "]"}], ",", "29"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{3.8707916074429483`*^9, 
+  3.8707916835296373`*^9},ExpressionUUID->"cc53e354-cf72-4e9b-85ca-\
+508f4244bef2"]
+},
+WindowSize->{807., 753.75},
+WindowMargins->{{-1148.25, Automatic}, {-172.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d4e8aecc-0d7b-4232-aff6-265f31eb653f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4918, 133, 205, "Input",ExpressionUUID->"cc53e354-cf72-4e9b-85ca-508f4244bef2"]
+}
+]
+*)
+

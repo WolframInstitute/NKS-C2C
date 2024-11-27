@@ -1,0 +1,159 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4837,        151]
+NotebookOptionsPosition[      4479,        137]
+NotebookOutlinePosition[      4883,        153]
+CellTagsIndexPosition[      4840,        150]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"TMToCA", "[", 
+     RowBox[{"rules_", ",", 
+      RowBox[{"k_", ":", "2"}]}], "]"}], ":=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"#2", "[", 
+                 RowBox[{"[", "3", "]"}], "]"}], "==", "1"}], ",", "Identity",
+                ",", "Reverse"}], "]"}], "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"k", " ", 
+                 RowBox[{"#1", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], "+", 
+                RowBox[{"#1", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}]}], ",", "x_", ",", "_"}], 
+              "}"}], "]"}], "\[Rule]", 
+            RowBox[{
+             RowBox[{"k", " ", 
+              RowBox[{"#2", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "+", "x"}]}], ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"_", ",", 
+              RowBox[{
+               RowBox[{"k", " ", 
+                RowBox[{"#1", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}]}], "+", 
+               RowBox[{"#1", "[", 
+                RowBox[{"[", "2", "]"}], "]"}]}], ",", "_"}], "}"}], 
+            "\[Rule]", 
+            RowBox[{"#2", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], "&"}], "@@@", 
+        "rules"}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"_", ",", "x_", ",", "_"}], "}"}], "\[Rule]", "x"}]}], "}"}],
+      "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"tmrule", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "1", ",", 
+          RowBox[{"-", "1"}]}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", "0", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"2", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"2", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "1", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"3", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", "1", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"3", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "0", ",", 
+          RowBox[{"-", "1"}]}], "}"}]}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"GraphicsRow", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"RulePlot", "[", 
+       RowBox[{
+        RowBox[{"TuringMachine", "[", "tmrule", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", "5"}], "}"}], ",", 
+          RowBox[{"Table", "[", 
+           RowBox[{"0", ",", 
+            RowBox[{"{", "15", "}"}]}], "]"}]}], "}"}], ",", "30"}], "]"}], 
+      ",", 
+      RowBox[{"ArrayPlot", "[", 
+       RowBox[{"CellularAutomaton", "[", 
+        RowBox[{
+         RowBox[{"TMToCA", "[", "tmrule", "]"}], ",", 
+         RowBox[{"ReplacePart", "[", 
+          RowBox[{
+           RowBox[{"Table", "[", 
+            RowBox[{"0", ",", 
+             RowBox[{"{", "15", "}"}]}], "]"}], ",", "2", ",", "5"}], "]"}], 
+         ",", 
+         RowBox[{"{", "30", "}"}]}], "]"}], "]"}]}], "}"}], "]"}]}], 
+  "]"}]}], "Input",ExpressionUUID->"e2344ba6-a605-4cd4-8ee2-f59cf6e3ca36"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{101.5, Automatic}, {-16.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9c73b660-8d6d-4c90-96ef-67b912808130"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3917, 115, 200, "Input",ExpressionUUID->"e2344ba6-a605-4cd4-8ee2-f59cf6e3ca36"]
+}
+]
+*)
+

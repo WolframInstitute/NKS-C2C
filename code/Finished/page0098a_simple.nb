@@ -1,0 +1,964 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     42909,        956]
+NotebookOptionsPosition[     42420,        939]
+NotebookOutlinePosition[     42821,        955]
+CellTagsIndexPosition[     42778,        952]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"RMStep", "[", 
+    RowBox[{"prog_", ",", 
+     RowBox[{"state", ":", 
+      RowBox[{"{", 
+       RowBox[{"Halted", ",", "_List"}], "}"}]}]}], "]"}], ":=", "state"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"RMStep", "[", 
+     RowBox[{"prog_", ",", 
+      RowBox[{"{", 
+       RowBox[{"instr_Integer", ",", "regs_List"}], "}"}]}], "]"}], ":=", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"instr", ">", 
+       RowBox[{"Length", "[", "prog", "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"Halted", ",", "regs"}], "}"}], ",", 
+      RowBox[{"With", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"t", "=", 
+          RowBox[{"prog", "[", 
+           RowBox[{"[", "instr", "]"}], "]"}]}], "}"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", "t", "]"}], "==", "1"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"instr", "+", "1"}], ",", 
+            RowBox[{"MapAt", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#1", "+", "1"}], "&"}], ",", "regs", ",", 
+              RowBox[{"First", "[", "t", "]"}]}], "]"}]}], "}"}], ",", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"regs", "[", 
+              RowBox[{"[", 
+               RowBox[{"First", "[", "t", "]"}], "]"}], "]"}], "==", "0"}], 
+            ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"instr", "+", "1"}], ",", "regs"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Last", "[", "t", "]"}], ",", 
+              RowBox[{"MapAt", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"#1", "-", "1"}], "&"}], ",", "regs", ",", 
+                RowBox[{"First", "[", "t", "]"}]}], "]"}]}], "}"}]}], "]"}]}],
+          "]"}]}], "]"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"RMEvolveList", "[", 
+     RowBox[{"prog_", ",", "regs_", ",", "n_Integer"}], "]"}], ":=", 
+    RowBox[{"NestList", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"RMStep", "[", 
+        RowBox[{"prog", ",", "#"}], "]"}], "&"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "regs"}], "}"}], ",", "n"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"RMRulePlot", "[", 
+     RowBox[{"prog_", ",", "nreg_Integer", ",", "opts___"}], "]"}], ":=", 
+    RowBox[{"Graphics", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Arrowheads", "[", 
+         RowBox[{"{", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "0.02"}], ",", ".5", ",", 
+            InterpretationBox[
+             DynamicModuleBox[{Typeset`open = False}, 
+              TemplateBox[{"Expression", 
+                RowBox[{"Graphics", "[", 
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "FEBitmaps", "IconizeEllipsis"]], "]"}], 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["832", "IconizedItem"]}]}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 DefaultBaseStyle -> "Column", 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                Dynamic[Typeset`open]},
+               "IconizedObject"]],
+             Graphics[{
+               Line[{{{0, 0}, {1, 
+                   Sqrt[3]}}, {{0, 0}, {1, -Sqrt[3]}}}]}],
+             SelectWithContents->True,
+             Selectable->False]}], "}"}], "}"}], "]"}], ",", 
+        RowBox[{"With", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"gfun", "=", 
+            RowBox[{"Interpolation", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"1", ",", ".8"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"nreg", ",", ".5"}], "}"}]}], "}"}], ",", 
+              RowBox[{"InterpolationOrder", "->", "1"}]}], "]"}]}], "}"}], 
+          ",", 
+          RowBox[{"MapIndexed", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Translate", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"GrayLevel", "[", 
+                    RowBox[{"gfun", "[", 
+                    RowBox[{"First", "[", "#1", "]"}], "]"}], "]"}], ",", 
+                   RowBox[{"Rectangle", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0.1", ",", "0.1"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.9", ",", "0.9"}], "}"}]}], "]"}], ",", "Black",
+                    ",", 
+                   RowBox[{"Rotate", "[", 
+                    RowBox[{
+                    RowBox[{"Triangle", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0.7", ",", " ", "0.7"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"0.25", ",", " ", "0.5"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"0.7", ",", " ", "0.3"}], "}"}]}], "}"}], "]"}], 
+                    ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Length", "[", "#1", "]"}], "==", "1"}], ",", 
+                    "\[Pi]", ",", "0"}], "]"}]}], "]"}], ",", 
+                   RowBox[{"EdgeForm", "[", "Black", "]"}], ",", 
+                   RowBox[{"Opacity", "[", "0", "]"}], ",", 
+                   RowBox[{"Rectangle", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"First", "[", "#2", "]"}], ",", "0"}], "}"}]}], 
+                "]"}], ",", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Length", "[", "#1", "]"}], "==", "2"}], ",", 
+                 RowBox[{"Arrow", "[", 
+                  RowBox[{"With", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"x1", "=", 
+                    RowBox[{
+                    RowBox[{"First", "[", "#2", "]"}], "+", ".5"}]}], ",", 
+                    RowBox[{"x2", "=", 
+                    RowBox[{
+                    RowBox[{"Last", "[", "#1", "]"}], "+", ".5"}]}], ",", 
+                    RowBox[{"yMax", "=", 
+                    RowBox[{
+                    RowBox[{"Max", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Sqrt", "[", 
+                    RowBox[{"Abs", "[", 
+                    RowBox[{
+                    RowBox[{"First", "[", "#2", "]"}], " ", "-", " ", 
+                    RowBox[{"Last", "[", "#1", "]"}]}], "]"}], "]"}]}], "]"}],
+                     "+", "1"}]}]}], "}"}], ",", 
+                    RowBox[{"BSplineCurve", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"x1", ",", "1"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x1", ",", "yMax"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"x1", "+", "x2"}], "2"], ",", "yMax"}], "}"}], 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x2", ",", "yMax"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x2", ",", "1"}], "}"}]}], "}"}], ",", 
+                    InterpretationBox[
+                    DynamicModuleBox[{Typeset`open = False}, 
+                    TemplateBox[{"Expression", 
+                    RowBox[{
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "IconizeEllipsis"]], "\[Rule]", 
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "IconizeEllipsis"]]}], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Rule", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["216", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    Dynamic[Typeset`open]},
+                    "IconizedObject"]],
+                    SplineWeights -> {1, 0.5, 1, 0.5, 1},
+                    SelectWithContents->True,
+                    Selectable->False]}], "]"}]}], "]"}], "]"}]}], "]"}]}], 
+              "}"}], "&"}], ",", "prog"}], "]"}]}], "]"}]}], "}"}], ",", 
+      InterpretationBox[
+       DynamicModuleBox[{Typeset`open = False}, 
+        TemplateBox[{"Expression", "SequenceIcon", 
+          GridBox[{{
+             RowBox[{
+               TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+               TagBox["Sequence", "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+               TagBox["2", "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Byte count: \"", "IconizedLabel"], 
+               "\[InvisibleSpace]", 
+               TagBox["320", "IconizedItem"]}]}}, 
+           GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+           "Column", 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+          Dynamic[Typeset`open]},
+         "IconizedObject"]],
+       Sequence[PlotRangePadding -> {0, {0, 0.2}}, {$CellContext`opts}],
+       SelectWithContents->True,
+       Selectable->False]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"RMGraphics", "[", 
+     RowBox[{"prog_List", ",", "history_"}], "]"}], ":=", 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"states", "=", 
+         RowBox[{"history", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
+        RowBox[{"regs", "=", 
+         RowBox[{"Transpose", "[", 
+          RowBox[{"history", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}]}]}], "}"}], ",", 
+      RowBox[{"GraphicsRow", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Graphics", "[", 
+           RowBox[{
+            RowBox[{"MapIndexed", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Disk", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"#1", ",", 
+                   RowBox[{"-", 
+                    RowBox[{"First", "[", "#2", "]"}]}]}], "}"}], ",", 
+                 ".35"}], "]"}], "&"}], ",", "states"}], "]"}], ",", 
+            InterpretationBox[
+             DynamicModuleBox[{Typeset`open = False}, 
+              TemplateBox[{"Expression", "SequenceIcon", 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["3", "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["992", "IconizedItem"]}]}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 DefaultBaseStyle -> "Column", 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                Dynamic[Typeset`open]},
+               "IconizedObject"]],
+             Sequence[PlotRange -> {{0, 
+                  Length[$CellContext`prog]} + 
+                0.5, {-Length[$CellContext`states], 0} - 0.5}, 
+              GridLines -> (Range[#, #2]& ), ImagePadding -> 0],
+             SelectWithContents->True,
+             Selectable->False]}], "]"}], ",", 
+          InterpretationBox[
+           DynamicModuleBox[{Typeset`open = False}, 
+            TemplateBox[{"Expression", 
+              RowBox[{"Graphics", "[", 
+                DynamicBox[
+                 FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+                "]"}], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Byte count: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["576", "IconizedItem"]}]}}, 
+               GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+               "Column", 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+              Dynamic[Typeset`open]},
+             "IconizedObject"]],
+           Graphics[
+           Frame -> True, FrameTicks -> False, PlotRange -> {{0, 2}, {0, 
+               Length[$CellContext`history]}}, ImagePadding -> 0],
+           SelectWithContents->True,
+           Selectable->False], ",", 
+          RowBox[{"Splice", "[", 
+           RowBox[{"With", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"gfun", "=", 
+               RowBox[{"Interpolation", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", ".8"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Length", "[", "regs", "]"}], ",", ".5"}], 
+                    "}"}]}], "}"}], ",", 
+                 RowBox[{"InterpolationOrder", "->", "1"}]}], "]"}]}], "}"}], 
+             ",", 
+             RowBox[{"MapIndexed", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Graphics", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"GrayLevel", "[", 
+                    RowBox[{"gfun", "[", 
+                    RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", 
+                    RowBox[{"EdgeForm", "[", "Black", "]"}], ",", 
+                    RowBox[{"MapIndexed", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Rectangle", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"-", 
+                    RowBox[{"First", "[", "#2", "]"}]}]}], "}"}], "]"}], ",", 
+                    
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", "#"}], "}"}]}], "]"}], "&"}], ",", 
+                    "#"}], "]"}]}], "}"}], ",", 
+                  InterpretationBox[
+                   DynamicModuleBox[{Typeset`open = False}, 
+                    TemplateBox[{"Expression", "SequenceIcon", 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["6", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["1272", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    Dynamic[Typeset`open]},
+                    "IconizedObject"]],
+                   Sequence[
+                   PlotRange -> {{1, Automatic}, {-Length[#], 0}}, 
+                    PlotRangePadding -> {{0, 1.5}, 0}, 
+                    GridLines -> {None, Range[#, #2]& }, Frame -> True, 
+                    FrameTicks -> False, ImagePadding -> 0],
+                   SelectWithContents->True,
+                   Selectable->False]}], "]"}], "&"}], ",", "regs"}], "]"}]}],
+             "]"}], "]"}]}], "}"}], ",", 
+        InterpretationBox[
+         DynamicModuleBox[{Typeset`open = False}, 
+          TemplateBox[{"Expression", 
+            RowBox[{
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+              "\[Rule]", 
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+            
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                 TagBox["Rule", "IconizedItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Byte count: \"", "IconizedLabel"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["72", "IconizedItem"]}]}}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+             "Column", 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+            Dynamic[Typeset`open]},
+           "IconizedObject"]],
+         Spacings -> 0,
+         SelectWithContents->True,
+         Selectable->False]}], "]"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"GraphicsColumn", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"RMRulePlot", "[", 
+        RowBox[{"#", ",", "2", ",", 
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", 
+             RowBox[{
+               DynamicBox[
+                FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+               "\[Rule]", 
+               DynamicBox[
+                FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  
+                  TagBox["Rule", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["296", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          ImageSize -> {50 Length[#], Automatic},
+          SelectWithContents->True,
+          Selectable->False]}], "]"}], ",", 
+       RowBox[{"RMGraphics", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"RMEvolveList", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", "15"}], "]"}]}], "]"}]}], 
+      "}"}], ",", 
+     RowBox[{"Alignment", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Left", ",", "Bottom"}], "}"}]}], ",", 
+     RowBox[{"Spacings", "\[Rule]", "0"}]}], "]"}], "&"}], "/@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "1", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "2", "}"}], ",", 
+      RowBox[{"{", "1", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "1", "}"}], ",", 
+      RowBox[{"{", "2", "}"}], ",", 
+      RowBox[{"{", "1", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}]}], "}"}]}], "}"}]}]}], "Input",
+ CellChangeTimes->{{3.868959410088747*^9, 3.8689594663372326`*^9}, {
+   3.8689594999051623`*^9, 3.868959510362849*^9}, {3.868959569073165*^9, 
+   3.8689595698892603`*^9}, {3.8689597072000694`*^9, 
+   3.8689597497736692`*^9}, {3.8689597955305996`*^9, 
+   3.8689599676619315`*^9}, {3.868960055473233*^9, 3.8689602026319804`*^9}, {
+   3.8689602923542585`*^9, 3.868960414831992*^9}, {3.868960845624556*^9, 
+   3.8689612737934575`*^9}, {3.8689613198628254`*^9, 
+   3.8689613394160194`*^9}, {3.8689613754607525`*^9, 
+   3.8689614166646957`*^9}, {3.8689614831211624`*^9, 3.868961576915698*^9}, {
+   3.8689616099200487`*^9, 3.868961638353756*^9}, {3.868961718980584*^9, 
+   3.8689617723945417`*^9}, {3.868961946765251*^9, 3.868961966198538*^9}, {
+   3.8689619987950983`*^9, 3.868962002706024*^9}, {3.8689620920854206`*^9, 
+   3.8689621099347982`*^9}, {3.8689621982419424`*^9, 3.868962257847597*^9}, 
+   3.8689623099024115`*^9, {3.868962356819024*^9, 3.868962402135209*^9}, {
+   3.8689624417008605`*^9, 3.868962443780061*^9}, {3.868962492691221*^9, 
+   3.8689625565925493`*^9}, {3.868962619000783*^9, 3.868962619391825*^9}, {
+   3.8689626912168603`*^9, 3.868962709754345*^9}, {3.86896274533473*^9, 
+   3.868962756695256*^9}, {3.8689628759607515`*^9, 3.8689629320190926`*^9}, {
+   3.868963007932419*^9, 3.868963054352702*^9}, {3.8689631087365513`*^9, 
+   3.8689631252983694`*^9}, {3.868963186137513*^9, 3.868963237686307*^9}, {
+   3.868963382816578*^9, 3.86896341488496*^9}, {3.868963865670103*^9, 
+   3.868963956663577*^9}, {3.868964011286246*^9, 3.868964019863212*^9}, {
+   3.8689640704786406`*^9, 3.868964086054685*^9}, {3.8689641621762037`*^9, 
+   3.868964288726118*^9}, {3.868969261443099*^9, 3.8689692634528627`*^9}, 
+   3.8689693005280385`*^9, {3.8689695384608016`*^9, 3.8689695457807026`*^9}, {
+   3.868969605882335*^9, 3.8689696806274924`*^9}, {3.868969724704687*^9, 
+   3.868969823009794*^9}, {3.8689698939131384`*^9, 3.8689699049973583`*^9}, {
+   3.8691355847134037`*^9, 3.869135616707997*^9}, {3.870267137076021*^9, 
+   3.870267193985374*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"576fe959-4ce7-41f6-bff5-4fa3b7d5ef69"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[{{}, {InsetBox[
+       GraphicsBox[
+        {Arrowheads[{{-0.02, 0.5, 
+            GraphicsBox[{
+              LineBox[
+               
+               NCache[{{{0, 0}, {1, 3^Rational[1, 2]}}, {{0, 0}, {
+                  1, -3^Rational[1, 2]}}}, {{{0, 0}, {
+                  1, 1.7320508075688772`}}, {{0, 0}, {
+                  1, -1.7320508075688772`}}}]]}]}}], 
+         GeometricTransformationBox[{
+           {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+           {GrayLevel[0], GeometricTransformationBox[
+             TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+              "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+            {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {1, 
+          0}], {GeometricTransformationBox[{
+            {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+            {GrayLevel[0], GeometricTransformationBox[
+              TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+               "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+             {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {2,
+            0}], ArrowBox[
+           BSplineCurveBox[{{2.5, 1}, {2.5, 2}, {2., 2}, {1.5, 2}, {1.5, 1}},
+           SplineWeights->{1, 0.5, 1, 0.5, 1}]]}},
+        ImageSize->{100, Automatic},
+        PlotRangePadding->{0, {0, 0.2}}], {6.575, -432}, 
+       ImageScaled[{0, 0}], {100, 110.00000000000001}], InsetBox[
+       GraphicsBox[{{}, {InsetBox[
+           
+           GraphicsBox[{DiskBox[{1, -1}, 0.35], DiskBox[{2, -2}, 0.35], 
+             DiskBox[{1, -3}, 0.35], DiskBox[{2, -4}, 0.35], 
+             DiskBox[{1, -5}, 0.35], DiskBox[{2, -6}, 0.35], 
+             DiskBox[{1, -7}, 0.35], DiskBox[{2, -8}, 0.35], 
+             DiskBox[{1, -9}, 0.35], DiskBox[{2, -10}, 0.35], 
+             DiskBox[{1, -11}, 0.35], DiskBox[{2, -12}, 0.35], 
+             DiskBox[{1, -13}, 0.35], DiskBox[{2, -14}, 0.35], 
+             DiskBox[{1, -15}, 0.35], DiskBox[{2, -16}, 0.35]},
+            DisplayFunction->Identity,
+            
+            GridLines->FrontEndValueCache[
+             Range[#, #2]& , {{0.5, 1.5, 
+               2.5}, {-16.5, -15.5, -14.5, -13.5, -12.5, -11.5, -10.5, -9.5, \
+-8.5, -7.5, -6.5, -5.5, -4.5, -3.5, -2.5, -1.5, -0.5}}],
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->{{0.5, 2.5}, {-16.5, -0.5}}], {27., -226.8}, 
+           ImageScaled[{0.5, 0.5}], {54., 432}], InsetBox[
+           GraphicsBox[{},
+            DisplayFunction->Identity,
+            Frame->True,
+            FrameTicks->False,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->{{0, 2}, {0, 16}}], {81., -226.8}, 
+           ImageScaled[{0.5, 0.5}], {54., 432}], InsetBox[
+           GraphicsBox[
+            {GrayLevel[0.8], EdgeForm[GrayLevel[0]], {}, 
+             RectangleBox[{1, -2}], {}, RectangleBox[{1, -4}], {}, 
+             RectangleBox[{1, -6}], {}, RectangleBox[{1, -8}], {}, 
+             RectangleBox[{1, -10}], {}, RectangleBox[{1, -12}], {}, 
+             RectangleBox[{1, -14}], {}, RectangleBox[{1, -16}]},
+            DisplayFunction->Identity,
+            Frame->True,
+            FrameTicks->False,
+            
+            GridLines->
+             FrontEndValueCache[{None, Range[#, #2]& }, {
+              None, {-16., -15., -14., -13., -12., -11., -10., -9., -8., -7., \
+-6., -5., -4., -3., -2., -1., 0.}}],
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->{{1, Automatic}, {-16, 0}},
+            PlotRangePadding->{{0, 1.5}, 0}], {141.75, -226.8}, 
+           ImageScaled[{0.5, 0.5}], {67.5, 432}], InsetBox[
+           GraphicsBox[
+            {GrayLevel[0.5], EdgeForm[GrayLevel[
+             0]], {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}},
+            DisplayFunction->Identity,
+            Frame->True,
+            FrameTicks->False,
+            
+            GridLines->
+             FrontEndValueCache[{None, Range[#, #2]& }, {
+              None, {-16., -15., -14., -13., -12., -11., -10., -9., -8., -7., \
+-6., -5., -4., -3., -2., -1., 0.}}],
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->{{1, Automatic}, {-16, 0}},
+            PlotRangePadding->{{0, 1.5}, 0}], {222.75, -226.8}, 
+           ImageScaled[{0.5, 0.5}], {94.5, 432}]}, {}},
+        ImageSize->{
+          UpTo[270], 
+          UpTo[432]},
+        PlotRange->{{0, 270.}, {-453.6, 0}},
+        PlotRangePadding->{6, 5}], {6.575, -864}, 
+       ImageScaled[{0, 0}], {263, 432}]}, {}},
+    ImageSize->Automatic,
+    PlotRangePadding->{6, 5}], ",", 
+   GraphicsBox[{{}, {InsetBox[
+       GraphicsBox[
+        {Arrowheads[{{-0.02, 0.5, 
+            GraphicsBox[{
+              LineBox[
+               
+               NCache[{{{0, 0}, {1, 3^Rational[1, 2]}}, {{0, 0}, {
+                  1, -3^Rational[1, 2]}}}, {{{0, 0}, {
+                  1, 1.7320508075688772`}}, {{0, 0}, {
+                  1, -1.7320508075688772`}}}]]}]}}], 
+         GeometricTransformationBox[{
+           {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+           {GrayLevel[0], GeometricTransformationBox[
+             TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+              "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+            {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {1, 
+          0}], GeometricTransformationBox[{
+           {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+           {GrayLevel[0], GeometricTransformationBox[
+             TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+              "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+            {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {2, 
+          0}], {GeometricTransformationBox[{
+            {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+            {GrayLevel[0], GeometricTransformationBox[
+              TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+               "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+             {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {3,
+            0}], ArrowBox[BSplineCurveBox[
+           NCache[{{3.5, 1}, {3.5, 1 + 2^Rational[1, 2]}, {
+             2.5, 1 + 2^Rational[1, 2]}, {1.5, 1 + 2^Rational[1, 2]}, {
+             1.5, 1}}, {{3.5, 1}, {3.5, 2.414213562373095}, {2.5, 
+             2.414213562373095}, {1.5, 2.414213562373095}, {1.5, 1}}],
+           SplineWeights->{1, 0.5, 1, 0.5, 1}]]}},
+        ImageSize->{150, Automatic},
+        PlotRangePadding->{0, {0, 0.2}}], {9.075000000000001, -432}, 
+       ImageScaled[{0, 0}], {150, 130.71067811865476}], InsetBox[
+       GraphicsBox[{{}, {InsetBox[
+           
+           GraphicsBox[{DiskBox[{1, -1}, 0.35], DiskBox[{2, -2}, 0.35], 
+             DiskBox[{3, -3}, 0.35], DiskBox[{1, -4}, 0.35], 
+             DiskBox[{2, -5}, 0.35], DiskBox[{3, -6}, 0.35], 
+             DiskBox[{1, -7}, 0.35], DiskBox[{2, -8}, 0.35], 
+             DiskBox[{3, -9}, 0.35], DiskBox[{1, -10}, 0.35], 
+             DiskBox[{2, -11}, 0.35], DiskBox[{3, -12}, 0.35], 
+             DiskBox[{1, -13}, 0.35], DiskBox[{2, -14}, 0.35], 
+             DiskBox[{3, -15}, 0.35], DiskBox[{1, -16}, 0.35]},
+            DisplayFunction->Identity,
+            
+            GridLines->FrontEndValueCache[
+             Range[#, #2]& , {{0.5, 1.5, 2.5, 
+               3.5}, {-16.5, -15.5, -14.5, -13.5, -12.5, -11.5, -10.5, -9.5, \
+-8.5, -7.5, -6.5, -5.5, -4.5, -3.5, -2.5, -1.5, -0.5}}],
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->{{0.5, 3.5}, {-16.5, -0.5}}], {40.5, -226.8}, 
+           ImageScaled[{0.5, 0.5}], {81., 432}], InsetBox[
+           GraphicsBox[{},
+            DisplayFunction->Identity,
+            Frame->True,
+            FrameTicks->False,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->{{0, 2}, {0, 16}}], {108., -226.8}, 
+           ImageScaled[{0.5, 0.5}], {54., 432}], InsetBox[
+           GraphicsBox[
+            {GrayLevel[0.8], EdgeForm[GrayLevel[0]], {}, {}, 
+             RectangleBox[{1, -3}], {}, {}, RectangleBox[{1, -6}], {}, {}, 
+             RectangleBox[{1, -9}], {}, {}, RectangleBox[{1, -12}], {}, {}, 
+             RectangleBox[{1, -15}], {}},
+            DisplayFunction->Identity,
+            Frame->True,
+            FrameTicks->False,
+            
+            GridLines->
+             FrontEndValueCache[{None, Range[#, #2]& }, {
+              None, {-16., -15., -14., -13., -12., -11., -10., -9., -8., -7., \
+-6., -5., -4., -3., -2., -1., 0.}}],
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->{{1, Automatic}, {-16, 0}},
+            PlotRangePadding->{{0, 1.5}, 0}], {168.75, -226.8}, 
+           ImageScaled[{0.5, 0.5}], {67.5, 432}], InsetBox[
+           GraphicsBox[
+            {GrayLevel[0.5], EdgeForm[GrayLevel[0]], {}, 
+             RectangleBox[{1, -2}], RectangleBox[{1, -3}], 
+             RectangleBox[{1, -4}], {RectangleBox[{1, -5}], 
+              RectangleBox[{2, -5}]}, {RectangleBox[{1, -6}], 
+              RectangleBox[{2, -6}]}, {RectangleBox[{1, -7}], 
+              RectangleBox[{2, -7}]}, {RectangleBox[{1, -8}], 
+              RectangleBox[{2, -8}], RectangleBox[{3, -8}]}, {
+              RectangleBox[{1, -9}], RectangleBox[{2, -9}], 
+              RectangleBox[{3, -9}]}, {RectangleBox[{1, -10}], 
+              RectangleBox[{2, -10}], RectangleBox[{3, -10}]}, {
+              RectangleBox[{1, -11}], RectangleBox[{2, -11}], 
+              RectangleBox[{3, -11}], RectangleBox[{4, -11}]}, {
+              RectangleBox[{1, -12}], RectangleBox[{2, -12}], 
+              RectangleBox[{3, -12}], RectangleBox[{4, -12}]}, {
+              RectangleBox[{1, -13}], RectangleBox[{2, -13}], 
+              RectangleBox[{3, -13}], RectangleBox[{4, -13}]}, {
+              RectangleBox[{1, -14}], RectangleBox[{2, -14}], 
+              RectangleBox[{3, -14}], RectangleBox[{4, -14}], 
+              RectangleBox[{5, -14}]}, {RectangleBox[{1, -15}], 
+              RectangleBox[{2, -15}], RectangleBox[{3, -15}], 
+              RectangleBox[{4, -15}], RectangleBox[{5, -15}]}, {
+              RectangleBox[{1, -16}], RectangleBox[{2, -16}], 
+              RectangleBox[{3, -16}], RectangleBox[{4, -16}], 
+              RectangleBox[{5, -16}]}},
+            DisplayFunction->Identity,
+            Frame->True,
+            FrameTicks->False,
+            
+            GridLines->
+             FrontEndValueCache[{None, Range[#, #2]& }, {
+              None, {-16., -15., -14., -13., -12., -11., -10., -9., -8., -7., \
+-6., -5., -4., -3., -2., -1., 0.}}],
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->{{1, Automatic}, {-16, 0}},
+            PlotRangePadding->{{0, 1.5}, 0}], {290.25, -226.8}, 
+           ImageScaled[{0.5, 0.5}], {175.5, 432}]}, {}},
+        ImageSize->{
+          UpTo[378], 
+          UpTo[432]},
+        PlotRange->{{0, 378.}, {-453.6, 0}},
+        PlotRangePadding->{6, 5}], {9.075000000000001, -864}, 
+       ImageScaled[{0, 0}], {363, 432}]}, {}},
+    ImageSize->Automatic,
+    PlotRangePadding->{6, 5}], ",", 
+   GraphicsBox[{{}, {InsetBox[
+       GraphicsBox[
+        {Arrowheads[{{-0.02, 0.5, 
+            GraphicsBox[{
+              LineBox[
+               
+               NCache[{{{0, 0}, {1, 3^Rational[1, 2]}}, {{0, 0}, {
+                  1, -3^Rational[1, 2]}}}, {{{0, 0}, {
+                  1, 1.7320508075688772`}}, {{0, 0}, {
+                  1, -1.7320508075688772`}}}]]}]}}], 
+         GeometricTransformationBox[{
+           {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+           {GrayLevel[0], GeometricTransformationBox[
+             TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+              "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+            {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {1, 
+          0}], GeometricTransformationBox[{
+           {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+           {GrayLevel[0], GeometricTransformationBox[
+             TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+              "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+            {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {2, 
+          0}], GeometricTransformationBox[{
+           {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+           {GrayLevel[0], GeometricTransformationBox[
+             TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+              "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+            {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {3, 
+          0}], {GeometricTransformationBox[{
+            {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+            {GrayLevel[0], GeometricTransformationBox[
+              TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+               "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+             {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {4,
+            0}], ArrowBox[BSplineCurveBox[
+           NCache[{{4.5, 1}, {4.5, 1 + 3^Rational[1, 2]}, {
+             3., 1 + 3^Rational[1, 2]}, {1.5, 1 + 3^Rational[1, 2]}, {
+             1.5, 1}}, {{4.5, 1}, {4.5, 2.732050807568877}, {3., 
+             2.732050807568877}, {1.5, 2.732050807568877}, {1.5, 1}}],
+           SplineWeights->{1, 0.5, 1, 0.5, 1}]]}},
+        ImageSize->{200, Automatic},
+        PlotRangePadding->{0, {0, 0.2}}], {11.600000000000001, -432}, 
+       ImageScaled[{0, 0}], {200, 146.60254037844388}], InsetBox[
+       GraphicsBox[{{}, {InsetBox[
+           
+           GraphicsBox[{DiskBox[{1, -1}, 0.35], DiskBox[{2, -2}, 0.35], 
+             DiskBox[{3, -3}, 0.35], DiskBox[{4, -4}, 0.35], 
+             DiskBox[{1, -5}, 0.35], DiskBox[{2, -6}, 0.35], 
+             DiskBox[{3, -7}, 0.35], DiskBox[{4, -8}, 0.35], 
+             DiskBox[{1, -9}, 0.35], DiskBox[{2, -10}, 0.35], 
+             DiskBox[{3, -11}, 0.35], DiskBox[{4, -12}, 0.35], 
+             DiskBox[{1, -13}, 0.35], DiskBox[{2, -14}, 0.35], 
+             DiskBox[{3, -15}, 0.35], DiskBox[{4, -16}, 0.35]},
+            DisplayFunction->Identity,
+            
+            GridLines->FrontEndValueCache[
+             Range[#, #2]& , {{0.5, 1.5, 2.5, 3.5, 
+               4.5}, {-16.5, -15.5, -14.5, -13.5, -12.5, -11.5, -10.5, -9.5, \
+-8.5, -7.5, -6.5, -5.5, -4.5, -3.5, -2.5, -1.5, -0.5}}],
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->{{0.5, 4.5}, {-16.5, -0.5}}], {54., -226.8}, 
+           ImageScaled[{0.5, 0.5}], {108., 432}], InsetBox[
+           GraphicsBox[{},
+            DisplayFunction->Identity,
+            Frame->True,
+            FrameTicks->False,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->{{0, 2}, {0, 16}}], {135., -226.8}, 
+           ImageScaled[{0.5, 0.5}], {54., 432}], InsetBox[
+           GraphicsBox[
+            {GrayLevel[0.8], EdgeForm[GrayLevel[0]], {}, 
+             RectangleBox[{1, -2}], 
+             RectangleBox[{1, -3}], {RectangleBox[{1, -4}], 
+              RectangleBox[{2, -4}]}, 
+             RectangleBox[{1, -5}], {RectangleBox[{1, -6}], 
+              RectangleBox[{2, -6}]}, {RectangleBox[{1, -7}], 
+              RectangleBox[{2, -7}]}, {RectangleBox[{1, -8}], 
+              RectangleBox[{2, -8}], RectangleBox[{3, -8}]}, {
+              RectangleBox[{1, -9}], RectangleBox[{2, -9}]}, {
+              RectangleBox[{1, -10}], RectangleBox[{2, -10}], 
+              RectangleBox[{3, -10}]}, {RectangleBox[{1, -11}], 
+              RectangleBox[{2, -11}], RectangleBox[{3, -11}]}, {
+              RectangleBox[{1, -12}], RectangleBox[{2, -12}], 
+              RectangleBox[{3, -12}], RectangleBox[{4, -12}]}, {
+              RectangleBox[{1, -13}], RectangleBox[{2, -13}], 
+              RectangleBox[{3, -13}]}, {RectangleBox[{1, -14}], 
+              RectangleBox[{2, -14}], RectangleBox[{3, -14}], 
+              RectangleBox[{4, -14}]}, {RectangleBox[{1, -15}], 
+              RectangleBox[{2, -15}], RectangleBox[{3, -15}], 
+              RectangleBox[{4, -15}]}, {RectangleBox[{1, -16}], 
+              RectangleBox[{2, -16}], RectangleBox[{3, -16}], 
+              RectangleBox[{4, -16}], RectangleBox[{5, -16}]}},
+            DisplayFunction->Identity,
+            Frame->True,
+            FrameTicks->False,
+            
+            GridLines->
+             FrontEndValueCache[{None, Range[#, #2]& }, {
+              None, {-16., -15., -14., -13., -12., -11., -10., -9., -8., -7., \
+-6., -5., -4., -3., -2., -1., 0.}}],
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->{{1, Automatic}, {-16, 0}},
+            PlotRangePadding->{{0, 1.5}, 0}], {249.75, -226.8}, 
+           ImageScaled[{0.5, 0.5}], {175.5, 432}], InsetBox[
+           GraphicsBox[
+            {GrayLevel[0.5], EdgeForm[GrayLevel[0]], {}, {}, 
+             RectangleBox[{1, -3}], RectangleBox[{1, -4}], 
+             RectangleBox[{1, -5}], 
+             RectangleBox[{1, -6}], {RectangleBox[{1, -7}], 
+              RectangleBox[{2, -7}]}, {RectangleBox[{1, -8}], 
+              RectangleBox[{2, -8}]}, {RectangleBox[{1, -9}], 
+              RectangleBox[{2, -9}]}, {RectangleBox[{1, -10}], 
+              RectangleBox[{2, -10}]}, {RectangleBox[{1, -11}], 
+              RectangleBox[{2, -11}], RectangleBox[{3, -11}]}, {
+              RectangleBox[{1, -12}], RectangleBox[{2, -12}], 
+              RectangleBox[{3, -12}]}, {RectangleBox[{1, -13}], 
+              RectangleBox[{2, -13}], RectangleBox[{3, -13}]}, {
+              RectangleBox[{1, -14}], RectangleBox[{2, -14}], 
+              RectangleBox[{3, -14}]}, {RectangleBox[{1, -15}], 
+              RectangleBox[{2, -15}], RectangleBox[{3, -15}], 
+              RectangleBox[{4, -15}]}, {RectangleBox[{1, -16}], 
+              RectangleBox[{2, -16}], RectangleBox[{3, -16}], 
+              RectangleBox[{4, -16}]}},
+            DisplayFunction->Identity,
+            Frame->True,
+            FrameTicks->False,
+            
+            GridLines->
+             FrontEndValueCache[{None, Range[#, #2]& }, {
+              None, {-16., -15., -14., -13., -12., -11., -10., -9., -8., -7., \
+-6., -5., -4., -3., -2., -1., 0.}}],
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->{{1, Automatic}, {-16, 0}},
+            PlotRangePadding->{{0, 1.5}, 0}], {411.75, -226.8}, 
+           ImageScaled[{0.5, 0.5}], {148.5, 432}]}, {}},
+        ImageSize->{
+          UpTo[486], 
+          UpTo[432]},
+        PlotRange->{{0, 486.}, {-453.6, 0}},
+        PlotRangePadding->{6, 5}], {11.600000000000001, -864}, 
+       ImageScaled[{0, 0}], {464, 432}]}, {}},
+    ImageSize->Automatic,
+    PlotRangePadding->{6, 5}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.870267180743952*^9, 3.8702671887815285`*^9}},
+ CellLabel->"Out[18]=",ExpressionUUID->"5af4aedc-d754-4b9b-819f-c64a074ea569"]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{101, Automatic}, {Automatic, 99.5}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"adecb004-c10d-4e80-9229-87cf2926ed66"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 23004, 544, 780, "Input",ExpressionUUID->"576fe959-4ce7-41f6-bff5-4fa3b7d5ef69"],
+Cell[23587, 568, 18817, 368, 235, "Output",ExpressionUUID->"5af4aedc-d754-4b9b-819f-c64a074ea569"]
+}, Open  ]]
+}
+]
+*)
+
