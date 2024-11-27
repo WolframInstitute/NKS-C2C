@@ -1,0 +1,124 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3743,        116]
+NotebookOptionsPosition[      3390,        102]
+NotebookOutlinePosition[      3791,        118]
+CellTagsIndexPosition[      3748,        115]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"GraphicsRow", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ArrayPlot", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"ResourceFunction", "[", "\"\<TagSystem\>\"", "]"}], "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", 
+          RowBox[{"#1", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}], "}"}], ",", 
+        RowBox[{"#1", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], ",", "20"}], "]"}], ",", 
+      InterpretationBox[
+       DynamicModuleBox[{Typeset`open = False}, 
+        TemplateBox[{"Expression", "SequenceIcon", 
+          GridBox[{{
+             RowBox[{
+               TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+               TagBox["Sequence", "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+               TagBox["2", "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Byte count: \"", "IconizedLabel"], 
+               "\[InvisibleSpace]", 
+               TagBox["168", "IconizedItem"]}]}}, 
+           GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+           "Column", 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+          Dynamic[Typeset`open]},
+         "IconizedObject"]],
+       Sequence[Mesh -> Automatic, Frame -> True],
+       SelectWithContents->True,
+       Selectable->False]}], "]"}], "&"}], "/@", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", "0", "}"}], "->", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "0"}], "}"}]}], ",", 
+         RowBox[{
+          RowBox[{"{", "1", "}"}], "->", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "0"}], "}"}]}]}], "}"}], ",", 
+       RowBox[{"{", "1", "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", "0", "}"}], "->", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "1"}], "}"}]}], ",", 
+         RowBox[{
+          RowBox[{"{", "1", "}"}], "->", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "0"}], "}"}]}]}], "}"}], ",", 
+       RowBox[{"{", "1", "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", "0", "}"}], "->", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "1"}], "}"}]}], ",", 
+         RowBox[{
+          RowBox[{"{", "1", "}"}], "->", 
+          RowBox[{"{", "0", "}"}]}]}], "}"}], ",", 
+       RowBox[{"{", "0", "}"}]}], "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.867961311199628*^9},ExpressionUUID->"2e8ba8f5-f091-41c4-8c6e-\
+8cce79274983"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{53, Automatic}, {104.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"64e95259-f2ec-4de3-9b6b-745757047647"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2828, 80, 95, "Input",ExpressionUUID->"2e8ba8f5-f091-41c4-8c6e-8cce79274983"]
+}
+]
+*)
+

@@ -1,0 +1,89 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2583,         81]
+NotebookOptionsPosition[      2232,         67]
+NotebookOutlinePosition[      2631,         83]
+CellTagsIndexPosition[      2588,         80]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Framed", "[", 
+  RowBox[{
+   RowBox[{"ResourceFunction", "[", "\"\<RaggedDigitsPlot\>\"", "]"}], "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"IntegerDigits", "[", 
+       RowBox[{"#", ",", "2"}], "]"}], "&"}], "/@", 
+     RowBox[{"NestList", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"EvenQ", "[", "#1", "]"}], ",", 
+          FractionBox[
+           RowBox[{"5", " ", "#1"}], "2"], ",", 
+          FractionBox[
+           RowBox[{"#1", "+", "1"}], "2"]}], "]"}], "&"}], ",", "6", ",", 
+       "200"}], "]"}]}], ",", 
+    InterpretationBox[
+     DynamicModuleBox[{Typeset`open = False}, 
+      TemplateBox[{"Expression", 
+        RowBox[{
+          DynamicBox[
+           FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+          "\[Rule]", 
+          DynamicBox[
+           FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+        GridBox[{{
+           RowBox[{
+             TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+             TagBox["Rule", "IconizedItem"]}]}, {
+           RowBox[{
+             TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+             TagBox["56", "IconizedItem"]}]}}, 
+         GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+         "Column", 
+         GridBoxItemSize -> {
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+        Dynamic[Typeset`open]},
+       "IconizedObject"]],
+     Mesh -> False,
+     SelectWithContents->True,
+     Selectable->False]}], "]"}], "]"}]], "Input",ExpressionUUID->"f58aefbd-\
+6a2c-4b65-9451-b4c10fa2cb48"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{108, Automatic}, {77, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"085b1d31-dbee-4b99-b011-f9976cedee29"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1670, 45, 74, "Input",ExpressionUUID->"f58aefbd-6a2c-4b65-9451-b4c10fa2cb48"]
+}
+]
+*)
+

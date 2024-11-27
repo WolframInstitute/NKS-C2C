@@ -1,0 +1,140 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4299,        132]
+NotebookOptionsPosition[      3948,        118]
+NotebookOutlinePosition[      4346,        134]
+CellTagsIndexPosition[      4303,        131]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"rule", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "1", ",", 
+          RowBox[{"-", "1"}]}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "0", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"2", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"4", ",", "1", ",", 
+          RowBox[{"-", "1"}]}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"2", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", "0", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"3", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", "1", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"3", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"4", ",", "1", ",", 
+          RowBox[{"-", "1"}]}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"4", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"4", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"4", ",", "0", ",", 
+          RowBox[{"-", "1"}]}], "}"}]}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"GraphicsRow", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"RulePlot", "[", 
+       RowBox[{
+        RowBox[{"TuringMachine", "[", "rule", "]"}], ",", "#", ",", 
+        InterpretationBox[
+         DynamicModuleBox[{Typeset`open = False}, 
+          TemplateBox[{"Expression", 
+            RowBox[{
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+              "\[Rule]", 
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+            
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                 TagBox["Rule", "IconizedItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Byte count: \"", "IconizedLabel"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["56", "IconizedItem"]}]}}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+             "Column", 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+            Dynamic[Typeset`open]},
+           "IconizedObject"]],
+         ImageSize -> Medium,
+         SelectWithContents->True,
+         Selectable->False]}], "]"}], "&"}], "/@", 
+     RowBox[{"Partition", "[", 
+      RowBox[{
+       RowBox[{"TuringMachine", "[", 
+        RowBox[{"rule", ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "}"}], ",", "0"}], "}"}]}], "}"}], ",", "1750"}], 
+        "]"}], ",", "250"}], "]"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.867959934111927*^9},ExpressionUUID->"749a4f76-c2c2-4094-b4c3-\
+4814fc5d9ba0"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{87, Automatic}, {83, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9e572463-812b-49a6-9f62-4377f55b71fb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3386, 96, 130, "Input",ExpressionUUID->"749a4f76-c2c2-4094-b4c3-4814fc5d9ba0"]
+}
+]
+*)
+

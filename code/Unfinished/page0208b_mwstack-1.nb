@@ -1,0 +1,122 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3785,        114]
+NotebookOptionsPosition[      3432,        100]
+NotebookOutlinePosition[      3832,        116]
+CellTagsIndexPosition[      3789,        113]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"ColorRules", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"0", "\[Rule]", "White"}], ",", 
+        RowBox[{"1", "\[Rule]", 
+         RowBox[{"GrayLevel", "[", "0.85`", "]"}]}], ",", 
+        RowBox[{"2", "\[Rule]", 
+         RowBox[{"GrayLevel", "[", "0.15`", "]"}]}]}], "}"}]}], ",", 
+     RowBox[{"ImageSize", "->", "Medium"}]}], "]"}], "&"}], "/@", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"PadRight", "[", 
+      RowBox[{"Sort", "[", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringSplit", "[", 
+            RowBox[{"#", ",", "\"\<\>\""}], "]"}], "&"}], "/@", 
+          RowBox[{"Last", "[", 
+           RowBox[{
+            RowBox[{"ResourceFunction", "[", "\"\<MultiwaySystem\>\"", "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "]"}]}], ")"}], "/.", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<A\>\"", "->", "1"}], ",", 
+          RowBox[{"\"\<B\>\"", "->", "2"}]}], "}"}]}], "]"}], "]"}], "&"}], "/@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<BB\>\"", "\[Rule]", "\"\<A\>\""}], ",", 
+          RowBox[{"\"\<AAA\>\"", "\[Rule]", "\"\<BB\>\""}], ",", 
+          RowBox[{"\"\<A\>\"", "\[Rule]", "\"\<ABA\>\""}]}], "}"}], ",", 
+        "\"\<BABBA\>\"", ",", "11"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<B\>\"", "\[Rule]", "\"\<BB\>\""}], ",", 
+          RowBox[{"\"\<BBB\>\"", "\[Rule]", "\"\<AAAA\>\""}]}], "}"}], ",", 
+        "\"\<B\>\"", ",", "20"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<A\>\"", "\[Rule]", "\"\<AB\>\""}], ",", 
+          RowBox[{"\"\<B\>\"", "\[Rule]", "\"\<A\>\""}]}], "}"}], ",", 
+        "\"\<A\>\"", ",", "13"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<B\>\"", "\[Rule]", "\"\<AA\>\""}], ",", 
+          RowBox[{"\"\<B\>\"", "\[Rule]", "\"\<BB\>\""}]}], "}"}], ",", 
+        "\"\<B\>\"", ",", "12"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<BBAA\>\"", "\[Rule]", "\"\<A\>\""}], ",", 
+          RowBox[{"\"\<AB\>\"", "\[Rule]", "\"\<BABA\>\""}]}], "}"}], ",", 
+        "\"\<BABBA\>\"", ",", "12"}], "}"}]}], "}"}]}], ")"}]}]], "Input",Expr\
+essionUUID->"f84e61e7-9d11-4482-bb72-93834fe51d12"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a3e5c48b-b12b-4a97-b948-900843b035ec"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2870, 78, 143, "Input",ExpressionUUID->"f84e61e7-9d11-4482-bb72-93834fe51d12"]
+}
+]
+*)
+

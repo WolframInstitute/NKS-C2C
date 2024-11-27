@@ -1,0 +1,82 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2151,         74]
+NotebookOptionsPosition[      1797,         60]
+NotebookOutlinePosition[      2198,         76]
+CellTagsIndexPosition[      2155,         73]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SeedRandom", "[", 
+   RowBox[{"45614", ",", 
+    RowBox[{"Method", "->", "\"\<Legacy\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ArrayPlot", "/@", 
+    RowBox[{
+     RowBox[{"CellularAutomaton", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"976", ",", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1"}], "}"}]}], "}"}], ",", 
+       RowBox[{"BlockRandom", "@", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"#", ",", 
+             RowBox[{"100", "-", "#"}]}], "}"}], "->", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0"}], "}"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"60", ",", "60"}], "}"}]}], "]"}]}], ",", "999"}], "]"}], 
+     "[", 
+     RowBox[{"[", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "5", ",", "10", ",", "100", ",", "1000"}], 
+       "}"}], "]"}], "]"}]}], "&"}], "/@", 
+  RowBox[{"{", 
+   RowBox[{"45", ",", "55"}], "}"}]}]}], "Input",
+ CellChangeTimes->{
+  3.868457346373707*^9},ExpressionUUID->"28723617-3f04-4727-a61a-\
+c084eeba82da"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{168, Automatic}, {55.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"34c76597-cb00-49ba-997a-e77639052926"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1235, 38, 105, "Input",ExpressionUUID->"28723617-3f04-4727-a61a-c084eeba82da"]
+}
+]
+*)
+

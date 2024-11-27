@@ -1,0 +1,100 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2953,         92]
+NotebookOptionsPosition[      2599,         78]
+NotebookOutlinePosition[      3000,         94]
+CellTagsIndexPosition[      2957,         91]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Graphics3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"Sphere", "[", 
+     RowBox[{
+      SqrtBox["2"], " ", 
+      RowBox[{"Select", "[", 
+       RowBox[{
+        RowBox[{"Flatten", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", 
+               RowBox[{"-", "1"}], ",", "0"}], "}"}], " ", "+", " ", 
+             RowBox[{"a", "*", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "1", ",", "1"}], "}"}]}], " ", "+", " ", 
+             RowBox[{"b", "*", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "1", ",", 
+                RowBox[{"-", "1"}]}], "}"}]}], "+", 
+             RowBox[{"c", "*", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "1", ",", "0"}], "}"}]}]}], ",", " ", 
+            RowBox[{"{", 
+             RowBox[{"a", ",", 
+              RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"b", ",", 
+              RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"c", ",", 
+              RowBox[{"-", "5"}], ",", "5"}], "}"}]}], "]"}], ",", "2"}], 
+         "]"}], ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Abs", "[", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], "\[LessEqual]", "3"}], 
+           " ", "&&", " ", 
+           RowBox[{
+            RowBox[{"Abs", "[", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "]"}], "\[LessEqual]", "3"}], 
+           " ", "&&", " ", 
+           RowBox[{
+            RowBox[{"Abs", "[", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "3", "]"}], "]"}], "]"}], "\[LessEqual]", " ", 
+            "3"}]}], ")"}], "&"}]}], "]"}]}], "]"}], "}"}], ",", 
+   RowBox[{"PlotRangePadding", "->", "0"}]}], "]"}]], "Input",ExpressionUUID->\
+"fc9e41df-12e4-47bd-a569-73316befa84c"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{96.5, Automatic}, {100, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"416a6265-3bd3-4d80-8086-6aef27a00c79"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2037, 56, 151, "Input",ExpressionUUID->"fc9e41df-12e4-47bd-a569-73316befa84c"]
+}
+]
+*)
+

@@ -1,0 +1,383 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16309,        375]
+NotebookOptionsPosition[     15822,        358]
+NotebookOutlinePosition[     16224,        374]
+CellTagsIndexPosition[     16181,        371]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"hist", "=", 
+      RowBox[{
+       RowBox[{"ResourceFunction", "[", "\"\<CyclicTagSystem\>\"", "]"}], "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", "1", "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+        RowBox[{"{", "1", "}"}], ",", "20"}], "]"}]}], ",", 
+     RowBox[{"icon", "=", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"pos", ",", "r", ",", "phase"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"GrayLevel", "[", ".15", "]"}], ",", 
+          RowBox[{"Circle", "[", 
+           RowBox[{"pos", ",", "r"}], "]"}], ",", 
+          RowBox[{"GrayLevel", "[", ".3", "]"}], ",", 
+          RowBox[{"Disk", "[", 
+           RowBox[{"pos", ",", "r", ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Pi", "/", "2"}], ",", 
+               RowBox[{"3", 
+                RowBox[{"Pi", "/", "2"}]}]}], "}"}], "+", 
+             RowBox[{"phase", " ", "\[Pi]"}]}]}], "]"}]}], "}"}]}], "]"}]}]}],
+     "}"}], ",", 
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Graphics", "[", 
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{"hist", ",", 
+          InterpretationBox[
+           DynamicModuleBox[{Typeset`open = False}, 
+            TemplateBox[{"Expression", "SequenceIcon", 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                   TagBox["Sequence", "IconizedItem"]}]}, {
+                 RowBox[{
+                   TagBox["\"Length: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["3", "IconizedItem"]}]}, {
+                 RowBox[{
+                   TagBox["\"Byte count: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["560", "IconizedItem"]}]}}, 
+               GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+               "Column", 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+              Dynamic[Typeset`open]},
+             "IconizedObject"]],
+           Sequence[
+           ColorRules -> {0 -> GrayLevel[0.85], 1 -> Black}, MeshStyle -> 
+            GrayLevel[0.15], Mesh -> Automatic],
+           SelectWithContents->True,
+           Selectable->False]}], "]"}], "]"}], ",", 
+       RowBox[{"Graphics", "[", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"With", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"pos", "=", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1.2"}], ",", 
+                 RowBox[{
+                  RowBox[{"Length", "[", "hist", "]"}], "-", "i"}]}], "}"}]}],
+               "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"icon", "[", 
+                RowBox[{"pos", ",", ".4", ",", 
+                 RowBox[{"Mod", "[", 
+                  RowBox[{"i", ",", "2"}], "]"}]}], "]"}], ",", 
+               RowBox[{"GrayLevel", "[", ".15", "]"}], ",", 
+               RowBox[{"Line", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"pos", "+", 
+                   RowBox[{"{", 
+                    RowBox[{".4", ",", "0"}], "}"}]}], ",", 
+                  RowBox[{"pos", "+", 
+                   RowBox[{"{", 
+                    RowBox[{"1.2", ",", "0"}], "}"}]}]}], "}"}], "]"}]}], 
+              "}"}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", 
+             RowBox[{
+              RowBox[{"Length", "[", "hist", "]"}], "-", "1"}]}], "}"}]}], 
+          "]"}], ",", 
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", 
+             RowBox[{
+               DynamicBox[
+                FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+               "\[Rule]", 
+               DynamicBox[
+                FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  TagBox["Rule", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["72", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          ImageSize -> 50,
+          SelectWithContents->True,
+          Selectable->False]}], "]"}]}], "}"}], ",", 
+     InterpretationBox[
+      DynamicModuleBox[{Typeset`open = False}, 
+       TemplateBox[{"Expression", "SequenceIcon", 
+         GridBox[{{
+            RowBox[{
+              TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["Sequence", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["4", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Byte count: \"", "IconizedLabel"], 
+              "\[InvisibleSpace]", 
+              TagBox["456", "IconizedItem"]}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+          "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+         Dynamic[Typeset`open]},
+        "IconizedObject"]],
+      Sequence[
+      Frame -> True, FrameTicks -> False, PlotRangePadding -> {0.75, 0.25}, 
+       ImageSize -> {Automatic, 400}],
+      SelectWithContents->True,
+      Selectable->False]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8704449274848537`*^9, 3.8704449511060276`*^9}, {
+  3.8704449982886505`*^9, 3.8704450096750655`*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"61ba6d93-5353-4214-a4a6-6c523b070891"],
+
+Cell[BoxData[
+ GraphicsBox[{{RasterBox[CompressedData["
+1:eJztlsEJgDAMRQN68+wAzuAA7uAIgmcH9+IIFq8SU2zTpE0CJYevze+jfpy2
+Y907ABjDGsLqgaprofT5qfPVY9/n1sv4wzoA93znLztf+nza/dngj3//cTqf
+vzb4/+crfT9s8Jf2Jzc/z/58+dAG/9R8tft/poM/tz+5/b879VwunfKH63Xw
+r5cvpbfBR2/+UroN/rh/G/moNx9s3D/p/JX2r13Hyvmm6p6vJXSsPF/z6Fg5
+nzw6Vs43Vb8BxmTuWg==
+     "], {{0, 0}, {11, 21}}, {0, 1}], GeometricTransformationBox[{
+      {GrayLevel[0.15], 
+       StyleBox[LineBox[{{{0, 0}, {1, 0}}, {{0, 1}, {1, 1}}}],
+        Antialiasing->False]}, 
+      {GrayLevel[0.15], 
+       StyleBox[LineBox[{{{0, 0}, {0, 1}}, {{1, 0}, {1, 1}}}],
+        Antialiasing->False]}}, {{{0, 0}}, {{1, 0}}, {{2, 0}}, {{3, 0}}, {{4, 
+     0}}, {{5, 0}}, {{6, 0}}, {{7, 0}}, {{8, 0}}, {{9, 0}}, {{0, 1}}, {{1, 
+     1}}, {{2, 1}}, {{3, 1}}, {{4, 1}}, {{5, 1}}, {{6, 1}}, {{7, 1}}, {{8, 
+     1}}, {{9, 1}}, {{10, 1}}, {{0, 2}}, {{1, 2}}, {{2, 2}}, {{3, 2}}, {{4, 
+     2}}, {{5, 2}}, {{6, 2}}, {{7, 2}}, {{8, 2}}, {{9, 2}}, {{10, 2}}, {{0, 
+     3}}, {{1, 3}}, {{2, 3}}, {{3, 3}}, {{4, 3}}, {{5, 3}}, {{6, 3}}, {{7, 
+     3}}, {{8, 3}}, {{0, 4}}, {{1, 4}}, {{2, 4}}, {{3, 4}}, {{4, 4}}, {{5, 
+     4}}, {{6, 4}}, {{7, 4}}, {{8, 4}}, {{0, 5}}, {{1, 5}}, {{2, 5}}, {{3, 
+     5}}, {{4, 5}}, {{5, 5}}, {{6, 5}}, {{7, 5}}, {{8, 5}}, {{9, 5}}, {{0, 
+     6}}, {{1, 6}}, {{2, 6}}, {{3, 6}}, {{4, 6}}, {{5, 6}}, {{6, 6}}, {{7, 
+     6}}, {{8, 6}}, {{9, 6}}, {{0, 7}}, {{1, 7}}, {{2, 7}}, {{3, 7}}, {{4, 
+     7}}, {{5, 7}}, {{6, 7}}, {{7, 7}}, {{0, 8}}, {{1, 8}}, {{2, 8}}, {{3, 
+     8}}, {{4, 8}}, {{5, 8}}, {{6, 8}}, {{7, 8}}, {{8, 8}}, {{0, 9}}, {{1, 
+     9}}, {{2, 9}}, {{3, 9}}, {{4, 9}}, {{5, 9}}, {{6, 9}}, {{0, 10}}, {{1, 
+     10}}, {{2, 10}}, {{3, 10}}, {{4, 10}}, {{5, 10}}, {{6, 10}}, {{0, 
+     11}}, {{1, 11}}, {{2, 11}}, {{3, 11}}, {{4, 11}}, {{0, 12}}, {{1, 
+     12}}, {{2, 12}}, {{3, 12}}, {{4, 12}}, {{5, 12}}, {{0, 13}}, {{1, 
+     13}}, {{2, 13}}, {{3, 13}}, {{0, 14}}, {{1, 14}}, {{2, 14}}, {{3, 
+     14}}, {{0, 15}}, {{1, 15}}, {{0, 16}}, {{1, 16}}, {{0, 17}}, {{1, 
+     17}}, {{2, 17}}, {{0, 18}}, {{1, 18}}, {{2, 18}}, {{0, 19}}, {{0, 
+     20}}}]}, {{{
+      {GrayLevel[0.15], CircleBox[{-1.2, 20}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 20}, 0.4, 
+        NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+         7.853981633974483}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 20}, {0., 20}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 19}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 19}, 0.4, 
+        NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+         4.71238898038469}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 19}, {0., 19}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 18}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 18}, 0.4, 
+        NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+         7.853981633974483}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 18}, {0., 18}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 17}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 17}, 0.4, 
+        NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+         4.71238898038469}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 17}, {0., 17}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 16}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 16}, 0.4, 
+        NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+         7.853981633974483}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 16}, {0., 16}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 15}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 15}, 0.4, 
+        NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+         4.71238898038469}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 15}, {0., 15}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 14}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 14}, 0.4, 
+        NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+         7.853981633974483}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 14}, {0., 14}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 13}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 13}, 0.4, 
+        NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+         4.71238898038469}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 13}, {0., 13}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 12}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 12}, 0.4, 
+        NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+         7.853981633974483}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 12}, {0., 12}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 11}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 11}, 0.4, 
+        NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+         4.71238898038469}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 11}, {0., 11}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 10}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 10}, 0.4, 
+        NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+         7.853981633974483}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 10}, {0., 10}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 9}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 9}, 0.4, 
+        NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+         4.71238898038469}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 9}, {0., 9}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 8}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 8}, 0.4, 
+        NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+         7.853981633974483}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 8}, {0., 8}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 7}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 7}, 0.4, 
+        NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+         4.71238898038469}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 7}, {0., 7}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 6}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 6}, 0.4, 
+        NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+         7.853981633974483}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 6}, {0., 6}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 5}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 5}, 0.4, 
+        NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+         4.71238898038469}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 5}, {0., 5}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 4}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 4}, 0.4, 
+        NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+         7.853981633974483}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 4}, {0., 4}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 3}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 3}, 0.4, 
+        NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+         4.71238898038469}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 3}, {0., 3}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 2}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 2}, 0.4, 
+        NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+         7.853981633974483}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 2}, {0., 2}}]}}, {{
+      {GrayLevel[0.15], CircleBox[{-1.2, 1}, 0.4]}, 
+      {GrayLevel[0.3], 
+       DiskBox[{-1.2, 1}, 0.4, 
+        NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+         4.71238898038469}]]}}, 
+     {GrayLevel[0.15], LineBox[{{-0.7999999999999999, 1}, {0., 1}}]}}}},
+  Frame->True,
+  FrameLabel->{None, None},
+  FrameTicks->False,
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->{Automatic, 400},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic},
+  PlotRangePadding->{0.75, 0.25}]], "Output",
+ CellChangeTimes->{{3.8704449519695807`*^9, 3.8704449554993315`*^9}, {
+   3.87044499097046*^9, 3.8704450119023046`*^9}, 3.8704452034176216`*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"283a0603-3a03-42be-896e-ec73b2fee64e"]
+}, Open  ]]
+},
+WindowSize->{959, 1037},
+WindowMargins->{{438.5, Automatic}, {Automatic, 47}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"66709fa1-0aa6-45d5-970a-ea284e0d755f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 6370, 158, 176, "Input",ExpressionUUID->"61ba6d93-5353-4214-a4a6-6c523b070891"],
+Cell[6953, 182, 8853, 173, 417, "Output",ExpressionUUID->"283a0603-3a03-42be-896e-ec73b2fee64e"]
+}, Open  ]]
+}
+]
+*)
+

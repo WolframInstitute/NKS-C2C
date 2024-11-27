@@ -1,0 +1,204 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6183,        196]
+NotebookOptionsPosition[      5702,        179]
+NotebookOutlinePosition[      6102,        195]
+CellTagsIndexPosition[      6059,        192]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"Row", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Characters", "[", "\"\<e[x_][y_]\[Rule] x[x[y]]\>\"", "]"}], "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<[\>\"", "->", 
+        GraphicsBox[{
+          {GrayLevel[0], RectangleBox[{0, 0}]}, 
+          {GrayLevel[1], 
+           InsetBox["\<\"[\"\>", 
+            NCache[{Rational[1, 2], Rational[1, 2]}, {0.5, 0.5}]]}},
+         BaselinePosition->Scaled[0.2],
+         ImageSize->15]}], ",", 
+       RowBox[{"\"\<]\>\"", "->", 
+        GraphicsBox[
+         {GrayLevel[1], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}], 
+          {GrayLevel[0], 
+           InsetBox["\<\"]\"\>", 
+            NCache[{Rational[1, 2], Rational[1, 2]}, {0.5, 0.5}]]}},
+         BaselinePosition->Scaled[0.2],
+         ImageSize->15]}]}], "}"}]}], ",", 
+    InterpretationBox[
+     DynamicModuleBox[{Typeset`open = False}, 
+      TemplateBox[{"Expression", 
+        RowBox[{
+          DynamicBox[
+           FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+          "\[Rule]", 
+          DynamicBox[
+           FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+        GridBox[{{
+           RowBox[{
+             TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+             TagBox["Rule", "IconizedItem"]}]}, {
+           RowBox[{
+             TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+             TagBox["56", "IconizedItem"]}]}}, 
+         GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+         "Column", 
+         GridBoxItemSize -> {
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+        Dynamic[Typeset`open]},
+       "IconizedObject"]],
+     BaseStyle -> Italic,
+     SelectWithContents->True,
+     Selectable->False]}], "]"}]}]], "Input",
+ CellChangeTimes->{3.8702689907467875`*^9},
+ CellLabel->"In[24]:=",ExpressionUUID->"569b8330-8a4c-4cee-85d3-5ffc5f503a66"],
+
+Cell[BoxData[
+ FrameBox[
+  TemplateBox[{"\"e\"", 
+    GraphicsBox[{{
+       GrayLevel[0], 
+       RectangleBox[{0, 0}]}, {
+       GrayLevel[1], 
+       TagBox[
+        InsetBox["[", 
+         NCache[{
+           Rational[1, 2], 
+           Rational[1, 2]}, {0.5, 0.5}]], "InsetString"]}}, BaselinePosition -> 
+     Scaled[0.2], ImageSize -> 15], "\"x\"", "\"_\"", 
+    GraphicsBox[{
+      GrayLevel[1], 
+      EdgeForm[
+       GrayLevel[0]], 
+      RectangleBox[{0, 0}], {
+       GrayLevel[0], 
+       TagBox[
+        InsetBox["]", 
+         NCache[{
+           Rational[1, 2], 
+           Rational[1, 2]}, {0.5, 0.5}]], "InsetString"]}}, BaselinePosition -> 
+     Scaled[0.2], ImageSize -> 15], 
+    GraphicsBox[{{
+       GrayLevel[0], 
+       RectangleBox[{0, 0}]}, {
+       GrayLevel[1], 
+       TagBox[
+        InsetBox["[", 
+         NCache[{
+           Rational[1, 2], 
+           Rational[1, 2]}, {0.5, 0.5}]], "InsetString"]}}, BaselinePosition -> 
+     Scaled[0.2], ImageSize -> 15], "\"y\"", "\"_\"", 
+    GraphicsBox[{
+      GrayLevel[1], 
+      EdgeForm[
+       GrayLevel[0]], 
+      RectangleBox[{0, 0}], {
+       GrayLevel[0], 
+       TagBox[
+        InsetBox["]", 
+         NCache[{
+           Rational[1, 2], 
+           Rational[1, 2]}, {0.5, 0.5}]], "InsetString"]}}, BaselinePosition -> 
+     Scaled[0.2], ImageSize -> 15], "\"\[Rule]\"", "\" \"", "\"x\"", 
+    GraphicsBox[{{
+       GrayLevel[0], 
+       RectangleBox[{0, 0}]}, {
+       GrayLevel[1], 
+       TagBox[
+        InsetBox["[", 
+         NCache[{
+           Rational[1, 2], 
+           Rational[1, 2]}, {0.5, 0.5}]], "InsetString"]}}, BaselinePosition -> 
+     Scaled[0.2], ImageSize -> 15], "\"x\"", 
+    GraphicsBox[{{
+       GrayLevel[0], 
+       RectangleBox[{0, 0}]}, {
+       GrayLevel[1], 
+       TagBox[
+        InsetBox["[", 
+         NCache[{
+           Rational[1, 2], 
+           Rational[1, 2]}, {0.5, 0.5}]], "InsetString"]}}, BaselinePosition -> 
+     Scaled[0.2], ImageSize -> 15], "\"y\"", 
+    GraphicsBox[{
+      GrayLevel[1], 
+      EdgeForm[
+       GrayLevel[0]], 
+      RectangleBox[{0, 0}], {
+       GrayLevel[0], 
+       TagBox[
+        InsetBox["]", 
+         NCache[{
+           Rational[1, 2], 
+           Rational[1, 2]}, {0.5, 0.5}]], "InsetString"]}}, BaselinePosition -> 
+     Scaled[0.2], ImageSize -> 15], 
+    GraphicsBox[{
+      GrayLevel[1], 
+      EdgeForm[
+       GrayLevel[0]], 
+      RectangleBox[{0, 0}], {
+       GrayLevel[0], 
+       TagBox[
+        InsetBox["]", 
+         NCache[{
+           Rational[1, 2], 
+           Rational[1, 2]}, {0.5, 0.5}]], "InsetString"]}}, BaselinePosition -> 
+     Scaled[0.2], ImageSize -> 15]},
+   "Row",
+   BaseStyle->Italic,
+   DisplayFunction->(RowBox[{
+      TemplateSlotSequence[1, "\[InvisibleSpace]"]}]& ),
+   InterpretationFunction->(RowBox[{"Row", "[", 
+      RowBox[{
+        RowBox[{"{", 
+          TemplateSlotSequence[1, ","], "}"}], ",", 
+        RowBox[{"BaseStyle", "\[Rule]", "Italic"}]}], "]"}]& )],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.870268991103732*^9},
+ CellLabel->"Out[24]=",ExpressionUUID->"264a2dac-9ee6-42d3-875d-0f923b7f50e5"]
+}, Open  ]]
+},
+WindowSize->{949, 1037},
+WindowMargins->{{18.5, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"da69e3ca-9d69-413d-996e-f4cbbd616c28"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1972, 50, 37, "Input",ExpressionUUID->"569b8330-8a4c-4cee-85d3-5ffc5f503a66"],
+Cell[2555, 74, 3131, 102, 45, "Output",ExpressionUUID->"264a2dac-9ee6-42d3-875d-0f923b7f50e5"]
+}, Open  ]]
+}
+]
+*)
+

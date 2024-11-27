@@ -1,0 +1,578 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23775,        570]
+NotebookOptionsPosition[     23266,        552]
+NotebookOutlinePosition[     23689,        569]
+CellTagsIndexPosition[     23646,        566]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"RMToAS", "[", 
+     RowBox[{"prog_", ",", "nr_"}], "]"}], ":=", 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"p", "=", 
+         RowBox[{"Length", "[", "prog", "]"}]}], ",", 
+        RowBox[{"g", "=", 
+         RowBox[{
+          UnderoverscriptBox["\[Product]", 
+           RowBox[{"j", "=", "1"}], "nr"], 
+          RowBox[{"Prime", "[", "j", "]"}]}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"p", " ", "g"}], ",", 
+        RowBox[{"Sort", "[", 
+         RowBox[{"Flatten", "[", 
+          RowBox[{"MapIndexed", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"With", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"n", "=", 
+                 RowBox[{
+                  RowBox[{"First", "[", "#2", "]"}], "-", "1"}]}], "}"}], ",", 
+               RowBox[{"#1", "/.", "\[InvisibleSpace]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"i", "[", "r_", "]"}], "\[RuleDelayed]", 
+                   RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"n", "+", 
+                    RowBox[{"j", " ", "p"}]}], "\[Rule]", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Evaluate", "[", 
+                    RowBox[{"Simplify", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Prime", "[", "r", "]"}], " ", 
+                    RowBox[{"(", 
+                    RowBox[{"#1", "-", "n"}], ")"}]}], "+", "n", "+", "1"}], 
+                    "]"}], "]"}], "&"}], ")"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"j", ",", "0", ",", 
+                    RowBox[{"g", "-", "1"}]}], "}"}]}], "]"}]}], ",", 
+                  RowBox[{
+                   RowBox[{"d", "[", 
+                    RowBox[{"r_", ",", "k_"}], "]"}], "\[RuleDelayed]", 
+                   RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"n", "+", 
+                    RowBox[{"j", " ", "p"}]}], "\[Rule]", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Mod", "[", 
+                    RowBox[{"j", ",", 
+                    RowBox[{"Prime", "[", "r", "]"}]}], "]"}], "==", "0"}], 
+                    ",", 
+                    RowBox[{
+                    RowBox[{"Evaluate", "[", 
+                    RowBox[{"Simplify", "[", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"#1", "-", "n"}], 
+                    RowBox[{"Prime", "[", "r", "]"}]], "+", "k", "-", "1"}], 
+                    "]"}], "]"}], "&"}], ",", 
+                    RowBox[{
+                    RowBox[{"#1", "+", "1"}], "&"}]}], "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"j", ",", "0", ",", 
+                    RowBox[{"g", "-", "1"}]}], "}"}]}], "]"}]}]}], "}"}]}]}], 
+              "]"}], "&"}], ",", "prog"}], "]"}], "]"}], "]"}]}], "}"}]}], 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"rule", "=", 
+     RowBox[{"RMToAS", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", "1", "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", "1"}], "}"}], ",", 
+          RowBox[{"{", "2", "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "3"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", "1"}], "}"}]}], "}"}], "/.", "\[InvisibleSpace]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", "a_", "}"}], "\[Rule]", 
+           RowBox[{"i", "[", "a", "]"}]}], ",", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"a_", ",", "b_"}], "}"}], "\[Rule]", 
+           RowBox[{"d", "[", 
+            RowBox[{"a", ",", "b"}], "]"}]}]}], "}"}]}], ",", "2"}], "]"}]}], 
+    "}"}], ",", 
+   RowBox[{"Framed", "@", 
+    RowBox[{"GraphicsGrid", "[", 
+     RowBox[{
+      RowBox[{"Riffle", "[", 
+       RowBox[{
+        RowBox[{"Partition", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"ToString", "[", 
+             RowBox[{
+              RowBox[{"#", "[", "n", "]"}], ",", "InputForm"}], "]"}], "&"}], 
+           "/@", 
+           RowBox[{"Values", "[", 
+            RowBox[{"Last", "@", "rule"}], "]"}]}], ",", "10"}], "]"}], ",", 
+        RowBox[{"Partition", "[", 
+         RowBox[{
+          RowBox[{"Keys", "[", 
+           RowBox[{"Last", "@", "rule"}], "]"}], ",", "10"}], "]"}]}], "]"}], 
+      ",", 
+      RowBox[{"Frame", "->", 
+       RowBox[{"{", 
+        RowBox[{"None", ",", "None", ",", 
+         RowBox[{"Flatten", "@", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"j", ",", "i"}], "}"}], "->", "True"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "10"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "1", ",", "6", ",", "2"}], "}"}]}], "]"}]}]}], 
+        "}"}]}], ",", 
+      RowBox[{"Background", "->", 
+       RowBox[{"{", 
+        RowBox[{"None", ",", 
+         RowBox[{"{", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"GrayLevel", "[", ".9", "]"}], ",", "None"}], "}"}], 
+          "}"}]}], "}"}]}], ",", 
+      RowBox[{"ImageSize", "->", "800"}], ",", 
+      RowBox[{"Spacings", "->", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "2"}], "}"}]}]}], "]"}]}]}], "]"}]}], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"c2f92b2e-9248-48d7-8472-8df224d8d979"],
+
+Cell[BoxData[
+ FrameBox[
+  GraphicsBox[{{{
+      {GrayLevel[0.9], RectangleBox[{675, -68}, {750, -85}]}, 
+      {GrayLevel[0.9], RectangleBox[{600, -68}, {675, -85}]}, 
+      {GrayLevel[0.9], RectangleBox[{525, -68}, {600, -85}]}, 
+      {GrayLevel[0.9], RectangleBox[{450, -68}, {525, -85}]}, 
+      {GrayLevel[0.9], RectangleBox[{375, -68}, {450, -85}]}, 
+      {GrayLevel[0.9], RectangleBox[{300, -68}, {375, -85}]}, 
+      {GrayLevel[0.9], RectangleBox[{225, -68}, {300, -85}]}, 
+      {GrayLevel[0.9], RectangleBox[{150, -68}, {225, -85}]}, 
+      {GrayLevel[0.9], RectangleBox[{75, -68}, {150, -85}]}, 
+      {GrayLevel[0.9], RectangleBox[{0, -68}, {75, -85}]}}, {
+      {GrayLevel[0.9], RectangleBox[{675, -34}, {750, -51}]}, 
+      {GrayLevel[0.9], RectangleBox[{600, -34}, {675, -51}]}, 
+      {GrayLevel[0.9], RectangleBox[{525, -34}, {600, -51}]}, 
+      {GrayLevel[0.9], RectangleBox[{450, -34}, {525, -51}]}, 
+      {GrayLevel[0.9], RectangleBox[{375, -34}, {450, -51}]}, 
+      {GrayLevel[0.9], RectangleBox[{300, -34}, {375, -51}]}, 
+      {GrayLevel[0.9], RectangleBox[{225, -34}, {300, -51}]}, 
+      {GrayLevel[0.9], RectangleBox[{150, -34}, {225, -51}]}, 
+      {GrayLevel[0.9], RectangleBox[{75, -34}, {150, -51}]}, 
+      {GrayLevel[0.9], RectangleBox[{0, -34}, {75, -51}]}}, {
+      {GrayLevel[0.9], RectangleBox[{675, 0}, {750, -17}]}, 
+      {GrayLevel[0.9], RectangleBox[{600, 0}, {675, -17}]}, 
+      {GrayLevel[0.9], RectangleBox[{525, 0}, {600, -17}]}, 
+      {GrayLevel[0.9], RectangleBox[{450, 0}, {525, -17}]}, 
+      {GrayLevel[0.9], RectangleBox[{375, 0}, {450, -17}]}, 
+      {GrayLevel[0.9], RectangleBox[{300, 0}, {375, -17}]}, 
+      {GrayLevel[0.9], RectangleBox[{225, 0}, {300, -17}]}, 
+      {GrayLevel[0.9], RectangleBox[{150, 0}, {225, -17}]}, 
+      {GrayLevel[0.9], RectangleBox[{75, 0}, {150, -17}]}, 
+      {GrayLevel[0.9], RectangleBox[{0, 0}, {75, -17}]}}}, {{
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", 
+         RowBox[{"2", "*", "n"}]}], 
+        NCache[{Rational[75, 2], Rational[-17, 2]}, {37.5, -8.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], " ", "+", " ", "n"}], ")"}], "/", "3"}], 
+        NCache[{Rational[225, 2], Rational[-17, 2]}, {112.5, -8.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"3", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], " ", "+", " ", "n"}], ")"}]}], 
+        NCache[{Rational[375, 2], Rational[-17, 2]}, {187.5, -8.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", " ", "+", " ", "n"}], ")"}], "/", "2"}], 
+        NCache[{Rational[525, 2], Rational[-17, 2]}, {262.5, -8.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "4"}], " ", "+", " ", "n"}], ")"}], "/", "3"}], 
+        NCache[{Rational[675, 2], Rational[-17, 2]}, {337.5, -8.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", 
+         RowBox[{"2", "*", "n"}]}], 
+        NCache[{Rational[825, 2], Rational[-17, 2]}, {412.5, -8.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", "n"}], 
+        NCache[{Rational[975, 2], Rational[-17, 2]}, {487.5, -8.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"3", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], " ", "+", " ", "n"}], ")"}]}], 
+        NCache[{Rational[1125, 2], Rational[-17, 2]}, {562.5, -8.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", "n"}], 
+        NCache[{Rational[1275, 2], Rational[-17, 2]}, {637.5, -8.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", "n"}], 
+        NCache[{Rational[1425, 2], Rational[-17, 2]}, {712.5, -8.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"]}, {
+      InsetBox["0", 
+       NCache[{Rational[75, 2], Rational[-51, 2]}, {37.5, -25.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["1", 
+       NCache[{Rational[225, 2], Rational[-51, 2]}, {112.5, -25.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["2", 
+       NCache[{Rational[375, 2], Rational[-51, 2]}, {187.5, -25.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["3", 
+       NCache[{Rational[525, 2], Rational[-51, 2]}, {262.5, -25.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["4", 
+       NCache[{Rational[675, 2], Rational[-51, 2]}, {337.5, -25.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["5", 
+       NCache[{Rational[825, 2], Rational[-51, 2]}, {412.5, -25.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["6", 
+       NCache[{Rational[975, 2], Rational[-51, 2]}, {487.5, -25.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["7", 
+       NCache[{Rational[1125, 2], Rational[-51, 2]}, {562.5, -25.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["8", 
+       NCache[{Rational[1275, 2], Rational[-51, 2]}, {637.5, -25.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["9", 
+       NCache[{Rational[1425, 2], Rational[-51, 2]}, {712.5, -25.5}], {
+       Center, Center}, {75, 15}]}, {
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", 
+         RowBox[{"2", "*", "n"}]}], 
+        NCache[{Rational[75, 2], Rational[-85, 2]}, {37.5, -42.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", "n"}], 
+        NCache[{Rational[225, 2], Rational[-85, 2]}, {112.5, -42.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"3", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], " ", "+", " ", "n"}], ")"}]}], 
+        NCache[{Rational[375, 2], Rational[-85, 2]}, {187.5, -42.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", " ", "+", " ", "n"}], ")"}], "/", "2"}], 
+        NCache[{Rational[525, 2], Rational[-85, 2]}, {262.5, -42.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", "n"}], 
+        NCache[{Rational[675, 2], Rational[-85, 2]}, {337.5, -42.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", 
+         RowBox[{"2", "*", "n"}]}], 
+        NCache[{Rational[825, 2], Rational[-85, 2]}, {412.5, -42.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], " ", "+", " ", "n"}], ")"}], "/", "3"}], 
+        NCache[{Rational[975, 2], Rational[-85, 2]}, {487.5, -42.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"3", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], " ", "+", " ", "n"}], ")"}]}], 
+        NCache[{Rational[1125, 2], Rational[-85, 2]}, {562.5, -42.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", "n"}], 
+        NCache[{Rational[1275, 2], Rational[-85, 2]}, {637.5, -42.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "4"}], " ", "+", " ", "n"}], ")"}], "/", "3"}], 
+        NCache[{Rational[1425, 2], Rational[-85, 2]}, {712.5, -42.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"]}, {
+      InsetBox["10", 
+       NCache[{Rational[75, 2], Rational[-119, 2]}, {37.5, -59.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["11", 
+       NCache[{Rational[225, 2], Rational[-119, 2]}, {112.5, -59.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["12", 
+       NCache[{Rational[375, 2], Rational[-119, 2]}, {187.5, -59.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["13", 
+       NCache[{Rational[525, 2], Rational[-119, 2]}, {262.5, -59.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["14", 
+       NCache[{Rational[675, 2], Rational[-119, 2]}, {337.5, -59.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["15", 
+       NCache[{Rational[825, 2], Rational[-119, 2]}, {412.5, -59.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["16", 
+       NCache[{Rational[975, 2], Rational[-119, 2]}, {487.5, -59.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["17", 
+       NCache[{Rational[1125, 2], Rational[-119, 2]}, {562.5, -59.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["18", 
+       NCache[{Rational[1275, 2], Rational[-119, 2]}, {637.5, -59.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["19", 
+       NCache[{Rational[1425, 2], Rational[-119, 2]}, {712.5, -59.5}], {
+       Center, Center}, {75, 15}]}, {
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", 
+         RowBox[{"2", "*", "n"}]}], 
+        NCache[{Rational[75, 2], Rational[-153, 2]}, {37.5, -76.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", "n"}], 
+        NCache[{Rational[225, 2], Rational[-153, 2]}, {112.5, -76.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"3", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], " ", "+", " ", "n"}], ")"}]}], 
+        NCache[{Rational[375, 2], Rational[-153, 2]}, {187.5, -76.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", " ", "+", " ", "n"}], ")"}], "/", "2"}], 
+        NCache[{Rational[525, 2], Rational[-153, 2]}, {262.5, -76.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", "n"}], 
+        NCache[{Rational[675, 2], Rational[-153, 2]}, {337.5, -76.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", 
+         RowBox[{"2", "*", "n"}]}], 
+        NCache[{Rational[825, 2], Rational[-153, 2]}, {412.5, -76.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", "n"}], 
+        NCache[{Rational[975, 2], Rational[-153, 2]}, {487.5, -76.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"3", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], " ", "+", " ", "n"}], ")"}]}], 
+        NCache[{Rational[1125, 2], Rational[-153, 2]}, {562.5, -76.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", "n"}], 
+        NCache[{Rational[1275, 2], Rational[-153, 2]}, {637.5, -76.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"], 
+      TagBox[InsetBox[
+        RowBox[{"1", " ", "+", " ", "n"}], 
+        NCache[{Rational[1425, 2], Rational[-153, 2]}, {712.5, -76.5}], {
+        Center, Center}, {75, 15}],
+       "InsetString"]}, {
+      InsetBox["20", 
+       NCache[{Rational[75, 2], Rational[-187, 2]}, {37.5, -93.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["21", 
+       NCache[{Rational[225, 2], Rational[-187, 2]}, {112.5, -93.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["22", 
+       NCache[{Rational[375, 2], Rational[-187, 2]}, {187.5, -93.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["23", 
+       NCache[{Rational[525, 2], Rational[-187, 2]}, {262.5, -93.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["24", 
+       NCache[{Rational[675, 2], Rational[-187, 2]}, {337.5, -93.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["25", 
+       NCache[{Rational[825, 2], Rational[-187, 2]}, {412.5, -93.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["26", 
+       NCache[{Rational[975, 2], Rational[-187, 2]}, {487.5, -93.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["27", 
+       NCache[{Rational[1125, 2], Rational[-187, 2]}, {562.5, -93.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["28", 
+       NCache[{Rational[1275, 2], Rational[-187, 2]}, {637.5, -93.5}], {
+       Center, Center}, {75, 15}], 
+      InsetBox["29", 
+       NCache[{Rational[1425, 2], Rational[-187, 2]}, {712.5, -93.5}], {
+       Center, Center}, {75, 15}]}}, 
+    StyleBox[{{}, {LineBox[{{0, 0}, {0, -17}}], LineBox[{{0, -34}, {0, -51}}],
+        LineBox[{{0, -68}, {0, -85}}], LineBox[{{75, 0}, {75, -17}}], 
+       LineBox[{{75, -34}, {75, -51}}], LineBox[{{75, -68}, {75, -85}}], 
+       LineBox[{{150, 0}, {150, -17}}], LineBox[{{150, -34}, {150, -51}}], 
+       LineBox[{{150, -68}, {150, -85}}], LineBox[{{225, 0}, {225, -17}}], 
+       LineBox[{{225, -34}, {225, -51}}], LineBox[{{225, -68}, {225, -85}}], 
+       LineBox[{{300, 0}, {300, -17}}], LineBox[{{300, -34}, {300, -51}}], 
+       LineBox[{{300, -68}, {300, -85}}], LineBox[{{375, 0}, {375, -17}}], 
+       LineBox[{{375, -34}, {375, -51}}], LineBox[{{375, -68}, {375, -85}}], 
+       LineBox[{{450, 0}, {450, -17}}], LineBox[{{450, -34}, {450, -51}}], 
+       LineBox[{{450, -68}, {450, -85}}], LineBox[{{525, 0}, {525, -17}}], 
+       LineBox[{{525, -34}, {525, -51}}], LineBox[{{525, -68}, {525, -85}}], 
+       LineBox[{{600, 0}, {600, -17}}], LineBox[{{600, -34}, {600, -51}}], 
+       LineBox[{{600, -68}, {600, -85}}], LineBox[{{675, 0}, {675, -17}}], 
+       LineBox[{{675, -34}, {675, -51}}], LineBox[{{675, -68}, {675, -85}}], 
+       LineBox[{{750, 0}, {750, -17}}], LineBox[{{750, -34}, {750, -51}}], 
+       LineBox[{{750, -68}, {750, -85}}], LineBox[{{0, 0}, {75, 0}}], 
+       LineBox[{{75, 0}, {150, 0}}], LineBox[{{150, 0}, {225, 0}}], 
+       LineBox[{{225, 0}, {300, 0}}], LineBox[{{300, 0}, {375, 0}}], 
+       LineBox[{{375, 0}, {450, 0}}], LineBox[{{450, 0}, {525, 0}}], 
+       LineBox[{{525, 0}, {600, 0}}], LineBox[{{600, 0}, {675, 0}}], 
+       LineBox[{{675, 0}, {750, 0}}], LineBox[{{0, -17}, {75, -17}}], 
+       LineBox[{{75, -17}, {150, -17}}], LineBox[{{150, -17}, {225, -17}}], 
+       LineBox[{{225, -17}, {300, -17}}], LineBox[{{300, -17}, {375, -17}}], 
+       LineBox[{{375, -17}, {450, -17}}], LineBox[{{450, -17}, {525, -17}}], 
+       LineBox[{{525, -17}, {600, -17}}], LineBox[{{600, -17}, {675, -17}}], 
+       LineBox[{{675, -17}, {750, -17}}], LineBox[{{0, -34}, {75, -34}}], 
+       LineBox[{{75, -34}, {150, -34}}], LineBox[{{150, -34}, {225, -34}}], 
+       LineBox[{{225, -34}, {300, -34}}], LineBox[{{300, -34}, {375, -34}}], 
+       LineBox[{{375, -34}, {450, -34}}], LineBox[{{450, -34}, {525, -34}}], 
+       LineBox[{{525, -34}, {600, -34}}], LineBox[{{600, -34}, {675, -34}}], 
+       LineBox[{{675, -34}, {750, -34}}], LineBox[{{0, -51}, {75, -51}}], 
+       LineBox[{{75, -51}, {150, -51}}], LineBox[{{150, -51}, {225, -51}}], 
+       LineBox[{{225, -51}, {300, -51}}], LineBox[{{300, -51}, {375, -51}}], 
+       LineBox[{{375, -51}, {450, -51}}], LineBox[{{450, -51}, {525, -51}}], 
+       LineBox[{{525, -51}, {600, -51}}], LineBox[{{600, -51}, {675, -51}}], 
+       LineBox[{{675, -51}, {750, -51}}], LineBox[{{0, -68}, {75, -68}}], 
+       LineBox[{{75, -68}, {150, -68}}], LineBox[{{150, -68}, {225, -68}}], 
+       LineBox[{{225, -68}, {300, -68}}], LineBox[{{300, -68}, {375, -68}}], 
+       LineBox[{{375, -68}, {450, -68}}], LineBox[{{450, -68}, {525, -68}}], 
+       LineBox[{{525, -68}, {600, -68}}], LineBox[{{600, -68}, {675, -68}}], 
+       LineBox[{{675, -68}, {750, -68}}], LineBox[{{0, -85}, {75, -85}}], 
+       LineBox[{{75, -85}, {150, -85}}], LineBox[{{150, -85}, {225, -85}}], 
+       LineBox[{{225, -85}, {300, -85}}], LineBox[{{300, -85}, {375, -85}}], 
+       LineBox[{{375, -85}, {450, -85}}], LineBox[{{450, -85}, {525, -85}}], 
+       LineBox[{{525, -85}, {600, -85}}], LineBox[{{600, -85}, {675, -85}}], 
+       LineBox[{{675, -85}, {750, -85}}]}},
+     Antialiasing->False]},
+   ImageSize->800,
+   PlotRangePadding->{6, 5}],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.870449974810327*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"61768f28-1abe-4078-9356-78853c28db28"]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{137, Automatic}, {-7, Automatic}},
+CellContext->CellGroup,
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3b355eeb-28b2-4562-9a53-64f37770df9a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 5876, 158, 427, "Input",ExpressionUUID->"c2f92b2e-9248-48d7-8472-8df224d8d979"],
+Cell[6459, 182, 16791, 367, 141, "Output",ExpressionUUID->"61768f28-1abe-4078-9356-78853c28db28"]
+}, Open  ]]
+}
+]
+*)
+

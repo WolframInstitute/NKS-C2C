@@ -1,0 +1,50 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1185,         42]
+NotebookOptionsPosition[       835,         28]
+NotebookOutlinePosition[      1235,         44]
+CellTagsIndexPosition[      1192,         41]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+With[{x = 30, y = 21}, ArrayPlot[Table[1 - Sign[Mod[i + 2 j, 5]/.{1->0}], {j, \
+y}, {i, x}], Mesh->All, MeshStyle->Black, PlotRangePadding->None]]\
+\>", "Input",
+ CellChangeTimes->{
+  3.867230158133705*^9},ExpressionUUID->"339cf186-4747-4a3b-bb1b-\
+291332f1af8e"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"16513e73-6c24-4604-b73e-51b2b4657b93"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 273, 6, 29, "Input",ExpressionUUID->"339cf186-4747-4a3b-bb1b-291332f1af8e"]
+}
+]
+*)
+

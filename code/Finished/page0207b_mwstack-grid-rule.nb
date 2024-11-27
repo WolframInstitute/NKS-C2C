@@ -1,0 +1,170 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6043,        162]
+NotebookOptionsPosition[      5689,        148]
+NotebookOutlinePosition[      6089,        164]
+CellTagsIndexPosition[      6046,        161]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GraphicsRow", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"With", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"statePlot", "=", 
+          RowBox[{"Function", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"stateString", ",", "pos"}], "}"}], ",", 
+            RowBox[{"MapIndexed", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"GrayLevel", "[", 
+                  RowBox[{
+                   RowBox[{"Association", "[", 
+                    RowBox[{
+                    RowBox[{"\"\<A\>\"", "\[Rule]", "0.85`"}], ",", 
+                    RowBox[{"\"\<B\>\"", "\[Rule]", "0"}]}], "]"}], "[", "#1",
+                    "]"}], "]"}], ",", 
+                 RowBox[{"EdgeForm", "[", 
+                  RowBox[{"GrayLevel", "[", "0.15`", "]"}], "]"}], ",", 
+                 RowBox[{"Rectangle", "[", 
+                  RowBox[{"pos", "+", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"First", "[", "#2", "]"}], "-", "1"}], ",", "0"}],
+                     "}"}]}], "]"}]}], "}"}], "&"}], ",", 
+              RowBox[{"Characters", "[", "stateString", "]"}]}], "]"}]}], 
+           "]"}]}], "}"}], ",", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"statePlot", "[", 
+             RowBox[{
+              RowBox[{"Keys", "[", "#", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0"}], "}"}]}], "]"}], ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", 
+                 RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}], ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"StringLength", "[", 
+                  RowBox[{"Keys", "[", "#", "]"}], "]"}], ",", "0"}], "}"}], 
+               ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"StringLength", "[", 
+                  RowBox[{"Values", "[", "#", "]"}], "]"}], ",", 
+                 RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}], ",", 
+            RowBox[{"statePlot", "[", 
+             RowBox[{
+              RowBox[{"Values", "[", "#", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", 
+                RowBox[{"-", "2"}]}], "}"}]}], "]"}]}], "}"}], ",", 
+          InterpretationBox[
+           DynamicModuleBox[{Typeset`open = False}, 
+            TemplateBox[{"Expression", "SequenceIcon", 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                   TagBox["Sequence", "IconizedItem"]}]}, {
+                 RowBox[{
+                   TagBox["\"Length: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["2", "IconizedItem"]}]}, {
+                 RowBox[{
+                   TagBox["\"Byte count: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["824", "IconizedItem"]}]}}, 
+               GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+               "Column", 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+              Dynamic[Typeset`open]},
+             "IconizedObject"]],
+           Sequence[PlotRange -> {{0, 
+               Max[{
+                 StringLength[
+                  Keys[#]], 
+                 StringLength[
+                  Values[#]]}]}, {-2, 1}}, PlotRangePadding -> 0.5],
+           SelectWithContents->True,
+           Selectable->False]}], "]"}]}], "]"}], "&"}], "/@", "#"}], ",", 
+    InterpretationBox[
+     DynamicModuleBox[{Typeset`open = False}, 
+      TemplateBox[{"Expression", "SequenceIcon", 
+        GridBox[{{
+           RowBox[{
+             TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+             TagBox["Sequence", "IconizedItem"]}]}, {
+           RowBox[{
+             TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+             TagBox["2", "IconizedItem"]}]}, {
+           RowBox[{
+             TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+             TagBox["240", "IconizedItem"]}]}}, 
+         GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+         "Column", 
+         GridBoxItemSize -> {
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+        Dynamic[Typeset`open]},
+       "IconizedObject"]],
+     Sequence[Frame -> All, ImageSize -> {Automatic, 75}],
+     SelectWithContents->True,
+     Selectable->False]}], "]"}], "&"}]], "Input",
+ CellChangeTimes->{3.8683785253287334`*^9, 
+  3.869905358806658*^9},ExpressionUUID->"7175ba3a-b1ce-45b3-916b-\
+df49b8b8f63e"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"cc5f53c2-7a6d-4434-a15c-cc955e6ba7ae"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5127, 126, 175, "Input",ExpressionUUID->"7175ba3a-b1ce-45b3-916b-df49b8b8f63e"]
+}
+]
+*)
+

@@ -1,0 +1,2541 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    135949,       2533]
+NotebookOptionsPosition[    135463,       2516]
+NotebookOutlinePosition[    135863,       2532]
+CellTagsIndexPosition[    135820,       2529]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"GraphicsColumn", "[", 
+    RowBox[{"#", ",", 
+     InterpretationBox[
+      DynamicModuleBox[{Typeset`open = False}, 
+       TemplateBox[{"Expression", 
+         RowBox[{
+           DynamicBox[
+            FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+           "\[Rule]", 
+           DynamicBox[
+            FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+         GridBox[{{
+            RowBox[{
+              TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["Rule", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Byte count: \"", "IconizedLabel"], 
+              "\[InvisibleSpace]", 
+              TagBox["128", "IconizedItem"]}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+          "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+         Dynamic[Typeset`open]},
+        "IconizedObject"]],
+      ImageSize -> {Automatic, 250},
+      SelectWithContents->True,
+      Selectable->False]}], "]"}], "&"}], "/@", 
+  RowBox[{"Partition", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"RulePlot", "[", 
+       RowBox[{"TuringMachine", "[", "#", "]"}], "]"}], "&"}], "/@", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"582285", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"657939", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2018806", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2868668", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2138664", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2139050", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"132527", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"600720", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"3374234978", ",", "4"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1806221583", ",", "4"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1232059922", ",", "4"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"3238044559", ",", "4"}], "}"}]}], "}"}]}], ",", "4"}], 
+   "]"}]}]], "Input",
+ CellLabel->
+  "In[179]:=",ExpressionUUID->"1fe47344-5f1d-4e2a-9ac8-2e9d3306958d"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[{{}, {InsetBox[
+       GraphicsBox[{{InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGH/c/K3Tg1NF4s/9dqPbryOr3+1/sOyJWff3t
+ft9Vdk+q2x/vNwKre0+Qr9QZJ9e77tV+qdvOLMrtT/fPmgkCb/dL9e3/dvn6
+4/2yf7d/u7b53X7JiQzlD0we7y8z28Ywj/HD/jtP6512czzez6QZGMwy/8N+
+tjWib0RiH+/vk36zNMvm4369otVT8zY+3l+864DLnEMf94uZVdvE1D/Z/9li
+AYuYyCeoPU/3F2+vP9Kf+glqz7P9QrwH4hZVf9r/JieH0Yb5xf6/ml87SwM/
+7WcJWrSMw+7l/pduWls91D/tlza/4X214tX+rymHHgYeAIZHSWOnRevr/ejh
+AwD0yKUe
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`,
+             0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPRMM3tpL9e3/dvn64/2KnXFyvete2cvcdmZRbn+6
+32+V3ZPq9sf2psYg8J4g/32o9uvI6vf2L/YdEau+/na/CVj8o/2zQgdOHY03
++7+mHHoYeOCj/dOSxk6L1tf7X7ppbfVQ/2QvbX7D+2rFq/3/NL92lgZ+smcO
+WrSMw+7lfiHeA3GLqj/Zv87JYbRhfrG/eHv9kf7UT/Yyf7d/u7b52f7PFgtY
+xEQ+2UP88XR/8a4DLnMOfbQXM6u2ial/sr9X+s3SLJuP9npFq6fmbXy8n1Ez
+MJhl/gd71jWib0RiH+8vNdvGMI/xg/2dp/VOuzke74eY+85eaiJD+QOTx/vR
+wwcAcsagDg==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPWsmCLy1f1bowKmj8WY/Z2gWV7DTB/sX+46IVV9/
+u//Wqge8Tjbf7I2MQeA9QX7+7gsFO1d8spe67cyi3P50P1jY+KO9VN/+b5ev
+P95fyLikRWTZB3vJiQzlD0we7xeZPPnf4T/v7e88rXfazfF4/5+1sZHfD76z
+Z1sj+kYk9vH+pyfUt2i1v7XXK1o9NW/j4/1S3XVlx6ve2IuZVdvE1D/ZDzH3
+tT3EH0/3Q8x9bS/7d/u3a5uf7YeY+9r+TU4Oow3zi/0Qc1/bswQtWsZh93I/
+xNzX9tLmN7yvVrzaDzH3jf2zksZOi9bX+9HDBwDOvZ5L
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPRMM3tpL9e3/dvn64/2KnXFyvete2cvcdmZRbn+6
+32+V3ZPq9sf2psYg8J4g/32o9uvI6vf2L/YdEau+/na/CVj8o/2zQgdOHY03
++7+mHHoYeOCj/dOSxk6L1tf7X7ppbfVQ/2QvbX7D+2rFq/3/NL92lgZ+smcO
+WrSMw+7lfiHeA3GLqj/Zv87JYbRhfrG/eHv9kf7UT/Yyf7d/u7b52f7PFgtY
+xEQ+2UP88XR/8a4DLnMOfbQXM6u2ial/sr9X+s3SLJuP9npFq6fmbXy8n1Ez
+MJhl/gd71jWib0RiH+8vNdvGMI/xg/2dp/VOuzke74eY+85eaiJD+QOTx/vR
+wwcAcsagDg==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}]}, 
+         {GrayLevel[
+          0.8], {LineBox[{{0, 0}, {0, 1}}], 
+           LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+           LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+           LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+           LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+           LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+           LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}]}, {
+           LineBox[{{0, 0}, {7.384615384615385, 0}}], 
+           LineBox[{{0, 1}, {7.384615384615385, 1}}]}}},
+        DisplayFunction->Identity,
+        ImagePadding->{{0., 0.}, {0., 0.}}], {131.25, -22.734}, 
+       ImageScaled[{0.5, 0.5}], {250, 42.1}], InsetBox[
+       GraphicsBox[{{InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPWsmCLy1f1bowKmj8WY/Z2gWV7DTB/sX+46IVV9/
+u//Wqge8Tjbf7I2MQeA9QX7+7gsFO1d8spe67cyi3P50P1jY+KO9VN/+b5ev
+P95fyLikRWTZB3vJiQzlD0we7xeZPPnf4T/v7e88rXfazfF4/5+1sZHfD76z
+Z1sj+kYk9vH+pyfUt2i1v7XXK1o9NW/j4/1S3XVlx6ve2IuZVdvE1D/ZDzH3
+tT3EH0/3Q8x9bS/7d/u3a5uf7YeY+9r+TU4Oow3zi/0Qc1/bswQtWsZh93I/
+xNzX9tLmN7yvVrzaDzH3jf2zksZOi9bX+9HDBwDOvZ5L
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`,
+             0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWIMAh/3S/Xt/3b5+uP9BbsvFOxc8Wm/zG1nFuX2
+p/tvrnrA62Tzbb8pWN17gnyO0CyuYKcP+1/sOyJWff3t/plg8Hb/s0IHTh2N
+N/vFzKptYurf7H9a0thp0fp6v17R6ql5G1/vlza/4X214tV+1jWib0RiX+9n
+Dlq0jMPu5f47T+uddnO83v86J4fRhvnFfqmJDOUPTF7vl/m7/du1zc+g7n4N
+tefpfunuurLjVTB7nux/ekJ9i1b7W6g9j/f/XRsb+f3gO6g9j/eLTp787/Cf
+91B7Hu8vYlzSIrLsA9Sex/vRwwcAImenfA==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPRMM3tpL9e3/dvn64/2KnXFyvete2cvcdmZRbn+6
+32+V3ZPq9sf2psYg8J4g/32o9uvI6vf2L/YdEau+/na/CVj8o/2zQgdOHY03
++7+mHHoYeOCj/dOSxk6L1tf7X7ppbfVQ/2QvbX7D+2rFq/3/NL92lgZ+smcO
+WrSMw+7lfiHeA3GLqj/Zv87JYbRhfrG/eHv9kf7UT/Yyf7d/u7b52f7PFgtY
+xEQ+2UP88XR/8a4DLnMOfbQXM6u2ial/sr9X+s3SLJuP9npFq6fmbXy8n1Ez
+MJhl/gd71jWib0RiH+8vNdvGMI/xg/2dp/VOuzke74eY+85eaiJD+QOTx/vR
+wwcAcsagDg==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}]}, 
+         {GrayLevel[
+          0.8], {LineBox[{{0, 0}, {0, 1}}], 
+           LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+           LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+           LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+           LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+           LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+           LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}]}, {
+           LineBox[{{0, 0}, {7.384615384615385, 0}}], 
+           LineBox[{{0, 1}, {7.384615384615385, 1}}]}}},
+        DisplayFunction->Identity,
+        ImagePadding->{{0., 0.}, {0., 0.}}], {131.25, -68.202}, 
+       ImageScaled[{0.5, 0.5}], {250, 42.1}], InsetBox[
+       GraphicsBox[{{InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWIMAh/3S/Xt/3b5+uP9BbsvFOxc8Wm/zG1nFuX2
+p/tvrnrA62Tzbb8pWN17gnyO0CyuYKcP+1/sOyJWff3t/plg8Hb/s0IHTh2N
+N/vFzKptYurf7H9a0thp0fp6v17R6ql5G1/vlza/4X214tV+1jWib0RiX+9n
+Dlq0jMPu5f47T+uddnO83v86J4fRhvnFfqmJDOUPTF7vl/m7/du1zc+g7n4N
+tefpfunuurLjVTB7nux/ekJ9i1b7W6g9j/f/XRsb+f3gO6g9j/eLTp787/Cf
+91B7Hu8vYlzSIrLsA9Sex/vRwwcAImenfA==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`,
+             0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGH/c/K3Tg1NF4s/9dqPbryOr3+1/sOyJWff3t
+ft9Vdk+q2x/vNwKre0+Qr9QZJ9e77tV+qdvOLMrtT/fPmgkCb/dL9e3/dvn6
+4/2yf7d/u7b53X7JiQzlD0we7y8z28Ywj/HD/jtP6512czzez6QZGMwy/8N+
+tjWib0RiH+/vk36zNMvm4369otVT8zY+3l+864DLnEMf94uZVdvE1D/Z/9li
+AYuYyCeoPU/3F2+vP9Kf+glqz7P9QrwH4hZVf9r/JieH0Yb5xf6/ml87SwM/
+7WcJWrSMw+7l/pduWls91D/tlza/4X214tX+rymHHgYeAIZHSWOnRevr/ejh
+AwD0yKUe
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPWsmCLy1f1bowKmj8WY/Z2gWV7DTB/sX+46IVV9/
+u//Wqge8Tjbf7I2MQeA9QX7+7gsFO1d8spe67cyi3P50P1jY+KO9VN/+b5ev
+P95fyLikRWTZB3vJiQzlD0we7xeZPPnf4T/v7e88rXfazfF4/5+1sZHfD76z
+Z1sj+kYk9vH+pyfUt2i1v7XXK1o9NW/j4/1S3XVlx6ve2IuZVdvE1D/ZDzH3
+tT3EH0/3Q8x9bS/7d/u3a5uf7YeY+9r+TU4Oow3zi/0Qc1/bswQtWsZh93I/
+xNzX9tLmN7yvVrzaDzH3jf2zksZOi9bX+9HDBwDOvZ5L
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWIMAh/3S/Xt/3b5+uP9BbsvFOxc8Wm/zG1nFuX2
+p/tvrnrA62Tzbb8pWN17gnyO0CyuYKcP+1/sOyJWff3t/plg8Hb/s0IHTh2N
+N/vFzKptYurf7H9a0thp0fp6v17R6ql5G1/vlza/4X214tV+1jWib0RiX+9n
+Dlq0jMPu5f47T+uddnO83v86J4fRhvnFfqmJDOUPTF7vl/m7/du1zc+g7n4N
+tefpfunuurLjVTB7nux/ekJ9i1b7W6g9j/f/XRsb+f3gO6g9j/eLTp787/Cf
+91B7Hu8vYlzSIrLsA9Sex/vRwwcAImenfA==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}]}, 
+         {GrayLevel[
+          0.8], {LineBox[{{0, 0}, {0, 1}}], 
+           LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+           LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+           LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+           LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+           LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+           LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}]}, {
+           LineBox[{{0, 0}, {7.384615384615385, 0}}], 
+           LineBox[{{0, 1}, {7.384615384615385, 1}}]}}},
+        DisplayFunction->Identity,
+        ImagePadding->{{0., 0.}, {0., 0.}}], {131.25, -113.67}, 
+       ImageScaled[{0.5, 0.5}], {250, 42.1}], InsetBox[
+       GraphicsBox[{{InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPRMM3tpL9e3/dvn64/2KnXFyvete2cvcdmZRbn+6
+32+V3ZPq9sf2psYg8J4g/32o9uvI6vf2L/YdEau+/na/CVj8o/2zQgdOHY03
++7+mHHoYeOCj/dOSxk6L1tf7X7ppbfVQ/2QvbX7D+2rFq/3/NL92lgZ+smcO
+WrSMw+7lfiHeA3GLqj/Zv87JYbRhfrG/eHv9kf7UT/Yyf7d/u7b52f7PFgtY
+xEQ+2UP88XR/8a4DLnMOfbQXM6u2ial/sr9X+s3SLJuP9npFq6fmbXy8n1Ez
+MJhl/gd71jWib0RiH+8vNdvGMI/xg/2dp/VOuzke74eY+85eaiJD+QOTx/vR
+wwcAcsagDg==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGH/c/K3Tg1NF4s/9dqPbryOr3+1/sOyJWff3t
+ft9Vdk+q2x/vNwKre0+Qr9QZJ9e77tV+qdvOLMrtT/fPmgkCb/dL9e3/dvn6
+4/2yf7d/u7b53X7JiQzlD0we7y8z28Ywj/HD/jtP6512czzez6QZGMwy/8N+
+tjWib0RiH+/vk36zNMvm4369otVT8zY+3l+864DLnEMf94uZVdvE1D/Z/9li
+AYuYyCeoPU/3F2+vP9Kf+glqz7P9QrwH4hZVf9r/JieH0Yb5xf6/ml87SwM/
+7WcJWrSMw+7l/pduWls91D/tlza/4X214tX+rymHHgYeAIZHSWOnRevr/ejh
+AwD0yKUe
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`,
+             0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGH/c/K3Tg1NF4s/9dqPbryOr3+1/sOyJWff3t
+ft9Vdk+q2x/vNwKre0+Qr9QZJ9e77tV+qdvOLMrtT/fPmgkCb/dL9e3/dvn6
+4/2yf7d/u7b53X7JiQzlD0we7y8z28Ywj/HD/jtP6512czzez6QZGMwy/8N+
+tjWib0RiH+/vk36zNMvm4369otVT8zY+3l+864DLnEMf94uZVdvE1D/Z/9li
+AYuYyCeoPU/3F2+vP9Kf+glqz7P9QrwH4hZVf9r/JieH0Yb5xf6/ml87SwM/
+7WcJWrSMw+7l/pduWls91D/tlza/4X214tX+rymHHgYeAIZHSWOnRevr/ejh
+AwD0yKUe
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWIMAh/3S/Xt/3b5+uP9BbsvFOxc8Wm/zG1nFuX2
+p/tvrnrA62Tzbb8pWN17gnyO0CyuYKcP+1/sOyJWff3t/plg8Hb/s0IHTh2N
+N/vFzKptYurf7H9a0thp0fp6v17R6ql5G1/vlza/4X214tV+1jWib0RiX+9n
+Dlq0jMPu5f47T+uddnO83v86J4fRhvnFfqmJDOUPTF7vl/m7/du1zc+g7n4N
+tefpfunuurLjVTB7nux/ekJ9i1b7W6g9j/f/XRsb+f3gO6g9j/eLTp787/Cf
+91B7Hu8vYlzSIrLsA9Sex/vRwwcAImenfA==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}]}, 
+         {GrayLevel[
+          0.8], {LineBox[{{0, 0}, {0, 1}}], 
+           LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+           LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+           LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+           LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+           LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+           LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}]}, {
+           LineBox[{{0, 0}, {7.384615384615385, 0}}], 
+           LineBox[{{0, 1}, {7.384615384615385, 1}}]}}},
+        DisplayFunction->Identity,
+        ImagePadding->{{0., 0.}, {0., 0.}}], {131.25, -159.138}, 
+       ImageScaled[{0.5, 0.5}], {250, 42.1}]}, {}},
+    ImageSize->{Automatic, 250},
+    PlotRange->{{0, 262.5}, {-181.872, 0}},
+    PlotRangePadding->{6, 5}], ",", 
+   GraphicsBox[{{}, {InsetBox[
+       GraphicsBox[{{InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWIMAh/3S/Xt/3b5+uP9BbsvFOxc8Wm/zG1nFuX2
+p/tvrnrA62Tzbb8pWN17gnyO0CyuYKcP+1/sOyJWff3t/plg8Hb/s0IHTh2N
+N/vFzKptYurf7H9a0thp0fp6v17R6ql5G1/vlza/4X214tV+1jWib0RiX+9n
+Dlq0jMPu5f47T+uddnO83v86J4fRhvnFfqmJDOUPTF7vl/m7/du1zc+g7n4N
+tefpfunuurLjVTB7nux/ekJ9i1b7W6g9j/f/XRsb+f3gO6g9j/eLTp787/Cf
+91B7Hu8vYlzSIrLsA9Sex/vRwwcAImenfA==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPWsmCLy1f1bowKmj8WY/Z2gWV7DTB/sX+46IVV9/
+u//Wqge8Tjbf7I2MQeA9QX7+7gsFO1d8spe67cyi3P50P1jY+KO9VN/+b5ev
+P95fyLikRWTZB3vJiQzlD0we7xeZPPnf4T/v7e88rXfazfF4/5+1sZHfD76z
+Z1sj+kYk9vH+pyfUt2i1v7XXK1o9NW/j4/1S3XVlx6ve2IuZVdvE1D/ZDzH3
+tT3EH0/3Q8x9bS/7d/u3a5uf7YeY+9r+TU4Oow3zi/0Qc1/bswQtWsZh93I/
+xNzX9tLmN7yvVrzaDzH3jf2zksZOi9bX+9HDBwDOvZ5L
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`,
+             0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPWsmCLy1f1bowKmj8WY/Z2gWV7DTB/sX+46IVV9/
+u//Wqge8Tjbf7I2MQeA9QX7+7gsFO1d8spe67cyi3P50P1jY+KO9VN/+b5ev
+P95fyLikRWTZB3vJiQzlD0we7xeZPPnf4T/v7e88rXfazfF4/5+1sZHfD76z
+Z1sj+kYk9vH+pyfUt2i1v7XXK1o9NW/j4/1S3XVlx6ve2IuZVdvE1D/ZDzH3
+tT3EH0/3Q8x9bS/7d/u3a5uf7YeY+9r+TU4Oow3zi/0Qc1/bswQtWsZh93I/
+xNzX9tLmN7yvVrzaDzH3jf2zksZOi9bX+9HDBwDOvZ5L
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWIMAh/3S/Xt/3b5+uP9BbsvFOxc8Wm/zG1nFuX2
+p/tvrnrA62Tzbb8pWN17gnyO0CyuYKcP+1/sOyJWff3t/plg8Hb/s0IHTh2N
+N/vFzKptYurf7H9a0thp0fp6v17R6ql5G1/vlza/4X214tV+1jWib0RiX+9n
+Dlq0jMPu5f47T+uddnO83v86J4fRhvnFfqmJDOUPTF7vl/m7/du1zc+g7n4N
+tefpfunuurLjVTB7nux/ekJ9i1b7W6g9j/f/XRsb+f3gO6g9j/eLTp787/Cf
+91B7Hu8vYlzSIrLsA9Sex/vRwwcAImenfA==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}]}, 
+         {GrayLevel[
+          0.8], {LineBox[{{0, 0}, {0, 1}}], 
+           LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+           LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+           LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+           LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+           LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+           LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}]}, {
+           LineBox[{{0, 0}, {7.384615384615385, 0}}], 
+           LineBox[{{0, 1}, {7.384615384615385, 1}}]}}},
+        DisplayFunction->Identity,
+        ImagePadding->{{0., 0.}, {0., 0.}}], {131.25, -22.734}, 
+       ImageScaled[{0.5, 0.5}], {250, 42.1}], InsetBox[
+       GraphicsBox[{{InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWIMAh/3S/Xt/3b5+uP9BbsvFOxc8Wm/zG1nFuX2
+p/tvrnrA62Tzbb8pWN17gnyO0CyuYKcP+1/sOyJWff3t/plg8Hb/s0IHTh2N
+N/vFzKptYurf7H9a0thp0fp6v17R6ql5G1/vlza/4X214tV+1jWib0RiX+9n
+Dlq0jMPu5f47T+uddnO83v86J4fRhvnFfqmJDOUPTF7vl/m7/du1zc+g7n4N
+tefpfunuurLjVTB7nux/ekJ9i1b7W6g9j/f/XRsb+f3gO6g9j/eLTp787/Cf
+91B7Hu8vYlzSIrLsA9Sex/vRwwcAImenfA==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPWsmCLy1f1bowKmj8WY/Z2gWV7DTB/sX+46IVV9/
+u//Wqge8Tjbf7I2MQeA9QX7+7gsFO1d8spe67cyi3P50P1jY+KO9VN/+b5ev
+P95fyLikRWTZB3vJiQzlD0we7xeZPPnf4T/v7e88rXfazfF4/5+1sZHfD76z
+Z1sj+kYk9vH+pyfUt2i1v7XXK1o9NW/j4/1S3XVlx6ve2IuZVdvE1D/ZDzH3
+tT3EH0/3Q8x9bS/7d/u3a5uf7YeY+9r+TU4Oow3zi/0Qc1/bswQtWsZh93I/
+xNzX9tLmN7yvVrzaDzH3jf2zksZOi9bX+9HDBwDOvZ5L
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`,
+             0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWIMAh/3S/Xt/3b5+uP9BbsvFOxc8Wm/zG1nFuX2
+p/tvrnrA62Tzbb8pWN17gnyO0CyuYKcP+1/sOyJWff3t/plg8Hb/s0IHTh2N
+N/vFzKptYurf7H9a0thp0fp6v17R6ql5G1/vlza/4X214tV+1jWib0RiX+9n
+Dlq0jMPu5f47T+uddnO83v86J4fRhvnFfqmJDOUPTF7vl/m7/du1zc+g7n4N
+tefpfunuurLjVTB7nux/ekJ9i1b7W6g9j/f/XRsb+f3gO6g9j/eLTp787/Cf
+91B7Hu8vYlzSIrLsA9Sex/vRwwcAImenfA==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGH/c/K3Tg1NF4s/9dqPbryOr3+1/sOyJWff3t
+ft9Vdk+q2x/vNwKre0+Qr9QZJ9e77tV+qdvOLMrtT/fPmgkCb/dL9e3/dvn6
+4/2yf7d/u7b53X7JiQzlD0we7y8z28Ywj/HD/jtP6512czzez6QZGMwy/8N+
+tjWib0RiH+/vk36zNMvm4369otVT8zY+3l+864DLnEMf94uZVdvE1D/Z/9li
+AYuYyCeoPU/3F2+vP9Kf+glqz7P9QrwH4hZVf9r/JieH0Yb5xf6/ml87SwM/
+7WcJWrSMw+7l/pduWls91D/tlza/4X214tX+rymHHgYeAIZHSWOnRevr/ejh
+AwD0yKUe
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}]}, 
+         {GrayLevel[
+          0.8], {LineBox[{{0, 0}, {0, 1}}], 
+           LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+           LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+           LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+           LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+           LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+           LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}]}, {
+           LineBox[{{0, 0}, {7.384615384615385, 0}}], 
+           LineBox[{{0, 1}, {7.384615384615385, 1}}]}}},
+        DisplayFunction->Identity,
+        ImagePadding->{{0., 0.}, {0., 0.}}], {131.25, -68.202}, 
+       ImageScaled[{0.5, 0.5}], {250, 42.1}], InsetBox[
+       GraphicsBox[{{InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGH/c/K3Tg1NF4s/9dqPbryOr3+1/sOyJWff3t
+ft9Vdk+q2x/vNwKre0+Qr9QZJ9e77tV+qdvOLMrtT/fPmgkCb/dL9e3/dvn6
+4/2yf7d/u7b53X7JiQzlD0we7y8z28Ywj/HD/jtP6512czzez6QZGMwy/8N+
+tjWib0RiH+/vk36zNMvm4369otVT8zY+3l+864DLnEMf94uZVdvE1D/Z/9li
+AYuYyCeoPU/3F2+vP9Kf+glqz7P9QrwH4hZVf9r/JieH0Yb5xf6/ml87SwM/
+7WcJWrSMw+7l/pduWls91D/tlza/4X214tX+rymHHgYeAIZHSWOnRevr/ejh
+AwD0yKUe
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`,
+             0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGH/c/K3Tg1NF4s/9dqPbryOr3+1/sOyJWff3t
+ft9Vdk+q2x/vNwKre0+Qr9QZJ9e77tV+qdvOLMrtT/fPmgkCb/dL9e3/dvn6
+4/2yf7d/u7b53X7JiQzlD0we7y8z28Ywj/HD/jtP6512czzez6QZGMwy/8N+
+tjWib0RiH+/vk36zNMvm4369otVT8zY+3l+864DLnEMf94uZVdvE1D/Z/9li
+AYuYyCeoPU/3F2+vP9Kf+glqz7P9QrwH4hZVf9r/JieH0Yb5xf6/ml87SwM/
+7WcJWrSMw+7l/pduWls91D/tlza/4X214tX+rymHHgYeAIZHSWOnRevr/ejh
+AwD0yKUe
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWIMAh/3S/Xt/3b5+uP9BbsvFOxc8Wm/zG1nFuX2
+p/tvrnrA62Tzbb8pWN17gnyO0CyuYKcP+1/sOyJWff3t/plg8Hb/s0IHTh2N
+N/vFzKptYurf7H9a0thp0fp6v17R6ql5G1/vlza/4X214tV+1jWib0RiX+9n
+Dlq0jMPu5f47T+uddnO83v86J4fRhvnFfqmJDOUPTF7vl/m7/du1zc+g7n4N
+tefpfunuurLjVTB7nux/ekJ9i1b7W6g9j/f/XRsb+f3gO6g9j/eLTp787/Cf
+91B7Hu8vYlzSIrLsA9Sex/vRwwcAImenfA==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPRMM3tpL9e3/dvn64/2KnXFyvete2cvcdmZRbn+6
+32+V3ZPq9sf2psYg8J4g/32o9uvI6vf2L/YdEau+/na/CVj8o/2zQgdOHY03
++7+mHHoYeOCj/dOSxk6L1tf7X7ppbfVQ/2QvbX7D+2rFq/3/NL92lgZ+smcO
+WrSMw+7lfiHeA3GLqj/Zv87JYbRhfrG/eHv9kf7UT/Yyf7d/u7b52f7PFgtY
+xEQ+2UP88XR/8a4DLnMOfbQXM6u2ial/sr9X+s3SLJuP9npFq6fmbXy8n1Ez
+MJhl/gd71jWib0RiH+8vNdvGMI/xg/2dp/VOuzke74eY+85eaiJD+QOTx/vR
+wwcAcsagDg==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}]}, 
+         {GrayLevel[
+          0.8], {LineBox[{{0, 0}, {0, 1}}], 
+           LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+           LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+           LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+           LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+           LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+           LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}]}, {
+           LineBox[{{0, 0}, {7.384615384615385, 0}}], 
+           LineBox[{{0, 1}, {7.384615384615385, 1}}]}}},
+        DisplayFunction->Identity,
+        ImagePadding->{{0., 0.}, {0., 0.}}], {131.25, -113.67}, 
+       ImageScaled[{0.5, 0.5}], {250, 42.1}], InsetBox[
+       GraphicsBox[{{InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGH/c/K3Tg1NF4s/9dqPbryOr3+1/sOyJWff3t
+ft9Vdk+q2x/vNwKre0+Qr9QZJ9e77tV+qdvOLMrtT/fPmgkCb/dL9e3/dvn6
+4/2yf7d/u7b53X7JiQzlD0we7y8z28Ywj/HD/jtP6512czzez6QZGMwy/8N+
+tjWib0RiH+/vk36zNMvm4369otVT8zY+3l+864DLnEMf94uZVdvE1D/Z/9li
+AYuYyCeoPU/3F2+vP9Kf+glqz7P9QrwH4hZVf9r/JieH0Yb5xf6/ml87SwM/
+7WcJWrSMw+7l/pduWls91D/tlza/4X214tX+rymHHgYeAIZHSWOnRevr/ejh
+AwD0yKUe
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`,
+             0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPRMM3tpL9e3/dvn64/2KnXFyvete2cvcdmZRbn+6
+32+V3ZPq9sf2psYg8J4g/32o9uvI6vf2L/YdEau+/na/CVj8o/2zQgdOHY03
++7+mHHoYeOCj/dOSxk6L1tf7X7ppbfVQ/2QvbX7D+2rFq/3/NL92lgZ+smcO
+WrSMw+7lfiHeA3GLqj/Zv87JYbRhfrG/eHv9kf7UT/Yyf7d/u7b52f7PFgtY
+xEQ+2UP88XR/8a4DLnMOfbQXM6u2ial/sr9X+s3SLJuP9npFq6fmbXy8n1Ez
+MJhl/gd71jWib0RiH+8vNdvGMI/xg/2dp/VOuzke74eY+85eaiJD+QOTx/vR
+wwcAcsagDg==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWgMApv3G8vUv12+/rq9i9PUWYemTLA3bCq7xBl4
+xT5tdZM5x8cb9nNmgsBFgvyq261tp12P2j9T2fP7TsUje6j59s8KHTh1NJ7Y
+6+o1TJlwaIn987z/HfKnn9gzxKcncz+w3K8i1bDX5fsTe0sF1ayuB4v3/wp+
+Jfx60RP72zsOxq06tnn/pd6QrIl+T+wNl3P7HNHcs//VyZbDixse2886zqi6
+YcGB/Wlg8Mh+9u6/ynU6h/c/ZvLg1PR5aN+XwfBN6O7h/Rpq6n/bf963f+W/
+0n9N96H9P6N3b3rXfNfezTxopavVwf0nJ/pnhPLdtvfxV5ORY92z30Ts75u+
+rzfs0cMHAHE0meM=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQPWsmCLy1f1bowKmj8WY/Z2gWV7DTB/sX+46IVV9/
+u//Wqge8Tjbf7I2MQeA9QX7+7gsFO1d8spe67cyi3P50P1jY+KO9VN/+b5ev
+P95fyLikRWTZB3vJiQzlD0we7xeZPPnf4T/v7e88rXfazfF4/5+1sZHfD76z
+Z1sj+kYk9vH+pyfUt2i1v7XXK1o9NW/j4/1S3XVlx6ve2IuZVdvE1D/ZDzH3
+tT3EH0/3Q8x9bS/7d/u3a5uf7YeY+9r+TU4Oow3zi/0Qc1/bswQtWsZh93I/
+xNzX9tLmN7yvVrzaDzH3jf2zksZOi9bX+9HDBwDOvZ5L
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWIMAh/3S/Xt/3b5+uP9BbsvFOxc8Wm/zG1nFuX2
+p/tvrnrA62Tzbb8pWN17gnyO0CyuYKcP+1/sOyJWff3t/plg8Hb/s0IHTh2N
+N/vFzKptYurf7H9a0thp0fp6v17R6ql5G1/vlza/4X214tV+1jWib0RiX+9n
+Dlq0jMPu5f47T+uddnO83v86J4fRhvnFfqmJDOUPTF7vl/m7/du1zc+g7n4N
+tefpfunuurLjVTB7nux/ekJ9i1b7W6g9j/f/XRsb+f3gO6g9j/eLTp787/Cf
+91B7Hu8vYlzSIrLsA9Sex/vRwwcAImenfA==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbWEMApv3Pyt04NTReGJfc7u17bTr0f1PVPb8vlPx
+yD5ldZM5x8cb+6fNBIGLBPkKTlNnHZoyYb9hU9klzsAr9lDz7U1k6t8uX3/d
+PshfTUaOdY+9qdjfN31fb9h7mAetdLU6aH9qon9GKN9t+zf+K/3XdB+y/xW9
+e9O75rv2/RkM34TuHrbXUlP/2/7zvv2s3X+V63QO2z9h8uDU9HloP+M4o+qG
+BQfs09NA4JG99nJunyOae+xfnWw5vLjhsf21HQfjVh3bbH+pNyRrot8Te10F
+1ayuB4vtfwe/En696Ik9Q3h6MvcDS3sVqYa9Lt+f2NvoNUyZcGjJ/md5/zvk
+Tz+xRw8fAB+ylqw=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}]}, 
+         {GrayLevel[
+          0.8], {LineBox[{{0, 0}, {0, 1}}], 
+           LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+           LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+           LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+           LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+           LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+           LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}]}, {
+           LineBox[{{0, 0}, {7.384615384615385, 0}}], 
+           LineBox[{{0, 1}, {7.384615384615385, 1}}]}}},
+        DisplayFunction->Identity,
+        ImagePadding->{{0., 0.}, {0., 0.}}], {131.25, -159.138}, 
+       ImageScaled[{0.5, 0.5}], {250, 42.1}]}, {}},
+    ImageSize->{Automatic, 250},
+    PlotRange->{{0, 262.5}, {-181.872, 0}},
+    PlotRangePadding->{6, 5}], ",", 
+   GraphicsBox[{{}, {InsetBox[
+       GraphicsBox[{{InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf9huDweP9jL4tvP7rP+43gfIh4t/3M4LVvSDI
+h+k/ewYE3uyHmQ/j/2dtYpDc9Q7O/y4T0Teh8e3+ZwovMkK93+zn/Ld9kuxs
+oDijR+6jlNf7pe6LT1+15fV+jsfLC/PrXkHte72f8Vft/2euL+F8BhT3vIba
+8wyuH2LPU7j5EPrJ/h9Q+yHqHsPdBwsP9PABADT3jdw=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr+0ZwODFfhifaRaH9Ly41/sh4h/sIeKfCfLT
+wOATXD+MDzMfxv/P2sQguevZ/mKBki2rVD/Zf5eJ6JvQ+HT/H4YlZoWbPtpz
+/ts+SXb2k/0tHy/vMLf/aC91X3z6qi2P9zP83Vf/eRHMvsdo9j/eDzH3HZwP
+MfctXD/E3Ddw8yHir+1/QO2H+R/mPvTwAQDfhX0m
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`,
+             0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQffVKXcFx3VSbNDC4Zi9yweXGhy+77GH8M2Bwx54B
+DB4Q5AtB9Z8Fiz+xh5q/B8bnX3D/e37ckv0wvquEfW/15837nym8yAj1fmK/
+i98hS1h99/7vjB65j1Ie289oXrA4VPfgfo7Hywvz6x7ZG4PB4f2Mv2r/P3N9
+COfD7Ifx/3GzMBqV3IXrf2+5QUaR+TbcfKE/+arWZjftnaH2m+zT1wvNvG7P
+C3UfzP/o4QMArfCUPQ==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQffVKXcFx3VSbNDC4Zi9yweXGhy+77GH8M2Bwx54B
+DB4Q5AtB9Z8Fiz+xh5q/B8bnX3D/e37ckv0wvquEfW/15837nym8yAj1fmK/
+i98hS1h99/7vjB65j1Ie289oXrA4VPfgfo7Hywvz6x7ZG4PB4f2Mv2r/P3N9
+COfD7Ifx/3GzMBqV3IXrf2+5QUaR+TbcfKE/+arWZjftnaH2m+zT1wvNvG7P
+C3UfzP/o4QMArfCUPQ==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf9huDweP9jL4tvP7rP+43gfIh4t/3M4LVvSDI
+h+k/ewYE3uyHmQ/j/2dtYpDc9Q7O/y4T0Teh8e3+ZwovMkK93+zn/Ld9kuxs
+oDijR+6jlNf7pe6LT1+15fV+jsfLC/PrXkHte72f8Vft/2euL+F8BhT3vIba
+8wyuH2LPU7j5EPrJ/h9Q+yHqHsPdBwsP9PABADT3jdw=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh/czgMEDexj/9+l3Jw873bS3t9+nsfpIv82C
+mSCwkiAfqt/+D1Q/jI9mvj3jr9r/z1wf2s9oXrA4VPegPefj5YX5dY/sd/I7
+ZAmr77b/zuiR+yjlsb2zhH1v9efN9s8UXmSEej+x515w/3t+3BL7s2dA4In9
+1St1Bcd1S/fA+IIQ+f0wvitE/36Y/t0Q8/fDzIfav58Daj/M/zD3oYcPAHwB
+kTE=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr+0ZwODFfhifaRaH9Ly41/sh4h/sIeKfCfLT
+wOATXD+MDzMfxv/P2sQguevZ/mKBki2rVD/Zf5eJ6JvQ+HT/H4YlZoWbPtpz
+/ts+SXb2k/0tHy/vMLf/aC91X3z6qi2P9zP83Vf/eRHMvsdo9j/eDzH3HZwP
+MfctXD/E3Ddw8yHir+1/QO2H+R/mPvTwAQDfhX0m
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh/czgMEDexj/9+l3Jw873bS3t9+nsfpIv82C
+mSCwkiAfqt/+D1Q/jI9mvj3jr9r/z1wf2s9oXrA4VPegPefj5YX5dY/sd/I7
+ZAmr77b/zuiR+yjlsb2zhH1v9efN9s8UXmSEej+x515w/3t+3BL7s2dA4In9
+1St1Bcd1S/fA+IIQ+f0wvitE/36Y/t0Q8/fDzIfav58Daj/M/zD3oYcPAHwB
+kTE=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf7I3B4PH+v6nfnyQufGNvAuXPmgkCD+0Zwepe
+EOT/g+o/ewYE3uyHmQ/jM/7dV/95EYLf8vHyDnP7j/bPFF5khHq/2f+HYYlZ
+4aaP9t8ZPXIfpbzeXyxQsmWV6id7jsfLC/PrXu1PA4NP9oy/av8/c30J5zNA
+7Yfx/7M2MUjuegbX/10mom9C41O4+Zz/tk+Snf0Ebr/UffHpq7Y83s8AdR8s
+PNDDBwDTfpZj
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbW+/T2P1kfo9Z8+AwBN70QsuNz582bX/DJQPoe/s
+/w8G9wnyBaH608Dgmj3UfBsYX2jB/e/5cUvsYXw3Cfve6s+b7U326euFZl63
+383vkCWsvtte6E++qrXZTfuZzQsWh+oetP9guUFGkfm2vTEYHLb/z83CaFRy
+F85nAIMHcD7jr9r/z1wf2k+H6ud8vLwwv+6R/U6o+d8ZPXIfpTy2d4La/0zh
+RUao9xN7Lqj7YOGBHj4AurykQw==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf9p89AwJv9v9L/f4kceEbOH/WTBB4uB+i7gVB
+Pky/MRg83g8zH87/u6/+8yIEv+Xj5R3m9h/3S90Xn75qy+P9fxiWmBVu+rif
+89/2SbKzn+wvFijZskr10/4fMhF9Exqf7k8Dg0/7/7M2MUjuegbnw+yH8Rl/
+1f5/5voSrp/z8fLC/LpXcPO/M3rkPkp5Dbf/mcKLjFDvN3D3wfyPHj4Adluj
+gQ==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{8., Rational[1, 2]}, {8., 0.5}], {
+           Center, Center}, {1.2307692307692317, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbW+/T2P1kfo9Z8+AwBN70QsuNz582bX/DJQPoe/s
+/w8G9wnyBaH608Dgmj3UfBsYX2jB/e/5cUvsYXw3Cfve6s+b7U326euFZl63
+383vkCWsvtte6E++qrXZTfuZzQsWh+oetP9guUFGkfm2vTEYHLb/z83CaFRy
+F85nAIMHcD7jr9r/z1wf2k+H6ud8vLwwv+6R/U6o+d8ZPXIfpTy2d4La/0zh
+RUao9xN7Lqj7YOGBHj4AurykQw==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{9.230769230769232, Rational[1, 2]}, {9.230769230769232, 
+            0.5}], {Center, Center}, {1.23076923076923, 1}]}, 
+         {GrayLevel[
+          0.8], {LineBox[{{0, 0}, {0, 1}}], 
+           LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+           LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+           LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+           LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+           LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+           LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}], 
+           LineBox[{{8.615384615384617, 0}, {8.615384615384617, 1}}], 
+           LineBox[{{9.846153846153847, 0}, {9.846153846153847, 1}}]}, {
+           LineBox[{{0, 0}, {9.846153846153847, 0}}], 
+           LineBox[{{0, 1}, {9.846153846153847, 1}}]}}},
+        DisplayFunction->Identity,
+        ImagePadding->{{0., 0.}, {0., 7.105427357601002*^-15}}], {131.25, -18.34650000000001},
+        ImageScaled[{0.5, 0.5}], {250, 33.975000000000016}], InsetBox[
+       GraphicsBox[{{InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf9p89AwJv9v9L/f4kceEbOH/WTBB4uB+i7gVB
+Pky/MRg83g8zH87/u6/+8yIEv+Xj5R3m9h/3S90Xn75qy+P9fxiWmBVu+rif
+89/2SbKzn+wvFijZskr10/4fMhF9Exqf7k8Dg0/7/7M2MUjuegbnw+yH8Rl/
+1f5/5voSrp/z8fLC/LpXcPO/M3rkPkp5Dbf/mcKLjFDvN3D3wfyPHj4Adluj
+gQ==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr+0ZwODFfhifaRaH9Ly41/sh4h/sIeKfCfLT
+wOATXD+MDzMfxv/P2sQguevZ/mKBki2rVD/Zf5eJ6JvQ+HT/H4YlZoWbPtpz
+/ts+SXb2k/0tHy/vMLf/aC91X3z6qi2P9zP83Vf/eRHMvsdo9j/eDzH3HZwP
+MfctXD/E3Ddw8yHir+1/QO2H+R/mPvTwAQDfhX0m
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`,
+             0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQffVKXcFx3VSbNDC4Zi9yweXGhy+77GH8M2Bwx54B
+DB4Q5AtB9Z8Fiz+xh5q/B8bnX3D/e37ckv0wvquEfW/15837nym8yAj1fmK/
+i98hS1h99/7vjB65j1Ie289oXrA4VPfgfo7Hywvz6x7ZG4PB4f2Mv2r/P3N9
+COfD7Ifx/3GzMBqV3IXrf2+5QUaR+TbcfKE/+arWZjftnaH2m+zT1wvNvG7P
+C3UfzP/o4QMArfCUPQ==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn/YzgMGL/TA+0ywO6Xlxr6HiH/Ybg8FngnwI
+/RquH8aHmQ/j/2dtYpDc9Wy/1H3x6au2vN7/XSaib0Lj0/2c/7ZPkp39Bko/
+2f8DLP4Wqu4xVN87qDmP0ex/vJ/x7776z4sQ/JaPl3eY23+E6//DsMSscNNH
+uPnFAiVbVql+gtrzFO5/mPvQwwcAmXiH4Q==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQffVKXcFx3VSbNDC4Zi9yweXGhy+77GH8M2Bwx54B
+DB4Q5AtB9Z8Fiz+xh5q/B8bnX3D/e37ckv0wvquEfW/15837nym8yAj1fmK/
+i98hS1h99/7vjB65j1Ie289oXrA4VPfgfo7Hywvz6x7ZG4PB4f2Mv2r/P3N9
+COfD7Ifx/3GzMBqV3IXrf2+5QUaR+TbcfKE/+arWZjftnaH2m+zT1wvNvG7P
+C3UfzP/o4QMArfCUPQ==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn/YzgMGL/TA+0ywO6Xlxr6HiH/Ybg8FngnwI
+/RquH8aHmQ/j/2dtYpDc9Wy/1H3x6au2vN7/XSaib0Lj0/2c/7ZPkp39Bko/
+2f8DLP4Wqu4xVN87qDmP0ex/vJ/x7776z4sQ/JaPl3eY23+E6//DsMSscNNH
+uPnFAiVbVql+gtrzFO5/mPvQwwcAmXiH4Q==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh/czgMEDexj/9+l3Jw873bS3t9+nsfpIv82C
+mSCwkiAfqt/+D1Q/jI9mvj3jr9r/z1wf2s9oXrA4VPegPefj5YX5dY/sd/I7
+ZAmr77b/zuiR+yjlsb2zhH1v9efN9s8UXmSEej+x515w/3t+3BL7s2dA4In9
+1St1Bcd1S/fA+IIQ+f0wvitE/36Y/t0Q8/fDzIfav58Daj/M/zD3oYcPAHwB
+kTE=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf9huDweP9jL4tvP7rP+43gfIh4t/3M4LVvSDI
+h+k/ewYE3uyHmQ/j/2dtYpDc9Q7O/y4T0Teh8e3+ZwovMkK93+zn/Ld9kuxs
+oDijR+6jlNf7pe6LT1+15fV+jsfLC/PrXkHte72f8Vft/2euL+F8BhT3vIba
+8wyuH2LPU7j5EPrJ/h9Q+yHqHsPdBwsP9PABADT3jdw=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh/czgMEDexj/9+l3Jw873bS3t9+nsfpIv82C
+mSCwkiAfqt/+D1Q/jI9mvj3jr9r/z1wf2s9oXrA4VPegPefj5YX5dY/sd/I7
+ZAmr77b/zuiR+yjlsb2zhH1v9efN9s8UXmSEej+x515w/3t+3BL7s2dA4In9
+1St1Bcd1S/fA+IIQ+f0wvitE/36Y/t0Q8/fDzIfav58Daj/M/zD3oYcPAHwB
+kTE=
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbW+/T2P1kfo9Z8+AwBN70QsuNz582bX/DJQPoe/s
+/w8G9wnyBaH608Dgmj3UfBsYX2jB/e/5cUvsYXw3Cfve6s+b7U326euFZl63
+383vkCWsvtte6E++qrXZTfuZzQsWh+oetP9guUFGkfm2vTEYHLb/z83CaFRy
+F85nAIMHcD7jr9r/z1wf2k+H6ud8vLwwv+6R/U6o+d8ZPXIfpTy2d4La/0zh
+RUao9xN7Lqj7YOGBHj4AurykQw==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{8., Rational[1, 2]}, {8., 0.5}], {
+           Center, Center}, {1.2307692307692317, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbW+/T2P1kfo9Z8+AwBN70QsuNz582bX/DJQPoe/s
+/w8G9wnyBaH608Dgmj3UfBsYX2jB/e/5cUvsYXw3Cfve6s+b7U326euFZl63
+383vkCWsvtte6E++qrXZTfuZzQsWh+oetP9guUFGkfm2vTEYHLb/z83CaFRy
+F85nAIMHcD7jr9r/z1wf2k+H6ud8vLwwv+6R/U6o+d8ZPXIfpTy2d4La/0zh
+RUao9xN7Lqj7YOGBHj4AurykQw==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf7I3B4PH+v6nfnyQufGNvAuXPmgkCD+0Zwepe
+EOT/g+o/ewYE3uyHmQ/jM/7dV/95EYLf8vHyDnP7j/bPFF5khHq/2f+HYYlZ
+4aaP9t8ZPXIfpbzeXyxQsmWV6id7jsfLC/PrXu1PA4NP9oy/av8/c30J5zNA
+7Yfx/7M2MUjuegbX/10mom9C41O4+Zz/tk+Snf0Ebr/UffHpq7Y83s8AdR8s
+PNDDBwDTfpZj
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{9.230769230769232, Rational[1, 2]}, {9.230769230769232, 
+            0.5}], {Center, Center}, {1.23076923076923, 1}]}, 
+         {GrayLevel[
+          0.8], {LineBox[{{0, 0}, {0, 1}}], 
+           LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+           LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+           LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+           LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+           LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+           LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}], 
+           LineBox[{{8.615384615384617, 0}, {8.615384615384617, 1}}], 
+           LineBox[{{9.846153846153847, 0}, {9.846153846153847, 1}}]}, {
+           LineBox[{{0, 0}, {9.846153846153847, 0}}], 
+           LineBox[{{0, 1}, {9.846153846153847, 1}}]}}},
+        DisplayFunction->Identity,
+        ImagePadding->{{0., 0.}, {0., 7.105427357601002*^-15}}], {131.25, -55.03950000000003},
+        ImageScaled[{0.5, 0.5}], {250, 33.975000000000016}], InsetBox[
+       GraphicsBox[{{InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf9p89AwJv9v9L/f4kceEbOH/WTBB4uB+i7gVB
+Pky/MRg83g8zH87/u6/+8yIEv+Xj5R3m9h/3S90Xn75qy+P9fxiWmBVu+rif
+89/2SbKzn+wvFijZskr10/4fMhF9Exqf7k8Dg0/7/7M2MUjuegbnw+yH8Rl/
+1f5/5voSrp/z8fLC/LpXcPO/M3rkPkp5Dbf/mcKLjFDvN3D3wfyPHj4Adluj
+gQ==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr+0ZwODFfhifaRaH9Ly41/sh4h/sIeKfCfLT
+wOATXD+MDzMfxv/P2sQguevZ/mKBki2rVD/Zf5eJ6JvQ+HT/H4YlZoWbPtpz
+/ts+SXb2k/0tHy/vMLf/aC91X3z6qi2P9zP83Vf/eRHMvsdo9j/eDzH3HZwP
+MfctXD/E3Ddw8yHir+1/QO2H+R/mPvTwAQDfhX0m
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`,
+             0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQffVKXcFx3VSbNDC4Zi9yweXGhy+77GH8M2Bwx54B
+DB4Q5AtB9Z8Fiz+xh5q/B8bnX3D/e37ckv0wvquEfW/15837nym8yAj1fmK/
+i98hS1h99/7vjB65j1Ie289oXrA4VPfgfo7Hywvz6x7ZG4PB4f2Mv2r/P3N9
+COfD7Ifx/3GzMBqV3IXrf2+5QUaR+TbcfKE/+arWZjftnaH2m+zT1wvNvG7P
+C3UfzP/o4QMArfCUPQ==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf9p89AwJv9v9L/f4kceEbOH/WTBB4uB+i7gVB
+Pky/MRg83g8zH87/u6/+8yIEv+Xj5R3m9h/3S90Xn75qy+P9fxiWmBVu+rif
+89/2SbKzn+wvFijZskr10/4fMhF9Exqf7k8Dg0/7/7M2MUjuegbnw+yH8Rl/
+1f5/5voSrp/z8fLC/LpXcPO/M3rkPkp5Dbf/mcKLjFDvN3D3wfyPHj4Adluj
+gQ==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQffVKXcFx3VSbNDC4Zi9yweXGhy+77GH8M2Bwx54B
+DB4Q5AtB9Z8Fiz+xh5q/B8bnX3D/e37ckv0wvquEfW/15837nym8yAj1fmK/
+i98hS1h99/7vjB65j1Ie289oXrA4VPfgfo7Hywvz6x7ZG4PB4f2Mv2r/P3N9
+COfD7Ifx/3GzMBqV3IXrf2+5QUaR+TbcfKE/+arWZjftnaH2m+zT1wvNvG7P
+C3UfzP/o4QMArfCUPQ==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf7I3B4PH+v6nfnyQufGNvAuXPmgkCD+0Zwepe
+EOT/g+o/ewYE3uyHmQ/jM/7dV/95EYLf8vHyDnP7j/bPFF5khHq/2f+HYYlZ
+4aaP9t8ZPXIfpbzeXyxQsmWV6id7jsfLC/PrXu1PA4NP9oy/av8/c30J5zNA
+7Yfx/7M2MUjuegbX/10mom9C41O4+Zz/tk+Snf0Ebr/UffHpq7Y83s8AdR8s
+PNDDBwDTfpZj
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh/czgMEDexj/9+l3Jw873bS3t9+nsfpIv82C
+mSCwkiAfqt/+D1Q/jI9mvj3jr9r/z1wf2s9oXrA4VPegPefj5YX5dY/sd/I7
+ZAmr77b/zuiR+yjlsb2zhH1v9efN9s8UXmSEej+x515w/3t+3BL7s2dA4In9
+1St1Bcd1S/fA+IIQ+f0wvitE/36Y/t0Q8/fDzIfav58Daj/M/zD3oYcPAHwB
+kTE=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr+0ZwODFfhifaRaH9Ly41/sh4h/sIeKfCfLT
+wOATXD+MDzMfxv/P2sQguevZ/mKBki2rVD/Zf5eJ6JvQ+HT/H4YlZoWbPtpz
+/ts+SXb2k/0tHy/vMLf/aC91X3z6qi2P9zP83Vf/eRHMvsdo9j/eDzH3HZwP
+MfctXD/E3Ddw8yHir+1/QO2H+R/mPvTwAQDfhX0m
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh/czgMEDexj/9+l3Jw873bS3t9+nsfpIv82C
+mSCwkiAfqt/+D1Q/jI9mvj3jr9r/z1wf2s9oXrA4VPegPefj5YX5dY/sd/I7
+ZAmr77b/zuiR+yjlsb2zhH1v9efN9s8UXmSEej+x515w/3t+3BL7s2dA4In9
+1St1Bcd1S/fA+IIQ+f0wvitE/36Y/t0Q8/fDzIfav58Daj/M/zD3oYcPAHwB
+kTE=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf9huDweP9jL4tvP7rP+43gfIh4t/3M4LVvSDI
+h+k/ewYE3uyHmQ/j/2dtYpDc9Q7O/y4T0Teh8e3+ZwovMkK93+zn/Ld9kuxs
+oDijR+6jlNf7pe6LT1+15fV+jsfLC/PrXkHte72f8Vft/2euL+F8BhT3vIba
+8wyuH2LPU7j5EPrJ/h9Q+yHqHsPdBwsP9PABADT3jdw=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbW+/T2P1kfo9Z8+AwBN70QsuNz582bX/DJQPoe/s
+/w8G9wnyBaH608Dgmj3UfBsYX2jB/e/5cUvsYXw3Cfve6s+b7U326euFZl63
+383vkCWsvtte6E++qrXZTfuZzQsWh+oetP9guUFGkfm2vTEYHLb/z83CaFRy
+F85nAIMHcD7jr9r/z1wf2k+H6ud8vLwwv+6R/U6o+d8ZPXIfpTy2d4La/0zh
+RUao9xN7Lqj7YOGBHj4AurykQw==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{8., Rational[1, 2]}, {8., 0.5}], {
+           Center, Center}, {1.2307692307692317, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbW+/T2P1kfo9Z8+AwBN70QsuNz582bX/DJQPoe/s
+/w8G9wnyBaH608Dgmj3UfBsYX2jB/e/5cUvsYXw3Cfve6s+b7U326euFZl63
+383vkCWsvtte6E++qrXZTfuZzQsWh+oetP9guUFGkfm2vTEYHLb/z83CaFRy
+F85nAIMHcD7jr9r/z1wf2k+H6ud8vLwwv+6R/U6o+d8ZPXIfpTy2d4La/0zh
+RUao9xN7Lqj7YOGBHj4AurykQw==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{9.230769230769232, Rational[1, 2]}, {9.230769230769232, 
+            0.5}], {Center, Center}, {1.23076923076923, 1}]}, 
+         {GrayLevel[
+          0.8], {LineBox[{{0, 0}, {0, 1}}], 
+           LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+           LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+           LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+           LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+           LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+           LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}], 
+           LineBox[{{8.615384615384617, 0}, {8.615384615384617, 1}}], 
+           LineBox[{{9.846153846153847, 0}, {9.846153846153847, 1}}]}, {
+           LineBox[{{0, 0}, {9.846153846153847, 0}}], 
+           LineBox[{{0, 1}, {9.846153846153847, 1}}]}}},
+        DisplayFunction->Identity,
+        ImagePadding->{{0., 0.}, {0., 7.105427357601002*^-15}}], {131.25, -91.73250000000004},
+        ImageScaled[{0.5, 0.5}], {250, 33.975000000000016}], InsetBox[
+       GraphicsBox[{{InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf9huDweP9jL4tvP7rP+43gfIh4t/3M4LVvSDI
+h+k/ewYE3uyHmQ/j/2dtYpDc9Q7O/y4T0Teh8e3+ZwovMkK93+zn/Ld9kuxs
+oDijR+6jlNf7pe6LT1+15fV+jsfLC/PrXkHte72f8Vft/2euL+F8BhT3vIba
+8wyuH2LPU7j5EPrJ/h9Q+yHqHsPdBwsP9PABADT3jdw=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh+0ZwOCBPYzPNItDel7cY6g4A0MaGLwjyIfq
+3w/TD+Ojmb//HzcLo1HJXfsZzQsWh+oe3P/ecoOMIvNt+138DlnC6rv3C/3J
+V7U2u2nvImHfW/15836Tffp6oZnX7fkW3P+eH7dkP8S+a2j2X4PJ28P4UP32
+MP1Q8+1h5kPtt4fZD/M/zH3o4QMAwiFoCA==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`,
+             0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQffVKXcFx3VSbNDC4Zi9yweXGhy+77GH8M2Bwx54B
+DB4Q5AtB9Z8Fiz+xh5q/B8bnX3D/e37ckv0wvquEfW/15837nym8yAj1fmK/
+i98hS1h99/7vjB65j1Ie289oXrA4VPfgfo7Hywvz6x7ZG4PB4f2Mv2r/P3N9
+COfD7Ifx/3GzMBqV3IXrf2+5QUaR+TbcfKE/+arWZjftnaH2m+zT1wvNvG7P
+C3UfzP/o4QMArfCUPQ==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQffVKXcFx3VSbNDC4Zi9yweXGhy+77GH8M2Bwx54B
+DB4Q5AtB9Z8Fiz+xh5q/B8bnX3D/e37ckv0wvquEfW/15837nym8yAj1fmK/
+i98hS1h99/7vjB65j1Ie289oXrA4VPfgfo7Hywvz6x7ZG4PB4f2Mv2r/P3N9
+COfD7Ifx/3GzMBqV3IXrf2+5QUaR+TbcfKE/+arWZjftnaH2m+zT1wvNvG7P
+C3UfzP/o4QMArfCUPQ==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGr/czgMGL/TD+v9TvTxIXPoGKf9hvAha/TJCf
+Bgaf4PphfJj5MD7jr9r/z1xf7i8WKNmySvXTfo7Hywvz617t/8OwxKxw08f9
+3xk9ch+lvN7f8vHyDnP7j/ufKbzICPV+s5/h7776z4s+7D97BgTewO2H8f+z
+NjFI7noH5/+Qieib0PgWrp/z3/ZJsrPfwM2Xui8+fdWW13D7Yf6HuQ89fAA4
+0Jhr
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh/czgMEDexj/9+l3Jw873bS3t9+nsfpIv82C
+mSCwkiAfqt/+D1Q/jI9mvj3jr9r/z1wf2s9oXrA4VPegPefj5YX5dY/sd/I7
+ZAmr77b/zuiR+yjlsb2zhH1v9efN9s8UXmSEej+x515w/3t+3BL7s2dA4In9
+1St1Bcd1S/fA+IIQ+f0wvitE/36Y/t0Q8/fDzIfav58Daj/M/zD3oYcPAHwB
+kTE=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn/YzgMGL/TA+0ywO6Xlxr6HiH/Ybg8FngnwI
+/RquH8aHmQ/j/2dtYpDc9Wy/1H3x6au2vN7/XSaib0Lj0/2c/7ZPkp39Bko/
+2f8DLP4Wqu4xVN87qDmP0ex/vJ/x7776z4sQ/JaPl3eY23+E6//DsMSscNNH
+uPnFAiVbVql+gtrzFO5/mPvQwwcAmXiH4Q==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbQwGh/czgMEDexj/9+l3Jw873bS3t9+nsfpIv82C
+mSCwkiAfqt/+D1Q/jI9mvj3jr9r/z1wf2s9oXrA4VPegPefj5YX5dY/sd/I7
+ZAmr77b/zuiR+yjlsb2zhH1v9efN9s8UXmSEej+x515w/3t+3BL7s2dA4In9
+1St1Bcd1S/fA+IIQ+f0wvitE/36Y/t0Q8/fDzIfav58Daj/M/zD3oYcPAHwB
+kTE=
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn+wZwODFfhj/X+r3J4kLn+yHiH+wNzEGgcsE
++WDK+DVcP4wPMx/GZ/xV+/+Z68v9UvfFp6/a8tqe4/Hywvy6V/s5/22fJDv7
+jf13Ro/cRymv9/+Qieib0PjW/pnCi4xQ7zf7/7M2MUjuemd/9gwIvIHbD+f/
+3Vf/eRGC3/Lx8g5z+49w/X8YlpgVbvoIN79YoGTLKtVPcPth/oe5Dz18AJZf
+kCQ=
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+            0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+           GraphicsBox[{
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbW+/T2P1kfo9Z8+AwBN70QsuNz582bX/DJQPoe/s
+/w8G9wnyBaH608Dgmj3UfBsYX2jB/e/5cUvsYXw3Cfve6s+b7U326euFZl63
+383vkCWsvtte6E++qrXZTfuZzQsWh+oetP9guUFGkfm2vTEYHLb/z83CaFRy
+F85nAIMHcD7jr9r/z1wf2k+H6ud8vLwwv+6R/U6o+d8ZPXIfpTy2d4La/0zh
+RUao9xN7Lqj7YOGBHj4AurykQw==
+                  "]]}]}}, 
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQnQYGn/YzgMGL/TA+0ywO6Xlxr6HiH/Ybg8FngnwI
+/RquH8aHmQ/j/2dtYpDc9Wy/1H3x6au2vN7/XSaib0Lj0/2c/7ZPkp39Bko/
+2f8DLP4Wqu4xVN87qDmP0ex/vJ/x7776z4sQ/JaPl3eY23+E6//DsMSscNNH
+uPnFAiVbVql+gtrzFO5/mPvQwwcAmXiH4Q==
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{8., Rational[1, 2]}, {8., 0.5}], {
+           Center, Center}, {1.2307692307692317, 1}], InsetBox[
+           GraphicsBox[{
+             {GrayLevel[1], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQbW+/T2P1kfo9Z8+AwBN70QsuNz582bX/DJQPoe/s
+/w8G9wnyBaH608Dgmj3UfBsYX2jB/e/5cUvsYXw3Cfve6s+b7U326euFZl63
+383vkCWsvtte6E++qrXZTfuZzQsWh+oetP9guUFGkfm2vTEYHLb/z83CaFRy
+F85nAIMHcD7jr9r/z1wf2k+H6ud8vLwwv+6R/U6o+d8ZPXIfpTy2d4La/0zh
+RUao9xN7Lqj7YOGBHj4AurykQw==
+                  "]]}]}}, 
+             {RGBColor[0.971, 0.6765, 0.09], EdgeForm[GrayLevel[
+               NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]], 
+              {GrayLevel[0], FilledCurveBox[{BezierCurve[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf7I3B4PH+v6nfnyQufGNvAuXPmgkCD+0Zwepe
+EOT/g+o/ewYE3uyHmQ/jM/7dV/95EYLf8vHyDnP7j/bPFF5khHq/2f+HYYlZ
+4aaP9t8ZPXIfpbzeXyxQsmWV6id7jsfLC/PrXu1PA4NP9oy/av8/c30J5zNA
+7Yfx/7M2MUjuegbX/10mom9C41O4+Zz/tk+Snf0Ebr/UffHpq7Y83s8AdR8s
+PNDDBwDTfpZj
+                  "]]}]}}},
+            PlotRange->NCache[{{-2, 2}, {
+                Rational[-7, 4], 
+                Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+           NCache[{9.230769230769232, Rational[1, 2]}, {9.230769230769232, 
+            0.5}], {Center, Center}, {1.23076923076923, 1}]}, 
+         {GrayLevel[
+          0.8], {LineBox[{{0, 0}, {0, 1}}], 
+           LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+           LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+           LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+           LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+           LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+           LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}], 
+           LineBox[{{8.615384615384617, 0}, {8.615384615384617, 1}}], 
+           LineBox[{{9.846153846153847, 0}, {9.846153846153847, 1}}]}, {
+           LineBox[{{0, 0}, {9.846153846153847, 0}}], 
+           LineBox[{{0, 1}, {9.846153846153847, 1}}]}}},
+        DisplayFunction->Identity,
+        ImagePadding->{{0., 0.}, {0., 7.105427357601002*^-15}}], {131.25, -128.42550000000006},
+        ImageScaled[{0.5, 0.5}], {250, 33.975000000000016}]}, {}},
+    ImageSize->{Automatic, 250},
+    PlotRange->{{0, 262.5}, {-146.77200000000008`, 0}},
+    PlotRangePadding->{6, 5}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8704321707761307`*^9},
+ CellLabel->
+  "Out[179]=",ExpressionUUID->"5a148c2a-1ac7-4002-aacd-ff16c631545e"]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"63839a8b-a8cd-4c3b-bef0-a7ec1433f183"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2355, 65, 114, "Input",ExpressionUUID->"1fe47344-5f1d-4e2a-9ac8-2e9d3306958d"],
+Cell[2938, 89, 132509, 2424, 829, "Output",ExpressionUUID->"5a148c2a-1ac7-4002-aacd-ff16c631545e"]
+}, Open  ]]
+}
+]
+*)
+

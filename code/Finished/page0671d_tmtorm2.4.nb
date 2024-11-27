@@ -1,0 +1,1319 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     68075,       1311]
+NotebookOptionsPosition[     67585,       1294]
+NotebookOutlinePosition[     67988,       1310]
+CellTagsIndexPosition[     67945,       1307]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"RMRulePlot", "[", 
+     RowBox[{"prog_", ",", "nreg_Integer", ",", "opts___"}], "]"}], ":=", 
+    RowBox[{"Graphics", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Arrowheads", "[", 
+         RowBox[{"{", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "0.003"}], ",", ".5", ",", 
+            InterpretationBox[
+             DynamicModuleBox[{Typeset`open = False}, 
+              TemplateBox[{"Expression", 
+                RowBox[{"Graphics", "[", 
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "FEBitmaps", "IconizeEllipsis"]], "]"}], 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["832", "IconizedItem"]}]}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 DefaultBaseStyle -> "Column", 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                Dynamic[Typeset`open]},
+               "IconizedObject"]],
+             Graphics[{
+               Line[{{{0, 0}, {1, 
+                   Sqrt[3]}}, {{0, 0}, {1, -Sqrt[3]}}}]}],
+             SelectWithContents->True,
+             Selectable->False]}], "}"}], "}"}], "]"}], ",", 
+        RowBox[{"With", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"gfun", "=", 
+            RowBox[{"Interpolation", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"1", ",", ".8"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"nreg", ",", ".5"}], "}"}]}], "}"}], ",", 
+              RowBox[{"InterpolationOrder", "->", "1"}]}], "]"}]}], "}"}], 
+          ",", 
+          RowBox[{"MapIndexed", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Translate", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"GrayLevel", "[", 
+                    RowBox[{"gfun", "[", 
+                    RowBox[{"First", "[", "#1", "]"}], "]"}], "]"}], ",", 
+                   RowBox[{"Rectangle", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0.1", ",", "0.1"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.9", ",", "0.9"}], "}"}]}], "]"}], ",", "Black",
+                    ",", 
+                   RowBox[{"Rotate", "[", 
+                    RowBox[{
+                    RowBox[{"Triangle", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0.7", ",", " ", "0.7"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"0.25", ",", " ", "0.5"}], "}"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"0.7", ",", " ", "0.3"}], "}"}]}], "}"}], "]"}], 
+                    ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Length", "[", "#1", "]"}], "==", "1"}], ",", 
+                    "\[Pi]", ",", "0"}], "]"}]}], "]"}], ",", 
+                   RowBox[{"EdgeForm", "[", "Black", "]"}], ",", 
+                   RowBox[{"Opacity", "[", "0", "]"}], ",", 
+                   RowBox[{"Rectangle", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"First", "[", "#2", "]"}], ",", "0"}], "}"}]}], 
+                "]"}], ",", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Length", "[", "#1", "]"}], "==", "2"}], ",", 
+                 RowBox[{"Arrow", "[", 
+                  RowBox[{"With", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"x1", "=", 
+                    RowBox[{
+                    RowBox[{"First", "[", "#2", "]"}], "+", ".5"}]}], ",", 
+                    RowBox[{"x2", "=", 
+                    RowBox[{
+                    RowBox[{"Last", "[", "#1", "]"}], "+", ".5"}]}], ",", 
+                    RowBox[{"yMax", "=", 
+                    RowBox[{
+                    RowBox[{"Max", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Sqrt", "[", 
+                    RowBox[{"Abs", "[", 
+                    RowBox[{
+                    RowBox[{"First", "[", "#2", "]"}], " ", "-", " ", 
+                    RowBox[{"Last", "[", "#1", "]"}]}], "]"}], "]"}]}], "]"}],
+                     "+", "1"}]}]}], "}"}], ",", 
+                    RowBox[{"BSplineCurve", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"x1", ",", "1"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x1", ",", "yMax"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"x1", "+", "x2"}], "2"], ",", "yMax"}], "}"}], 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x2", ",", "yMax"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x2", ",", "1"}], "}"}]}], "}"}], ",", 
+                    InterpretationBox[
+                    DynamicModuleBox[{Typeset`open = False}, 
+                    TemplateBox[{"Expression", 
+                    RowBox[{
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "IconizeEllipsis"]], "\[Rule]", 
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "IconizeEllipsis"]]}], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Rule", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["216", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    Dynamic[Typeset`open]},
+                    "IconizedObject"]],
+                    SplineWeights -> {1, 0.5, 1, 0.5, 1},
+                    SelectWithContents->True,
+                    Selectable->False]}], "]"}]}], "]"}], "]"}]}], "]"}]}], 
+              "}"}], "&"}], ",", "prog"}], "]"}]}], "]"}]}], "}"}], ",", 
+      InterpretationBox[
+       DynamicModuleBox[{Typeset`open = False}, 
+        TemplateBox[{"Expression", "SequenceIcon", 
+          GridBox[{{
+             RowBox[{
+               TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+               TagBox["Sequence", "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+               TagBox["2", "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Byte count: \"", "IconizedLabel"], 
+               "\[InvisibleSpace]", 
+               TagBox["320", "IconizedItem"]}]}}, 
+           GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+           "Column", 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+          Dynamic[Typeset`open]},
+         "IconizedObject"]],
+       Sequence[PlotRangePadding -> {0, {0, 0.2}}, {$CellContext`opts}],
+       SelectWithContents->True,
+       Selectable->False]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"RMCompile", "[", 
+    RowBox[{"_", "\[Rule]", 
+     RowBox[{"z", ":", 
+      RowBox[{"{", 
+       RowBox[{"_", ",", "_", ",", "1"}], "}"}]}]}], "]"}], ":=", 
+   RowBox[{"RMCompile0", "[", 
+    RowBox[{"z", ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"RMCompile", "[", 
+    RowBox[{"_", "\[Rule]", 
+     RowBox[{"z", ":", 
+      RowBox[{"{", 
+       RowBox[{"_", ",", "_", ",", 
+        RowBox[{"-", "1"}]}], "}"}]}]}], "]"}], ":=", 
+   RowBox[{"RMCompile0", "[", 
+    RowBox[{"z", ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "1"}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"RMCompile0", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"s_", ",", "a_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"ra_", ",", "rb_"}], "}"}]}], "]"}], ":=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"i", "[", "3", "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"ra", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"3", ",", "3"}], "]"}], ",", 
+       RowBox[{"i", "[", "ra", "]"}], ",", 
+       RowBox[{"i", "[", "ra", "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"3", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"a", "==", "1"}], ",", 
+         RowBox[{"i", "[", "ra", "]"}], ",", 
+         RowBox[{"{", "}"}]}], "]"}], ",", 
+       RowBox[{"i", "[", "3", "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"rb", ",", "5"}], "]"}], ",", 
+       RowBox[{"i", "[", "rb", "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"3", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"rb", ",", "1"}], "]"}], ",", 
+       RowBox[{"dm", "[", 
+        RowBox[{"rb", ",", 
+         RowBox[{"{", 
+          RowBox[{"s", ",", "0"}], "}"}]}], "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"rb", ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"i", "[", "rb", "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"3", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"rb", ",", "1"}], "]"}], ",", 
+       RowBox[{"dm", "[", 
+        RowBox[{"rb", ",", 
+         RowBox[{"{", 
+          RowBox[{"s", ",", "1"}], "}"}]}], "]"}]}], "}"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"TMToRM", "[", "rules_", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"subs", ",", "adrs"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"subs", "=", 
+        RowBox[{"RMCompile", "/@", "rules"}]}], ";", 
+       RowBox[{"adrs", "=", 
+        RowBox[{"Thread", "[", 
+         RowBox[{
+          RowBox[{"First", "/@", "rules"}], "\[Rule]", 
+          RowBox[{"Most", "[", 
+           RowBox[{"FoldList", "[", 
+            RowBox[{"Plus", ",", "1", ",", 
+             RowBox[{"Length", "/@", "subs"}]}], "]"}], "]"}]}], "]"}]}], ";", 
+       RowBox[{
+        RowBox[{"MapIndexed", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"#1", "/.", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"dr", "[", 
+                RowBox[{"r_", ",", "n_"}], "]"}], "\[RuleDelayed]", 
+               RowBox[{"d", "[", 
+                RowBox[{"r", ",", 
+                 RowBox[{"n", "+", 
+                  RowBox[{"First", "[", "#2", "]"}]}]}], "]"}]}], ",", 
+              RowBox[{
+               RowBox[{"dm", "[", 
+                RowBox[{"r_", ",", "z_"}], "]"}], "\[RuleDelayed]", 
+               RowBox[{"d", "[", 
+                RowBox[{"r", ",", 
+                 RowBox[{"z", "/.", "adrs"}]}], "]"}]}]}], "}"}]}], "&"}], 
+          ",", 
+          RowBox[{"Flatten", "[", "subs", "]"}]}], "]"}], "/.", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"i", "\[Rule]", "List"}], ",", 
+          RowBox[{"d", "\[Rule]", "List"}]}], "|>"}]}]}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"RMRulePlot", "[", 
+  RowBox[{
+   RowBox[{"TMToRM", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "1", ",", 
+         RowBox[{"-", "1"}]}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"2", ",", "0", ",", "1"}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "0"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "1", ",", "1"}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"3", ",", "0"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1", ",", "1"}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"3", ",", "1"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0", ",", 
+         RowBox[{"-", "1"}]}], "}"}]}]}], "}"}], "]"}], ",", "3", ",", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       RowBox[{
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+         "\[Rule]", 
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["Rule", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["56", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    ImageSize -> Large,
+    SelectWithContents->True,
+    Selectable->False]}], "]"}]}], "Input",
+ CellChangeTimes->{3.8703434706606655`*^9},
+ CellLabel->"In[27]:=",ExpressionUUID->"8a78133a-6e2c-4110-8112-47e835ce814b"],
+
+Cell[BoxData[
+ GraphicsBox[
+  {Arrowheads[{{-0.003, 0.5, 
+      GraphicsBox[{
+        LineBox[
+         NCache[{{{0, 0}, {1, 3^Rational[1, 2]}}, {{0, 0}, {
+            1, -3^Rational[1, 2]}}}, {{{0, 0}, {1, 1.7320508075688772`}}, {{0,
+             0}, {1, -1.7320508075688772`}}}]]}]}}], 
+   GeometricTransformationBox[{
+     {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {1, 0}], {
+    GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {2, 0}], 
+    ArrowBox[BSplineCurveBox[{{2.5, 1}, {2.5, 2}, {2., 2}, {1.5, 2}, {1.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {3, 0}], 
+    ArrowBox[BSplineCurveBox[
+     NCache[{{3.5, 1}, {3.5, 1 + 3^Rational[1, 2]}, {
+       5., 1 + 3^Rational[1, 2]}, {6.5, 1 + 3^Rational[1, 2]}, {6.5, 1}}, {{
+       3.5, 1}, {3.5, 2.732050807568877}, {5., 2.732050807568877}, {6.5, 
+       2.732050807568877}, {6.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {4, 0}], 
+   GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {5, 0}], {
+    GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {6, 0}], 
+    ArrowBox[BSplineCurveBox[
+     NCache[{{6.5, 1}, {6.5, 1 + 2^Rational[1, 2]}, {
+       5.5, 1 + 2^Rational[1, 2]}, {4.5, 1 + 2^Rational[1, 2]}, {4.5, 1}}, {{
+       6.5, 1}, {6.5, 2.414213562373095}, {5.5, 2.414213562373095}, {4.5, 
+       2.414213562373095}, {4.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {7, 0}], 
+   GeometricTransformationBox[{
+     {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {8, 0}], {
+    GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {9, 0}], 
+    ArrowBox[BSplineCurveBox[
+     NCache[{{9.5, 1}, {9.5, 1 + 5^Rational[1, 2]}, {
+       12., 1 + 5^Rational[1, 2]}, {14.5, 1 + 5^Rational[1, 2]}, {
+       14.5, 1}}, {{9.5, 1}, {9.5, 3.23606797749979}, {12., 
+       3.23606797749979}, {14.5, 3.23606797749979}, {14.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {10, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {11, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{11.5, 1}, {11.5, 2}, {11., 2}, {10.5, 2}, {10.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {12, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{12.5, 1}, {12.5, 2}, {13., 2}, {13.5, 2}, {13.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {13, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{13.5, 1}, {13.5, 1 + 59^Rational[1, 2]}, {
+       43., 1 + 59^Rational[1, 2]}, {72.5, 1 + 59^Rational[1, 2]}, {
+       72.5, 1}}, {{13.5, 1}, {13.5, 8.681145747868609}, {43., 
+       8.681145747868609}, {72.5, 8.681145747868609}, {72.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {14, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{14.5, 1}, {14.5, 1 + 6^Rational[1, 2]}, {
+       11.5, 1 + 6^Rational[1, 2]}, {8.5, 1 + 6^Rational[1, 2]}, {8.5, 1}}, {{
+       14.5, 1}, {14.5, 3.449489742783178}, {11.5, 3.449489742783178}, {8.5, 
+       3.449489742783178}, {8.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {15, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {16, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{16.5, 1}, {16.5, 2}, {16., 2}, {15.5, 2}, {15.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {17, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{17.5, 1}, {17.5, 2}, {18., 2}, {18.5, 2}, {18.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {18, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{18.5, 1}, {18.5, 1 + 6 2^Rational[1, 2]}, {
+       54.5, 1 + 6 2^Rational[1, 2]}, {90.5, 1 + 6 2^Rational[1, 2]}, {
+       90.5, 1}}, {{18.5, 1}, {18.5, 9.485281374238571}, {54.5, 
+       9.485281374238571}, {90.5, 9.485281374238571}, {90.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {19, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {20, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{20.5, 1}, {20.5, 2}, {20., 2}, {19.5, 2}, {19.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {21, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{21.5, 1}, {21.5, 1 + 3^Rational[1, 2]}, {
+       23., 1 + 3^Rational[1, 2]}, {24.5, 1 + 3^Rational[1, 2]}, {
+       24.5, 1}}, {{21.5, 1}, {21.5, 2.732050807568877}, {23., 
+       2.732050807568877}, {24.5, 2.732050807568877}, {24.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {22, 0}], 
+   GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {23, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {24, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{24.5, 1}, {24.5, 1 + 2^Rational[1, 2]}, {
+       23.5, 1 + 2^Rational[1, 2]}, {22.5, 1 + 2^Rational[1, 2]}, {
+       22.5, 1}}, {{24.5, 1}, {24.5, 2.414213562373095}, {23.5, 
+       2.414213562373095}, {22.5, 2.414213562373095}, {22.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {25, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {26, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{26.5, 1}, {26.5, 1 + 5^Rational[1, 2]}, {
+       29., 1 + 5^Rational[1, 2]}, {31.5, 1 + 5^Rational[1, 2]}, {
+       31.5, 1}}, {{26.5, 1}, {26.5, 3.23606797749979}, {29., 
+       3.23606797749979}, {31.5, 3.23606797749979}, {31.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {27, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {28, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{28.5, 1}, {28.5, 2}, {28., 2}, {27.5, 2}, {27.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {29, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{29.5, 1}, {29.5, 2}, {30., 2}, {30.5, 2}, {30.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {30, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{30.5, 1}, {30.5, 1 + 6^Rational[1, 2]}, {
+       33.5, 1 + 6^Rational[1, 2]}, {36.5, 1 + 6^Rational[1, 2]}, {
+       36.5, 1}}, {{30.5, 1}, {30.5, 3.449489742783178}, {33.5, 
+       3.449489742783178}, {36.5, 3.449489742783178}, {36.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {31, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{31.5, 1}, {31.5, 1 + 6^Rational[1, 2]}, {
+       28.5, 1 + 6^Rational[1, 2]}, {25.5, 1 + 6^Rational[1, 2]}, {
+       25.5, 1}}, {{31.5, 1}, {31.5, 3.449489742783178}, {28.5, 
+       3.449489742783178}, {25.5, 3.449489742783178}, {25.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {32, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {33, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{33.5, 1}, {33.5, 2}, {33., 2}, {32.5, 2}, {32.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {34, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{34.5, 1}, {34.5, 2}, {35., 2}, {35.5, 2}, {35.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {35, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{35.5, 1}, {35.5, 1 + 19^Rational[1, 2]}, {
+       45., 1 + 19^Rational[1, 2]}, {54.5, 1 + 19^Rational[1, 2]}, {
+       54.5, 1}}, {{35.5, 1}, {35.5, 5.358898943540674}, {45., 
+       5.358898943540674}, {54.5, 5.358898943540674}, {54.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {36, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {37, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{37.5, 1}, {37.5, 2}, {37., 2}, {36.5, 2}, {36.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {38, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{38.5, 1}, {38.5, 1 + 3^Rational[1, 2]}, {
+       40., 1 + 3^Rational[1, 2]}, {41.5, 1 + 3^Rational[1, 2]}, {
+       41.5, 1}}, {{38.5, 1}, {38.5, 2.732050807568877}, {40., 
+       2.732050807568877}, {41.5, 2.732050807568877}, {41.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {39, 0}], 
+   GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {40, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {41, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{41.5, 1}, {41.5, 1 + 2^Rational[1, 2]}, {
+       40.5, 1 + 2^Rational[1, 2]}, {39.5, 1 + 2^Rational[1, 2]}, {
+       39.5, 1}}, {{41.5, 1}, {41.5, 2.414213562373095}, {40.5, 
+       2.414213562373095}, {39.5, 2.414213562373095}, {39.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {42, 0}], 
+   GeometricTransformationBox[{
+     {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {43, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {44, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{44.5, 1}, {44.5, 1 + 5^Rational[1, 2]}, {
+       47., 1 + 5^Rational[1, 2]}, {49.5, 1 + 5^Rational[1, 2]}, {
+       49.5, 1}}, {{44.5, 1}, {44.5, 3.23606797749979}, {47., 
+       3.23606797749979}, {49.5, 3.23606797749979}, {49.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {45, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {46, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{46.5, 1}, {46.5, 2}, {46., 2}, {45.5, 2}, {45.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {47, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{47.5, 1}, {47.5, 2}, {48., 2}, {48.5, 2}, {48.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {48, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{48.5, 1}, {48.5, 1 + 47^Rational[1, 2]}, {
+       25., 1 + 47^Rational[1, 2]}, {1.5, 1 + 47^Rational[1, 2]}, {
+       1.5, 1}}, {{48.5, 1}, {48.5, 7.855654600401044}, {25., 
+       7.855654600401044}, {1.5, 7.855654600401044}, {1.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {49, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{49.5, 1}, {49.5, 1 + 6^Rational[1, 2]}, {
+       46.5, 1 + 6^Rational[1, 2]}, {43.5, 1 + 6^Rational[1, 2]}, {
+       43.5, 1}}, {{49.5, 1}, {49.5, 3.449489742783178}, {46.5, 
+       3.449489742783178}, {43.5, 3.449489742783178}, {43.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {50, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {51, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{51.5, 1}, {51.5, 2}, {51., 2}, {50.5, 2}, {50.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {52, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{52.5, 1}, {52.5, 2}, {53., 2}, {53.5, 2}, {53.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {53, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{53.5, 1}, {53.5, 1 + 34^Rational[1, 2]}, {
+       36.5, 1 + 34^Rational[1, 2]}, {19.5, 1 + 34^Rational[1, 2]}, {
+       19.5, 1}}, {{53.5, 1}, {53.5, 6.830951894845301}, {36.5, 
+       6.830951894845301}, {19.5, 6.830951894845301}, {19.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {54, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {55, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{55.5, 1}, {55.5, 2}, {55., 2}, {54.5, 2}, {54.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {56, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{56.5, 1}, {56.5, 1 + 3^Rational[1, 2]}, {
+       58., 1 + 3^Rational[1, 2]}, {59.5, 1 + 3^Rational[1, 2]}, {
+       59.5, 1}}, {{56.5, 1}, {56.5, 2.732050807568877}, {58., 
+       2.732050807568877}, {59.5, 2.732050807568877}, {59.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {57, 0}], 
+   GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {58, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {59, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{59.5, 1}, {59.5, 1 + 2^Rational[1, 2]}, {
+       58.5, 1 + 2^Rational[1, 2]}, {57.5, 1 + 2^Rational[1, 2]}, {
+       57.5, 1}}, {{59.5, 1}, {59.5, 2.414213562373095}, {58.5, 
+       2.414213562373095}, {57.5, 2.414213562373095}, {57.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {60, 0}], 
+   GeometricTransformationBox[{
+     {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {61, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {62, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{62.5, 1}, {62.5, 1 + 5^Rational[1, 2]}, {
+       65., 1 + 5^Rational[1, 2]}, {67.5, 1 + 5^Rational[1, 2]}, {
+       67.5, 1}}, {{62.5, 1}, {62.5, 3.23606797749979}, {65., 
+       3.23606797749979}, {67.5, 3.23606797749979}, {67.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {63, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {64, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{64.5, 1}, {64.5, 2}, {64., 2}, {63.5, 2}, {63.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {65, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{65.5, 1}, {65.5, 2}, {66., 2}, {66.5, 2}, {66.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {66, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{66.5, 1}, {66.5, 1 + 6^Rational[1, 2]}, {
+       69.5, 1 + 6^Rational[1, 2]}, {72.5, 1 + 6^Rational[1, 2]}, {
+       72.5, 1}}, {{66.5, 1}, {66.5, 3.449489742783178}, {69.5, 
+       3.449489742783178}, {72.5, 3.449489742783178}, {72.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {67, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{67.5, 1}, {67.5, 1 + 6^Rational[1, 2]}, {
+       64.5, 1 + 6^Rational[1, 2]}, {61.5, 1 + 6^Rational[1, 2]}, {
+       61.5, 1}}, {{67.5, 1}, {67.5, 3.449489742783178}, {64.5, 
+       3.449489742783178}, {61.5, 3.449489742783178}, {61.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {68, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {69, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{69.5, 1}, {69.5, 2}, {69., 2}, {68.5, 2}, {68.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {70, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{70.5, 1}, {70.5, 2}, {71., 2}, {71.5, 2}, {71.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {71, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{71.5, 1}, {71.5, 1 + 19^Rational[1, 2]}, {
+       81., 1 + 19^Rational[1, 2]}, {90.5, 1 + 19^Rational[1, 2]}, {
+       90.5, 1}}, {{71.5, 1}, {71.5, 5.358898943540674}, {81., 
+       5.358898943540674}, {90.5, 5.358898943540674}, {90.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {72, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {73, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{73.5, 1}, {73.5, 2}, {73., 2}, {72.5, 2}, {72.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {74, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{74.5, 1}, {74.5, 1 + 3^Rational[1, 2]}, {
+       76., 1 + 3^Rational[1, 2]}, {77.5, 1 + 3^Rational[1, 2]}, {
+       77.5, 1}}, {{74.5, 1}, {74.5, 2.732050807568877}, {76., 
+       2.732050807568877}, {77.5, 2.732050807568877}, {77.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {75, 0}], 
+   GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {76, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {77, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{77.5, 1}, {77.5, 1 + 2^Rational[1, 2]}, {
+       76.5, 1 + 2^Rational[1, 2]}, {75.5, 1 + 2^Rational[1, 2]}, {
+       75.5, 1}}, {{77.5, 1}, {77.5, 2.414213562373095}, {76.5, 
+       2.414213562373095}, {75.5, 2.414213562373095}, {75.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {78, 0}], 
+   GeometricTransformationBox[{
+     {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {79, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {80, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{80.5, 1}, {80.5, 1 + 5^Rational[1, 2]}, {
+       83., 1 + 5^Rational[1, 2]}, {85.5, 1 + 5^Rational[1, 2]}, {
+       85.5, 1}}, {{80.5, 1}, {80.5, 3.23606797749979}, {83., 
+       3.23606797749979}, {85.5, 3.23606797749979}, {85.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {81, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {82, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{82.5, 1}, {82.5, 2}, {82., 2}, {81.5, 2}, {81.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {83, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{83.5, 1}, {83.5, 2}, {84., 2}, {84.5, 2}, {84.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {84, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{84.5, 1}, {84.5, 1 + 4 3^Rational[1, 2]}, {
+       60.5, 1 + 4 3^Rational[1, 2]}, {36.5, 1 + 4 3^Rational[1, 2]}, {
+       36.5, 1}}, {{84.5, 1}, {84.5, 7.928203230275509}, {60.5, 
+       7.928203230275509}, {36.5, 7.928203230275509}, {36.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {85, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{85.5, 1}, {85.5, 1 + 6^Rational[1, 2]}, {
+       82.5, 1 + 6^Rational[1, 2]}, {79.5, 1 + 6^Rational[1, 2]}, {
+       79.5, 1}}, {{85.5, 1}, {85.5, 3.449489742783178}, {82.5, 
+       3.449489742783178}, {79.5, 3.449489742783178}, {79.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {86, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {87, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{87.5, 1}, {87.5, 2}, {87., 2}, {86.5, 2}, {86.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {88, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{88.5, 1}, {88.5, 2}, {89., 2}, {89.5, 2}, {89.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {89, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{89.5, 1}, {89.5, 1 + 35^Rational[1, 2]}, {
+       72., 1 + 35^Rational[1, 2]}, {54.5, 1 + 35^Rational[1, 2]}, {
+       54.5, 1}}, {{89.5, 1}, {89.5, 6.916079783099616}, {72., 
+       6.916079783099616}, {54.5, 6.916079783099616}, {54.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {90, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {91, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{91.5, 1}, {91.5, 2}, {91., 2}, {90.5, 2}, {90.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {92, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{92.5, 1}, {92.5, 1 + 3^Rational[1, 2]}, {
+       94., 1 + 3^Rational[1, 2]}, {95.5, 1 + 3^Rational[1, 2]}, {
+       95.5, 1}}, {{92.5, 1}, {92.5, 2.732050807568877}, {94., 
+       2.732050807568877}, {95.5, 2.732050807568877}, {95.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {93, 0}], 
+   GeometricTransformationBox[{
+     {GrayLevel[0.65], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {94, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {95, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{95.5, 1}, {95.5, 1 + 2^Rational[1, 2]}, {
+       94.5, 1 + 2^Rational[1, 2]}, {93.5, 1 + 2^Rational[1, 2]}, {
+       93.5, 1}}, {{95.5, 1}, {95.5, 2.414213562373095}, {94.5, 
+       2.414213562373095}, {93.5, 2.414213562373095}, {93.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {96, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {97, 0}],
+     ArrowBox[BSplineCurveBox[
+     NCache[{{97.5, 1}, {97.5, 1 + 5^Rational[1, 2]}, {
+       100., 1 + 5^Rational[1, 2]}, {102.5, 1 + 5^Rational[1, 2]}, {
+       102.5, 1}}, {{97.5, 1}, {97.5, 3.23606797749979}, {100., 
+       3.23606797749979}, {102.5, 3.23606797749979}, {102.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {98, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {99, 0}],
+     ArrowBox[
+     BSplineCurveBox[{{99.5, 1}, {99.5, 2}, {99., 2}, {98.5, 2}, {98.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {100, 
+     0}], ArrowBox[
+     BSplineCurveBox[{{100.5, 1}, {100.5, 2}, {101., 2}, {101.5, 2}, {
+      101.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {101, 
+     0}], ArrowBox[
+     BSplineCurveBox[{{101.5, 1}, {101.5, 11}, {51.5, 11}, {1.5, 11}, {
+      1.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {102, 
+     0}], ArrowBox[BSplineCurveBox[
+     NCache[{{102.5, 1}, {102.5, 1 + 6^Rational[1, 2]}, {
+       99.5, 1 + 6^Rational[1, 2]}, {96.5, 1 + 6^Rational[1, 2]}, {
+       96.5, 1}}, {{102.5, 1}, {102.5, 3.449489742783178}, {99.5, 
+       3.449489742783178}, {96.5, 3.449489742783178}, {96.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, GeometricTransformationBox[{
+     {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+     {GrayLevel[0], GeometricTransformationBox[
+       TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+        "Triangle"], {{{-1, 0}, {0, -1}}, Center}], 
+      {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {103, 
+    0}], {GeometricTransformationBox[{
+      {GrayLevel[0.5], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {104, 
+     0}], ArrowBox[
+     BSplineCurveBox[{{104.5, 1}, {104.5, 2}, {104., 2}, {103.5, 2}, {
+      103.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {105, 
+     0}], ArrowBox[
+     BSplineCurveBox[{{105.5, 1}, {105.5, 2}, {106., 2}, {106.5, 2}, {
+      106.5, 1}},
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}, {GeometricTransformationBox[{
+      {GrayLevel[0.8], RectangleBox[{0.1, 0.1}, {0.9, 0.9}]}, 
+      {GrayLevel[0], GeometricTransformationBox[
+        TagBox[PolygonBox[{{0.7, 0.7}, {0.25, 0.5}, {0.7, 0.3}}],
+         "Triangle"], {{{1, 0}, {0, 1}}, Center}], 
+       {Opacity[0], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}]}}}, {106, 
+     0}], ArrowBox[BSplineCurveBox[
+     NCache[{{106.5, 1}, {106.5, 1 + 87^Rational[1, 2]}, {
+       63., 1 + 87^Rational[1, 2]}, {19.5, 1 + 87^Rational[1, 2]}, {
+       19.5, 1}}, {{106.5, 1}, {106.5, 10.327379053088816`}, {63., 
+       10.327379053088816`}, {19.5, 10.327379053088816`}, {19.5, 1}}],
+     SplineWeights->{1, 0.5, 1, 0.5, 1}]]}},
+  ImageSize->Large,
+  PlotRangePadding->{0, {0, 0.2}}]], "Output",
+ CellChangeTimes->{3.8703434716915865`*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"62fca255-59bc-42ef-af20-349c7166437a"]
+}, Open  ]]
+},
+WindowSize->{954.5, 1037.},
+WindowMargins->{{55.5, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7b47dcc1-5513-46e2-9ad6-b2cec31b7cf8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 14693, 379, 572, "Input",ExpressionUUID->"8a78133a-6e2c-4110-8112-47e835ce814b"],
+Cell[15276, 403, 52293, 888, 78, "Output",ExpressionUUID->"62fca255-59bc-42ef-af20-349c7166437a"]
+}, Open  ]]
+}
+]
+*)
+

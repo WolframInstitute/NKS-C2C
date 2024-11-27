@@ -1,0 +1,134 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3945,        126]
+NotebookOptionsPosition[      3591,        112]
+NotebookOutlinePosition[      3992,        128]
+CellTagsIndexPosition[      3949,        125]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"rule", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "1", ",", 
+          RowBox[{"-", "1"}]}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "0", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"2", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"4", ",", "1", ",", 
+          RowBox[{"-", "1"}]}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"2", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", "0", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"3", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", "1", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"3", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"4", ",", "1", ",", 
+          RowBox[{"-", "1"}]}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"4", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"4", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"4", ",", "0", ",", 
+          RowBox[{"-", "1"}]}], "}"}]}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"RulePlot", "[", 
+    RowBox[{
+     RowBox[{"TuringMachine", "[", "rule", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Reap", "[", 
+       RowBox[{"Fold", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"!", 
+               RowBox[{"MemberQ", "[", 
+                RowBox[{"#1", ",", 
+                 RowBox[{"#2", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"1", ",", "3"}], "]"}], "]"}]}], "]"}]}], ",", 
+              RowBox[{"Sow", "[", "#2", "]"}]}], "]"}], ";", 
+            RowBox[{"Union", "[", 
+             RowBox[{"#1", ",", 
+              RowBox[{"{", 
+               RowBox[{"#2", "[", 
+                RowBox[{"[", 
+                 RowBox[{"1", ",", "3"}], "]"}], "]"}], "}"}]}], "]"}]}], 
+           ")"}], "&"}], ",", 
+         RowBox[{"{", "}"}], ",", 
+         RowBox[{"TuringMachine", "[", 
+          RowBox[{"rule", ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", "}"}], ",", "0"}], "}"}]}], "}"}], ",", "20000"}],
+           "]"}]}], "]"}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ",", "1"}], "]"}], "]"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.867960074477389*^9},ExpressionUUID->"4fa41797-d871-4ae0-b8a0-\
+c16822dcf9d4"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{138.5, Automatic}, {83, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8f6ec05b-2901-437c-b7d7-678ad804ffbe"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3029, 90, 105, "Input",ExpressionUUID->"4fa41797-d871-4ae0-b8a0-c16822dcf9d4"]
+}
+]
+*)
+

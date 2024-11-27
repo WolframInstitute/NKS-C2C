@@ -1,0 +1,353 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17999,        345]
+NotebookOptionsPosition[     17514,        328]
+NotebookOutlinePosition[     17914,        344]
+CellTagsIndexPosition[     17871,        341]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"haltingTimes", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"t", "=", "0"}], "}"}], ",", 
+         RowBox[{
+          RowBox[{"NestWhile", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"t", "++"}], ";", 
+               RowBox[{"TuringMachine", "[", 
+                RowBox[{"445", ",", "#"}], "]"}]}], ")"}], "&"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"1", ",", "8", ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"IntegerDigits", "[", 
+                 RowBox[{"n", ",", "2", ",", "8"}], "]"}], ",", "0"}], 
+               "}"}]}], "}"}], ",", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", 
+                RowBox[{"1", ",", "3"}], "]"}], "]"}], "<=", "0"}], "&"}]}], 
+           "]"}], ";", "t"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"n", ",", "0", ",", "255"}], "}"}]}], "]"}]}], "}"}], ",", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"GrayLevel", "[", "0.85", "]"}], ",", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"Rectangle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"2", "^", 
+                RowBox[{"(", 
+                 RowBox[{"i", "-", "1"}], ")"}]}], ",", 
+               RowBox[{"-", 
+                RowBox[{"Max", "[", 
+                 RowBox[{"Take", "[", 
+                  RowBox[{"haltingTimes", ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"2", "^", 
+                    RowBox[{"(", 
+                    RowBox[{"i", "-", "1"}], ")"}]}], "+", "1"}], ",", 
+                    RowBox[{"2", "^", "i"}]}], "}"}]}], "]"}], "]"}]}]}], 
+              "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"2", "^", "i"}], ",", "0"}], "}"}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "8"}], "}"}]}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"AbsoluteThickness", "[", ".3", "]"}], ",", 
+         RowBox[{"MapIndexed", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Last", "[", "#2", "]"}], "-", ".5"}], ",", "0"}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Last", "[", "#2", "]"}], "-", ".5"}], ",", 
+                 RowBox[{"-", "#1"}]}], "}"}]}], "}"}], "]"}], "&"}], ",", 
+           "haltingTimes"}], "]"}]}], "}"}]}], "}"}], ",", 
+     InterpretationBox[
+      DynamicModuleBox[{Typeset`open = False}, 
+       TemplateBox[{"Expression", "SequenceIcon", 
+         GridBox[{{
+            RowBox[{
+              TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["Sequence", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["5", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Byte count: \"", "IconizedLabel"], 
+              "\[InvisibleSpace]", 
+              TagBox["2264", "IconizedItem"]}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+          "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+         Dynamic[Typeset`open]},
+        "IconizedObject"]],
+      Sequence[
+      PlotRange -> {{-3, 257}, {1, -Max[$CellContext`haltingTimes] - 1 - 2}}, 
+       Frame -> True, AspectRatio -> 1/11.2, ImageSize -> Large, 
+       FrameTicks -> {{
+          Function[{$CellContext`min, $CellContext`max}, 
+           Table[
+            If[
+             Divisible[
+              Round[$CellContext`t], 5], {$CellContext`t, 
+              If[$CellContext`t == 5 Ceiling[$CellContext`min/5], "", 
+               Round[-$CellContext`t]], 0.005}, {$CellContext`t, "", 
+              0.0025}], {$CellContext`t, $CellContext`min, \
+$CellContext`max}]], False}, {True, False}}],
+      SelectWithContents->True,
+      Selectable->False]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{3.8704268039942617`*^9},
+ CellLabel->"In[8]:=",ExpressionUUID->"845ee321-c321-49a3-92e0-76a5da5e7d51"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {GrayLevel[0.85], RectangleBox[{1, -5}, {2, 0}], 
+    RectangleBox[{2, -7}, {4, 0}], RectangleBox[{4, -9}, {8, 0}], 
+    RectangleBox[{8, -11}, {16, 0}], RectangleBox[{16, -13}, {32, 0}], 
+    RectangleBox[{32, -15}, {64, 0}], RectangleBox[{64, -17}, {128, 0}], 
+    RectangleBox[{128, -19}, {256, 0}]}, 
+   {AbsoluteThickness[0.3], LineBox[{{0.5, 0}, {0.5, -3}}], 
+    LineBox[{{1.5, 0}, {1.5, -5}}], LineBox[{{2.5, 0}, {2.5, -3}}], 
+    LineBox[{{3.5, 0}, {3.5, -7}}], LineBox[{{4.5, 0}, {4.5, -3}}], 
+    LineBox[{{5.5, 0}, {5.5, -5}}], LineBox[{{6.5, 0}, {6.5, -3}}], 
+    LineBox[{{7.5, 0}, {7.5, -9}}], LineBox[{{8.5, 0}, {8.5, -3}}], 
+    LineBox[{{9.5, 0}, {9.5, -5}}], LineBox[{{10.5, 0}, {10.5, -3}}], 
+    LineBox[{{11.5, 0}, {11.5, -7}}], LineBox[{{12.5, 0}, {12.5, -3}}], 
+    LineBox[{{13.5, 0}, {13.5, -5}}], LineBox[{{14.5, 0}, {14.5, -3}}], 
+    LineBox[{{15.5, 0}, {15.5, -11}}], LineBox[{{16.5, 0}, {16.5, -3}}], 
+    LineBox[{{17.5, 0}, {17.5, -5}}], LineBox[{{18.5, 0}, {18.5, -3}}], 
+    LineBox[{{19.5, 0}, {19.5, -7}}], LineBox[{{20.5, 0}, {20.5, -3}}], 
+    LineBox[{{21.5, 0}, {21.5, -5}}], LineBox[{{22.5, 0}, {22.5, -3}}], 
+    LineBox[{{23.5, 0}, {23.5, -9}}], LineBox[{{24.5, 0}, {24.5, -3}}], 
+    LineBox[{{25.5, 0}, {25.5, -5}}], LineBox[{{26.5, 0}, {26.5, -3}}], 
+    LineBox[{{27.5, 0}, {27.5, -7}}], LineBox[{{28.5, 0}, {28.5, -3}}], 
+    LineBox[{{29.5, 0}, {29.5, -5}}], LineBox[{{30.5, 0}, {30.5, -3}}], 
+    LineBox[{{31.5, 0}, {31.5, -13}}], LineBox[{{32.5, 0}, {32.5, -3}}], 
+    LineBox[{{33.5, 0}, {33.5, -5}}], LineBox[{{34.5, 0}, {34.5, -3}}], 
+    LineBox[{{35.5, 0}, {35.5, -7}}], LineBox[{{36.5, 0}, {36.5, -3}}], 
+    LineBox[{{37.5, 0}, {37.5, -5}}], LineBox[{{38.5, 0}, {38.5, -3}}], 
+    LineBox[{{39.5, 0}, {39.5, -9}}], LineBox[{{40.5, 0}, {40.5, -3}}], 
+    LineBox[{{41.5, 0}, {41.5, -5}}], LineBox[{{42.5, 0}, {42.5, -3}}], 
+    LineBox[{{43.5, 0}, {43.5, -7}}], LineBox[{{44.5, 0}, {44.5, -3}}], 
+    LineBox[{{45.5, 0}, {45.5, -5}}], LineBox[{{46.5, 0}, {46.5, -3}}], 
+    LineBox[{{47.5, 0}, {47.5, -11}}], LineBox[{{48.5, 0}, {48.5, -3}}], 
+    LineBox[{{49.5, 0}, {49.5, -5}}], LineBox[{{50.5, 0}, {50.5, -3}}], 
+    LineBox[{{51.5, 0}, {51.5, -7}}], LineBox[{{52.5, 0}, {52.5, -3}}], 
+    LineBox[{{53.5, 0}, {53.5, -5}}], LineBox[{{54.5, 0}, {54.5, -3}}], 
+    LineBox[{{55.5, 0}, {55.5, -9}}], LineBox[{{56.5, 0}, {56.5, -3}}], 
+    LineBox[{{57.5, 0}, {57.5, -5}}], LineBox[{{58.5, 0}, {58.5, -3}}], 
+    LineBox[{{59.5, 0}, {59.5, -7}}], LineBox[{{60.5, 0}, {60.5, -3}}], 
+    LineBox[{{61.5, 0}, {61.5, -5}}], LineBox[{{62.5, 0}, {62.5, -3}}], 
+    LineBox[{{63.5, 0}, {63.5, -15}}], LineBox[{{64.5, 0}, {64.5, -3}}], 
+    LineBox[{{65.5, 0}, {65.5, -5}}], LineBox[{{66.5, 0}, {66.5, -3}}], 
+    LineBox[{{67.5, 0}, {67.5, -7}}], LineBox[{{68.5, 0}, {68.5, -3}}], 
+    LineBox[{{69.5, 0}, {69.5, -5}}], LineBox[{{70.5, 0}, {70.5, -3}}], 
+    LineBox[{{71.5, 0}, {71.5, -9}}], LineBox[{{72.5, 0}, {72.5, -3}}], 
+    LineBox[{{73.5, 0}, {73.5, -5}}], LineBox[{{74.5, 0}, {74.5, -3}}], 
+    LineBox[{{75.5, 0}, {75.5, -7}}], LineBox[{{76.5, 0}, {76.5, -3}}], 
+    LineBox[{{77.5, 0}, {77.5, -5}}], LineBox[{{78.5, 0}, {78.5, -3}}], 
+    LineBox[{{79.5, 0}, {79.5, -11}}], LineBox[{{80.5, 0}, {80.5, -3}}], 
+    LineBox[{{81.5, 0}, {81.5, -5}}], LineBox[{{82.5, 0}, {82.5, -3}}], 
+    LineBox[{{83.5, 0}, {83.5, -7}}], LineBox[{{84.5, 0}, {84.5, -3}}], 
+    LineBox[{{85.5, 0}, {85.5, -5}}], LineBox[{{86.5, 0}, {86.5, -3}}], 
+    LineBox[{{87.5, 0}, {87.5, -9}}], LineBox[{{88.5, 0}, {88.5, -3}}], 
+    LineBox[{{89.5, 0}, {89.5, -5}}], LineBox[{{90.5, 0}, {90.5, -3}}], 
+    LineBox[{{91.5, 0}, {91.5, -7}}], LineBox[{{92.5, 0}, {92.5, -3}}], 
+    LineBox[{{93.5, 0}, {93.5, -5}}], LineBox[{{94.5, 0}, {94.5, -3}}], 
+    LineBox[{{95.5, 0}, {95.5, -13}}], LineBox[{{96.5, 0}, {96.5, -3}}], 
+    LineBox[{{97.5, 0}, {97.5, -5}}], LineBox[{{98.5, 0}, {98.5, -3}}], 
+    LineBox[{{99.5, 0}, {99.5, -7}}], LineBox[{{100.5, 0}, {100.5, -3}}], 
+    LineBox[{{101.5, 0}, {101.5, -5}}], LineBox[{{102.5, 0}, {102.5, -3}}], 
+    LineBox[{{103.5, 0}, {103.5, -9}}], LineBox[{{104.5, 0}, {104.5, -3}}], 
+    LineBox[{{105.5, 0}, {105.5, -5}}], LineBox[{{106.5, 0}, {106.5, -3}}], 
+    LineBox[{{107.5, 0}, {107.5, -7}}], LineBox[{{108.5, 0}, {108.5, -3}}], 
+    LineBox[{{109.5, 0}, {109.5, -5}}], LineBox[{{110.5, 0}, {110.5, -3}}], 
+    LineBox[{{111.5, 0}, {111.5, -11}}], LineBox[{{112.5, 0}, {112.5, -3}}], 
+    LineBox[{{113.5, 0}, {113.5, -5}}], LineBox[{{114.5, 0}, {114.5, -3}}], 
+    LineBox[{{115.5, 0}, {115.5, -7}}], LineBox[{{116.5, 0}, {116.5, -3}}], 
+    LineBox[{{117.5, 0}, {117.5, -5}}], LineBox[{{118.5, 0}, {118.5, -3}}], 
+    LineBox[{{119.5, 0}, {119.5, -9}}], LineBox[{{120.5, 0}, {120.5, -3}}], 
+    LineBox[{{121.5, 0}, {121.5, -5}}], LineBox[{{122.5, 0}, {122.5, -3}}], 
+    LineBox[{{123.5, 0}, {123.5, -7}}], LineBox[{{124.5, 0}, {124.5, -3}}], 
+    LineBox[{{125.5, 0}, {125.5, -5}}], LineBox[{{126.5, 0}, {126.5, -3}}], 
+    LineBox[{{127.5, 0}, {127.5, -17}}], LineBox[{{128.5, 0}, {128.5, -3}}], 
+    LineBox[{{129.5, 0}, {129.5, -5}}], LineBox[{{130.5, 0}, {130.5, -3}}], 
+    LineBox[{{131.5, 0}, {131.5, -7}}], LineBox[{{132.5, 0}, {132.5, -3}}], 
+    LineBox[{{133.5, 0}, {133.5, -5}}], LineBox[{{134.5, 0}, {134.5, -3}}], 
+    LineBox[{{135.5, 0}, {135.5, -9}}], LineBox[{{136.5, 0}, {136.5, -3}}], 
+    LineBox[{{137.5, 0}, {137.5, -5}}], LineBox[{{138.5, 0}, {138.5, -3}}], 
+    LineBox[{{139.5, 0}, {139.5, -7}}], LineBox[{{140.5, 0}, {140.5, -3}}], 
+    LineBox[{{141.5, 0}, {141.5, -5}}], LineBox[{{142.5, 0}, {142.5, -3}}], 
+    LineBox[{{143.5, 0}, {143.5, -11}}], LineBox[{{144.5, 0}, {144.5, -3}}], 
+    LineBox[{{145.5, 0}, {145.5, -5}}], LineBox[{{146.5, 0}, {146.5, -3}}], 
+    LineBox[{{147.5, 0}, {147.5, -7}}], LineBox[{{148.5, 0}, {148.5, -3}}], 
+    LineBox[{{149.5, 0}, {149.5, -5}}], LineBox[{{150.5, 0}, {150.5, -3}}], 
+    LineBox[{{151.5, 0}, {151.5, -9}}], LineBox[{{152.5, 0}, {152.5, -3}}], 
+    LineBox[{{153.5, 0}, {153.5, -5}}], LineBox[{{154.5, 0}, {154.5, -3}}], 
+    LineBox[{{155.5, 0}, {155.5, -7}}], LineBox[{{156.5, 0}, {156.5, -3}}], 
+    LineBox[{{157.5, 0}, {157.5, -5}}], LineBox[{{158.5, 0}, {158.5, -3}}], 
+    LineBox[{{159.5, 0}, {159.5, -13}}], LineBox[{{160.5, 0}, {160.5, -3}}], 
+    LineBox[{{161.5, 0}, {161.5, -5}}], LineBox[{{162.5, 0}, {162.5, -3}}], 
+    LineBox[{{163.5, 0}, {163.5, -7}}], LineBox[{{164.5, 0}, {164.5, -3}}], 
+    LineBox[{{165.5, 0}, {165.5, -5}}], LineBox[{{166.5, 0}, {166.5, -3}}], 
+    LineBox[{{167.5, 0}, {167.5, -9}}], LineBox[{{168.5, 0}, {168.5, -3}}], 
+    LineBox[{{169.5, 0}, {169.5, -5}}], LineBox[{{170.5, 0}, {170.5, -3}}], 
+    LineBox[{{171.5, 0}, {171.5, -7}}], LineBox[{{172.5, 0}, {172.5, -3}}], 
+    LineBox[{{173.5, 0}, {173.5, -5}}], LineBox[{{174.5, 0}, {174.5, -3}}], 
+    LineBox[{{175.5, 0}, {175.5, -11}}], LineBox[{{176.5, 0}, {176.5, -3}}], 
+    LineBox[{{177.5, 0}, {177.5, -5}}], LineBox[{{178.5, 0}, {178.5, -3}}], 
+    LineBox[{{179.5, 0}, {179.5, -7}}], LineBox[{{180.5, 0}, {180.5, -3}}], 
+    LineBox[{{181.5, 0}, {181.5, -5}}], LineBox[{{182.5, 0}, {182.5, -3}}], 
+    LineBox[{{183.5, 0}, {183.5, -9}}], LineBox[{{184.5, 0}, {184.5, -3}}], 
+    LineBox[{{185.5, 0}, {185.5, -5}}], LineBox[{{186.5, 0}, {186.5, -3}}], 
+    LineBox[{{187.5, 0}, {187.5, -7}}], LineBox[{{188.5, 0}, {188.5, -3}}], 
+    LineBox[{{189.5, 0}, {189.5, -5}}], LineBox[{{190.5, 0}, {190.5, -3}}], 
+    LineBox[{{191.5, 0}, {191.5, -15}}], LineBox[{{192.5, 0}, {192.5, -3}}], 
+    LineBox[{{193.5, 0}, {193.5, -5}}], LineBox[{{194.5, 0}, {194.5, -3}}], 
+    LineBox[{{195.5, 0}, {195.5, -7}}], LineBox[{{196.5, 0}, {196.5, -3}}], 
+    LineBox[{{197.5, 0}, {197.5, -5}}], LineBox[{{198.5, 0}, {198.5, -3}}], 
+    LineBox[{{199.5, 0}, {199.5, -9}}], LineBox[{{200.5, 0}, {200.5, -3}}], 
+    LineBox[{{201.5, 0}, {201.5, -5}}], LineBox[{{202.5, 0}, {202.5, -3}}], 
+    LineBox[{{203.5, 0}, {203.5, -7}}], LineBox[{{204.5, 0}, {204.5, -3}}], 
+    LineBox[{{205.5, 0}, {205.5, -5}}], LineBox[{{206.5, 0}, {206.5, -3}}], 
+    LineBox[{{207.5, 0}, {207.5, -11}}], LineBox[{{208.5, 0}, {208.5, -3}}], 
+    LineBox[{{209.5, 0}, {209.5, -5}}], LineBox[{{210.5, 0}, {210.5, -3}}], 
+    LineBox[{{211.5, 0}, {211.5, -7}}], LineBox[{{212.5, 0}, {212.5, -3}}], 
+    LineBox[{{213.5, 0}, {213.5, -5}}], LineBox[{{214.5, 0}, {214.5, -3}}], 
+    LineBox[{{215.5, 0}, {215.5, -9}}], LineBox[{{216.5, 0}, {216.5, -3}}], 
+    LineBox[{{217.5, 0}, {217.5, -5}}], LineBox[{{218.5, 0}, {218.5, -3}}], 
+    LineBox[{{219.5, 0}, {219.5, -7}}], LineBox[{{220.5, 0}, {220.5, -3}}], 
+    LineBox[{{221.5, 0}, {221.5, -5}}], LineBox[{{222.5, 0}, {222.5, -3}}], 
+    LineBox[{{223.5, 0}, {223.5, -13}}], LineBox[{{224.5, 0}, {224.5, -3}}], 
+    LineBox[{{225.5, 0}, {225.5, -5}}], LineBox[{{226.5, 0}, {226.5, -3}}], 
+    LineBox[{{227.5, 0}, {227.5, -7}}], LineBox[{{228.5, 0}, {228.5, -3}}], 
+    LineBox[{{229.5, 0}, {229.5, -5}}], LineBox[{{230.5, 0}, {230.5, -3}}], 
+    LineBox[{{231.5, 0}, {231.5, -9}}], LineBox[{{232.5, 0}, {232.5, -3}}], 
+    LineBox[{{233.5, 0}, {233.5, -5}}], LineBox[{{234.5, 0}, {234.5, -3}}], 
+    LineBox[{{235.5, 0}, {235.5, -7}}], LineBox[{{236.5, 0}, {236.5, -3}}], 
+    LineBox[{{237.5, 0}, {237.5, -5}}], LineBox[{{238.5, 0}, {238.5, -3}}], 
+    LineBox[{{239.5, 0}, {239.5, -11}}], LineBox[{{240.5, 0}, {240.5, -3}}], 
+    LineBox[{{241.5, 0}, {241.5, -5}}], LineBox[{{242.5, 0}, {242.5, -3}}], 
+    LineBox[{{243.5, 0}, {243.5, -7}}], LineBox[{{244.5, 0}, {244.5, -3}}], 
+    LineBox[{{245.5, 0}, {245.5, -5}}], LineBox[{{246.5, 0}, {246.5, -3}}], 
+    LineBox[{{247.5, 0}, {247.5, -9}}], LineBox[{{248.5, 0}, {248.5, -3}}], 
+    LineBox[{{249.5, 0}, {249.5, -5}}], LineBox[{{250.5, 0}, {250.5, -3}}], 
+    LineBox[{{251.5, 0}, {251.5, -7}}], LineBox[{{252.5, 0}, {252.5, -3}}], 
+    LineBox[{{253.5, 0}, {253.5, -5}}], LineBox[{{254.5, 0}, {254.5, -3}}], 
+    LineBox[{{255.5, 0}, {255.5, -19}}]}},
+  AspectRatio->0.08928571428571429,
+  Frame->True,
+  FrameTicks->FrontEndValueCache[{{
+      Function[{$CellContext`min, $CellContext`max}, 
+       Table[
+        If[
+         Divisible[
+          Round[$CellContext`t], 5], {$CellContext`t, 
+          If[$CellContext`t == 5 Ceiling[$CellContext`min/5], "", 
+           Round[-$CellContext`t]], 0.005}, {$CellContext`t, "", 
+          0.0025}], {$CellContext`t, $CellContext`min, $CellContext`max}]], 
+      False}, {True, False}}, {{{{-22., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-21., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-20., 
+        FormBox["\"\"", TraditionalForm], 0.005}, {-19., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-18., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-17., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-16., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-15., 
+        FormBox["15", TraditionalForm], 0.005}, {-14., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-13., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-12., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-11., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-10., 
+        FormBox["10", TraditionalForm], 0.005}, {-9., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-8., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-7., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-6., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-5., 
+        FormBox["5", TraditionalForm], 0.005}, {-4., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-3., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-2., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {-1., 
+        FormBox["\"\"", TraditionalForm], 0.0025}, {0., 
+        FormBox["0", TraditionalForm], 0.005}, {1., 
+        FormBox["\"\"", TraditionalForm], 0.0025}}, False}, {True, False}}],
+  ImageSize->Large,
+  PlotRange->{{-3, 257}, {1, -22}}]], "Output",
+ CellChangeTimes->{3.87042680617512*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"e6587c2f-6a54-45a1-8e0e-d5e370624be5"]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7ea23e57-a2fa-4488-b09a-d7ade7f38981"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4811, 126, 172, "Input",ExpressionUUID->"845ee321-c321-49a3-92e0-76a5da5e7d51"],
+Cell[5394, 150, 12104, 175, 86, "Output",ExpressionUUID->"e6587c2f-6a54-45a1-8e0e-d5e370624be5"]
+}, Open  ]]
+}
+]
+*)
+

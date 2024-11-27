@@ -1,0 +1,131 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4266,        123]
+NotebookOptionsPosition[      3914,        109]
+NotebookOutlinePosition[      4314,        125]
+CellTagsIndexPosition[      4271,        122]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{"NestList", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"EvenQ", "[", "#", "]"}], ",", 
+        FractionBox[
+         RowBox[{"5", " ", "#"}], "2"], ",", 
+        FractionBox[
+         RowBox[{"#", "+", "1"}], "2"]}], "]"}], "&"}], ",", "6", ",", 
+     "1000"}], "]"}], ",", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", "SequenceIcon", 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["Sequence", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["3", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["376", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    Sequence[
+    ScalingFunctions -> "Log", Frame -> True, 
+     FrameTicks -> {False, {True, False}}],
+    SelectWithContents->True,
+    Selectable->False], ",", 
+   RowBox[{"Epilog", "->", 
+    RowBox[{"{", 
+     RowBox[{"Inset", "[", 
+      RowBox[{
+       RowBox[{"ListPlot", "[", 
+        RowBox[{
+         RowBox[{"NestList", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"EvenQ", "[", "#", "]"}], ",", 
+              FractionBox[
+               RowBox[{"5", " ", "#"}], "2"], ",", 
+              FractionBox[
+               RowBox[{"#", "+", "1"}], "2"]}], "]"}], "&"}], ",", "6", ",", 
+           "30"}], "]"}], ",", 
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", "SequenceIcon", 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  
+                  TagBox["Sequence", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Length: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["6", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["536", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          Sequence[
+          Joined -> True, Mesh -> All, Frame -> True, PlotStyle -> 
+           AbsolutePointSize[4], ScalingFunctions -> "Log", ImageSize -> 160],
+          
+          SelectWithContents->True,
+          Selectable->False]}], "]"}], ",", 
+       RowBox[{"Scaled", "[", 
+        RowBox[{"{", 
+         RowBox[{".7", ",", ".3"}], "}"}], "]"}]}], "]"}], "}"}]}]}], 
+  "]"}]], "Input",ExpressionUUID->"1fbc03cb-ecbb-4916-b927-4836eb7560d2"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"01f1e415-3022-468a-8d16-97335babdcd2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3352, 87, 83, "Input",ExpressionUUID->"1fbc03cb-ecbb-4916-b927-4836eb7560d2"]
+}
+]
+*)
+

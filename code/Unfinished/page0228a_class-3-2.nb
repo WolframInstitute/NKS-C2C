@@ -1,0 +1,75 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1993,         67]
+NotebookOptionsPosition[      1641,         53]
+NotebookOutlinePosition[      2041,         69]
+CellTagsIndexPosition[      1998,         66]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SeedRandom", "[", 
+   RowBox[{"145", ",", 
+    RowBox[{"Method", "->", "\"\<Legacy\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"GraphicsRow", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"BlockRandom", "[", 
+     RowBox[{"ArrayPlot", "[", 
+      RowBox[{
+       RowBox[{"CellularAutomaton", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"RandomInteger", "[", 
+          RowBox[{"1", ",", "800"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"290", ",", 
+           RowBox[{"{", 
+            RowBox[{"249", ",", "549"}], "}"}]}], "}"}]}], "]"}], ",", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{"None", ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringTemplate", "[", "\"\<rule ``\>\"", "]"}], "[", 
+             "#", "]"}], ",", "Italic"}], "]"}]}], "}"}]}]}], "]"}], "]"}], 
+    "&"}], "/@", 
+   RowBox[{"{", 
+    RowBox[{"90", ",", "105"}], "}"}]}], "]"}]}], "Input",ExpressionUUID->\
+"1cb69272-06de-4999-87e6-747b001e90a9"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1b1c47ae-6158-465d-b328-16b9e5c9dacf"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1079, 31, 86, "Input",ExpressionUUID->"1cb69272-06de-4999-87e6-747b001e90a9"]
+}
+]
+*)
+

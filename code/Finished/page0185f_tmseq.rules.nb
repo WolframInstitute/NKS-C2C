@@ -1,0 +1,271 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10684,        263]
+NotebookOptionsPosition[     10326,        249]
+NotebookOutlinePosition[     10730,        265]
+CellTagsIndexPosition[     10687,        262]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"stateIndicator", "=", 
+     RowBox[{"Function", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"state", ",", "pos"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"Black", ",", 
+         RowBox[{"Translate", "[", 
+          RowBox[{
+           RowBox[{"Rotate", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Disk", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "0"}], "}"}], ",", "0.18"}], "]"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Polygon", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"0.17", ",", "0"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "0.17"}], ",", "0"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", ".5"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"0.17", ",", "0"}], "}"}]}], "}"}], "]"}]}], "}"}],
+              ",", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "state"}], ")"}], 
+              FractionBox["\[Pi]", "2"]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}]}], "]"}], ",", "pos"}], "]"}]}], 
+        "}"}]}], "]"}]}], "}"}], ",", 
+   RowBox[{"GraphicsColumn", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"GraphicsRow", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Graphics", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"GrayLevel", "[", 
+                RowBox[{"1", "-", 
+                 RowBox[{".5", "*", 
+                  RowBox[{
+                   RowBox[{"Keys", "[", "#", "]"}], "[", 
+                   RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}], ",", 
+               RowBox[{"EdgeForm", "[", "Black", "]"}], ",", 
+               RowBox[{"Rectangle", "[", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "0"}], "}"}], "]"}], ",", 
+               RowBox[{"stateIndicator", "[", 
+                RowBox[{
+                 RowBox[{"First", "@", 
+                  RowBox[{"Keys", "@", "#"}]}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{".5", ",", ".5"}], "}"}]}], "]"}], ",", "Black", 
+               ",", 
+               RowBox[{"Arrowheads", "[", ".1", "]"}], ",", 
+               RowBox[{"Arrow", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"1.2", ",", ".5"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"2.25", ",", ".5"}], "}"}]}], "}"}], "]"}], ",", 
+               RowBox[{"GrayLevel", "[", 
+                RowBox[{"1", "-", 
+                 RowBox[{".5", "*", 
+                  RowBox[{
+                   RowBox[{"Values", "[", "#", "]"}], "[", 
+                   RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}], ",", 
+               RowBox[{"Rectangle", "[", 
+                RowBox[{"{", 
+                 RowBox[{"3", ",", "0"}], "}"}], "]"}], ",", 
+               RowBox[{"stateIndicator", "[", 
+                RowBox[{
+                 RowBox[{"First", "@", 
+                  RowBox[{"Values", "@", "#"}]}], ",", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"3.5", ",", ".5"}], "}"}], "+", 
+                  RowBox[{".68", "*", 
+                   RowBox[{"Last", "@", 
+                    RowBox[{"Values", "@", "#"}]}]}]}]}], "]"}]}], "}"}], ",",
+              "\[IndentingNewLine]", 
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Expression", 
+                 RowBox[{
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "IconizeEllipsis"]], "\[Rule]", 
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "IconizeEllipsis"]]}], 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Rule", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["288", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              PlotRange -> {{-0.75, 4.75}, {-0.75, 1.75}},
+              SelectWithContents->True,
+              Selectable->False]}], "]"}], "&"}], "/@", "#"}], ",", 
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", 
+             RowBox[{
+               DynamicBox[
+                FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+               "\[Rule]", 
+               DynamicBox[
+                FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  
+                  TagBox["Rule", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["56", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          Frame -> All,
+          SelectWithContents->True,
+          Selectable->False]}], "]"}], "&"}], "/@", 
+      InterpretationBox[
+       DynamicModuleBox[{Typeset`open = False}, 
+        TemplateBox[{"List", "ListIcon", 
+          GridBox[{{
+             RowBox[{
+               TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+               TagBox["List", "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Dimensions: \"", "IconizedLabel"], 
+               "\[InvisibleSpace]", 
+               TagBox[
+                RowBox[{"{", 
+                  RowBox[{"5", ",", "8"}], "}"}], "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Byte count: \"", "IconizedLabel"], 
+               "\[InvisibleSpace]", 
+               TagBox["13720", "IconizedItem"]}]}}, 
+           GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+           "Column", 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+          Dynamic[Typeset`open]},
+         "IconizedObject"]],
+       {{{1, 1} -> {3, 0, {-1, 0}}, {1, 0} -> {2, 1, {0, -1}}, {2, 1} -> {
+          2, 1, {1, 0}}, {2, 0} -> {3, 1, {0, -1}}, {3, 1} -> {
+          1, 0, {0, -1}}, {3, 0} -> {4, 1, {0, 1}}, {4, 1} -> {
+          1, 0, {0, 1}}, {4, 0} -> {2, 0, {1, 0}}}, {{1, 1} -> {
+          1, 0, {0, 1}}, {1, 0} -> {4, 1, {1, 0}}, {2, 1} -> {
+          2, 1, {0, -1}}, {2, 0} -> {3, 1, {-1, 0}}, {3, 1} -> {
+          2, 1, {0, -1}}, {3, 0} -> {1, 0, {0, 1}}, {4, 1} -> {
+          1, 0, {0, -1}}, {4, 0} -> {2, 1, {1, 0}}}, {{1, 1} -> {
+          3, 0, {1, 0}}, {1, 0} -> {2, 1, {-1, 0}}, {2, 1} -> {
+          1, 1, {-1, 0}}, {2, 0} -> {4, 0, {1, 0}}, {3, 1} -> {
+          4, 0, {0, -1}}, {3, 0} -> {1, 0, {0, 1}}, {4, 1} -> {
+          2, 1, {0, 1}}, {4, 0} -> {1, 1, {0, -1}}}, {{1, 1} -> {
+          2, 0, {-1, 0}}, {1, 0} -> {4, 0, {1, 0}}, {2, 1} -> {
+          4, 1, {0, 1}}, {2, 0} -> {1, 1, {0, 1}}, {3, 1} -> {
+          3, 1, {0, -1}}, {3, 0} -> {2, 0, {-1, 0}}, {4, 1} -> {
+          2, 0, {1, 0}}, {4, 0} -> {3, 1, {0, -1}}}, {{1, 1} -> {
+          2, 0, {0, -1}}, {1, 0} -> {2, 1, {0, 1}}, {2, 1} -> {
+          3, 0, {0, 1}}, {2, 0} -> {4, 1, {0, -1}}, {3, 1} -> {
+          2, 1, {0, 1}}, {3, 0} -> {1, 1, {-1, 0}}, {4, 1} -> {
+          2, 0, {1, 0}}, {4, 0} -> {3, 1, {0, -1}}}},
+       SelectWithContents->True,
+       Selectable->False]}], ",", 
+     InterpretationBox[
+      DynamicModuleBox[{Typeset`open = False}, 
+       TemplateBox[{"Expression", 
+         RowBox[{
+           DynamicBox[
+            FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+           "\[Rule]", 
+           DynamicBox[
+            FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+         GridBox[{{
+            RowBox[{
+              TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["Rule", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Byte count: \"", "IconizedLabel"], 
+              "\[InvisibleSpace]", 
+              TagBox["56", "IconizedItem"]}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+          "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+         Dynamic[Typeset`open]},
+        "IconizedObject"]],
+      ImageSize -> Large,
+      SelectWithContents->True,
+      Selectable->False]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.868350518296912*^9},ExpressionUUID->"b900b1ca-38c0-4cac-b3e0-\
+ecefe0a636bf"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{116.5, Automatic}, {Automatic, 140.5}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f80c667c-9e9d-4b1c-9d02-6b175d27feac"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 9764, 227, 221, "Input",ExpressionUUID->"b900b1ca-38c0-4cac-b3e0-ecefe0a636bf"]
+}
+]
+*)
+

@@ -1,0 +1,137 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4382,        129]
+NotebookOptionsPosition[      4029,        115]
+NotebookOutlinePosition[      4429,        131]
+CellTagsIndexPosition[      4386,        128]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"ConstraintViolations", "[", "array_", "]"}], ":=", 
+    RowBox[{"Count", "[", 
+     RowBox[{
+      RowBox[{"Partition", "[", 
+       RowBox[{"array", ",", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "3"}], "}"}], ",", "1"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"_", ",", "a_", ",", "_"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"b_", ",", "x_", ",", "c_"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"_", ",", "d_", ",", "_"}], "}"}]}], "}"}], "/;", 
+       RowBox[{"!", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"a", "+", "b", "+", "c", "+", "d"}], "==", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"x", "==", "1"}], ",", "1", ",", "2"}], "]"}]}], 
+         ")"}]}]}], ",", 
+      RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SeedRandom", "[", "3060", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{"ConstraintViolations", "/@", 
+    RowBox[{"NestList", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"new", "=", 
+           RowBox[{"MapAt", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"1", "-", "#"}], "&"}], ",", "#", ",", 
+             RowBox[{"RandomInteger", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"1", ",", "10"}], "}"}], ",", "2"}], "]"}]}], "]"}]}],
+           "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"ConstraintViolations", "[", "new", "]"}], ">", 
+            RowBox[{"ConstraintViolations", "[", "#", "]"}]}], ",", "#", ",", 
+           "new"}], "]"}]}], "]"}], "&"}], ",", 
+      RowBox[{"RandomChoice", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"10", ",", "10"}], "}"}]}], "]"}], ",", "1000"}], "]"}]}], 
+   ",", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", "SequenceIcon", 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["Sequence", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["7", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["1552", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    Sequence[
+    AspectRatio -> 1/8, PlotRange -> {All, {0, 65}}, Filling -> Axis, Frame -> 
+     True, PlotRangePadding -> 0, ImageSize -> Large, FrameTicks -> {{
+        Table[{$CellContext`n, 
+          Style[
+           StringTemplate["``%"][100 $CellContext`n/64]]}, {$CellContext`n, 0,
+           64, 16}], False}, {Automatic, False}}],
+    SelectWithContents->True,
+    Selectable->False]}], "]"}]}], "Input",ExpressionUUID->"5a96103a-16d6-\
+4f9e-8c91-76dac2cef05c"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"048f1100-d908-4c79-a3f4-c6c765b7dd65"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3467, 93, 189, "Input",ExpressionUUID->"5a96103a-16d6-4f9e-8c91-76dac2cef05c"]
+}
+]
+*)
+

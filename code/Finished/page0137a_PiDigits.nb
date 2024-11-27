@@ -1,0 +1,120 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3902,        112]
+NotebookOptionsPosition[      3549,         98]
+NotebookOutlinePosition[      3949,        114]
+CellTagsIndexPosition[      3906,        111]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Framed", "[", 
+  RowBox[{
+   RowBox[{"Style", "[", 
+    RowBox[{
+     RowBox[{"Column", "[", 
+      RowBox[{
+       RowBox[{"MapAt", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\"\<3.\>\"", "<>", 
+           RowBox[{"ToString", "[", "#", "]"}]}], "&"}], ",", 
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"StringJoin", "[", "#", "]"}], "&"}], ",", 
+           RowBox[{"Partition", "[", 
+            RowBox[{
+             RowBox[{"Map", "[", 
+              RowBox[{"ToString", ",", 
+               RowBox[{"Rest", "[", 
+                RowBox[{"First", "[", 
+                 RowBox[{"RealDigits", "[", 
+                  RowBox[{"\[Pi]", ",", "10", ",", "4002"}], "]"}], "]"}], 
+                "]"}]}], "]"}], ",", "125"}], "]"}]}], "]"}], ",", "1"}], 
+        "]"}], ",", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", "SequenceIcon", 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["Sequence", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                
+                TagBox["2", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["168", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Sequence[Alignment -> Right, ItemSize -> Full],
+        SelectWithContents->True,
+        Selectable->False]}], "]"}], ",", "Italic"}], "]"}], ",", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       RowBox[{
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+         "\[Rule]", 
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["Rule", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["120", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    Background -> GrayLevel[0.9],
+    SelectWithContents->True,
+    Selectable->False]}], "]"}]], "Input",ExpressionUUID->"fcfd1a03-c2f0-415f-\
+8148-f4e2e0194def"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{44.5, Automatic}, {94, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b0fc0b79-e817-4d50-9169-7d16102038ee"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2987, 76, 127, "Input",ExpressionUUID->"fcfd1a03-c2f0-415f-8148-f4e2e0194def"]
+}
+]
+*)
+

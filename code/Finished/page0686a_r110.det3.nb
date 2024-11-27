@@ -1,0 +1,136 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5853,        128]
+NotebookOptionsPosition[      5501,        114]
+NotebookOutlinePosition[      5901,        130]
+CellTagsIndexPosition[      5858,        127]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"ArrayPlot", "[", 
+      RowBox[{"#", ",", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", "SequenceIcon", 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["Sequence", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                
+                TagBox["2", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["816", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Sequence[PlotRange -> {All, {-160, 160} + Round[(1/2) Length[
+               Part[#, 1]]]}, ImageSize -> Large],
+        SelectWithContents->True,
+        Selectable->False]}], "]"}], "&"}], "@", 
+    RowBox[{"CellularAutomaton", "[", 
+     RowBox[{"110", ",", 
+      RowBox[{"IntegerDigits", "[", 
+       RowBox[{"#", ",", "2"}], "]"}], ",", "1200"}], "]"}]}], "&"}], "/@", 
+  InterpretationBox[
+   DynamicModuleBox[{Typeset`open = False}, 
+    TemplateBox[{"List", 
+      StyleBox[
+      "\"Structure Data\"", "IconizedCustomName", StripOnInput -> False], 
+      GridBox[{{
+         RowBox[{
+           TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["List", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["3", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["1216", "IconizedItem"]}]}}, 
+       GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+       "Column", 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+      Dynamic[Typeset`open]},
+     "IconizedObject"]],
+   {44810843423071142059464620786640504407407001576496425596824488620963537716\
+706048590169380553638172122079027215725946851490488599068433520265284645567822\
+655636764740687243467479290651019853534992612598453431583271699362287963270882\
+936461600342760560948992146381282021939985533373857187274614740982402359352395\
+530981631362975285771809599295985888264217013116041665702471186353614029933770\
+099675786566435696960826165268870565030774640411199990290101188652737143381121\
+917397279787477104094305536532462563091758651064688269611552315589542792055997\
+522126506589235355688788894468914404350406114904976784766388598644822457724321\
+538596703266697819866140618013643568933685839699569611989756835921195886057497\
+751822309618081479614583542651330570049015523283557317194207350898338945789225\
+01115604234906704065450162686339863269017850, 
+    27258821666853365347744660367356196700446448543063343758427979770427001775\
+927126761967419095598304217406407642803106721453338048553430282618822732174066\
+817015981659558599688108659131598990143190197861970081954829790448321387464049\
+913646879707503849191665025587604227761873659863005769886007575883814808656456\
+989389154098644800284480661526640427410636490155544951227062277654737808895751\
+890298552189870424548713415331324768328116032225063055457989278033006342597361\
+442104536758619870373111243053494352557525648891646196629478840366854480163075\
+435958727334766866410429373328678584019456413446215040707182254757971672701815\
+652794099035172008995137997852334144815177765802302168132689171758196452009442\
+734950100868375098947813622829725344180049728557048415510475290650765276184044\
+72201599016656040198589451679781853761666428, 
+    18815235441233990726828510839329300524927877945571691532566741324196025718\
+022566683318867148665598414410000866293506700347368966868897604275404196996081\
+153119428807897400123097003502031909812276092612122447876539443430951422509680\
+792050229458279949959307583013236316451987977125113377531821189486264397467689\
+212674436010532605237006529608243363614722513690493831255075436395659870373360\
+977100459076909889961168219232693002099806541390649574888092943049611660053236\
+753566281621537576294244608104445619332257609124643364377102061391040162121640\
+330914284462227843658209434697975368774026952476101626313716653497492225353933\
+330224942648138242883783023400326831616927526877856620160482533591415265213381\
+599648703098894759903004309569101396191548767907006610473031250846827222791672\
+53295965888141060177117284627433366612293583},
+   SelectWithContents->True,
+   Selectable->False]}]], "Input",ExpressionUUID->"005c155d-7898-4b07-b5be-\
+7ba9f080831d"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"39ea8229-d148-4a65-bcfc-9ec28f313c0b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4939, 92, 36, "Input",ExpressionUUID->"005c155d-7898-4b07-b5be-7ba9f080831d"]
+}
+]
+*)
+

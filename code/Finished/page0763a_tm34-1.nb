@@ -1,0 +1,223 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7449,        215]
+NotebookOptionsPosition[      7095,        201]
+NotebookOutlinePosition[      7495,        217]
+CellTagsIndexPosition[      7452,        214]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"RulePlot", "[", 
+    RowBox[{
+     RowBox[{"TuringMachine", "[", "#1", "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"min", "=", 
+           RowBox[{
+            RowBox[{"Min", "[", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1", ",", "2"}], "]"}], "]"}], "]"}], "-", 
+            "1"}]}], "}"}], ",", 
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"#", "-", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "min", ",", "0"}], "}"}]}], "&"}], "/@", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
+            RowBox[{"ArrayPad", "[", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "2"}], "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "min"}], ",", 
+                  RowBox[{
+                   RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", ",", "1", ",", "2"}], "]"}], "]"}], "+", "1",
+                    "-", 
+                   RowBox[{"Length", "[", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", ",", "2"}], "]"}], "]"}], "]"}], "-", 
+                   RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", ",", "1", ",", "3"}], "]"}], "]"}]}]}], 
+                 "}"}]}], "}"}]}], "]"}]}], "}"}], "]"}]}], "]"}], "&"}], "@", 
+      RowBox[{"Module", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"break", "=", "False"}], "}"}], ",", 
+        RowBox[{"TakeWhile", "[", 
+         RowBox[{"#2", ",", 
+          RowBox[{
+           RowBox[{"Which", "[", 
+            RowBox[{"break", ",", "False", ",", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", 
+                RowBox[{"1", ",", "3"}], "]"}], "]"}], "<=", "0"}], ",", 
+             "True", ",", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", 
+                RowBox[{"1", ",", "3"}], "]"}], "]"}], "==", "1"}], ",", 
+             RowBox[{"break", "=", "True"}]}], "]"}], "&"}]}], "]"}]}], 
+       "]"}]}], ",", 
+     InterpretationBox[
+      DynamicModuleBox[{Typeset`open = False}, 
+       TemplateBox[{"Expression", 
+         RowBox[{
+           DynamicBox[
+            FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+           "\[Rule]", 
+           DynamicBox[
+            FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+         GridBox[{{
+            RowBox[{
+              TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["Rule", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Byte count: \"", "IconizedLabel"], 
+              "\[InvisibleSpace]", 
+              TagBox["56", "IconizedItem"]}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+          "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+         Dynamic[Typeset`open]},
+        "IconizedObject"]],
+      ImageSize -> Large,
+      SelectWithContents->True,
+      Selectable->False]}], "]"}], "&"}], "@@@", 
+  RowBox[{"Insert", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", 
+          RowBox[{";;", "2"}], "]"}], "]"}], ",", 
+        RowBox[{"TuringMachine", "[", 
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", 
+            RowBox[{";;", "2"}], "]"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"1", ",", "24"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"IntegerDigits", "[", 
+               RowBox[{
+                RowBox[{"Last", "[", "#", "]"}], ",", "2", ",", "24"}], "]"}],
+               ",", "0"}], "}"}]}], "}"}], ",", "1200"}], "]"}]}], "}"}], 
+      "&"}], "/@", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"582285", ",", "3", ",", "1023"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"657939", ",", "3", ",", "615"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2018806", ",", "3", ",", "129"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2868668", ",", "3", ",", "126"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2138664", ",", "3", ",", "351"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2139050", ",", "3", ",", "63"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"132527", ",", "3", ",", "22"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"3374234978", ",", "4", ",", "2261"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1806221583", ",", "4", ",", "991"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1232059922", ",", "4", ",", "599"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"3238044559", ",", "4", ",", "319"}], "}"}]}], "}"}]}], ",", 
+    RowBox[{"Splice", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"600720", ",", "3"}], "}"}], ",", 
+           RowBox[{"Take", "[", 
+            RowBox[{"#", ",", "521"}], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"600720", ",", "3"}], "}"}], ",", 
+           RowBox[{"Drop", "[", 
+            RowBox[{"#", ",", "521"}], "]"}]}], "}"}]}], "}"}], "&"}], "@", 
+      RowBox[{"TuringMachine", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"600720", ",", "3"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", "24"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"IntegerDigits", "[", 
+             RowBox[{"10", ",", "2", ",", "24"}], "]"}], ",", "0"}], "}"}]}], 
+         "}"}], ",", "1200"}], "]"}]}], "]"}], ",", "8"}], "]"}]}]], "Input",E\
+xpressionUUID->"c36d3567-f011-41fb-bd8f-d5c473a12529"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f2473813-52a9-49ce-b855-f97f9ef93c3a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6533, 179, 274, "Input",ExpressionUUID->"c36d3567-f011-41fb-bd8f-d5c473a12529"]
+}
+]
+*)
+

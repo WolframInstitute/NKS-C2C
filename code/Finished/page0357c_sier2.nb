@@ -1,0 +1,166 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5867,        158]
+NotebookOptionsPosition[      5384,        141]
+NotebookOutlinePosition[      5787,        157]
+CellTagsIndexPosition[      5744,        154]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"RulePlot", "[", 
+  RowBox[{
+   RowBox[{"SubstitutionSystem", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"1", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1"}], "}"}]}], "}"}]}], ",", 
+      RowBox[{"0", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}]}], "}"}]}]}], "}"}], "]"}], ",", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       RowBox[{
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+         "\[Rule]", 
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["Rule", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["56", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    ImageSize -> Small,
+    SelectWithContents->True,
+    Selectable->False]}], "]"}]], "Input",
+ CellChangeTimes->{3.8708837839023714`*^9},
+ CellLabel->"In[16]:=",ExpressionUUID->"8c7738ec-1f47-4fb2-afe3-306c637c51b2"],
+
+Cell[BoxData[
+ GraphicsBox[{{InsetBox[
+     GraphicsBox[{
+       {EdgeForm[GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+        {GrayLevel[0], RectangleBox[{-1, 0}]}}, 
+       {Arrowheads[{{Automatic, Automatic, 
+           GraphicsBox[
+            LineBox[
+             NCache[{{Rational[-1, 2] 3^Rational[1, 2], 
+                Rational[1, 2]}, {0, 0}, {Rational[-1, 2] 3^Rational[1, 2], 
+                Rational[-1, 2]}}, {{-0.8660254037844386, 0.5}, {0, 
+               0}, {-0.8660254037844386, -0.5}}]]]}}], 
+        ArrowBox[
+         NCache[{{0.5, Rational[1, 2]}, {1.5, Rational[1, 2]}}, {{0.5, 0.5}, {
+          1.5, 0.5}}]]}, {
+        {EdgeForm[GrayLevel[
+          NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+         {GrayLevel[0], 
+          RectangleBox[NCache[{2, Rational[1, 2]}, {2, 0.5}]]}, 
+         {GrayLevel[1], RectangleBox[NCache[{3, Rational[1, 2]}, {3, 0.5}]]}}, 
+        {EdgeForm[GrayLevel[
+          NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+         {GrayLevel[0], 
+          RectangleBox[NCache[{2, Rational[-1, 2]}, {2, -0.5}]]}, 
+         {GrayLevel[0], 
+          RectangleBox[NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}}}},
+      PlotRange->NCache[{{
+          Rational[-3, 2], 
+          Rational[9, 2]}, {-1, 2}}, {{-1.5, 4.5}, {-1, 2}}]], 
+     NCache[{1., Rational[1, 2]}, {1., 0.5}], {Center, Center}, {2., 1}], 
+    InsetBox[
+     GraphicsBox[{
+       {EdgeForm[GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+        {GrayLevel[1], RectangleBox[{-1, 0}]}}, 
+       {Arrowheads[{{Automatic, Automatic, 
+           GraphicsBox[
+            LineBox[
+             NCache[{{Rational[-1, 2] 3^Rational[1, 2], 
+                Rational[1, 2]}, {0, 0}, {Rational[-1, 2] 3^Rational[1, 2], 
+                Rational[-1, 2]}}, {{-0.8660254037844386, 0.5}, {0, 
+               0}, {-0.8660254037844386, -0.5}}]]]}}], 
+        ArrowBox[
+         NCache[{{0.5, Rational[1, 2]}, {1.5, Rational[1, 2]}}, {{0.5, 0.5}, {
+          1.5, 0.5}}]]}, {
+        {EdgeForm[GrayLevel[
+          NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+         {GrayLevel[1], 
+          RectangleBox[NCache[{2, Rational[1, 2]}, {2, 0.5}]]}, 
+         {GrayLevel[1], RectangleBox[NCache[{3, Rational[1, 2]}, {3, 0.5}]]}}, 
+        {EdgeForm[GrayLevel[
+          NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+         {GrayLevel[1], 
+          RectangleBox[NCache[{2, Rational[-1, 2]}, {2, -0.5}]]}, 
+         {GrayLevel[1], 
+          RectangleBox[NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}}}},
+      PlotRange->NCache[{{
+          Rational[-3, 2], 
+          Rational[9, 2]}, {-1, 2}}, {{-1.5, 4.5}, {-1, 2}}]], 
+     NCache[{3., Rational[1, 2]}, {3., 0.5}], {Center, Center}, {2., 1}]}, 
+   {GrayLevel[
+    0.8], {LineBox[{{0, 0}, {0, 1}}], LineBox[{{2., 0}, {2., 1}}], 
+     LineBox[{{4., 0}, {4., 1}}]}, {LineBox[{{0, 0}, {4., 0}}], 
+     LineBox[{{0, 1}, {4., 1}}]}}},
+  ImageSize->Small]], "Output",
+ CellChangeTimes->{3.8708837844153204`*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"d54643e6-8d4b-41f2-9272-7fa07df57f3f"]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{119.5, Automatic}, {77.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"99ca9c34-23b9-49f8-8124-4486ded5dbdf"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1689, 47, 37, "Input",ExpressionUUID->"8c7738ec-1f47-4fb2-afe3-306c637c51b2"],
+Cell[2272, 71, 3096, 67, 67, "Output",ExpressionUUID->"d54643e6-8d4b-41f2-9272-7fa07df57f3f"]
+}, Open  ]]
+}
+]
+*)
+

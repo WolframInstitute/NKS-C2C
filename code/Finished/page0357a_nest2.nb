@@ -1,0 +1,132 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4403,        124]
+NotebookOptionsPosition[      3919,        107]
+NotebookOutlinePosition[      4323,        123]
+CellTagsIndexPosition[      4280,        120]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"RulePlot", "[", 
+  RowBox[{
+   RowBox[{"SubstitutionSystem", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"1", "->", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0"}], "}"}]}], ",", 
+      RowBox[{"0", "->", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1"}], "}"}]}]}], "}"}], "]"}], ",", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", "SequenceIcon", 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["Sequence", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["3", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["560", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    Sequence[
+    ImageSize -> Tiny, MeshStyle -> GrayLevel[0.15], 
+     ColorRules -> {1 -> Black, 0 -> GrayLevel[0.85]}],
+    SelectWithContents->True,
+    Selectable->False]}], "]"}]], "Input",
+ CellChangeTimes->{3.870883626709302*^9},
+ CellLabel->"In[15]:=",ExpressionUUID->"c92a64d3-5a09-44e9-b41b-fba71598041b"],
+
+Cell[BoxData[
+ GraphicsBox[{{InsetBox[
+     GraphicsBox[{
+       {EdgeForm[GrayLevel[0.15]], 
+        {GrayLevel[0], 
+         RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}}, 
+       {EdgeForm[GrayLevel[0.15]], 
+        {GrayLevel[0], 
+         RectangleBox[
+          NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}, 
+        {GrayLevel[0.85], 
+         RectangleBox[
+          NCache[{Rational[1, 2], Rational[-5, 4]}, {0.5, -1.25}]]}}},
+      PlotRange->NCache[{{-1, 2}, {
+          Rational[-7, 4], 
+          Rational[3, 2]}}, {{-1, 2}, {-1.75, 1.5}}]], 
+     NCache[{0.46153846153846156`, Rational[1, 2]}, {0.46153846153846156`, 
+      0.5}], {Center, Center}, {0.9230769230769231, 1}], InsetBox[
+     GraphicsBox[{
+       {EdgeForm[GrayLevel[0.15]], 
+        {GrayLevel[0.85], 
+         RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}}, 
+       {EdgeForm[GrayLevel[0.15]], 
+        {GrayLevel[0.85], 
+         RectangleBox[
+          NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}, 
+        {GrayLevel[0], 
+         RectangleBox[
+          NCache[{Rational[1, 2], Rational[-5, 4]}, {0.5, -1.25}]]}}},
+      PlotRange->NCache[{{-1, 2}, {
+          Rational[-7, 4], 
+          Rational[3, 2]}}, {{-1, 2}, {-1.75, 1.5}}]], 
+     NCache[{1.3846153846153846`, Rational[1, 2]}, {1.3846153846153846`, 
+      0.5}], {Center, Center}, {0.9230769230769231, 1}]}, 
+   {GrayLevel[
+    0.8], {LineBox[{{0, 0}, {0, 1}}], 
+     LineBox[{{0.9230769230769231, 0}, {0.9230769230769231, 1}}], 
+     LineBox[{{1.8461538461538463`, 0}, {1.8461538461538463`, 1}}]}, {
+     LineBox[{{0, 0}, {1.8461538461538463`, 0}}], 
+     LineBox[{{0, 1}, {1.8461538461538463`, 1}}]}}},
+  ImageSize->Tiny]], "Output",
+ CellChangeTimes->{3.8708836272732735`*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"7300a6aa-9d26-4360-a963-d48e8cebe265"]
+}, Open  ]]
+},
+WindowSize->{1920, 1048},
+WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"270f8d7f-1a1d-4671-83d8-3ff77be60c9d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1469, 38, 35, "Input",ExpressionUUID->"c92a64d3-5a09-44e9-b41b-fba71598041b"],
+Cell[2052, 62, 1851, 42, 72, "Output",ExpressionUUID->"7300a6aa-9d26-4360-a963-d48e8cebe265"]
+}, Open  ]]
+}
+]
+*)
+

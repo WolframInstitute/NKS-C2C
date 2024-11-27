@@ -1,0 +1,156 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6820,        148]
+NotebookOptionsPosition[      6467,        134]
+NotebookOutlinePosition[      6867,        150]
+CellTagsIndexPosition[      6824,        147]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"off", "=", "#3"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"ArrayPlot", "[", 
+        RowBox[{"#", ",", 
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", "SequenceIcon", 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  
+                  TagBox["Sequence", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Length: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["2", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["824", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          Sequence[
+          PlotRange -> {
+            All, {0, 320} + $CellContext`off + Round[(1/2) Length[
+                 Part[#, 1]]]}, ImageSize -> Large],
+          SelectWithContents->True,
+          Selectable->False]}], "]"}], "&"}], "@", 
+      RowBox[{"CellularAutomaton", "[", 
+       RowBox[{"110", ",", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"#1", ",", "2"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "1200"}], "}"}], "+", "#2"}], "}"}]}], "]"}]}]}],
+     "]"}], "&"}], "@@@", 
+  InterpretationBox[
+   DynamicModuleBox[{Typeset`open = False}, 
+    TemplateBox[{"List", 
+      StyleBox[
+      "\"Structure Data\"", "IconizedCustomName", StripOnInput -> False], 
+      GridBox[{{
+         RowBox[{
+           TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["List", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Dimensions: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox[
+            RowBox[{"{", 
+              RowBox[{"3", ",", "3"}], "}"}], "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["1728", "IconizedItem"]}]}}, 
+       GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+       "Column", 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+      Dynamic[Typeset`open]},
+     "IconizedObject"]],
+   {{3084900793517063785696080718842907128343746102595599625656760047496599629\
+161959428165963290372116973203370908387230567526601987553763997786018577261581\
+912506015249676533498485299580547368066278814822132313495811874243033963111966\
+119479446111472216260010049029005593655513924820609987991529288995931172059689\
+204662564038638863091057227156819452130010782226452669773184024653259244544962\
+342815282921530281939011416230476282966810109265801508548115452318878440095746\
+323008215161403257082821531096561793397574594027418729216372280721652018024413\
+247055877293666212440969398140459495427385835790802867937818784938930878511256\
+721181352952910663857482529319851807729115809675200643876340335697847155914855\
+244452368981160173432546744489463873881873647541603891575194663920495579164245\
+335091163676647194510601679609838799217874715, 0, -160}, {
+    49070939402437534342253757015885340492545412785813401054175747841808037559\
+195421679790775268004953376523597523567712429888661806617474684913856744904429\
+476649478885420055639466729601354952239382347182292921653134964454411377226090\
+176529135788003003361701976255166897783603904691388175160992359202624438289762\
+480130527716760114884928866839311748157848215826887061084339812829311850556464\
+255042385774005016209217291968530318148124571310057911061231851808409690808006\
+383575192564722285364012548494328775708197694450926481977921435626807925690504\
+989023315980319380329722826175372692160069061578106169242730396204999262124245\
+959721586343448249900420407790697224274062164981367943442412757106877708757621\
+797371462821608444040972288321019450523895531990583573865702143636994052363549\
+959467601624521954939141963733178383916565610179554367256264929580264846389537\
+048799221291282165929715995549260194527789558321853729374651772705068942717781\
+008538281635973767236382391857218752213636005133614134747506393494008728445948\
+442179149699049271082799400045551450233959197231240326634846304129871383800271\
+840866088175538699748819548510060757319590130633508601382461661890334779635851\
+106497417682915684721473492070687287788300734197987938391183610104012976067124\
+668794315373939216144588069257064951651313056034376666609, 700, -90}, {
+    38561259918963297321201008985536339104296826282444995320709500593707495364\
+524492852074541129243530906240112440832417169844730356600631669442553748094132\
+976451945445922079334914279699711034736413072960863993227602127773305418285670\
+467329391516491218614157736748383499398198172539738273848501192224553551829250\
+901534325512851408121302455671238291522732350829717817603785652309052150521281\
+867648973881053124351586631769684058967019171544578520242514844148720436510463\
+537459021462216921778681065118167628924872175525912863631220652055890882104614\
+973044599297791418268495397937664709394458232104529041268655591183473067551650\
+249882086641006187857511480721126683007558401399236393268452292192367140136656\
+907985634678760633500238243229130008460249837077279679513974474195825435116576\
+2210863304553703377647767341808575082936119, 0, -160}},
+   SelectWithContents->True,
+   Selectable->False]}]], "Input",ExpressionUUID->"5ec8d036-8c31-4791-be9e-\
+6b0ec397fef4"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"89105519-c90f-4b89-8909-c783ec4b6b50"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5905, 112, 60, "Input",ExpressionUUID->"5ec8d036-8c31-4791-be9e-6b0ec397fef4"]
+}
+]
+*)
+

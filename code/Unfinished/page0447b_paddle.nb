@@ -1,0 +1,219 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7671,        211]
+NotebookOptionsPosition[      7317,        197]
+NotebookOutlinePosition[      7717,        213]
+CellTagsIndexPosition[      7674,        210]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Total", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "11", "]"}], "]"}], "]"}], "-", 
+        RowBox[{"Total", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "13", "]"}], "]"}], "]"}]}], "&"}], "/@", "#"}], ",", 
+     InterpretationBox[
+      DynamicModuleBox[{Typeset`open = False}, 
+       TemplateBox[{"Expression", "SequenceIcon", 
+         GridBox[{{
+            RowBox[{
+              TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["Sequence", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["10", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Byte count: \"", "IconizedLabel"], 
+              "\[InvisibleSpace]", 
+              TagBox["1392", "IconizedItem"]}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+          "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+         Dynamic[Typeset`open]},
+        "IconizedObject"]],
+      Sequence[
+      AspectRatio -> 1/8, Filling -> Axis, Frame -> True, Mesh -> True, 
+       FrameTicks -> {{True, False}, {True, False}}, Joined -> True, 
+       PlotStyle -> Thickness[0.001], MeshStyle -> PointSize[0.003], 
+       PlotRangePadding -> {0, {
+          Scaled[0.03], 
+          Scaled[0.2]}}, ImageSize -> Large],
+      SelectWithContents->True,
+      Selectable->False]}], "]"}], "&"}], "/@", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"offset", "=", "1"}], "}"}], ",", 
+       RowBox[{"NestList", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"RotateLeft", "[", 
+           RowBox[{
+            RowBox[{"Join", "@@", 
+             RowBox[{"Map", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"MapThread", "[", 
+                 RowBox[{"Join", ",", "#"}], "]"}], "&"}], ",", 
+               RowBox[{
+                RowBox[{"Partition", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"2", ",", "2"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"2", ",", "2"}], "}"}], ",", 
+                  RowBox[{"Mod", "[", 
+                   RowBox[{
+                    RowBox[{"offset", "++"}], ",", "2", ",", "1"}], "]"}]}], 
+                 "]"}], "/.", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"a_", ",", "b_"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"c_", ",", "d_"}], "}"}]}], "}"}], "/;", 
+                    RowBox[{
+                    RowBox[{"Max", "[", 
+                    RowBox[{"a", ",", "b", ",", "c", ",", "d"}], "]"}], ">", 
+                    "1"}]}], "->", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"a", ",", "b"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"c", ",", "d"}], "}"}]}], "}"}]}], ",", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "1"}], "}"}]}], "}"}], "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "1"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}]}], "}"}]}], ",", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "1"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}]}], "}"}], "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"a_", ",", "b_"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"c_", ",", "d_"}], "}"}]}], "}"}], "->", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"d", ",", "c"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"b", ",", "a"}], "}"}]}], "}"}]}]}], "}"}]}]}], 
+              "]"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Mod", "[", 
+               RowBox[{"offset", ",", "2"}], "]"}], ",", 
+              RowBox[{"Mod", "[", 
+               RowBox[{"offset", ",", "2"}], "]"}]}], "}"}]}], "]"}], "&"}], 
+         ",", "#", ",", "500"}], "]"}]}], "]"}], "&"}], "/@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"CenterArray", "[", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{"1", ",", "6", ",", "6"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"24", ",", "24"}], "}"}]}], "]"}], ",", 
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                "#2", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+                "-", "20"}], ")"}], "2"], "+", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                "#2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                "-", "20"}], ")"}], "2"]}], "\[LessEqual]", 
+            SuperscriptBox["2", "2"]}], ",", "2", ",", "#1"}], "]"}], "&"}], 
+        ",", 
+        RowBox[{"CenterArray", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{"1", ",", "6", ",", "6"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"24", ",", "24"}], "}"}]}], "]"}], ",", 
+        RowBox[{"{", "2", "}"}]}], "]"}]}], "}"}]}], ")"}]}]], "Input",Express\
+ionUUID->"7554ef9c-87be-4c8e-9344-07187fc1b6b0"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"147a1031-4425-4fe3-acec-422273c0c9d9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6755, 175, 236, "Input",ExpressionUUID->"7554ef9c-87be-4c8e-9344-07187fc1b6b0"]
+}
+]
+*)
+

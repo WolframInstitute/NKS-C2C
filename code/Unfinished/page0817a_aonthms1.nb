@@ -1,0 +1,1071 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     50257,       1063]
+NotebookOptionsPosition[     49901,       1049]
+NotebookOutlinePosition[     50301,       1065]
+CellTagsIndexPosition[     50258,       1062]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"CloudGet", "[", "\"\<https://wolfr.am/PO7vasDF\>\"", "]"}], ";"}],
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"data73", " ", "=", 
+     RowBox[{"DepthLeafSort", "[", 
+      RowBox[{"Select", "[", 
+       RowBox[{
+        RowBox[{"FindAONTheoremsList", "[", 
+         RowBox[{"7", ",", "3"}], "]"}], ",", " ", 
+        RowBox[{
+         RowBox[{"LowestQ", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"{", 
+            RowBox[{"a", ",", "b", ",", "c"}], "}"}]}], "]"}], "&"}]}], "]"}],
+       "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"data73a", "=", 
+     RowBox[{"data73", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ";;", "180"}], "]"}], "]"}]}], ";", " ", 
+    RowBox[{"data73b", "=", 
+     RowBox[{"data73", "[", 
+      RowBox[{"[", 
+       RowBox[{"799", ";;", "858"}], "]"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"data73c", "=", 
+     RowBox[{"data73", "[", 
+      RowBox[{"[", 
+       RowBox[{"2803", ";;", "2826"}], "]"}], "]"}]}], ";"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"data73a", "=", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"List", "ListIcon", 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["List", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["180", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["44848", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    {$CellContext`a == Wedge[$CellContext`a, $CellContext`a], $CellContext`a == 
+     Vee[$CellContext`a, $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`a] == 
+     Vee[$CellContext`a, $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`b] == 
+     Wedge[$CellContext`b, $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`b] == 
+     Vee[$CellContext`b, $CellContext`a], $CellContext`a == Square[
+       Square[$CellContext`a]], Wedge[$CellContext`a, $CellContext`a] == 
+     Square[
+       Square[$CellContext`a]], Vee[$CellContext`a, $CellContext`a] == 
+     Square[
+       Square[$CellContext`a]], Square[$CellContext`a] == Square[
+       Wedge[$CellContext`a, $CellContext`a]], Square[$CellContext`a] == 
+     Square[
+       Vee[$CellContext`a, $CellContext`a]], $CellContext`a == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], $CellContext`a], $CellContext`a == 
+     Wedge[
+       Vee[$CellContext`a, $CellContext`a], $CellContext`a], $CellContext`a == 
+     Wedge[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`a]], $CellContext`a == 
+     Wedge[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`a]], $CellContext`a == Vee[
+       Wedge[$CellContext`a, $CellContext`a], $CellContext`a], $CellContext`a == 
+     Vee[
+       Vee[$CellContext`a, $CellContext`a], $CellContext`a], $CellContext`a == 
+     Vee[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`a]], $CellContext`a == 
+     Vee[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`a]], $CellContext`a == 
+     Wedge[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`b]], $CellContext`a == 
+     Vee[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`b]], $CellContext`a == Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`a], $CellContext`a == 
+     Wedge[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`a]], $CellContext`a == Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`a], $CellContext`a == 
+     Vee[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`a]], $CellContext`a == Wedge[
+       Vee[$CellContext`b, $CellContext`a], $CellContext`a], $CellContext`a == 
+     Vee[
+       Wedge[$CellContext`b, $CellContext`a], $CellContext`a], 
+     Square[$CellContext`a] == Wedge[
+       Square[$CellContext`a], 
+       Square[$CellContext`a]], Square[$CellContext`a] == Vee[
+       Square[$CellContext`a], 
+       Square[$CellContext`a]], Wedge[
+       Square[$CellContext`a], $CellContext`a] == Wedge[$CellContext`a, 
+       Square[$CellContext`a]], Vee[
+       Square[$CellContext`a], $CellContext`a] == Vee[$CellContext`a, 
+       Square[$CellContext`a]], Square[
+       Wedge[$CellContext`a, $CellContext`a]] == Square[
+       Vee[$CellContext`a, $CellContext`a]], Square[
+       Square[$CellContext`a]] == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], $CellContext`a], Square[
+       Square[$CellContext`a]] == Wedge[
+       Vee[$CellContext`a, $CellContext`a], $CellContext`a], Square[
+       Square[$CellContext`a]] == Wedge[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`a]], Square[
+       Square[$CellContext`a]] == Wedge[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`a]], Square[
+       Square[$CellContext`a]] == Vee[
+       Wedge[$CellContext`a, $CellContext`a], $CellContext`a], Square[
+       Square[$CellContext`a]] == Vee[
+       Vee[$CellContext`a, $CellContext`a], $CellContext`a], Square[
+       Square[$CellContext`a]] == Vee[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`a]], Square[
+       Square[$CellContext`a]] == Vee[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`a]], Square[
+       Square[$CellContext`a]] == Wedge[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`b]], Square[
+       Square[$CellContext`a]] == Vee[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`b]], Square[
+       Square[$CellContext`a]] == Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`a], Square[
+       Square[$CellContext`a]] == Wedge[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`a]], Square[
+       Square[$CellContext`a]] == Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`a], Square[
+       Square[$CellContext`a]] == Vee[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`a]], Wedge[
+       Square[$CellContext`a], $CellContext`a] == Wedge[
+       Square[$CellContext`b], $CellContext`b], Wedge[$CellContext`a, 
+       Square[$CellContext`a]] == Wedge[
+       Square[$CellContext`b], $CellContext`b], Wedge[
+       Square[$CellContext`a], $CellContext`a] == Wedge[$CellContext`b, 
+       Square[$CellContext`b]], Wedge[$CellContext`a, 
+       Square[$CellContext`a]] == Wedge[$CellContext`b, 
+       Square[$CellContext`b]], Vee[
+       Square[$CellContext`a], $CellContext`a] == Vee[
+       Square[$CellContext`b], $CellContext`b], Vee[$CellContext`a, 
+       Square[$CellContext`a]] == Vee[
+       Square[$CellContext`b], $CellContext`b], Vee[
+       Square[$CellContext`a], $CellContext`a] == Vee[$CellContext`b, 
+       Square[$CellContext`b]], Vee[$CellContext`a, 
+       Square[$CellContext`a]] == Vee[$CellContext`b, 
+       Square[$CellContext`b]], Square[
+       Square[$CellContext`a]] == Wedge[
+       Vee[$CellContext`b, $CellContext`a], $CellContext`a], Square[
+       Square[$CellContext`a]] == Vee[
+       Wedge[$CellContext`b, $CellContext`a], $CellContext`a], 
+     Wedge[$CellContext`a, 
+       Square[$CellContext`b]] == Wedge[
+       Square[$CellContext`b], $CellContext`a], Wedge[
+       Square[$CellContext`a], $CellContext`b] == Wedge[$CellContext`b, 
+       Square[$CellContext`a]], Vee[$CellContext`a, 
+       Square[$CellContext`b]] == Vee[
+       Square[$CellContext`b], $CellContext`a], Vee[
+       Square[$CellContext`a], $CellContext`b] == Vee[$CellContext`b, 
+       Square[$CellContext`a]], Square[
+       Wedge[$CellContext`a, $CellContext`b]] == Square[
+       Wedge[$CellContext`b, $CellContext`a]], Square[
+       Vee[$CellContext`a, $CellContext`b]] == Square[
+       Vee[$CellContext`b, $CellContext`a]], 
+     Wedge[$CellContext`a, $CellContext`a] == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`a] == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`a] == Wedge[
+       Vee[$CellContext`a, $CellContext`a], $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`a] == Wedge[
+       Vee[$CellContext`a, $CellContext`a], $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`a] == Wedge[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`a] == Wedge[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`a]], 
+     Wedge[$CellContext`a, $CellContext`a] == Wedge[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`a] == Wedge[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`a]], 
+     Wedge[$CellContext`a, $CellContext`a] == Vee[
+       Wedge[$CellContext`a, $CellContext`a], $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`a] == Vee[
+       Wedge[$CellContext`a, $CellContext`a], $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`a] == Vee[
+       Vee[$CellContext`a, $CellContext`a], $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`a] == Vee[
+       Vee[$CellContext`a, $CellContext`a], $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`a] == Vee[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`a] == Vee[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`a]], 
+     Wedge[$CellContext`a, $CellContext`a] == Vee[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`a] == Vee[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`a]], $CellContext`a == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`a]], $CellContext`a == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`a, $CellContext`a]], $CellContext`a == Wedge[
+       Vee[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`a]], $CellContext`a == Wedge[
+       Vee[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`a, $CellContext`a]], $CellContext`a == Vee[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`a]], $CellContext`a == Vee[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`a, $CellContext`a]], $CellContext`a == Vee[
+       Vee[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`a]], $CellContext`a == Vee[
+       Vee[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`a, $CellContext`a]], 
+     Wedge[$CellContext`a, $CellContext`a] == Wedge[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`b]], 
+     Vee[$CellContext`a, $CellContext`a] == Wedge[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`b]], 
+     Wedge[$CellContext`a, $CellContext`a] == Vee[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`b]], 
+     Vee[$CellContext`a, $CellContext`a] == Vee[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`b]], $CellContext`a == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`a, $CellContext`b]], $CellContext`a == Wedge[
+       Vee[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`a, $CellContext`b]], $CellContext`a == Vee[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`b]], $CellContext`a == Vee[
+       Vee[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`b]], 
+     Wedge[$CellContext`a, $CellContext`a] == Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`a] == Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`a] == Wedge[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`a] == Wedge[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`a]], 
+     Wedge[$CellContext`a, $CellContext`a] == Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`a] == Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`a] == Vee[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`a] == Vee[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`a]], $CellContext`a == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`b, $CellContext`a]], $CellContext`a == Wedge[
+       Vee[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`b, $CellContext`a]], $CellContext`a == Vee[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`b, $CellContext`a]], $CellContext`a == Vee[
+       Vee[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`b, $CellContext`a]], 
+     Wedge[$CellContext`a, $CellContext`a] == Wedge[
+       Vee[$CellContext`b, $CellContext`a], $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`a] == Wedge[
+       Vee[$CellContext`b, $CellContext`a], $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`a] == Vee[
+       Wedge[$CellContext`b, $CellContext`a], $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`a] == Vee[
+       Wedge[$CellContext`b, $CellContext`a], $CellContext`a], $CellContext`a == 
+     Wedge[
+       Vee[$CellContext`a, $CellContext`b], 
+       Wedge[$CellContext`a, $CellContext`a]], $CellContext`a == Wedge[
+       Vee[$CellContext`a, $CellContext`b], 
+       Vee[$CellContext`a, $CellContext`a]], $CellContext`a == Vee[
+       Wedge[$CellContext`a, $CellContext`b], 
+       Wedge[$CellContext`a, $CellContext`a]], $CellContext`a == Vee[
+       Wedge[$CellContext`a, $CellContext`b], 
+       Vee[$CellContext`a, $CellContext`a]], $CellContext`a == Wedge[
+       Vee[$CellContext`b, $CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`a]], $CellContext`a == Wedge[
+       Vee[$CellContext`b, $CellContext`a], 
+       Vee[$CellContext`a, $CellContext`a]], $CellContext`a == Vee[
+       Wedge[$CellContext`b, $CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`a]], $CellContext`a == Vee[
+       Wedge[$CellContext`b, $CellContext`a], 
+       Vee[$CellContext`a, $CellContext`a]], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], $CellContext`b], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Vee[$CellContext`a, $CellContext`a], $CellContext`b], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[$CellContext`a, 
+       Wedge[$CellContext`a, $CellContext`b]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Wedge[$CellContext`a, $CellContext`a], $CellContext`b], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Vee[$CellContext`a, $CellContext`a], $CellContext`b], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[$CellContext`a, 
+       Vee[$CellContext`a, $CellContext`b]], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`a]], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`b]], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`b]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`b]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`b]], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Wedge[$CellContext`b, $CellContext`a], $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[$CellContext`b, 
+       Wedge[$CellContext`a, $CellContext`a]], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[$CellContext`b, 
+       Vee[$CellContext`a, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Vee[$CellContext`b, $CellContext`a], $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[$CellContext`b, 
+       Wedge[$CellContext`a, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[$CellContext`b, 
+       Vee[$CellContext`a, $CellContext`a]], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Wedge[$CellContext`b, $CellContext`a], $CellContext`b], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[$CellContext`b, 
+       Wedge[$CellContext`a, $CellContext`b]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Vee[$CellContext`b, $CellContext`a], $CellContext`b], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[$CellContext`b, 
+       Vee[$CellContext`a, $CellContext`b]], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Wedge[$CellContext`b, $CellContext`b], $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Vee[$CellContext`b, $CellContext`b], $CellContext`a], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[$CellContext`b, 
+       Wedge[$CellContext`b, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Wedge[$CellContext`b, $CellContext`b], $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Vee[$CellContext`b, $CellContext`b], $CellContext`a], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[$CellContext`b, 
+       Vee[$CellContext`b, $CellContext`a]], Square[
+       Wedge[$CellContext`a, $CellContext`a]] == Wedge[
+       Square[$CellContext`a], 
+       Square[$CellContext`a]], Square[
+       Vee[$CellContext`a, $CellContext`a]] == Wedge[
+       Square[$CellContext`a], 
+       Square[$CellContext`a]], Square[
+       Wedge[$CellContext`a, $CellContext`a]] == Vee[
+       Square[$CellContext`a], 
+       Square[$CellContext`a]], Square[
+       Vee[$CellContext`a, $CellContext`a]] == Vee[
+       Square[$CellContext`a], 
+       Square[$CellContext`a]], Square[
+       Vee[$CellContext`a, $CellContext`b]] == Wedge[
+       Square[$CellContext`a], 
+       Square[$CellContext`b]], Square[
+       Wedge[$CellContext`a, $CellContext`b]] == Vee[
+       Square[$CellContext`a], 
+       Square[$CellContext`b]], Square[
+       Vee[$CellContext`a, $CellContext`b]] == Wedge[
+       Square[$CellContext`b], 
+       Square[$CellContext`a]], Square[
+       Wedge[$CellContext`a, $CellContext`b]] == Vee[
+       Square[$CellContext`b], 
+       Square[$CellContext`a]], Wedge[
+       Square[$CellContext`a], 
+       Square[$CellContext`a]] == Vee[
+       Square[$CellContext`a], 
+       Square[$CellContext`a]], Wedge[
+       Square[$CellContext`a], 
+       Square[$CellContext`b]] == Wedge[
+       Square[$CellContext`b], 
+       Square[$CellContext`a]], Vee[
+       Square[$CellContext`a], 
+       Square[$CellContext`b]] == Vee[
+       Square[$CellContext`b], 
+       Square[$CellContext`a]], Wedge[
+       Square[$CellContext`a], $CellContext`a] == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Square[$CellContext`a]], Wedge[$CellContext`a, 
+       Square[$CellContext`a]] == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Square[$CellContext`a]], Wedge[
+       Square[$CellContext`a], $CellContext`a] == Wedge[
+       Vee[$CellContext`a, $CellContext`a], 
+       Square[$CellContext`a]], Wedge[$CellContext`a, 
+       Square[$CellContext`a]] == Wedge[
+       Vee[$CellContext`a, $CellContext`a], 
+       Square[$CellContext`a]], Wedge[
+       Square[$CellContext`a], $CellContext`a] == Wedge[
+       Square[$CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`a]], Wedge[$CellContext`a, 
+       Square[$CellContext`a]] == Wedge[
+       Square[$CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`a]], Wedge[
+       Square[$CellContext`a], $CellContext`a] == Wedge[
+       Square[$CellContext`a], 
+       Vee[$CellContext`a, $CellContext`a]], Wedge[$CellContext`a, 
+       Square[$CellContext`a]] == Wedge[
+       Square[$CellContext`a], 
+       Vee[$CellContext`a, $CellContext`a]], Vee[
+       Square[$CellContext`a], $CellContext`a] == Vee[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Square[$CellContext`a]], Vee[$CellContext`a, 
+       Square[$CellContext`a]] == Vee[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Square[$CellContext`a]], Vee[
+       Square[$CellContext`a], $CellContext`a] == Vee[
+       Vee[$CellContext`a, $CellContext`a], 
+       Square[$CellContext`a]], Vee[$CellContext`a, 
+       Square[$CellContext`a]] == Vee[
+       Vee[$CellContext`a, $CellContext`a], 
+       Square[$CellContext`a]], Vee[
+       Square[$CellContext`a], $CellContext`a] == Vee[
+       Square[$CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`a]], Vee[$CellContext`a, 
+       Square[$CellContext`a]] == Vee[
+       Square[$CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`a]], Vee[
+       Square[$CellContext`a], $CellContext`a] == Vee[
+       Square[$CellContext`a], 
+       Vee[$CellContext`a, $CellContext`a]], Vee[$CellContext`a, 
+       Square[$CellContext`a]] == Vee[
+       Square[$CellContext`a], 
+       Vee[$CellContext`a, $CellContext`a]], Square[
+       Square[$CellContext`a]] == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`a]], Square[
+       Square[$CellContext`a]] == Wedge[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`a, $CellContext`a]], Square[
+       Square[$CellContext`a]] == Wedge[
+       Vee[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`a]], Square[
+       Square[$CellContext`a]] == Wedge[
+       Vee[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`a, $CellContext`a]]},
+    SelectWithContents->True,
+    Selectable->False]}], ";", 
+  RowBox[{"data73b", "=", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"List", "ListIcon", 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["List", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["60", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["17344", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    {Vee[$CellContext`a, $CellContext`b] == Vee[
+       Wedge[$CellContext`b, $CellContext`b], 
+       Vee[$CellContext`b, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Vee[$CellContext`b, $CellContext`b], 
+       Vee[$CellContext`b, $CellContext`a]], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == Wedge[
+       Wedge[$CellContext`b, $CellContext`b], $CellContext`b], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == Wedge[
+       Wedge[$CellContext`b, $CellContext`b], $CellContext`b], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == Wedge[
+       Vee[$CellContext`b, $CellContext`b], $CellContext`b], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == Wedge[
+       Vee[$CellContext`b, $CellContext`b], $CellContext`b], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Wedge[$CellContext`b, 
+       Wedge[$CellContext`b, $CellContext`b]], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Wedge[$CellContext`b, 
+       Wedge[$CellContext`b, $CellContext`b]], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Wedge[$CellContext`b, 
+       Vee[$CellContext`b, $CellContext`b]], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Wedge[$CellContext`b, 
+       Vee[$CellContext`b, $CellContext`b]], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == Vee[
+       Wedge[$CellContext`b, $CellContext`b], $CellContext`b], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == Vee[
+       Wedge[$CellContext`b, $CellContext`b], $CellContext`b], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == Vee[
+       Vee[$CellContext`b, $CellContext`b], $CellContext`b], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == Vee[
+       Vee[$CellContext`b, $CellContext`b], $CellContext`b], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Vee[$CellContext`b, 
+       Wedge[$CellContext`b, $CellContext`b]], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Vee[$CellContext`b, 
+       Wedge[$CellContext`b, $CellContext`b]], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Vee[$CellContext`b, 
+       Vee[$CellContext`b, $CellContext`b]], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Vee[$CellContext`b, 
+       Vee[$CellContext`b, $CellContext`b]], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Wedge[$CellContext`b, 
+       Vee[$CellContext`b, $CellContext`c]], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Wedge[$CellContext`b, 
+       Vee[$CellContext`b, $CellContext`c]], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Vee[$CellContext`b, 
+       Wedge[$CellContext`b, $CellContext`c]], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Vee[$CellContext`b, 
+       Wedge[$CellContext`b, $CellContext`c]], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == Wedge[
+       Vee[$CellContext`b, $CellContext`c], $CellContext`b], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == Wedge[
+       Vee[$CellContext`b, $CellContext`c], $CellContext`b], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Wedge[$CellContext`b, 
+       Vee[$CellContext`c, $CellContext`b]], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Wedge[$CellContext`b, 
+       Vee[$CellContext`c, $CellContext`b]], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == Vee[
+       Wedge[$CellContext`b, $CellContext`c], $CellContext`b], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == Vee[
+       Wedge[$CellContext`b, $CellContext`c], $CellContext`b], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Vee[$CellContext`b, 
+       Wedge[$CellContext`c, $CellContext`b]], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == 
+     Vee[$CellContext`b, 
+       Wedge[$CellContext`c, $CellContext`b]], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Vee[$CellContext`b, $CellContext`c], 
+       Wedge[$CellContext`a, $CellContext`b]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Wedge[$CellContext`b, $CellContext`c], 
+       Vee[$CellContext`a, $CellContext`b]], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Vee[$CellContext`b, $CellContext`c], 
+       Wedge[$CellContext`b, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Wedge[$CellContext`b, $CellContext`c], 
+       Vee[$CellContext`b, $CellContext`a]], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == Wedge[
+       Vee[$CellContext`c, $CellContext`b], $CellContext`b], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == Wedge[
+       Vee[$CellContext`c, $CellContext`b], $CellContext`b], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`b] == Vee[
+       Wedge[$CellContext`c, $CellContext`b], $CellContext`b], Vee[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`b] == Vee[
+       Wedge[$CellContext`c, $CellContext`b], $CellContext`b], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Vee[$CellContext`c, $CellContext`a], 
+       Wedge[$CellContext`a, $CellContext`b]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Wedge[$CellContext`c, $CellContext`a], 
+       Vee[$CellContext`a, $CellContext`b]], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Vee[$CellContext`c, $CellContext`a], 
+       Wedge[$CellContext`b, $CellContext`a]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Wedge[$CellContext`c, $CellContext`a], 
+       Vee[$CellContext`b, $CellContext`a]], Wedge[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`c] == 
+     Wedge[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]], Vee[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`c] == 
+     Vee[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`c]], Wedge[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`c] == Wedge[
+       Wedge[$CellContext`a, $CellContext`c], $CellContext`b], 
+     Wedge[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]] == Wedge[
+       Wedge[$CellContext`a, $CellContext`c], $CellContext`b], Wedge[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`c] == 
+     Wedge[$CellContext`a, 
+       Wedge[$CellContext`c, $CellContext`b]], Wedge[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]] == Wedge[$CellContext`a, 
+       Wedge[$CellContext`c, $CellContext`b]], Wedge[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`c]] == Wedge[$CellContext`a, 
+       Vee[$CellContext`c, $CellContext`b]], Vee[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`c] == Vee[
+       Vee[$CellContext`a, $CellContext`c], $CellContext`b], 
+     Vee[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`c]] == Vee[
+       Vee[$CellContext`a, $CellContext`c], $CellContext`b], 
+     Vee[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]] == Vee[$CellContext`a, 
+       Wedge[$CellContext`c, $CellContext`b]], Vee[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`c] == 
+     Vee[$CellContext`a, 
+       Vee[$CellContext`c, $CellContext`b]], Vee[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`c]] == Vee[$CellContext`a, 
+       Vee[$CellContext`c, $CellContext`b]], 
+     Wedge[$CellContext`a, $CellContext`b] == Wedge[
+       Vee[$CellContext`c, $CellContext`b], 
+       Wedge[$CellContext`a, $CellContext`b]], 
+     Vee[$CellContext`a, $CellContext`b] == Vee[
+       Wedge[$CellContext`c, $CellContext`b], 
+       Vee[$CellContext`a, $CellContext`b]], Wedge[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`c] == Wedge[
+       Wedge[$CellContext`b, $CellContext`a], $CellContext`c], 
+     Wedge[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]] == Wedge[
+       Wedge[$CellContext`b, $CellContext`a], $CellContext`c], Wedge[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`c] == Wedge[
+       Vee[$CellContext`b, $CellContext`a], $CellContext`c], Wedge[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`c] == 
+     Wedge[$CellContext`b, 
+       Wedge[$CellContext`a, $CellContext`c]]},
+    SelectWithContents->True,
+    Selectable->False]}], ";", 
+  RowBox[{"data73c", "=", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"List", "ListIcon", 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["List", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["24", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["8296", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    {Wedge[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]] == Wedge[
+       Vee[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`c, $CellContext`b]], Wedge[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`c]] == Wedge[
+       Vee[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`c, $CellContext`b]], Vee[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]] == Vee[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`c, $CellContext`b]], Vee[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`c] == Vee[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`c, $CellContext`b]], Vee[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`c]] == Vee[
+       Wedge[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`c, $CellContext`b]], Vee[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]] == Vee[
+       Vee[$CellContext`a, $CellContext`a], 
+       Wedge[$CellContext`c, $CellContext`b]], Vee[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`c] == Vee[
+       Vee[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`c, $CellContext`b]], Vee[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`c]] == Vee[
+       Vee[$CellContext`a, $CellContext`a], 
+       Vee[$CellContext`c, $CellContext`b]], Wedge[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`c] == Wedge[
+       Wedge[$CellContext`a, $CellContext`b], 
+       Wedge[$CellContext`a, $CellContext`c]], Wedge[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]] == Wedge[
+       Wedge[$CellContext`a, $CellContext`b], 
+       Wedge[$CellContext`a, $CellContext`c]], Vee[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]] == Wedge[
+       Vee[$CellContext`a, $CellContext`b], 
+       Vee[$CellContext`a, $CellContext`c]], Wedge[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`c]] == Vee[
+       Wedge[$CellContext`a, $CellContext`b], 
+       Wedge[$CellContext`a, $CellContext`c]], Vee[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`c] == Vee[
+       Vee[$CellContext`a, $CellContext`b], 
+       Vee[$CellContext`a, $CellContext`c]], Vee[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`c]] == Vee[
+       Vee[$CellContext`a, $CellContext`b], 
+       Vee[$CellContext`a, $CellContext`c]], Wedge[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`c] == Wedge[
+       Wedge[$CellContext`a, $CellContext`b], 
+       Wedge[$CellContext`b, $CellContext`c]], Wedge[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]] == Wedge[
+       Wedge[$CellContext`a, $CellContext`b], 
+       Wedge[$CellContext`b, $CellContext`c]], Vee[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`c] == Vee[
+       Vee[$CellContext`a, $CellContext`b], 
+       Vee[$CellContext`b, $CellContext`c]], Vee[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`c]] == Vee[
+       Vee[$CellContext`a, $CellContext`b], 
+       Vee[$CellContext`b, $CellContext`c]], Wedge[
+       Wedge[$CellContext`a, $CellContext`b], $CellContext`c] == Wedge[
+       Wedge[$CellContext`a, $CellContext`b], 
+       Wedge[$CellContext`c, $CellContext`a]], Wedge[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]] == Wedge[
+       Wedge[$CellContext`a, $CellContext`b], 
+       Wedge[$CellContext`c, $CellContext`a]], Vee[$CellContext`a, 
+       Wedge[$CellContext`b, $CellContext`c]] == Wedge[
+       Vee[$CellContext`a, $CellContext`b], 
+       Vee[$CellContext`c, $CellContext`a]], Wedge[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`c]] == Vee[
+       Wedge[$CellContext`a, $CellContext`b], 
+       Wedge[$CellContext`c, $CellContext`a]], Vee[
+       Vee[$CellContext`a, $CellContext`b], $CellContext`c] == Vee[
+       Vee[$CellContext`a, $CellContext`b], 
+       Vee[$CellContext`c, $CellContext`a]], Vee[$CellContext`a, 
+       Vee[$CellContext`b, $CellContext`c]] == Vee[
+       Vee[$CellContext`a, $CellContext`b], 
+       Vee[$CellContext`c, $CellContext`a]]},
+    SelectWithContents->True,
+    Selectable->False]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"unprovable", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"a", "==", " ", 
+      RowBox[{"a", " ", "\[Wedge]", "a"}]}], ",", " ", 
+     RowBox[{"a", "==", " ", 
+      RowBox[{"a", " ", "\[Vee]", " ", "a"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"a", "\[Wedge]", "b"}], " ", "==", " ", 
+      RowBox[{"b", "\[Wedge]", "a"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"a", "\[Vee]", "b"}], " ", "==", " ", 
+      RowBox[{"b", " ", "\[Vee]", "a"}]}], ",", " ", 
+     RowBox[{"a", "==", 
+      RowBox[{"\[Square]", 
+       RowBox[{"\[Square]", "a"}]}]}], ",", " ", 
+     RowBox[{"a", " ", "==", " ", 
+      RowBox[{"a", " ", "\[Wedge]", 
+       RowBox[{"(", 
+        RowBox[{"a", "\[Vee]", "b"}], ")"}]}]}], ",", " ", 
+     RowBox[{"a", " ", "==", " ", 
+      RowBox[{"a", " ", "\[Vee]", 
+       RowBox[{"a", "\[Wedge]", "b"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Square]", "a"}], "\[Wedge]", "a"}], "==", 
+      RowBox[{
+       RowBox[{"\[Square]", "b"}], "\[Wedge]", "b"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Square]", "a"}], "\[Vee]", "a"}], "==", 
+      RowBox[{
+       RowBox[{"\[Square]", "b"}], "\[Vee]", "b"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"\[Square]", 
+       RowBox[{"(", 
+        RowBox[{"a", " ", "\[Vee]", "b"}], ")"}]}], "==", " ", 
+      RowBox[{
+       RowBox[{"\[Square]", "a"}], "\[Wedge]", 
+       RowBox[{"\[Square]", "b"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"a", " ", "\[Wedge]", "b"}], ")"}], "\[Wedge]", "c"}], "==", 
+      RowBox[{"a", "\[Wedge]", 
+       RowBox[{"(", 
+        RowBox[{"b", "\[Wedge]", "c"}], ")"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"a", "\[Vee]", "b"}], ")"}], "\[Vee]", "c"}], "==", 
+      RowBox[{"a", "\[Vee]", 
+       RowBox[{"(", 
+        RowBox[{"b", "\[Vee]", "c"}], ")"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"a", "\[Wedge]", 
+       RowBox[{"(", 
+        RowBox[{"b", "\[Vee]", "c"}], ")"}]}], "==", 
+      RowBox[{
+       RowBox[{"a", "\[Wedge]", "b"}], "\[Vee]", 
+       RowBox[{"a", "\[Wedge]", "c"}]}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"a", "\[Vee]", " ", 
+       RowBox[{"b", " ", "\[Wedge]", "c"}]}], "==", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"a", "\[Vee]", "b"}], ")"}], "\[Wedge]", 
+       RowBox[{"(", 
+        RowBox[{"a", "\[Vee]", "c"}], ")"}]}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"gridformat", "[", 
+    RowBox[{"list_", ",", "n_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      InterpretationBox[
+       TagBox[
+        FrameBox[
+         PaneBox[GridBox[{
+            {
+             StyleBox[
+              StyleBox[
+               AdjustmentBox["\<\"[\[FilledSmallSquare]]\"\>",
+                BoxBaselineShift->-0.25,
+                BoxMargins->{{0, 0}, {-1, -1}}], "ResourceFunctionIcon",
+               FontColor->GrayLevel[0.45]],
+              ShowStringCharacters->False,
+              FontFamily->"Source Sans Pro Black",
+              FontSize->0.65 Inherited,
+              FontWeight->"Heavy",
+              PrivateFontOptions->{"OperatorSubstitution"->False}], 
+             StyleBox[
+              RowBox[{
+               StyleBox["\<\"PresentFormulas\"\>", "ResourceFunctionLabel"], 
+               " "}],
+              ShowAutoStyles->False,
+              ShowStringCharacters->False,
+              FontSize->0.9 Inherited,
+              FontColor->GrayLevel[0.1]]}
+           },
+           GridBoxSpacings->{"Columns" -> {{0.25}}}],
+          Alignment->Left,
+          BaseStyle->{LineSpacing -> {0, 0}, LineBreakWithin -> False},
+          BaselinePosition->Baseline,
+          FrameMargins->{{3, 0}, {0, 0}}],
+         Background->RGBColor[0.968627, 0.976471, 0.984314],
+         BaselinePosition->Baseline,
+         DefaultBaseStyle->{},
+         FrameMargins->{{0, 0}, {1, 1}},
+         FrameStyle->RGBColor[0.831373, 0.847059, 0.85098],
+         RoundingRadius->4],
+        {"FunctionResourceBox", 
+         GrayLevel[0.45], "\"PresentFormulas\""},
+        TagBoxNote->"FunctionResourceBox"],
+       ResourceFunction[
+        ResourceObject[<|
+         "Name" -> "PresentFormulas", "UUID" -> 
+          "78c32434-2c28-4923-9608-1447346cdbfa", "ResourceType" -> 
+          "Function", "Version" -> None, "FunctionLocation" -> 
+          CloudObject[
+           "https://www.wolframcloud.com/obj/wolframphysics/Resources/78c/\
+78c32434-2c28-4923-9608-1447346cdbfa/download/DefinitionData"], "ShortName" -> 
+          "PresentFormulas", "SymbolName" -> 
+          "FunctionRepository`$78c324342c28492396081447346cdbfa`\
+PresentFormulas", "ResourceLocations" -> {
+            CloudObject[
+            "https://www.wolframcloud.com/obj/wolframphysics/Resources/78c/\
+78c32434-2c28-4923-9608-1447346cdbfa"]}, "DocumentationLink" -> 
+          URL["https://www.wolframcloud.com/obj/wolframphysics/\
+PresentFormulas"], "ExampleNotebookData" -> Automatic|>]],
+       Selectable->False], "[", 
+      RowBox[{"Style", "[", 
+       RowBox[{"#", ",", "10"}], "]"}], "]"}], "&"}], "[", 
+    RowBox[{"Grid", "[", 
+     RowBox[{
+      RowBox[{"Partition", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"MemberQ", "[", 
+              RowBox[{"unprovable", ",", " ", "#"}], "]"}], ",", " ", "\n", 
+             "       ", 
+             RowBox[{"Item", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"#", ",", " ", "8.5"}], "]"}], ",", 
+               RowBox[{"Background", " ", "\[Rule]", 
+                RowBox[{"Lighter", "[", " ", 
+                 RowBox[{
+                  TemplateBox[<|"color" -> Hue[0.03, 0.4, 1]|>,
+                   "HueColorSwatchTemplate"], ",", ".5"}], "]"}]}], ",", " ", 
+               "\n", "        ", 
+               RowBox[{"FrameStyle", " ", "\[Rule]", 
+                RowBox[{"Lighter", "[", " ", 
+                 RowBox[{
+                  TemplateBox[<|"color" -> Hue[0.02, 0.5, 0.96]|>,
+                   "HueColorSwatchTemplate"], ",", ".2"}], "]"}]}]}], "]"}], 
+             ",", " ", "\n", "       ", 
+             RowBox[{"Item", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"#", ",", " ", "8.5"}], "]"}], ",", 
+               RowBox[{"FrameStyle", " ", "->", " ", "None"}]}], "]"}]}], 
+            "]"}], " ", "&"}], "/@", "list"}], "/.", " ", 
+         RowBox[{"Square", " ", "->", " ", "OverBar"}]}], ",", "n"}], "]"}], 
+      ",", 
+      RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+      RowBox[{"FrameStyle", "\[Rule]", "LightGray"}], ",", 
+      RowBox[{"ItemStyle", "\[Rule]", 
+       RowBox[{
+        InterpretationBox[
+         TagBox[
+          FrameBox[
+           PaneBox[GridBox[{
+              {
+               StyleBox[
+                StyleBox[
+                 AdjustmentBox["\<\"[\[FilledSmallSquare]]\"\>",
+                  BoxBaselineShift->-0.25,
+                  BoxMargins->{{0, 0}, {-1, -1}}], "ResourceFunctionIcon",
+                 FontColor->GrayLevel[0.45]],
+                ShowStringCharacters->False,
+                FontFamily->"Source Sans Pro Black",
+                FontSize->0.65 Inherited,
+                FontWeight->"Heavy",
+                PrivateFontOptions->{"OperatorSubstitution"->False}], 
+               StyleBox[
+                RowBox[{
+                 
+                 StyleBox["\<\"MetamathematicsStyleData\"\>", 
+                  "ResourceFunctionLabel"], " "}],
+                ShowAutoStyles->False,
+                ShowStringCharacters->False,
+                FontSize->0.9 Inherited,
+                FontColor->GrayLevel[0.1]]}
+             },
+             GridBoxSpacings->{"Columns" -> {{0.25}}}],
+            Alignment->Left,
+            BaseStyle->{LineSpacing -> {0, 0}, LineBreakWithin -> False},
+            BaselinePosition->Baseline,
+            FrameMargins->{{3, 0}, {0, 0}}],
+           Background->RGBColor[0.968627, 0.976471, 0.984314],
+           BaselinePosition->Baseline,
+           DefaultBaseStyle->{},
+           FrameMargins->{{0, 0}, {1, 1}},
+           FrameStyle->RGBColor[0.831373, 0.847059, 0.85098],
+           RoundingRadius->4],
+          {"FunctionResourceBox", 
+           GrayLevel[0.45], "\"MetamathematicsStyleData\""},
+          TagBoxNote->"FunctionResourceBox"],
+         ResourceFunction[
+          
+          ResourceObject[<|
+           "Name" -> "MetamathematicsStyleData", "UUID" -> 
+            "18e76d86-6728-455c-8ce3-40ea165a9c11", "ResourceType" -> 
+            "Function", "Version" -> None, "FunctionLocation" -> 
+            CloudObject[
+             "https://www.wolframcloud.com/obj/wolframphysics/Resources/18e/\
+18e76d86-6728-455c-8ce3-40ea165a9c11/download/DefinitionData"], "ShortName" -> 
+            "MetamathematicsStyleData", "SymbolName" -> 
+            "FunctionRepository`$18e76d866728455c8ce340ea165a9c11`\
+MetamathematicsStyleData", "ResourceLocations" -> {
+              CloudObject[
+              "https://www.wolframcloud.com/obj/wolframphysics/Resources/18e/\
+18e76d86-6728-455c-8ce3-40ea165a9c11"]}, "DocumentationLink" -> 
+            URL["https://www.wolframcloud.com/obj/wolframphysics/\
+MetamathematicsStyleData"], "ExampleNotebookData" -> Automatic|>]],
+         Selectable->False], "[", "\"\<TheoremFontColor\>\"", "]"}]}], ",", 
+      RowBox[{"Spacings", "\[Rule]", "1"}], ",", 
+      RowBox[{"Background", "->", 
+       RowBox[{"Lighter", "[", 
+        RowBox[{
+         TemplateBox[<|"color" -> Hue[0.5, 0.5, 0.85]|>,
+          "HueColorSwatchTemplate"], ",", ".8"}], "]"}]}], ",", 
+      RowBox[{"ItemSize", "->", 
+       RowBox[{"Scaled", "[", 
+        RowBox[{"1", "/", "n"}], "]"}]}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Column", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"gridformat", "[", 
+      RowBox[{"data73a", ",", "7"}], "]"}], ",", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<\[SpanFromAbove] 88 lines\>\"", ",", " ", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", "SequenceIcon", 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["Sequence", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                
+                TagBox["3", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["160", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Sequence[Small, Gray, FontFamily -> "Helvetica"],
+        SelectWithContents->True,
+        Selectable->False]}], "]"}], ",", 
+     RowBox[{"gridformat", "[", 
+      RowBox[{"data73b", ",", "6"}], "]"}], ",", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<\[SpanFromAbove] 324 lines\>\"", ",", " ", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", "SequenceIcon", 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["Sequence", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                
+                TagBox["3", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["160", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Sequence[Small, Gray, FontFamily -> "Helvetica"],
+        SelectWithContents->True,
+        Selectable->False]}], "]"}], ",", 
+     RowBox[{"gridformat", "[", 
+      RowBox[{"data73c", ",", "4"}], "]"}]}], "}"}], ",", "Center"}], 
+  "]"}]}], "Input",ExpressionUUID->"6f0cf4c6-01ad-42f9-b8ab-6fa332ecc15b"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8b9f8671-da8c-4276-ad95-478f287547fb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 49339, 1027, 382, "Input",ExpressionUUID->"6f0cf4c6-01ad-42f9-b8ab-6fa332ecc15b"]
+}
+]
+*)
+

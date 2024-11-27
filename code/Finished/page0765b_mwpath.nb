@@ -1,0 +1,169 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6253,        161]
+NotebookOptionsPosition[      5900,        147]
+NotebookOutlinePosition[      6300,        163]
+CellTagsIndexPosition[      6257,        160]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"rule", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<AA\>\"", "->", "\"\<ABA\>\""}], ",", 
+       RowBox[{"\"\<AB\>\"", "->", "\"\<BA\>\""}]}], "}"}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Framed", "@", 
+      RowBox[{"LayeredGraphPlot", "[", 
+       RowBox[{"#", ",", 
+        InterpretationBox[
+         DynamicModuleBox[{Typeset`open = False}, 
+          TemplateBox[{"Expression", "SequenceIcon", 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                 TagBox["Sequence", "IconizedItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                 TagBox["6", "IconizedItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Byte count: \"", "IconizedLabel"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["10248", "IconizedItem"]}]}}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+             "Column", 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+            Dynamic[Typeset`open]},
+           "IconizedObject"]],
+         Sequence[VertexCoordinates -> Flatten[
+            KeyValueMap[Table[(# -> Part[#2, $CellContext`i]) -> {(Total[
+                   Map[StringLength, 
+                    Part[#2, 
+                    Span[1, $CellContext`i - 1]]]] + ($CellContext`i - 1) + 
+                 0.5 StringLength[
+                    Part[#2, $CellContext`i]])/
+                6.25, (-0.75) #}, {$CellContext`i, 
+               Length[#2]}]& , 
+             Merge[
+              VertexList[#], Sort[#, Or[StringLength[#] < StringLength[#2], 
+                And[
+                StringLength[#] == StringLength[#2], AlphabeticOrder[#, #2] == 
+                 1]]& ]& ]], 1], VertexShapeFunction -> (Inset[
+            ArrayPlot[{
+              StringSplit[
+               Values[#2], ""]}, 
+             ColorRules -> {"A" -> GrayLevel[0.85], "B" -> GrayLevel[0.15]}, 
+             Mesh -> True, MeshStyle -> Black], #, Center, {
+            Automatic, 0.2}]& ), ImageSize -> Medium, BaseStyle -> Gray, 
+          EdgeStyle -> 
+          BlockMap[
+           DirectedEdge[Blank[] -> Part[#, 1], Blank[] -> Part[#, 2]] -> 
+            Directive[Thick, Black]& , {
+            "AAB", "ABAB", "BAAB", "BABAB", "BBAAB", "BBABAB", "BBBAAB", 
+             "BBBABAB", "BBBABBA", "BBBBABA"}, 2, 1], Epilog -> Inset[
+            (GraphicsRow[
+             Map[
+             With[{$CellContext`statePlot = 
+                Function[{$CellContext`stateString, $CellContext`pos}, 
+                  MapIndexed[{
+                    GrayLevel[
+                    <|"A" -> 0.85, "B" -> 0|>[#]], 
+                    EdgeForm[
+                    GrayLevel[0.15]], 
+                    Rectangle[$CellContext`pos + {First[#2] - 1, 0}]}& , 
+                   Characters[$CellContext`stateString]]]}, 
+               Graphics[{
+                 $CellContext`statePlot[
+                  Keys[#], {0, 0}], 
+                 Line[{{0, 0}, {0, -1}}], 
+                 Line[{{
+                    StringLength[
+                    Keys[#]], 0}, {
+                    StringLength[
+                    Values[#]], -1}}], 
+                 $CellContext`statePlot[
+                  Values[#], {0, -2}]}, PlotRange -> {{0, 
+                   Max[{
+                    StringLength[
+                    Keys[#]], 
+                    StringLength[
+                    Values[#]]}]}, {-2, 1}}, PlotRangePadding -> 0.5]]& , #], 
+             Frame -> All, 
+             ImageSize -> {Automatic, 60}]& )[$CellContext`rule], {
+            Right, Top}, {Right, Top}, 
+            Scaled[0.5]]],
+         SelectWithContents->True,
+         Selectable->False]}], "]"}]}], "&"}], "@", 
+    RowBox[{
+     RowBox[{"ResourceFunction", "[", "\"\<MultiwaySystem\>\"", "]"}], "[", 
+     RowBox[{
+     "rule", ",", "\"\<AAB\>\"", ",", "11", ",", "\"\<StatesGraph\>\"", ",", 
+      InterpretationBox[
+       DynamicModuleBox[{Typeset`open = False}, 
+        TemplateBox[{"Expression", 
+          RowBox[{
+            DynamicBox[
+             FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+            "\[Rule]", 
+            DynamicBox[
+             FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+          GridBox[{{
+             RowBox[{
+               TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+               TagBox["Rule", "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Byte count: \"", "IconizedLabel"], 
+               "\[InvisibleSpace]", 
+               TagBox["104", "IconizedItem"]}]}}, 
+           GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+           "Column", 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+          Dynamic[Typeset`open]},
+         "IconizedObject"]],
+       "IncludeStepNumber" -> True,
+       SelectWithContents->True,
+       Selectable->False]}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{3.870778146379367*^9, 
+  3.871056549040717*^9},ExpressionUUID->"e23fef41-4dfc-4e79-8be7-\
+62853a4c28b6"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"000e0568-4ccd-4d4c-9e85-6284e323d3a8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5338, 125, 89, "Input",ExpressionUUID->"e23fef41-4dfc-4e79-8be7-62853a4c28b6"]
+}
+]
+*)
+

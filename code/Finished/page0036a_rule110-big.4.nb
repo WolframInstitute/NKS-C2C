@@ -1,0 +1,58 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1416,         50]
+NotebookOptionsPosition[      1066,         36]
+NotebookOutlinePosition[      1465,         52]
+CellTagsIndexPosition[      1422,         49]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"ArrayPlot", "[", 
+  RowBox[{"CellularAutomaton", "[", 
+   RowBox[{"110", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "1", "}"}], ",", "0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"2100", ",", "2800"}], "}"}], ",", 
+      RowBox[{"-", "560"}]}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{3.866212477370839*^9, 3.8679566258405685`*^9, 
+  3.869842679235287*^9},ExpressionUUID->"7ce631c5-cddd-448d-9afb-\
+4ceeaa0d45e0"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{194, Automatic}, {41, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d8df17df-1fe7-4d32-aa2b-de66d51d3a01"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 504, 14, 28, "Input",ExpressionUUID->"7ce631c5-cddd-448d-9afb-4ceeaa0d45e0"]
+}
+]
+*)
+

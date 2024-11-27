@@ -1,0 +1,161 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5599,        153]
+NotebookOptionsPosition[      5246,        139]
+NotebookOutlinePosition[      5645,        155]
+CellTagsIndexPosition[      5602,        152]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Row", "[", 
+  RowBox[{
+   RowBox[{"MapIndexed", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Labeled", "[", 
+       RowBox[{
+        RowBox[{"GraphicsRow", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"Graphics", "[", 
+             RowBox[{
+              RowBox[{"Flatten", "[", 
+               RowBox[{"MapIndexed", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"EdgeForm", "[", "Black", "]"}], ",", 
+                    RowBox[{"GrayLevel", "[", 
+                    RowBox[{"0.85", "-", "#1"}], "]"}], ",", 
+                    RowBox[{"Rectangle", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"First", "[", "#2", "]"}], "-", "1"}], ",", "0"}],
+                     "}"}], "]"}]}], "}"}], "&"}], ",", "#"}], "]"}], "]"}], 
+              ",", 
+              InterpretationBox[
+               DynamicModuleBox[{Typeset`open = False}, 
+                TemplateBox[{"Expression", "SequenceIcon", 
+                  GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["2", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["256", "IconizedItem"]}]}}, 
+                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                   DefaultBaseStyle -> "Column", 
+                   GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                  Dynamic[Typeset`open]},
+                 "IconizedObject"]],
+               Sequence[ImagePadding -> 2, ImageSize -> {Automatic, 30}],
+               SelectWithContents->True,
+               Selectable->False]}], "]"}], "&"}], "/@", "#1"}], ",", 
+          InterpretationBox[
+           DynamicModuleBox[{Typeset`open = False}, 
+            TemplateBox[{"Expression", 
+              RowBox[{
+                DynamicBox[
+                 FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+                "\[Rule]", 
+                DynamicBox[
+                 FEPrivate`FrontEndResource[
+                 "FEBitmaps", "IconizeEllipsis"]]}], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                   TagBox["Rule", "IconizedItem"]}]}, {
+                 RowBox[{
+                   TagBox["\"Byte count: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["56", "IconizedItem"]}]}}, 
+               GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+               "Column", 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+              Dynamic[Typeset`open]},
+             "IconizedObject"]],
+           Frame -> All,
+           SelectWithContents->True,
+           Selectable->False]}], "]"}], ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"\"\<(\>\"", "<>", 
+           RowBox[{"FromLetterNumber", "[", "#2", "]"}], "<>", "\"\<)\>\""}], 
+          ",", "Italic"}], "]"}], ",", "Left"}], "]"}], "&"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "1", "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "1", "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", "0", "}"}]}], "}"}]}], "}"}]}], "]"}], ",", 
+   RowBox[{"Spacer", "[", "5", "]"}]}], "]"}]], "Input",ExpressionUUID->\
+"d7376468-45a1-4219-896b-46c0394d21b6"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{129, Automatic}, {79, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"da46db0c-4920-402f-911a-2fdbe4d58aba"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4684, 117, 242, "Input",ExpressionUUID->"d7376468-45a1-4219-896b-46c0394d21b6"]
+}
+]
+*)
+

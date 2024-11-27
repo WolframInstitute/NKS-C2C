@@ -1,0 +1,62 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1595,         54]
+NotebookOptionsPosition[      1244,         40]
+NotebookOutlinePosition[      1644,         56]
+CellTagsIndexPosition[      1601,         53]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ArrayPlot", "@", 
+    RowBox[{"CellularAutomaton", "[", 
+     RowBox[{"#1", ",", 
+      RowBox[{
+       RowBox[{"SeedRandom", "[", "#2", "]"}], ";", 
+       RowBox[{"RandomInteger", "[", 
+        RowBox[{"1", ",", "#3"}], "]"}]}], ",", "#4"}], "]"}]}], "&"}], "@@@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"184", ",", "6783", ",", "100", ",", "80"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"14", ",", "6783", ",", "100", ",", "80"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"62", ",", "4561", ",", "200", ",", "160"}], "}"}]}], 
+   "}"}]}]], "Input",ExpressionUUID->"53dac244-39bc-4153-be2a-6b60c415d6c2"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8ab740f0-b2b2-45f6-ac03-63f2c070c858"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 682, 18, 48, "Input",ExpressionUUID->"53dac244-39bc-4153-be2a-6b60c415d6c2"]
+}
+]
+*)
+

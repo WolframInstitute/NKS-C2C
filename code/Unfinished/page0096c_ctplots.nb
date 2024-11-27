@@ -1,0 +1,141 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4513,        133]
+NotebookOptionsPosition[      4156,        119]
+NotebookOutlinePosition[      4560,        135]
+CellTagsIndexPosition[      4517,        132]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Column", "[", 
+  RowBox[{"ParallelMap", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ListLinePlot", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+         "ResourceFunction", "[", "\"\<CyclicTagSystemEvolveList\>\"", "]"}], 
+         "[", 
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", 
+          RowBox[{"{", "1", "}"}], ",", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], ",", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "/", "1000"}], ",", 
+          "\"\<Lengths\>\""}], "]"}], "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"Total", "[", 
+             RowBox[{"Flatten", "[", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}], 
+            RowBox[{"Length", "[", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}]], "-", "1"}], ")"}], " ", 
+         
+         RowBox[{"Range", "[", 
+          RowBox[{"0", ",", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "/", "1000"}]}], "]"}]}]}], ",", 
+       
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", "SequenceIcon", 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["Sequence", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                
+                TagBox["7", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["1112", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Sequence[
+        Filling -> Axis, Frame -> True, 
+         FrameTicks -> {{True, False}, {True, False}}, AspectRatio -> 1/12, 
+         PlotRangePadding -> {0, 1}, DataRange -> {0, 
+           Part[#, 2]}, ImageSize -> Full],
+        SelectWithContents->True,
+        Selectable->False]}], "]"}], "&"}], "\[IndentingNewLine]", ",", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"rule", ",", "range"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"rule", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", "1", "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "0", ",", "1"}], "}"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"1", ",", "1", ",", "1"}], "}"}], ",", 
+              RowBox[{"{", "0", "}"}]}], "}"}]}], "}"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"range", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            SuperscriptBox["10", "3"], ",", 
+            SuperscriptBox["10", "6"]}], "}"}]}], "}"}]}], "]"}], ",", "1"}], 
+     "]"}]}], "]"}], "]"}]], "Input",ExpressionUUID->"101d7d41-1c5c-4e1e-bbe5-\
+4168c50338de"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{140.5, Automatic}, {Automatic, 136.5}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"403deba0-d2cd-4697-a15a-b664785f09ac"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3594, 97, 183, "Input",ExpressionUUID->"101d7d41-1c5c-4e1e-bbe5-4168c50338de"]
+}
+]
+*)
+

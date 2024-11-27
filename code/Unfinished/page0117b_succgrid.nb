@@ -1,0 +1,122 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4033,        114]
+NotebookOptionsPosition[      3680,        100]
+NotebookOutlinePosition[      4081,        116]
+CellTagsIndexPosition[      4038,        113]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Framed", "[", 
+  RowBox[{"Row", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Column", "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Text", "[", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringTemplate", "[", "\"\<``:\>\"", "]"}], "[", "n", 
+             "]"}], ",", "8", ",", "Italic"}], "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"n", ",", "63"}], "}"}]}], "]"}], ",", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", 
+           RowBox[{
+             DynamicBox[
+              FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+             "\[Rule]", 
+             DynamicBox[
+              FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["Rule", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["72", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Spacings -> 0,
+        SelectWithContents->True,
+        Selectable->False]}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"ResourceFunction", "[", "\"\<RaggedDigitsPlot\>\"", "]"}], "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"IntegerDigits", "[", 
+          RowBox[{"n", ",", "2"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"n", ",", "1", ",", "63"}], "}"}]}], "]"}], ",", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", "SequenceIcon", 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["Sequence", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                
+                TagBox["3", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["352", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Sequence[
+        "Label" -> True, ImageSize -> {Automatic, 766}, PlotRangePadding -> 
+         0.35],
+        SelectWithContents->True,
+        Selectable->False]}], "]"}]}], "}"}], "]"}], "]"}]], "Input",Expressio\
+nUUID->"75153930-4cb8-4769-af87-7b1caefd2b64"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{131, Automatic}, {86.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"81cd5ccc-d2ec-4cb9-931c-400690139176"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3118, 78, 64, "Input",ExpressionUUID->"75153930-4cb8-4769-af87-7b1caefd2b64"]
+}
+]
+*)
+

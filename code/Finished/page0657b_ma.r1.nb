@@ -1,0 +1,50 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1148,         42]
+NotebookOptionsPosition[       798,         28]
+NotebookOutlinePosition[      1198,         44]
+CellTagsIndexPosition[      1155,         41]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ResourceFunction", "[", "\"\<MobileAutomatonRulePlot\>\"", "]"}], 
+  "[", 
+  RowBox[{"{", 
+   RowBox[{"35", ",", "57"}], "}"}], "]"}]], "Input",ExpressionUUID->\
+"21ce5240-473f-4e70-a211-6464e5cc1535"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"03843573-bbad-40e4-a433-7c5e0937b3aa"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 236, 6, 28, "Input",ExpressionUUID->"21ce5240-473f-4e70-a211-6464e5cc1535"]
+}
+]
+*)
+

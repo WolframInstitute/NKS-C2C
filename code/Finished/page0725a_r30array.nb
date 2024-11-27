@@ -1,0 +1,4071 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    190044,       4063]
+NotebookOptionsPosition[    189555,       4046]
+NotebookOutlinePosition[    189956,       4062]
+CellTagsIndexPosition[    189913,       4059]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"hist", "=", 
+     RowBox[{"CellularAutomaton", "[", 
+      RowBox[{"30", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "1", "}"}], ",", "0"}], "}"}], ",", "21"}], "]"}]}], 
+    "}"}], ",", 
+   RowBox[{"GraphicsGrid", "[", 
+    RowBox[{"Partition", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"GraphicsColumn", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"ArrayPlot", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"ArrayPad", "[", 
+                RowBox[{"hist", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Length", "[", "#", "]"}], ",", 
+                    RowBox[{"Length", "[", "#", "]"}]}], "}"}]}], "}"}]}], 
+                "]"}], "//.", 
+               RowBox[{
+                RowBox[{"Join", "[", 
+                 RowBox[{
+                  RowBox[{"{", "l___", "}"}], ",", 
+                  RowBox[{"#", "/.", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"1", "\[Rule]", 
+                    RowBox[{"(", 
+                    RowBox[{"1", "|", "2"}], ")"}]}], ",", 
+                    RowBox[{"0", "\[Rule]", 
+                    RowBox[{"(", 
+                    RowBox[{"0", "|", 
+                    RowBox[{"-", "1"}]}], ")"}]}]}], "}"}]}], ",", 
+                  RowBox[{"{", "r___", "}"}]}], "]"}], "->", 
+                RowBox[{"Join", "[", 
+                 RowBox[{
+                  RowBox[{"{", "l", "}"}], ",", 
+                  RowBox[{"MapAt", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"2", "#"}], "&"}], ",", 
+                    RowBox[{"#", "/.", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"1", "->", "2"}], ",", 
+                    RowBox[{"0", "->", 
+                    RowBox[{"-", "1"}]}]}], "}"}]}], ",", "1"}], "]"}], ",", 
+                  RowBox[{"{", "r", "}"}]}], "]"}]}]}], "/.", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"1", "\[Rule]", ".5"}], ",", 
+                RowBox[{
+                 RowBox[{"2", "|", "4"}], "\[Rule]", "1"}], ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "1"}], "|", 
+                  RowBox[{"-", "2"}]}], "\[Rule]", "0"}], ",", 
+                RowBox[{"0", "\[Rule]", ".3"}]}], "}"}]}], ",", 
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Expression", "SequenceIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["2", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["864", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Sequence[PlotRange -> {All, {Length[#] + 1, Length[
+                    Part[$CellContext`hist, 1]] + Length[#]}, {0, 1}}, 
+               PlotRangePadding -> 0],
+              SelectWithContents->True,
+              Selectable->False]}], "]"}], ",", 
+           RowBox[{"ArrayPlot", "[", 
+            RowBox[{
+             RowBox[{"{", "#", "}"}], ",", 
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Expression", "SequenceIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["3", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["384", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Sequence[
+              ImageSize -> {Automatic, 16}, PlotRangePadding -> 0, MeshStyle -> 
+               GrayLevel[0.15]],
+              SelectWithContents->True,
+              Selectable->False]}], "]"}]}], "}"}], "]"}], "&"}], "/@", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"Tuples", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"1", ",", "0"}], "}"}], ",", "n"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"n", ",", "1", ",", "5"}], "}"}]}], "]"}], ",", "1"}], 
+        "]"}]}], ",", "6"}], "]"}], "]"}]}], "]"}]], "Input",
+ CellLabel->"In[38]:=",ExpressionUUID->"71464737-6975-4093-ad3e-5fbb3868e43a"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztkssNAjEMRCOK4M6ZIuiBEpDgStfUAULiEnBmxs5nd0mk1WgTxx6/+HC5
+n6+7lNL+9R3T97q91+P044iK++yjPHlcHo/OUZyaD/2rnFQ+bL8oDxuv1qvd
+t/d9kF8vD5RH5cTWq9W35Zv1o/JlfVpxUU5q37XnQu1f5cv6VP2zfntx8fqL
+8mV9sv6suDy+N5faPFm+LA82D+oL1WPrevP05ov4eHmx99U8Uf+9+ZbevhSn
+8lH5ee8vjW9+zt5X+bD8UP3RHFW+FrfafKw4tf5SleXWik+t+ktVtu9WfFD+
+tetoPlvjifhY++w7sGt036P55udsHu/9rWp0fv99PpFG53fyLGt0fqeWNTq/
+U8s657Otro3nEwZhRos=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {189., -95.68178294573644}, 
+          ImageScaled[{0.5, 0.5}], {360, 184.67441860465118}], InsetBox[
+          GraphicsBox[RasterBox[{{0}}, {{0, 0}, {1, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {189., -202.70813953488374}, 
+          ImageScaled[{0.5, 0.5}], {360, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[201]},
+       PlotRange->{{0, 378.}, {-214.0527131782946, 0}},
+       PlotRangePadding->{6, 5}], {190., -109.63636363636364}, 
+      ImageScaled[{0.5, 0.5}], {350, 201}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlkEOgkAMRScewr1rD8EdPIKJa6/sETiCblxIiO1vf2kZhoQ0QJkwbz4P
+Lvfn7XFqrZ0/+7V9t9f0W+dp/by2b1aOs+xb9kvXpT50POkY5YTy0c4X5azl
+5F13dN7W9dHmAeUhjYNyYq27NRdReUCf0/peofyjuLDmH5Vftn+t43pzYc1n
+dH7Z/t2aC5tnNf+iPvZ6PJpnNf9av4Po/VvxrOZf1vuRlc+q/vX6pUo+q/rX
+6+NsblX9a/VLNqfq/vX6Za81m09vPNn51fb3ms/o/Ep9R+PJzu/R8xmd38Hz
+f2X5d9T12vv/Z3Yd+Yyt++H5BmLtUKc=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {189., -95.68178294573644}, 
+          ImageScaled[{0.5, 0.5}], {360, 184.67441860465118}], InsetBox[
+          GraphicsBox[RasterBox[{{1}}, {{0, 0}, {1, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {189., -202.70813953488374}, 
+          ImageScaled[{0.5, 0.5}], {360, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[201]},
+       PlotRange->{{0, 378.}, {-214.0527131782946, 0}},
+       PlotRangePadding->{6, 5}], {570., -109.63636363636364}, 
+      ImageScaled[{0.5, 0.5}], {350, 201}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlksOwjAMRCMOwZ41h+AOHAEJtly5K84BqsSiDY5nbKdNaCOhEa3jz8sQ
+cbo9r/dDSun4+ZxTvh7jel1+vILivs+1PPO4afyQPUfr2fINyneeE8cHn7ec
+R14aJ++5s3Nbz0fr18qjnCevr+XH6sXN7Z2f5Yv2KcV5ObFzR/uCnZ/li/bJ
+9i/F2eb2c7H25+WL9on2J8XN45fmgtaL5ovywPJIv3/9PmHrWvMszVfjY+WF
+7mfzlPfX86eVL3r+2Nz4fjSP9Rxb4Tt9H3//cvzs/8PWVtYX0XykOLZ+q4px
+q8cnqn6ris5di4+Wv3ddm0/v/sTms/sXjbfy710xbvz9y+7/V/X6d+v+1NTr
+3637U1Ovf3ctq9e/u5Z192dd7c2fb3RCdsA=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           
+           ImagePadding->{{0.5, 0.5000000000000036}, {0.5, 
+            0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0}}, {{0, 0}, {2, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5000000000000036}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {950., -109.63636363636364}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlkEKAjEMRYuHcO/aQ8wdPIKgW6/syrVHUIRBOjTN/00zrXUK8mGSpvlv
+YpnD+Xa67EII+/fvGOZ1n0K0nlP8fKlS3vf59bMe6v45L87X4nodrt7Sj8ZB
+j6P9cn5Zzjgntg4X1/xZ4+Xzi9XR8jWV9tfybfePzQPvI/8/K+fE+dbi/Fyw
+/lm+aJ9c/+y96c+ltD8rX7RPtL90Hn6feHGpzRPli/LA6kj56Hml781+f3rx
+Zd8vxkuuw/HD+1ybJ8o37av+/cvxK9/fSjFfcr9WPhg/7fx+eKJ809zq85E4
+sef3qhg3Pz61zu9VMd9+fLT6rfl48V2Lz2g883ykuaz9HTouT5RvHNd5WPeP
+qtb5/ff5LOUbx2VeG8+8Wue3df+9q3V+N83rNp+++ms8X0//0gA=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           
+           ImagePadding->{{0.5, 0.5000000000000036}, {0.5, 
+            0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1}}, {{0, 0}, {2, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5000000000000036}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1330., -109.63636363636364}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztljsOwkAMRFccgp6aQ+QOHAEJWq5MRc0RiEAUhOzO+BcnkEhoBOv1el4c
+k93xcjhtSinb/rMvw+vavfTejf8+1O+48/O6wTzvuFo8Wq/lseVD37F/tG71
+i/KM11HnJM1j9a31L6uX58Hm0XHC5/n6lvuX9gNbp+w54zm19/tx8fKve96m
+n79a31ou2vqsfNk62fpQ3KdOx4U9z5svy0Oapx3Pz2PdfZPPzyi+0vsr5cX2
+EZuH3R/Nk+WLfKE4lo+Wn3R/lkr5yO6P/v+oxg+dn81Txidu/nJ12N8/s7Xm
+o7buzcfr/Llqm0M8H3RONp8ovlPxQfmXrm0+XvM37/0zW639i+J+vT+RWvsX
+xWX7y1Zr//57fyK19m92/XNXa/+u2tZ1fsbqUvvzAfc/0gA=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           
+           ImagePadding->{{0.5, 0.5000000000000036}, {0.5, 
+            0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0}}, {{0, 0}, {2, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5000000000000036}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1710., -109.63636363636364}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztl0sOwjAMRCMOwZ41h+gdOAISbLkyK9YcgQqpGwvwZ+zaCa2ERqLBjSeT
+13A4306XXWttP3+Obbnu06LX9/WY6Pe6cU+i3+rQcXQ8d58bJ69H++F8kPkk
+na+2X63PUp/4Opgv6Hrz85Xm11ZH67fXusvXCevfut/k+1C3b7j6XrnU7itr
+/375jeWvtm88F7b5rZVfnL8ynkT54u1nHf7qnufF8Wg/q/FXzmHbPNf2M5+/
+2HsQXcc8f3/f9+Yvypcq+azKX5TH2b5V5a+VL9k+VecvypdeNduf0fyM56/t
+96Oq9//Mf8unf377On9mqxd/s/uoql783fSzjn7+zNYtn7Haj58v+D6lTw==
+
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           
+           ImagePadding->{{0.5, 0.5000000000000036}, {0.5, 
+            0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1}}, {{0, 0}, {2, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5000000000000036}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {2090., -109.63636363636364}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}]}, {InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlksKAjEQRIOHcO/aQ8wdPIKgW6/synMowiyMdFd1dzKZzCQghaS/L4V4
+uj4ut0NK6fj5nNN8ntOs9+95TQmc37j/fFQnj8vroXsUZ62nf0f7R/mg+TA/
+KU6Kt/Yrvbf3faT7PM7KQ6/D+9raL7a33Mc6j5UvO6cUF+UkzVWaS6n9rXzZ
+Obn58J7evaNcvPNF+bJzsvNJcXn80lzYfqX5sjy4OvjdUD+9r/3U4slyQXy8
+vNh8a53o/EvzZd+fex+Uz/Nj52zFk507v9fz/Xw4fv7/Ya3V6gufv8r9vkj9
+16qsr2rxKdV/rar7rj4fVL93bc2nd3+y+3n9y8Zv1Z9evvk9W8ebv1WN+nfv
+/kQa9e/e/Yk06t+hukb9O1TX4c+62ps/32XtybY=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 
+            0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 0}}, {{0, 0}, {3, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {190., -328.90909090909093}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztljsOwjAQRC0OQU/NIbgDR0CCliunouYIIBCFHeyZ8foriIRGxOv9PI+S
+7E7X43njnNs+f3sXu+6Hty6BxuLW9y+v6wb3f+LC+PC+v47zaPkW+D89/3qd
+7Zftj83DxnP19Ln9dVyfnV/1g8oD5eE4qfWsc7PnY/VD/hyxOCsnbm47l1Lz
+1/Iv2x+Kyzt3XJf1hdqflS/bJ9ufH4f914oLW680X5YHmwfN9b1e7rnpeVrz
+Vc83zQvPFaujcmbzttJY3/5c9Z6/Gr/8/aPxDfmk95d6T8f5ofq9Oap8fW7l
+n7+Ik1p/VOW41eNTqv6omp67Ph+UvzefWnxb8UH5Z9e0L0t/h+r8Z1eWG5dn
+vO/P3mr176/7M5evvz7v92dvtfq3d/+jq9W/f03r3591dTZ/PgAcVg2y
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 
+            0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 1}}, {{0, 0}, {3, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {570., -328.90909090909093}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztl00KwjAQhYOHcO/aQ3gHjyDo1iu7cu0RLEKFNE3em5n8tSRQHqWTzLwv
+w6Cn2/N6PzjnjtNzdvN6XZy3Pov3+TuOe/zW+6/r+8O4ZTz6juJk58X8xDhg
+Tmy9Ur9Sziwn7hw9F+t9c/Wi+lh+4TlS3my+PL7t/tk80jr9OFwfe77Mt55L
+Lv8cX7bOeBzXJ/zcLM1FW5+Ob6v5G95XLS65eabrDH3q+GFe0nxcXv08r8O3
+/vxFeaSctfXX4Yv5oDiOj/werPv74Ftv/kr5ofytOXJ8cF/k5uPv1+fvVVlu
+efnE47T5e1XWdyk+6+dvlyfyV5vP3nim+bD9a/8d2tp3G772/5na/XtVXf/i
+uNa+elFr/w6eadX17+DJqrV/h6Z19GdZ3RrPLywA1pc=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 
+            0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 0}}, {{0, 0}, {3, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {950., -328.90909090909093}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlcENwjAMRSOG4M6ZIboDIyDBlZU5cWYEKqSqatrY/zuJS0siVVabxP5+
+cdzT9XG5HUIIx/45h2E8u8Hev+PVxd+xdcN4d1Mb75+vm/rT5nU/rD/tHct/
+1MXxQfNlOeOc8s6drwvufMZ5TS+Wxzye7Edfb4uH5708z5+P5lfmy+fB3Svc
+P5t3mbqw54/et7x7qHNC9Xpxseqz8eV1ovqW1+H9pBYX67669avz0/Rz8ezn
+hvopxbN0/cZ+rPXF8cN1ovp9+Hr1X+t/0L7fi6fMN5VXWq+ND8tPi/87PGW+
+fv03pcMaf22OGN8Ut9J82P6yHZ4yX38+y/63y1Pm689nbzxlvuX6L7t/bQ4+
+fFPcdB65+/dq4/pKfefW/S/P2ObWb+MpW1v9Np6oza3fZmXb6rOu3RrPD3UU
+hyI=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 
+            0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 1}}, {{0, 0}, {3, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1330., -328.90909090909093}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztljEOwjAMRSMOwc7MIXoHjoAEK1dmYuYIIKQOBLv/O7GTULVS9aXaie1n
+y+rhfDtddiml/fs9Ju15TvL3+/Stv37Xz/NQ7fP52S9XzY7iWe/T7Ki+Wntt
+vXK+uF8cp/K+W+su7Q+XL88D5cv65/dr8WLrZvtTPg/WOnI/lB+6f/m8Hxfv
++r3nF+WH7intO7KzXErzq+XL5snmh/xk/3ZcvHja8ozbv/l3Nh4bVzun3ROl
+iIu1vywvdJ7lx+bZiifLF9WFOLJ8WH6lebbmyfKV/fz3r81u/w/rrct84vev
+xskaf1RFXKL5eMcfTZc5xPNBcXrzieLbms9aeNr41O/f3F87v1bVuMh+/P4t
+Pb82rZ1f5Ne7vt7qNb8bT1lr57d3/qOr1/xuKuu2P9vov/F8AV2fDbI=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 
+            0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 0}}, {{0, 0}, {3, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1710., -328.90909090909093}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlk0OwiAQhYmHcO/aQ3AHj2CiW6/synWPoDFhYUOZN/OYUiok5kWK8/Px
+OvF0fVxuhxDC8fM5h7SeMen9u15xvo+eS/tSnPy5KYafNYnx5s/ReEvP89/x
+/lE+1n7L/OT7khSNY+2bvR/UD1oe+XNSfcvxy3XV75vtH/WDrU7re4Xz9+LC
+9s/xXW/+onXV5mKtrw7f9ebv2ly0+Xz41p+/5X18Duvuzc+fHF+/+YvmkeKU
+8/v7k+PrP39192D/fSvV+kLLj7sH/n9Ya9X6ohYfiZM2/1a1zNefD5t/64r2
+7cVHit+7tuKzF39ifXrN3/7npy9fdv7u35+Ssv79d39KavXv8CemrH+HltXq
+36GYDn/6aK/+fAM9kYLB
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 
+            0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 1}}, {{0, 0}, {3, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {2090., -328.90909090909093}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}]}, {InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlk0KwjAUhIOHcO/aQ/QOHkHQrVd25dojWASRpCYz7ycJqS3III0vb743
+TT2cb6fLLoSwnz/HkF736fq+HtPne07L656Jfuv//v1yPbqf1rHWS/0gDhyn
+nH+9X1QH9cvy0vrO3fedD85Drr9YpXV4Tux+Xr6l/m15yPcpfc5YTqgvn+eV
+nTP2r+UrnZ+uf/7c9Oai7c+LL+qT7U+2bjmvWlyQP6uiPtn86upozxP93HLq
+xdM7v2wOkK9yH9bno14+W+W3vM7rPW1/37VWzn+r85fnh/bvxVPKN/VVVjkf
+lhPavzdHLV82H1582Ln15ubFtzYftH9afzTl/NXjg+qProhPvK7e/9DeHHrx
+ZfNVrrPefFr5xuu05+9684nUmt9/zydS7/xuGqs1v5uWleO75VOro+fzBSjJ
+hyI=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 
+            0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1, 0}}, {{0, 0}, {3, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {190., -548.1818181818182}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztl0EKAjEQBIOP8O7ZR+wffIKgV7/sybNPUIQcXIjTnUwyvcEFaVhjZqbS
+26yH8+102aWU9u/PMeXrvmS9fq7Hsr6Prsv3sX2eBUW/t9bh+637tfrn5kP5
+oPOynFFO5Xo+XFrP2+6X9a/lY3R9Wz2v5wCf//e+Nl9ujvJzhu7PnlctF7RO
+3fz+/mX75/odxaXVn739256/sVy8eerkL1oPrctpL55x+Yv+Hs1b9BzHcNTJ
+31p+XJ9RPOPzt45fVH7q5y/aB5er0dxU87c2X6I5qecvni8aXFT86/X/MZqD
+nn+5vJzVn+Pzd6781Mnfb42eS0W98jd6DlXl/avR91Z09vfPaP37s69uh+cL
+hzJYFg==
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 
+            0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1, 1}}, {{0, 0}, {3, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5000000000000071}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {570., -548.1818181818182}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztls0NwjAMhSOG4M6ZIboDIyDBlZU5MQcIqUINjd9z7IQ0JBJ6gvj3s1tx
+ON9Ol10IYf/6HMN87tOs1/d5TAGcpd23f+o+ZRfbo3tkp42Hvsuc+Htrv3Ic
+PC+OF45j7Tt3PohPLg/Uh5YTm8+rb2v/Wr5snSk7VD/HP/d55Ll49a/ly9bJ
+1ofscvu2csmtz8qXrZOtTzuvWly8ebJ8WR5cHDw3lE/Oqz+leLJcEB+Ol/1/
+GRvHWn9tvuz82b7lPDw/6xxb4Rvfs/5aPiw/lP/XHLV817f2c7z4pOy0+VtV
+dq9K8fHK36rKe1eeT+y/dZ4s31p8euOJ+Cx/x/vL2iP/XtW6v8iu9/1Eat3f
+2P/fecZq3d/BU1br/g6V1ev9O3Rdx/uzrG6N5xOheRPD
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 0, 0}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {950., -548.1818181818182}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztkksOAiEQRImHcO/aQ8wdPIKJbr2yK9ceQWMyMTBAVXcDw3xITMehP9WP
+Ol0fl9vBOXf8/s5uPM9hjPffeQ3+99R5B3n/er9Puj6eP+0T15XOk/bL/0f7
+Tw+rl9OH+flzcD7HV763f4/fqdR9mCflgfqgudp5tr3Tc6R6pHxZnak8K6eU
+rtJcSu0v5cvq5PThPbXvbuWi1Wfly+pk9flz0vmtubDzSvNlebB90F5hvXau
+tk9rvtL3jfPi98rP5zlr9bfmy74/9z6onucX14nre+Mb3ufr9XzYd0b65+Yo
+5et/1/Nj97fO7zWyvqrFp9T8XiPyXW0+qP/cfGrxbcVn6f5k99P6N9VHWr/W
+aPUvylu7P1G0+nfr/kTR6t+t+xNFq3/n1t97tPp3j/m4+7NuXJo/P//Sh3U=
+
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 0, 1}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1330., -548.1818181818182}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztljEOwjAMRSMOwc7MIXoHjoAEK1dmYuYIIAZQozj//8ZJSpVIlVXVsf1f
+XLeH8+102YUQ9u/rGKz1nOb394n1u37W42vn+3829ov90XPkp8ZD9xona7/N
+h9WrcmY55eMg3ZiL1/mkn+P8iAeKo/Lm8nm9B+X62X5Q67T8Sjlxusu5eOnP
+c2HrxH6ofrbeVlyW1qfx7TV/7fNqxcWbZzq+rVPjx/OK41h5uLz8HK/NE9WH
+OKA4SDe7X41TWn9dvvGqNX/ZPEu/d+37k+Pbfv6q/FD+3hzz9fF94c3H4mTl
+XTtPS1eem9f8xee4NP9aLau7Fp/0OfwvT6SvNZ+t8UzrY/vX7z+0t+62fP3n
+r7p/q1brX77Pe+taiy3t38Ezb9W+HDw1W9q/w+bt6M+69t94vgBmKNUd
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 1, 0}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1710., -548.1818181818182}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlk0KwjAQhYOHcO/aQ/QOHkHQrVfuyrVHsAhFGs28NzNJh9AGysM2zs+X
+x5DT9XG5HVJKx+k5p3mNw6z3z3oO+Xt5X75ew1JHuC/PO//OlY2ji/fbN+Lw
+//t3afmg+tg47H4uH9u33hfW80H1yvWV60FxtJzYfLX69vYv57H3UerHy0nX
+t9cX/v7r+Lf9/NXF9XOx1qfja6+TrW+5D/tvLS5sPh/fuPkr5/OfGxunLV9c
+v9YH2r5Kedg46P+t+LFcZD615i9/f0RxrOcYwxf3xZ0PimPnh/JH8eP4rj9/
+ESdt/miOcl+YWx0+9vkSzcnHt/385fKX40Rz8vGN44Pi966yL2vfQ/X8e1eW
+G3tO7PutqM6//d0/o9Xr3637E6nOv7s/ter1766y7v5sq7358w0FmR1W
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 1, 1}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {2090., -548.1818181818182}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}]}, {InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztmE0KAjEMhYuHcO/aQ8wdPIKgW6/syrVHUIRBUmjfS5r+jLYgj2HS/HwJ
+GfBwvp0uuxDC/v07hvXclyDOM3rm7a6f81hWlfe+GtvF9ug9stP6k8+IA+bE
+5qutF/nR8tb5sXPx6k8+X5Qfzw/Fz3Pi++VTd3n9bBxtntIO58f619Vt5+JV
+P8eXzTNtx80Jvzdrc7HmZ+Pbf/+25uLNM5/nelrtXz6etW9effDh237/cn2w
+f+9a88znj/kgO46Pvg+l98fg227/su/Z+L05cnzwXHjzkXb2+KMqy82XT9rO
+Gn9UZeuuxUf63d586vjW27/ofm8OtdQ2v/7/J/yqls4vsvs3nqn6dfOL7XrX
+NYqWzu/kmVfb/E6erJbO79S8xnwnT1/dGs8XT9nPZg==
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 0, 0}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {190., -767.4545454545455}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlD0OwjAMhSMOwc7MIXoHjoAEK1dmYuYIIKQMDXX9nu20KcRS9dT8OPZn
+y4fz7XTZpZT27++Yst2HrNePPYZyHT2X1zU/5bnyvLavneP8ZXsK/3j+Vj5o
+vixnlJO37mzebP5sP7A8xvvZvvsB9Y++F5W3N3+WLxqndM7Lic07pi/s+bN8
+0TjZ+Nl61eZijc/LF43T2idjzSbPk1pconmifOd5xM1f9D1b3fzzsxZfiYPm
+R8sbvc/68ca/NF+0/tb+svLz1rEVvuU+ep/lM72fTZ/HrfFE85a4RfOROLHv
+t6ooN9QPyyfq/VbV279ePlvvTyvfpfj8Gk+Nj7SO1gHVtfNem2+5j/qx3v9V
+9fbvv/enpt7+7TznNWr+dp3WqPnbdVp7f9bVrfF8AQ7VUTs=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 0, 1}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {570., -767.4545454545455}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztl0EOwjAMBCMewZ0zj+gfeAISXPkyJ848AYTUQyps7zpO00aJhFakqZ2d
+bCs4XR+X2yGldPx+zmkez2nW+2+8puU8tm4e7ylXuc9S0evWOrae9Z3lxPJB
+/bKcUU5l525fjzofNA+6D5tfXofnjfaL8s359+aB9yH5YTnp8+XPK9bH7z82
+v/Xev766fi6Wv1JFfXD7wzkv/aD+orhE87T2ae0f5ZfXkddj/fznJmktnjpf
+mwOaA9YXx89aF/f+jOW7/vv3f327jvcc2/KVfaHng/Hh+Vn9W3NE+ejc/PlC
+94H13y5Pna/MrRafqP5bVcz32v+v95NPju/6fHrjafGR5tFz0O/rL58cXz6/
+eR3//b2qL7/7+f3ZWkvzO3jqWprfobqW5neoriOfdXVvPD++l3Uq
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 1, 0}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {950., -767.4545454545455}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlkEOAiEMRYmHcO/aQ8wdPIKJbr2yK9ceQWPCAkLp/xQGGIfE/GTKtL+P
+SuZ0fVxuB+fc8fs7O7+ei9f7b72W+Dm6zz/P5/HrvaRVi+t5wvp6vtivxkHr
+j+OD9styxjlZzz0f1/rD45pftg80D8sJq2flwp+PlDf2V2t+S/9XLP+yuSyf
+C7Z/li/qk/WP+l2LS6k/VK0+0/74+6AXl9o8Ub4oDzSPtB+th9bFtB1PlAt7
+vhgvOQ/LTzsv1n8rlXxLfWn7WD4sP+z9fjxR32Fc9mvlg/HT6o/Dk+ur1v2r
+98/VH5cnyqUtH/Z+mYcnynctPun88/JE+a7FZ2s8Ub5pbrW+Q7fLE+UbxnUe
+1ve3qtb5/ff5LOUbxmVeO8+8ls3vzhNV6/z29j+67vPZVmfj+QGirPhI
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 1, 1}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1330., -767.4545454545455}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztmDEOwjAMRSMOwc7MIXoHjoAEK1fuxMwRQEgdiOz+b8dNGtpK6IvEdezn
+rwhxuj4ut0NK6fj5nNP0jMOvvoY0+4zD/fs8s/fydT3PFJdrnkfbR3HWfHJ+
+xAH3h+qdX2fz8/Oa54DzRPXtnQ/yg5eHVq/8neVkn3upL7z9s3ytfch5+HsB
+ncvm9XKJ6p/la61Tqw/liZq7l0tpfV6+bJ1sfSguz1+bCzovmq+VB5oTF8/f
+x9a5aboUT5aLdb4sL/Q+y4+tszZPxBf1JXPw+svOj62zFU9Ut7Yvr/v5sPta
+PLvfWq2+iOYjvx/3+7O1sr5aik/U+WvVvL9afNA5rbksxbc2n979yfZX5t/y
+/xP+Vb3+ZeO2xlPr3+pfFNe6r7VoqX+37k+kXv+2rrsXLfXvrrLu92cd7c2f
+b9NchRs=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 0, 0}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1710., -767.4545454545455}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztljEOwjAQBC0eQU/NI/gDT0CCli9TUfMEIlAak83tnTexAUdCK7B93huv
+HHan6/G8SSlth88+oedxeOvN0HHe5/rL67nD9eN4rmic3Y+th8bRd+Rfxcfy
+Z/Gb94HrR+uU9h09HzYPvj7sOl5OaL/SvjW5tPNgcWF9onlRTpYvFRd1/16+
+lk+vP9RnzJc+F6w/FV/WJ+sPzcvnr81FxdPL18cjfv+y/KPnpjoHNV/v+bK8
+2PXeOt7fa/PlclB+/3Lj8fddLfXyma9Tysd/v7D+WuWLuMX46e6XVnl6+aK+
+VXzU+7embO6W5oPq1+azNN+1+PwKz+m+yu/fnBOrtfuvzTfnxtVr5/9nbVXl
+91/zaakqv53ntKry23VaVfntOq89n8vqt/F8AnZYfDg=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 0, 1}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {2090., -767.4545454545455}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}]}, {InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlD0OwjAMhSMOwc7MIXIHjoAEK1dmYuYIIFCGRil+z3aStiRS9ZQ/x/7s
++nC+nS67EML+/R1DGveY9PoZj5ivo+fSumQnP5efl/alc5K97/ozhsmQ5jgn
+lg8aL8sZ5WTNOxs3Gz9bDywPyQ7LCX3PK25r/Cxfzk/+v2L51+JijV/LF/WT
+9R/1txUXrX9Wvqif2jqR8tWKizdPlC/KA7UzneP9xJo3rzx4853jU97X91/p
+HZYz638vvmj+tfWl5ae9vzS++T56n+WD8pPe782R5YvWrw8fvh/35mbl24qP
+9f2lKxp3LT5rr08t31Z8tsZT4jO3juYB1d5x9+ab76N2tPe3qtb6/ff6lNRa
+v4Pnb/Xqv0PL6tV/h5Z11GddXRvPFysSTcI=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 1, 0}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {190., -986.7272727272727}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlk0OAiEMhYmHcO/aQ3AHj2CiW6/syvUcQWOCiZOBvpaWgkJiXkToz8eT
+cDjfTpddCGH/+hxDGveY9Poej7ieR9eleSrO9rolhq+xfObRfNJ41HcuJ6pe
+ab9lfvR5UYrGkfaN9p/7napXymN7HVVfPn65Ln7f6/6xPPp+4Pq37n+F87fi
+otW/jG+7+xety8oX3Pp0+La7f1tz4eaz4Wt///L4S8/Nzp91fO3uXzQPFQfb
+T9fvw9f+/uWdg3y/l0p9ocWnHKf+HeatXF9o8cntl+bvVct87flo5e9V0b6t
++FDxR1cvPr/izzq+du9Q77774Iv6t9/3p7fW+vff/Ump1L/Tn5jW+ndqWaX+
+9a57FJ3+tNFR/fkEIyZbkg==
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 1, 1}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {570., -986.7272727272727}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlUEOQiEMRImHcO/aQ3gHj2CiW6/syrVH0OjCUCkzQCmf+EnMxACl89r0
+707X43kTQti+fvvwuy7vdT98/t1UzZ97CJXre19qOr4eT4ujxePeQ/7wPptv
+qd90fHQO+S+Po/nW9m3rg/tByy/W0jg8J+Tf2nf6PJ9PKV/WR94Pz4nNC8VF
+XHr5t+7f/Lny+cvda+dSm58133xf9pu/3lxaedbylf7Tysfh6obea5/jWj7e
+fEvry/JC91l+bJ69edbyZeuf3rf6Trd/77yVzVvmz94v41w/X9j9pfKNOdnP
+X66O/vPTi68XH8Rt6Txr+fbig96fjWctXy8+s/NM++k/f9H90RxG85Wcubjz
+z89WtepfdG60z1Fq3b//zlOqdf+uGqt1/64aK+K78rTV2Xg+AYTWJqI=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1, 0, 0}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {950., -986.7272727272727}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztl0EOgjAQRRsP4d61h+AOHsFEt17ZlWuOoDHpAoT+/2cKpdgm5kemDDNv
+Pgqn6+NyO4QQjp/POcT17KLev+vVjY+z++JxlGcY70caVw/zTcfn83FxzMEX
+t/eb7hvPCymbR43nmg/rB5UHyqNymtbl+vb2r/kB18n1q3Oyzj2XL9j6rHy9
+96HqE7Wu3Fys9Vn5qnWy9anzstXNnpfPn2qdKg8tj/X3xD436xyW4os4sD5A
+fWnX8f7f/eYtxZf1BTof5WHj1jrX5sjyVefv5cPyG37fjj9Vvoiblw/LSb3+
+VnW6/qWff/O9P25dtb7LvV/Xqmvz2Zs/Vb6I2xw/tH+v/lT5sv5C+/7Fnyrf
+NPf6nj9Lq+rf5k9Nvf5tmlbVv6XrrU2bP/Nq7f58A0VeUQs=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1, 0, 1}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1330., -986.7272727272727}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztljsOwjAMhiMOwc7MIXoHjoAEK1dmYuYIVKAuJol/PxKX0EiV1Yft318c
+q4fz7XTZpZT283VMdN2n63s9puW+ZEvfLc+xOM+CXRb3nurQx6N6Of2y+r71
+5v35erE4Zb0yXvK66++99gftBymPch1S3rJ89nPgUz9+3urnBT9nKCfpfvly
+keuz8kV1SvXn/fX7jnJB86A8rXzzdbSfv624cHGkPK18UR5cP3Hfo/nQvNo4
+vfnWOejnL+rPxeF0cs+j+db5eM9f+/ng/NfGN6/fb/7q+LWbn7350nqtfFAd
+2vzRVsq3Fx9036L5efP15oPm/xWeVr7efDj/aD69+VJeGL+4/89oK+VLuaFx
+OP9Rbav+/Zf+9Oab5zfu/LTaVv272Y+19m+0/rVblO/GU2dHmZ8vCDn4SA==
+
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1, 1, 0}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1710., -986.7272727272727}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztVsEJwzAQMx2i/7w7RHboCIXm25X76jsjtBT8iFM46c7xnU0DQZCYnCTL
+ItPtcb2fUkrnz31J+XrOGZfv9ZrL5+i6/Fz6TrmuXC+93+IqID4P9QHzaYX9
+4fTiPnM+7fmyutFc6PTLfNn8Snxtftv3XZsLjBefB93+7M+h1SdWd+1c6PTX
+zy/Ln+PbyhdrPu06tOfMtl+tfKntZ5z+Reehczk8ys84/YvuA8rTxj9eflHd
+7Bz2fPxGLz/9+5f1D5vv7aNf/6I80Pk+PsXvX2ldn/n071+2X2L4Erd/dfO9
+fYiXX64vR81n+/4dqz/j9O8WvXVFwVr9660jKvL5jcG7Fxz9/9Mb//k8Fvvx
+8w3bj8Ho
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1, 1, 1}}, {{0, 0}, {4, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {2090., -986.7272727272727}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}]}, {InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlksOwjAMRCMOwZ41h+gdOAISbLkyK84BqpRNlNQzmfxaYgmNSF3Hfh4h
+LvfX7XFyzp1/n6vz8V68Ptf4LOE5mufPrTphXphvPbfy2HrWd5YTywedl+WM
+clL3zs6dux+r31weVp14Ph6151bnZ/mifaby2L2oey/tC3Z+li/aJ9s/u6/a
+XHL7U/mifeb6xNpXKy6leaJ8UR5oHWsuB0a8Dh+1eKJcLD4YL/1/GVpH7b81
+39RcVh7Lh+Wn7nEUvuFz9H2WD8rPur83R5Yv6l+VTyqPvX9UVf2r8il1/6iq
++lfls3d/5vJtxedoPC0+qXNsD3j0nrs33/A5Wif3/aOq6l/U3/+qqn8nz21V
+/Tt1W0v9/k6N6/RnXd0bzy8d2l//
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 0, 0, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {190., -1206.}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlU0KwjAQhYOHcO/aQ/QOHkHQrVfuyrVHUIQKCe28NzNJmsYGymAzv988
+6un6uNwOIYTj5zmH6YzDZO/f8xwCdV6/uDQ+zjNCv9Qf3SM/bT70W+bE33vn
+lfPgfXG8cB7v3Nb9sHrQ8kBzcHvR18s1t3d+LV+2zyU/1L+WfykuuebX8mX7
+ZPtDfta9e7lY+/PyZftk+9PuqxaX3DxZviwPLg/eWxxvr2vNU5uvdr8yL/v/
+NJvH239tvuz+2bnlOjw/7x5b4Zves/FaPiw/VH9tjlq+83pNj/37izhp67dq
+WV2V4pOrfqtW1l15Pmn81nmyfGvx6Y0n4hO/x/pdyqON79V69Yv8etcnsl79
+zuv2f3mm1qvfnadsvfpdu//WrVe/u5Xt/v0sa7fG8w3d3etK
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 0, 0, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {570., -1206.}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlksKAjEMhouHcO/aQ8wdPIKgW6/syrVHUIRBpk6aL01t5xWQH/vI40so
+czjfTpddCGH//h1Db/eu1+vHHt1wXbJntP+9P+7nN450XtvXzln9pf/z+tMc
+ZT60XitnysnXd51Lqf7QebDy0PxYedN4vro5fy0fK1+ap3TOyyndr3JcStVv
+5Ttc5/Vo/mm+tbjk5uflS/Ok+Vn7VYtLaZ6Ur5S/dZ5o37R4NG6un9p8NT65
+vOh9qx9v/rX5Dtclo+8vv0855/ZxKnzjfXrfyofy0+K35mjlK3ErzUc6Z40/
+VfXOL+MjGf++a82pNN9afOL4c+dJ+dbiszSeGh9pnfaBauu6W/ON96mf3PtL
+VTa/kvHv17Wqd343nmll87ve99Orpd7fTcd1m8//6tx4vgA+syMo
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 0, 1, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {950., -1206.}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlkEOwjAMBCMewZ0zj+gfeAISXPkyJ848AYTUQ6wmu163CYVGQpYSx/ZO
+VqiH8+102aWU9u/fMY3rPozx+lmPwe6zeeN+fl5az2GMtp6tw/Yr5bPnLAek
+z8cHzYf55X1wPsu3rlv3hfo+rB+8PFAdHye+31y6o/q9fNk5S3lRTpzu5Xzh
+1e/lW9KB8qbrY53qu0e5qPNF+bJzsvPZPqW+rbmw/ebmm+/7+aH56/30vmqd
+1ny97zvNi9dV74/rROdvzdfus3movvoO0fvfxtee1+/rfNh3RvP34qfyzfd1
+fqz+aP/eHL185+UT/3/pzUmNrO6l+KzdnyrfVnzW7k8UOV9ifraO935vDq35
+2nO2jnr/VyPn3/j3a2+dvWLUv//uTxQ5/27+VGPUv1usx82fy8a1+fMFclON
+jg==
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 0, 1, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1330., -1206.}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlkEOAiEMRYmHcO/aQ8wdPIKJbr2yK9ceQaNxw1D6P5SCE0jMj9KB/tem
+4+F8O112IYT9+3MM0nou4pYSd/2sx/LT76/3lcZxcby2r8Wx52nfOU7S8+s8
+WL/aOSxv7BzUt7xvVZ/0Ppofzk+7P47XtI1vvi+1c1EuaJ5SXC0nznc5Fyv/
+eS6sDzlOyx/N14tLaX4c33HmrzcXa57p8+PlN39R/qV1s6pDHd9+8xetQ2me
+3jzT98er1fxF76l93/XjmffvN3/RffT+3hzz+eF9Yc1HipPqNjpPlEsbPnod
+S+8fVVHfrfik6/C/PDV/3ny2xjPtD+1fu/+hvX378rWfv+zzW1Wuf/E+7+1r
+FK3t38kzr2xfTp6c1vbv1LzGfCdPW/03ni+/KNkG
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 1, 0, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1710., -1206.}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlDEOwjAMRSMOwc7MIXoHjoAEK1dmYuYIVEgdsOL6fztp05JI1VcTx7Gf
+LZ+uj8vtkFI6jt85Tes5THr/rtcg91G7ad/yI+2kvXVu2bH+rH+WE8sHzZfl
+jHKK1p3N21sfK14vj5Rd70H+o/6x98rlHc2f5YvGqdlFObF5x/oinj/LF42T
+jZ+tV20u3viifNE4vX2SskufJ7W4lOaJ8tXin+eH82Lfm38Xn+O1eaJ8NQ6W
+Hytv9D7rJxr/0nzR+nv7y8svWsdW+Mpz9D7L5/dcLnset8YTzVvjVpqPxol9
+v1VF+w71w/Ip9X6rGu3fKJ+t96eX71J89sbT4qPto3VAde281+Yrz1E/3vt7
+1Wj//nt/Whrt385zXkvN3655LTV/u+a192dd3RrPD88JUpI=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 1, 0, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {2090., -1206.}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}]}, {InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztmEsOwjAMRCMOwZ41h+gdOAISbLkyK9YcgQqpi1aJZ2zn008ioRFtiT3P
+o0jlcn/dHqcQwnn8XMO03sOkz//6DMvr8nPL9R3mmq6zVPY+ek67H/qu5aTl
+w/nVc2Y52ebO3881HzYP8f54fqg+4sTWy+Wb82/Ng91Hyo+Xk9Z3nlzY/efJ
+b/nz17avnQvy51Vvn/O+WB44f7W45OaJ+pT75/mh/rl6/rmltBTPuE/cPzsn
+xIv9fXwffZ+1ecr91z9/tfzYPlvxjPPFvrj5sHz0/FD91hw5PvXOX8QpXn99
++eR8YW6l+OSqv1aVfZfng/bfurbmszeeiE/qOjuHFO+95pPja8/vfB/8HnE0
+1eVX/3/L0dWb385TVm9+u8rqzW9XWXs+y+rWeP4ANnx8FQ==
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 1, 1, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {190., -1425.2727272727275}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlDsOwjAQRC0OQU/NIXIHjoAELVemouYIIKQUbOzMzK6dD8RSNJI/+3k7
+yuF8O112KaX9+zumft27Xq+f9ejsPnuv38+f2/Xs8jqM8x0Px7H5x+MN+0Ec
+UH8qH1QfG6dUD+IUnXv+HOdn+2f5qH2wcVRObL5afXP9l+eh8mXrLN2LctL6
+ru8LtX+VL1unVr9d+L/Zmou3vihftk7E3zuvqbiw+byK+vTyQ/Wr+bxzqzWH
+2nzV+Y7zwn2p/Ng62fpbaalu5Ad1PmoeX514jkvha8/Z9yoflh/KPzW3KN8S
+t9p8SvfyeZfnTy/fNnz8/5e5OXk16t8on7X708t3Kj5r9yfSqH/Z+7/qTy9f
+e87G8b7/VY3699/96eVrz9H7uftYqmr+3fypatS/m47r5s+2ujZ/vgCezdOc
+
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 0, 1, 1, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {570., -1425.2727272727275}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlkEKwjAQRYOHcO/aQ+QOHkHQrVfuyrVHsAhFEkz+n8k0SW0GytBmkvn/
+dSg9XR+X28E5d5yvs1ti8i6IV3Qfx+Tvn3j6cP/3eWo9VRfXo3VUJz0vvGc5
+pNelfFi/Us4sJ+4cO9/a95PXi/Wx/FD/PCf+fdn4LvfP9pHqDOuwPvZ8nW+7
+uZD65/jKdbL6UJ3WdykXrT4d3/bf39pcrHnmdS5R6/vL92P7snktniwXxEfL
+C+lg+Un31+KZ14/5xHpZ39I+pTpb8UT+U+vsfpYzu872b82R44PnwppPWKfv
+32tm52otPlb9e82hv/p84v1b54n81ebzbzzzfOTz+/ucfv4/W+fS+UV1e+OZ
+8i+bX1zX2lcvuXR+9z6fKOvmd/Bkc+n8jpzPMd/B0zZvjecbELvZBg==
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 0, 0, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {950., -1425.2727272727275}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlM0NwjAMhSOG4M6ZIboDIyDBlZU5cWYEKiQLETXxe7bblBJL1VPz49if
+LR/Ot9Nll1Laj98xid0H0evbHkO+/q1iz+z/s675kf1c0X3tHOtP+2c5ofGy
++Wp+WN5WP9P7YnpfWOuD9gPLQ/PDckLfi8rbmz/LF42zdM7Lic07ui/Y/Fm+
+9TjF4ucvm7eXizU+L180TjS+er30eTIXl2ieKF+UB+pHy0t7z1q3qDpE89X4
+WHmh91k/3viX5luvv5h//rL8vHVcC998H73P8kH5ae+35sjyLXGL5lM6x76/
+VvX2r42PGD5fWnOK5rsUn9I7rbnMzXcpPlvjqfEpraN1QLV13q355vuoH+v9
+raq3f/+9PzX19m/nWdeo+dt1WqPmb9dp7f05r/4azxcpH0qB
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 0, 0, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1330., -1425.2727272727275}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlEEOwjAMBCMewZ0zj+gfeAISXPkyJ848gQopl6jBu163aUsioRWJ49jj
+VU/Xx+V2SCkdx9855fUcst6/6zWU+2hc3rfylHFlvHVuxXH58nob/3FOLB+0
+X5YzykmdO9s32z/rB5aHlYflhL4X1bfaP8sXrbMWp3Ji+472Bds/yxetk62f
+ndfcXLz1qXzROr0+sea1FJdonihflAeax+rLes87t6g5RPO1+Hh5offZPGr9
+S/NF5+/1l5efOse18C3P0fssH5Sf9X5rjixf1L8qn1oc+/5aVfWvyifq/bWq
+6l+Vz9b96eW7FJ+98bT41PbROaDauu/WfMtzNI/3/l5V9e+/+9NS1b+d52+N
++v52ndao72/Xae3+nFe3xvMDKTdy1g==
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 0, 1, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1710., -1425.2727272727275}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlD0OwjAMhSMOwc7MIXoHjoAEK1dmYu4RqJAyNErq92ynTUssVU/Nj2N/
+tny5v26PUwjhPH3XEO09RH3+7DOk6+i5uC75Sc+l56V96RzrT/pnObF80HxZ
+zigna93ZvLX1keLV8pjvRxsL/6PoH33PK29r/ixfNM7SOSsnNm+fvtDnz/JF
+42TjZ+tVm4s2PitfNE5tn8w1Wnme1OLizRPlu8zDb/6i72Hv6uf52nzZ+qK8
+0PusH2v8a/NF66/tLy0/ax1b4Zvuo/dZPvn9aPI8bo0nmneJmzefEif2/VYV
+5Yb6Yfl4vd+qWvvXymfv/anluxafo/GU+JTW0TqgunXeW/NN91E/2vtHVWv/
+/nt/Smrt385zWb3mb9e8es3frnnt/VlX98bzCx/VTGs=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 0, 1, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {2090., -1425.2727272727275}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}]}, {InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztmE0KwjAQhYOHcO/aQ/QOHkHQrVd25dojWIQgCZ3Me5Mf0zaB8mgymcx8
+MwTa0/VxuR2cc8f5OTs/npPX+3e8pnges/PjPYUaj9/+WNF1zY71p72znNB4
+2XxZziinvLrzeVvrg/ZDOg+dX+hHt0e51cqby9/eD2yckh3HSedfhgt+Dps/
+yzcdZ7371+o3ty+k/HJV86udtxwfzjn235pLaZ4oXyl+lJ8WP3eevW6S1uKJ
+8mXri/JK78f5oXG25onyResfzvN8lv3rfqx17IVvvI7u5zjb7xd0/d8q8ZX6
+ojQfyS59fr88Ub6t+JQ6v1e19W/t7+v18kT5tuKzNZ4aH2k+VD/K/U/Yqub2
+r2a3N55S/lz/2r8j9qa5/Tt4pjW3f4emtdT9O3RZR3/W1bXx/AALTerF
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 1, 0, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {190., -1644.5454545454545}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztl00KAjEMhYuHcO/aQ/QOHkHQrVd25dojKEKRFtuXl/RnZmxBHnbSNPny
+GPRwvp0uO+fc/v05urDuPuj1sx4+3ZfGhX2UJ41L49FzFMfmQ99ZTr+fh/X0
+sX73tfyk85Lyqtu3fd6sH1geKA/LKdaw+Lmzc2rrB76PXD9WTmzfdXyh77+V
+f7n6+fdmay7a+nR8+Tql9eXi0ngtfy2X2jxRnSwPWR48N3Sfdm615lCHL+aA
+8qC+pefLeXCdbP19+PZ//0rnYD0/SllfsPy0c0j3Uf2jOcr49vv9izix9y9V
+rf618ql1/1JV1vf4/9dr1dF8tsYT8cntI34ofqv+5Pjy/o3z6M9vVa3+/Xd/
+IrX6d/Isq9W/U8tq9e/Usk5/ttW18XwBNH7EYQ==
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 1, 0, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {570., -1644.5454545454545}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlj0OwjAMhSMOwc7MIXoHjoAEK1dmYuYIVEgeGtK8Z8dpmlJL6El18M9n
+K+3p+rjcDiGE4/g7B7HnIHr/2muIn7Pn5Hk+jth7SCvr/82Xzo/jxfUiDla/
+tT4uDp4Xx0s/97yf7Q/PB9Vr5YHiaDlx+cq5ePWv5Yv4oHM6Tvp5eXHx6l/L
+l61TW792XrW5WOsr5Tv1i9W/f5fm4s2T5cvyYOOgvlA+69y85uDNF/Gx8RLj
+38Naztb6l+bLzp/tW5untM5WPNm6p34xv/tXxw/nb81Ry3duL2x8/L7v2Hhr
+UZZbLT5e+deqpfvL8RGz3y+9ams+W+M51591f9nzW91PK9/Yz8ax/n+rWrq/
+/76fSLn9Fevv+7O1lu7vrnn1un93Teu+n3W1N54fnrjywQ==
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 1, 1, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {950., -1644.5454545454545}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJzt2E0KwjAQhuHgIdy79hC9g0cQdOuVXbn2CIpQpKHJvF/+2moKMtD8TObJ
+IOLhfDtdds65/ftzdONzH8Z4/TyPwX9P543vrX38ef58a9xNnucQjzwfdYiP
+O6f6sHp1Z+qUe+/WeN59f89v1a3WQffRvHm+PBf9fnzPkCu9x9B+85H3j+pf
+xoXnofWHXFPrsOaxPgmfdxrruYTy0HWWq+pD12vOoftq51Las3T/0n2se7Py
+0bws1vOkLqn9ZNVtnYP6aevbeVLfUF3WPNVH9WPrl/Ok5/bH6XrVh/rF86/H
+U60r14/Wr+Vfryd1qeujfr9sx5P6lvVRv1+260l9W/n8mif1nXcr9Tv0dz2p
+73Tc9shdv7RDa1/av//en6m+/nh8ffeM++T//9k95yPr3+6ZGnt/1o1b83wB
+OjUsbg==
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{0, 1, 1, 1, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1330., -1644.5454545454545}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztmDEOwjAMRSMOwc7MIXIHjoAEK1fuxMwRqJA6EMWxv504NKQS+qJJY/9n
+y0Wcro/L7RBCOK6fc9iuJX7rKwbmun+uZ/LcErf71Dq1L93PrXP70PO471Rc
+dN3qN3++vF7lOPq6o7619ZHxwXlwPlBOnP82vvX+pXHQPMsc+bnA3Zeeq+VS
+yz9Wx37zV3uutS/Q/LR80Ty5/LT18uJSm6csz3bzN79fPo/RuqV5Ufl48dXW
+l+Iq9SWrg36Oe/GU5e83f1F+1jr25kutY/XRv48oflz83hwxPu3nb/n5er8/
+e6u0r1rxqRX/VzX1580nH3+/PDl/3nxG4ynjg/av/f+EUdXav9y+f+NJ+bf1
+77jz06rW/p08y2rt36lltfbv1LLO+dlW98bzDXCG60o=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 0, 0, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1710., -1644.5454545454545}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlk0KAjEMhYuHcO/aQ8wdPIKgW6/syvUcQVFGaJg276Vp57cggTTm5+sj
+zOn6uNwOIYTj53cOw3l2g71/z6uTfjQu9vddyJ7+Hy/zSb9WT4tH7+P8ev+p
+G7TfvB/nJ+uwnNA8aF9ofa97Gcfy0PLYOPHv7qULth+WLzrHeB5e1xh/fy5e
+87N80T7zfn7/snNbuZT2V8pX65PtT9ZJ1W3NRatXiy/KA82jzaXVQ+ta87Tm
+q/HJ5yn/LmPzlPbfmi/6/nm//fsxxS+29fdnLb7yftxv58O+s9b/1BxZvuN6
+8eeTimPrz9Va9evFx6v+XG2pfq18fv75789afFvxWbo+0fms+kXjtf+v1Vr1
+i8ZtjWdqfla/Xvth7bZUv1vXp2at+p2676VYr/2729ju+7ONXZo+30m00HA=
+
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 0, 0, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {2090., -1644.5454545454545}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}]}, {InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlT0OwjAMhSMOwc7MIXoHjoAEK1dmYuYIVEgMieL4+Sd1WxIJPbWJHfvr
+kzldH5fbIaV0nH/nRK33lD8/p1Lv3/Ui31P71LnyPLfPnZPm457R/rV80H6l
+nFFO0jzWvrXfJ39f+vS3pP7l80g5cf17cWn35e8HaZ3UOS0n9Ht5cfHqvx7n
+5V+/+avNa/WFtD4Z5/XM36W5ePPM88bPX5Q/xQGN4/L0UrR+NA/XNxovzWOt
+vw/X+PmL7ev/76IV5YPGo5yl/Lj7oznW64qbvxwn6t618uT6oupG+9Hy8bp/
+bYr6rjefrfsT4xzHZ288877s/i05oRrd/7Kc/eevNH5v6uXff/cnp1b/Dp51
+9fLv0LZa/Tu0rcOffXVrPD/qufwi
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 0, 1, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {190., -1863.818181818182}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlDsOwjAQRC0OQU/NIXIHjoAELVemos4RQEhpjDcz+3EcEltCI9lhP29H
+e7o+LrdDSun4+Z3TdJ7DpPfveQ35fVnHIRXPmL3//n/Kk6v0zuZj40nvLAeO
+E88H1Yf4zdchx7fG8fZtnQ+q18oDxdFyYvNF9e3tvxzf71+pHy8nbd9aLtH9
+s3Nk69TWJ+Xxzd3PRVufjuv69u/SXKJ4snVqebBxUF8on3VuUXOwcW2/f9k5
+sJzZ+6VUqpvzgX//avl557gs1/r71zqHPD7K35onywdxk/qx8pG+0+Zfm2p9
+Fc0nOv9aFfmuNh8pfmsuMVzb89kKT5aPdI/4oe+35k+Oa739i+73ol7/7tWf
+SKP823nOq9e/Xcsa5d+u89r9WVf/jecbvEy59g==
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 0, 1, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {570., -1863.818181818182}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlM0NwjAMhSOG4M6ZIbIDIyDBlZU5cWYEKqQINUrxe7ET05JI1VOT1D+f
+XR/Ot9NlF0LYT88xpHWPSa/v9Yj5Pnov7Ut28nv5felculdn7xnDbOXvH15o
+figfNF+WM8pJW3c2bzZ/th9YHpIdlhPqzypvbf4sXy5O/r9i+bfios2/li8a
+Jxs/Gm8vLrXxafmicdb2iVSvXlyseaJ8UR6onfk7Pk+0dbOqgzXfJT7l8/r5
+K/lhObPxe/FF64/mzfrRxunFE407P0e/Z/mg/CT/3hxZvmj/2vDh57E3Ny3f
+Xny0/n9d0bxb8ZHsr129+WyNp8RnaR+tA6reeXvzzc9RO7Xfb1W1/fvv/Smp
+tn8Hz+9qNX+HltVq/g4t6+jPtro2ni+a0EqB
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 1, 0, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {950., -1863.818181818182}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlEsOwjAMRCMOwZ41h+gdOAISbLkyK9YcgQrUBVGDZzxu+iGR0IjEcezn
+UQ/n2+mySynt+98xDeveDXp9r0eX76Nxw76VJ4/L461zK87K99l/dulrlf7j
+/Xv5oP2ynFFO6tzZvtn+WT+wPKw8LCf0vai+1f5ZvmidpTiVE9t3tC/Y/lm+
+aJ1s/ey8pubirU/li9bp9Yk1r1pconmifFEeaB6rL+s979yi5hDN1+Lj5YXe
+Z/Oo9dfmi87f6y8vP3WOS+Gbn6P3WT4oP+v9uTmyfFH/qnxKcez7S1XVvyqf
+qPeXqqp/VT5r96eXby0+W+Np8Snto3NAde6+5+abn6N5vPe3qqp//92flqr+
+bTx/a9T3t+m4Rn1/m45r8+e0ujaeL8oAcZs=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 1, 0, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1330., -1863.818181818182}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztljEOwjAMRSMOwc7MIXoHjoAEK1dmYu4RqBBZojr+P3aTFBIJfZE4tf38
+KzhdH5fbIYRwXD7nENdzinr/rNeU7qNxcV97ThqXxmvnWhz7PO07y4nlg/bL
+ckY5WefO9l06H63eUh7rcfNX45qFfTmPls+rb2v/LF+0TikOqx/nvxUXr/5Z
+vmidbP1ovbW4lNZn5YvWWeoTbV61uHjzRPmiPPLx+vuP5iudm9ccvPmy80Xn
+s36P/x1k79fiifJF54/Oh81jrbMVT7Tu9By9z/JB+Wn5W3Nk+aL+tfKR4tj8
+varVv1Y+Xvl7Vat/rXz27s9SvrX4/BpPjY+0j84B1dZ9t+abnufv9/v/s7Va
+/fvv/tTUx7+Dp6RW/w7Nq9W/Q/M6/Lmt7o3nG7OYQx8=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 1, 1, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1710., -1863.818181818182}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztmEEKwjAQRYOHcO/aQ+QOHkHQrVd25bpHUIQiLZnkz/xOktoG5EMNk/9f
+xqF4uj4ut0MI4fj5nMO4nnHU+3e94vw5um98XqqT3jfEMFlDTKtcx1pv7hf1
+b+VjzSvllvaVOFnrWHPb8v++L/m18ijV0XLK19PnTqv+fqQ8aD9oc1h/V1r+
+1r5Ez2fz2/jWm7+oL6++0PpDlfWJ+pP2TbUeF+15Pnz956+OPz/Htffgy9d/
+/qL3gHK2+m/D13/+avmx91hb87795i92D/x7WN982Tm4/HyRzu9V83z9+Sx1
+fq+K5vbiU6q/dm3FB63fmo8vX7/30Na5++DLzt//70+OL/8/4NaV7d+t92dJ
+2f7dNa9s/7b237vu/emja+3PN6V0TSI=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 0, 1, 1, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {2090., -1863.818181818182}, ImageScaled[
+      {0.5, 0.5}], {348, 200}]}, {InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlkEOgkAMRScewr1rD8EdPIKJbr2yK9ceQSNhQaX0/3agoJCYH5hOp33z
+HTicb6fLrpSyf/+OpbvuTafXz/Vo5HMu7in0++rmS5X5tXErjs1n3bOc0HqH
+421+XJzVP58n2rd3f1A/aPVp+bA8OCd0Pc6X+P+K7Z/li/Yx3o+fkzbPysty
+qdU/yxetc3jcf/6yfbNcatUX5avVidbHxenvl6m5aOtNzVc+1+LQPNi+6ev1
+1X+OT80T5WLx8fLC6uB9Gq1/br7o/g+Px9/T0TqzeKJ1y/H+vd9fXn5W/dkc
+Wb6aL2rz0eLY9ZeqrH9r86m1/lI16l+WT3s/3/dntmbzWbs/0f5Y/6KctfnZ
+fWfzleNoHu/8X1Wvf6247L6WolH/bjzHNerfTce11vm7aastr//5/szWtfnz
+BaI74ZU=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1, 0, 0, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {190., -2083.0909090909095}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlTEOwjAQBC0eQU/NI/gDT0CCli9TUecJIKhiON+ub3FikkhoRZys7+ZW
+zu50PZ43KaXt87dP1jUc3noz9fK67uZ9a916Ln9+/H/I9LNe1A/bz+4PXUfr
+Reur5ez51/qw69r5+Hnw+mB9WE5e/you1j5sPSxftM7yHNlc18+dm5u+f3V+
+rX7YnNTVpc+FV5+aL1onxw+fVysuUZ61fD0erI/XF7Zf/BxX86zly84X5YW+
+z/qw96fmi84f7Rt9f6zx711rRevO+y/7Rfnw5wta31z5lrnFz1+Pk7f/1Byj
+fK2+1Xw8bnPnWcu3FR/PvzdF+bbi0zvP7/3o8utx/rd8qvjm3DDf/s/PqKrz
+u7R8qvjm/Mp+y+WZqzq/q45Vnd9Vy7rm87faG88Hp0FmZg==
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1, 0, 0, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {570., -2083.0909090909095}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlEsOwjAMRCMOwb5rDtE7cASksuXKrFhzBBBVhGS1eMZ2E6UkEho1H2f8
+bDJcbufpkFI6vn+nlMd9zHr9jMco59F9eV6LI/fJ/dq6tm8t3vz9FJrH9xv1
+H8UHzZfljHLy1p3Nm82f7QeWhxaH5YTeF5W3N3+WL8ZH/5/54vv7Er2f9efl
+i/pk/aN+S3Gx+vPyRX1a+0SrVyku0TxRvigPLg7/nnjrFlWHaL5afa28NB8o
+P/Z8KZ4oX7T+aN7sPV6ftXiivuU6ep7lg/LT7q/NkeWL9q+Vzzxvf49rc/Py
+LcXHen8riua9FZ/W+9PKtxSfvfHU+KzNo3VAtXbetfnKdTSO9fxe1du//96f
+mnr7t/P8rVHvb9dljXp/uy5r789ttTWeL15wQx8=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1, 0, 1, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {950., -2083.0909090909095}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztl00KwjAQhYOHcO/aQ/QOHkHQrVd25dojKEKQhDYz32TaNNpAeTQ/kzcv
+b0p6ON9Ol10IYf9+jiG2+xDx+mmPIe/Xzov9Upx0/JlhbN9+th+PJ71Tncrj
+9nzLecvnJaE2Dh2n5zM1LvG16iHFoTqNoz3vPH8pL5o/84OeJ60rppNXPdK6
+4vlr9a2tQ61Prbzm8gXlZ9WX8tTym5qXz7fqz9b5+ZPypHpo40zN1+5nPTfr
+Ocylr/V8tXql4/w7THlq+S+lr9YX0nqmc319SOtbodUXXvpo9Uvf1+NPqq+k
+W60+Eg/r/mvFcf5z33/9/h/Xjizvdv/XveLS+tD4vSPzpd89tHXerfTV+ovN
++11/Un3Luvd3/2yNPv79X39KWOvfDcto9W9r3r3g5k9f7N2fL5FtR08=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1, 0, 1, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1330., -2083.0909090909095}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlj0OwjAMhSMOwc7MIbgDR0CClSszMXMEKioGUjt+dpyYqK1UWW399z6b
+iMPlfr7uUkr76T6m5XX7XM/T/PRgLef3fS/lyf1o/xdjl/1K+dDvkj70O9qv
+Vi+np9wH54/XQ3Wje1E3H3kfbDx4HVreaD1JN61X3gtbP/rfm6SjPEc7Jy5O
+ymvjYp+jlS/ap7Z/Ot4+d5QLWofL582X1tH+/I3hoo+r5YvykPZJ8kfroXWt
+eXrz1c4X5YXGa/No30fzReeP6kbj0TzWOf4LX7p/v/NXy6+sqz/PWr7cXnjz
+4fy09aOtlm8vPujcovl58/Xmg9YfhWct3158RuVZy/eXq///0Gge0Xxzblj+
+cc/PWttqf9eyn958c37lvOvjSXNod/6u3bba383OFuW78fS1o/F8A4w1X3Q=
+
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1, 1, 0, 0}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {1710., -2083.0909090909095}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[RasterBox[CompressedData["
+1:eJztlksOwjAMRCMOwZ41h+gdOAISbLkyK9Y9AgiURSKlM2OnCf1UQqPGrWM/
+TyNO18fldgghHD+/c4jXc4h6/16vIV9nn4vrXJ6xoPEaYb50Hefj4piDNV7q
+J19n86vzQsrmscX989H8wPNAeVRO2n7+vr39s35A/mX7UTl5517bF6g+L1+2
+TrV+tt5WXKz1efmydVp9guZVm8svrp8jc/FlebB50NzQfta5qXNoxXeag/38
+Zd9H/FCdaL03X3b+bN/qPt46e/Fk687j7PsqH41f+/NzLr4lblY+6b33fPkf
+f1r5tuKj7r80Zfuei8/S/WnlW5sP6/vePGqr17/s82v1p5VvHk/v9f+vvfvs
+pV7/bt2fSLXvfnvnp1e9/t11Wln/9q5zqbr7s46u5fx8AxURzJU=
+            "], {{0, 0}, {43, 22}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999858}},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -95.36196362365591}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 184.05541346514048}], 
+         InsetBox[
+          GraphicsBox[RasterBox[{{1, 1, 1, 0, 1}}, {{0, 0}, {5, 1}}, {0, 1}],
+           DisplayFunction->Identity,
+           Frame->Automatic,
+           FrameLabel->{None, None},
+           FrameTicks->{{None, None}, {None, None}},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0.5, 0.5}, {0.5, 0.4999999999999982}},
+           ImageSize->{Automatic, 16},
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultPlotStyle" -> Automatic},
+           PlotRangePadding->0], {188.3648163170703, -202.0581841383975}, 
+          ImageScaled[{0.5, 0.5}], {358.79012631822917, 16}]}, {}},
+       DisplayFunction->Identity,
+       ImagePadding->{{8.881784197001252*^-16, 5.684341886080802*^-14}, {
+        5.684341886080802*^-14, 2.842170943040401*^-14}},
+       ImageSize->{
+         UpTo[360], 
+         UpTo[200]},
+       PlotRange->{{0, 376.7296326341406}, {-213.39244102948317`, 0}},
+       PlotRangePadding->{6, 5}], {2090., -2083.0909090909095}, 
+      ImageScaled[{0.5, 0.5}], {348, 200}]}}, {}},
+  ImageSize->{
+    UpTo[600], 
+    UpTo[700]},
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{3.871054798244752*^9},
+ CellLabel->"Out[38]=",ExpressionUUID->"8bc5190e-55b5-4e20-af8b-d5508fa17ee7"]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{127, Automatic}, {14.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"78c03559-c4d6-417d-a2af-771634378049"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 5906, 141, 203, "Input",ExpressionUUID->"71464737-6975-4093-ad3e-5fbb3868e43a"],
+Cell[6489, 165, 183050, 3878, 596, "Output",ExpressionUUID->"8bc5190e-55b5-4e20-af8b-d5508fa17ee7"]
+}, Open  ]]
+}
+]
+*)
+

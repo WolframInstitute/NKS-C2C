@@ -1,0 +1,863 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     38522,        855]
+NotebookOptionsPosition[     38033,        838]
+NotebookOutlinePosition[     38434,        854]
+CellTagsIndexPosition[     38391,        851]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"rules", "=", "#"}], ",", 
+       RowBox[{"hist", "=", 
+        RowBox[{
+         RowBox[{"ResourceFunction", "[", "\"\<CyclicTagSystem\>\"", "]"}], 
+         "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"{", "1", "}"}], ",", "20"}], "]"}]}], ",", 
+       RowBox[{"icon", "=", 
+        RowBox[{"Function", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"pos", ",", "r", ",", "phase"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"GrayLevel", "[", ".15", "]"}], ",", 
+            RowBox[{"Circle", "[", 
+             RowBox[{"pos", ",", "r"}], "]"}], ",", 
+            RowBox[{"GrayLevel", "[", ".3", "]"}], ",", 
+            RowBox[{"Disk", "[", 
+             RowBox[{"pos", ",", "r", ",", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Pi", "/", "2"}], ",", 
+                 RowBox[{"3", 
+                  RowBox[{"Pi", "/", "2"}]}]}], "}"}], "+", 
+               RowBox[{"phase", " ", "\[Pi]"}]}]}], "]"}]}], "}"}]}], "]"}]}],
+        ",", 
+       RowBox[{"tk", "=", ".3"}], ",", 
+       RowBox[{"swid", "=", ".4"}], ",", 
+       RowBox[{"rht", "=", ".23"}]}], "}"}], ",", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"icon", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "1.2"}], ",", 
+               RowBox[{
+                RowBox[{"-", "i"}], "+", 
+                RowBox[{
+                 FractionBox["1", "2"], "rht", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"Length", "[", 
+                    RowBox[{"rules", "\[LeftDoubleBracket]", 
+                    RowBox[{"Mod", "[", 
+                    RowBox[{"i", ",", "2", ",", "1"}], "]"}], 
+                    "\[RightDoubleBracket]"}], "]"}], "+", ".5"}], 
+                  ")"}]}]}]}], "}"}], ",", ".3", ",", 
+             RowBox[{"Mod", "[", 
+              RowBox[{"i", ",", "2"}], "]"}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", 
+             RowBox[{
+              RowBox[{"Length", "[", "hist", "]"}], "-", "1"}]}], "}"}]}], 
+          "]"}], ",", 
+         RowBox[{"GeometricTransformation", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"EdgeForm", "[", 
+              RowBox[{"Directive", "[", 
+               RowBox[{
+                RowBox[{"Thickness", "[", "0.001", "]"}], ",", 
+                RowBox[{"GrayLevel", "[", ".15", "]"}]}], "]"}], "]"}], ",", 
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"With", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"values", "=", 
+                   RowBox[{"rules", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"Mod", "[", 
+                    RowBox[{"i", ",", "2", ",", "1"}], "]"}], "]"}], "]"}]}], 
+                  "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"hist", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "1"}], "]"}], "]"}], "==", "1"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"GrayLevel", "[", 
+                    RowBox[{".85", "-", 
+                    RowBox[{"values", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"j", "+", "1"}], "]"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"i", "+", ".5"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "i"}], "+", 
+                    RowBox[{"rht", " ", "j"}]}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"i", "+", 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"hist", "\[LeftDoubleBracket]", 
+                    RowBox[{"i", "+", "1"}], "\[RightDoubleBracket]"}], "]"}],
+                     "-", "j", "+", "1", "-", "tk"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "i"}], "+", 
+                    RowBox[{"rht", " ", "j"}]}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"i", "+", 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"hist", "\[LeftDoubleBracket]", 
+                    RowBox[{"i", "+", "1"}], "\[RightDoubleBracket]"}], "]"}],
+                     "-", "j", "+", "1", "-", "tk"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "i"}], "+", 
+                    RowBox[{"rht", " ", 
+                    RowBox[{"(", 
+                    RowBox[{"j", "+", "swid"}], ")"}]}]}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"i", "+", ".5"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "i"}], "+", 
+                    RowBox[{"rht", 
+                    RowBox[{"(", 
+                    RowBox[{"j", "+", "swid"}], ")"}]}]}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"i", "+", ".5"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "i"}], "+", 
+                    RowBox[{"rht", " ", "j"}]}]}], "}"}]}], "}"}], "]"}]}], 
+                    "}"}]}], "]"}], ",", 
+                   RowBox[{"GrayLevel", "[", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"values", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"j", "+", "1"}], "]"}], "]"}], "==", "1"}], ",", 
+                    ".3", ",", ".6"}], "]"}], "]"}], ",", 
+                   RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", ".75"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "i"}], "+", 
+                    RowBox[{"rht", " ", "j"}]}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"i", "+", ".5"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "i"}], "+", 
+                    RowBox[{"rht", " ", "j"}]}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"i", "+", ".5"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "i"}], "+", 
+                    RowBox[{"rht", 
+                    RowBox[{"(", 
+                    RowBox[{"j", "+", "swid"}], ")"}]}]}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", ".75"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "i"}], "+", 
+                    RowBox[{"rht", 
+                    RowBox[{"(", 
+                    RowBox[{"j", "+", "swid"}], ")"}]}]}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", ".75"}], ",", 
+                    RowBox[{
+                    RowBox[{"-", "i"}], "+", 
+                    RowBox[{"rht", " ", "j"}]}]}], "}"}]}], "}"}], "]"}]}], 
+                  "}"}]}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"i", ",", 
+                 RowBox[{
+                  RowBox[{"Length", "[", "hist", "]"}], "-", "1"}]}], "}"}], 
+               ",", 
+               RowBox[{"{", 
+                RowBox[{"j", ",", "0", ",", 
+                 RowBox[{
+                  RowBox[{"Length", "[", 
+                   RowBox[{"rules", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"Mod", "[", 
+                    RowBox[{"i", ",", "2", ",", "1"}], "]"}], "]"}], "]"}], 
+                   "]"}], "-", "1"}]}], "}"}]}], "]"}], ",", 
+             RowBox[{"EdgeForm", "[", 
+              RowBox[{"GrayLevel", "[", ".15", "]"}], "]"}], ",", 
+             RowBox[{"MapIndexed", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"GrayLevel", "[", 
+                   RowBox[{".85", "-", "#1"}], "]"}], ",", 
+                  RowBox[{"Rectangle", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"First", "[", "#2", "]"}], "+", 
+                    RowBox[{"Last", "[", "#2", "]"}], "-", "1", "+", "tk"}], 
+                    ",", 
+                    RowBox[{"1", "-", 
+                    RowBox[{"First", "[", "#2", "]"}]}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"First", "[", "#2", "]"}], "+", 
+                    RowBox[{"Last", "[", "#2", "]"}], "-", "tk"}], ",", 
+                    RowBox[{"-", 
+                    RowBox[{"First", "[", "#2", "]"}]}]}], "}"}]}], "]"}]}], 
+                 "}"}], "&"}], ",", "hist", ",", 
+               RowBox[{"{", "2", "}"}]}], "]"}]}], "}"}], ",", 
+           RowBox[{"ShearingTransform", "[", 
+            RowBox[{
+             RowBox[{"-", ".15"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "1"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "0"}], "}"}]}], "]"}]}], "]"}]}], "}"}], ",", 
+       
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", "SequenceIcon", 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["Sequence", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                
+                TagBox["3", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["232", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Sequence[Frame -> True, FrameTicks -> False, ImageSize -> Large],
+        SelectWithContents->True,
+        Selectable->False]}], "]"}]}], "]"}], "&"}], "@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", "1", "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "0", ",", "1"}], "}"}]}], "}"}]}]], "Input",
+ CellLabel->"In[20]:=",ExpressionUUID->"210e2db5-5b93-4480-b080-f7cecc6ac5b6"],
+
+Cell[BoxData[
+ GraphicsBox[{{{
+     {GrayLevel[0.15], CircleBox[{-1.2, -0.8275}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -0.8275}, 0.3, 
+       NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+        7.853981633974483}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -1.5975}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -1.5975}, 0.3, 
+       NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+        4.71238898038469}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -2.8275}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -2.8275}, 0.3, 
+       NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+        7.853981633974483}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -3.5975}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -3.5975}, 0.3, 
+       NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+        4.71238898038469}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -4.8275}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -4.8275}, 0.3, 
+       NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+        7.853981633974483}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -5.5975}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -5.5975}, 0.3, 
+       NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+        4.71238898038469}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -6.8275}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -6.8275}, 0.3, 
+       NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+        7.853981633974483}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -7.5975}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -7.5975}, 0.3, 
+       NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+        4.71238898038469}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -8.8275}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -8.8275}, 0.3, 
+       NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+        7.853981633974483}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -9.5975}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -9.5975}, 0.3, 
+       NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+        4.71238898038469}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -10.8275}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -10.8275}, 0.3, 
+       NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+        7.853981633974483}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -11.5975}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -11.5975}, 0.3, 
+       NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+        4.71238898038469}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -12.8275}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -12.8275}, 0.3, 
+       NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+        7.853981633974483}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -13.5975}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -13.5975}, 0.3, 
+       NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+        4.71238898038469}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -14.8275}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -14.8275}, 0.3, 
+       NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+        7.853981633974483}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -15.5975}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -15.5975}, 0.3, 
+       NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+        4.71238898038469}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -16.8275}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -16.8275}, 0.3, 
+       NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+        7.853981633974483}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -17.5975}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -17.5975}, 0.3, 
+       NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+        4.71238898038469}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -18.8275}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -18.8275}, 0.3, 
+       NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+        7.853981633974483}]]}}, {
+     {GrayLevel[0.15], CircleBox[{-1.2, -19.5975}, 0.3]}, 
+     {GrayLevel[0.3], 
+      DiskBox[{-1.2, -19.5975}, 0.3, 
+       NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {1.5707963267948966`, 
+        4.71238898038469}]]}}}, GeometricTransformationBox[
+    {EdgeForm[{GrayLevel[0.15], Thickness[0.001]}], {{
+       {GrayLevel[-0.15000000000000002`], 
+        PolygonBox[{{1.5, -1.}, {2.7, -1.}, {2.7, -0.908}, {1.5, -0.908}, {
+         1.5, -1.}}]}, 
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -1.}, {1.5, -1.}, {
+         1.5, -0.908}, {-0.75, -0.908}, {-0.75, -1.}}]}}, {{
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{2.5, -2.}, {5.7, -2.}, {5.7, -1.908}, {2.5, -1.908}, {
+          2.5, -2.}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -2.}, {2.5, -2.}, {
+          2.5, -1.908}, {-0.75, -1.908}, {-0.75, -2.}}]}}, {
+        {GrayLevel[0.85], 
+         PolygonBox[{{2.5, -1.77}, {4.7, -1.77}, {4.7, -1.678}, {
+          2.5, -1.678}, {2.5, -1.77}}]}, 
+        {GrayLevel[0.6], 
+         PolygonBox[{{-0.75, -1.77}, {2.5, -1.77}, {
+          2.5, -1.678}, {-0.75, -1.678}, {-0.75, -1.77}}]}}, {
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{2.5, -1.54}, {3.7, -1.54}, {3.7, -1.448}, {
+          2.5, -1.448}, {2.5, -1.54}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -1.54}, {2.5, -1.54}, {
+          2.5, -1.448}, {-0.75, -1.448}, {-0.75, -1.54}}]}}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        PolygonBox[{{3.5, -3.}, {6.7, -3.}, {6.7, -2.908}, {3.5, -2.908}, {
+         3.5, -3.}}]}, 
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -3.}, {3.5, -3.}, {
+         3.5, -2.908}, {-0.75, -2.908}, {-0.75, -3.}}]}}, {
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -4.}, {4.5, -4.}, {
+         4.5, -3.908}, {-0.75, -3.908}, {-0.75, -4.}}]}, 
+       {GrayLevel[0.6], 
+        PolygonBox[{{-0.75, -3.77}, {4.5, -3.77}, {
+         4.5, -3.678}, {-0.75, -3.678}, {-0.75, -3.77}}]}, 
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -3.54}, {4.5, -3.54}, {
+         4.5, -3.448}, {-0.75, -3.448}, {-0.75, -3.54}}]}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        PolygonBox[{{5.5, -5.}, {7.7, -5.}, {7.7, -4.908}, {5.5, -4.908}, {
+         5.5, -5.}}]}, 
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -5.}, {5.5, -5.}, {
+         5.5, -4.908}, {-0.75, -4.908}, {-0.75, -5.}}]}}, {{
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{6.5, -6.}, {10.7, -6.}, {10.7, -5.908}, {6.5, -5.908}, {
+          6.5, -6.}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -6.}, {6.5, -6.}, {
+          6.5, -5.908}, {-0.75, -5.908}, {-0.75, -6.}}]}}, {
+        {GrayLevel[0.85], 
+         PolygonBox[{{6.5, -5.77}, {9.7, -5.77}, {9.7, -5.678}, {
+          6.5, -5.678}, {6.5, -5.77}}]}, 
+        {GrayLevel[0.6], 
+         PolygonBox[{{-0.75, -5.77}, {6.5, -5.77}, {
+          6.5, -5.678}, {-0.75, -5.678}, {-0.75, -5.77}}]}}, {
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{6.5, -5.54}, {8.7, -5.54}, {8.7, -5.448}, {
+          6.5, -5.448}, {6.5, -5.54}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -5.54}, {6.5, -5.54}, {
+          6.5, -5.448}, {-0.75, -5.448}, {-0.75, -5.54}}]}}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        PolygonBox[{{7.5, -7.}, {11.7, -7.}, {11.7, -6.908}, {7.5, -6.908}, {
+         7.5, -7.}}]}, 
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -7.}, {7.5, -7.}, {
+         7.5, -6.908}, {-0.75, -6.908}, {-0.75, -7.}}]}}, {{
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{8.5, -8.}, {14.7, -8.}, {14.7, -7.908}, {8.5, -7.908}, {
+          8.5, -8.}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -8.}, {8.5, -8.}, {
+          8.5, -7.908}, {-0.75, -7.908}, {-0.75, -8.}}]}}, {
+        {GrayLevel[0.85], 
+         PolygonBox[{{8.5, -7.77}, {13.7, -7.77}, {13.7, -7.678}, {
+          8.5, -7.678}, {8.5, -7.77}}]}, 
+        {GrayLevel[0.6], 
+         PolygonBox[{{-0.75, -7.77}, {8.5, -7.77}, {
+          8.5, -7.678}, {-0.75, -7.678}, {-0.75, -7.77}}]}}, {
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{8.5, -7.54}, {12.7, -7.54}, {12.7, -7.448}, {
+          8.5, -7.448}, {8.5, -7.54}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -7.54}, {8.5, -7.54}, {
+          8.5, -7.448}, {-0.75, -7.448}, {-0.75, -7.54}}]}}}, 
+      {GrayLevel[0.3], 
+       PolygonBox[{{-0.75, -9.}, {9.5, -9.}, {
+        9.5, -8.908}, {-0.75, -8.908}, {-0.75, -9.}}]}, {{
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{10.5, -10.}, {17.7, -10.}, {17.7, -9.908}, {
+          10.5, -9.908}, {10.5, -10.}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -10.}, {10.5, -10.}, {
+          10.5, -9.908}, {-0.75, -9.908}, {-0.75, -10.}}]}}, {
+        {GrayLevel[0.85], 
+         PolygonBox[{{10.5, -9.77}, {16.7, -9.77}, {16.7, -9.678}, {
+          10.5, -9.678}, {10.5, -9.77}}]}, 
+        {GrayLevel[0.6], 
+         PolygonBox[{{-0.75, -9.77}, {10.5, -9.77}, {
+          10.5, -9.678}, {-0.75, -9.678}, {-0.75, -9.77}}]}}, {
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{10.5, -9.54}, {15.7, -9.54}, {15.7, -9.448}, {
+          10.5, -9.448}, {10.5, -9.54}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -9.54}, {10.5, -9.54}, {
+          10.5, -9.448}, {-0.75, -9.448}, {-0.75, -9.54}}]}}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        PolygonBox[{{11.5, -11.}, {18.7, -11.}, {18.7, -10.908}, {
+         11.5, -10.908}, {11.5, -11.}}]}, 
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -11.}, {11.5, -11.}, {
+         11.5, -10.908}, {-0.75, -10.908}, {-0.75, -11.}}]}}, {{
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{12.5, -12.}, {21.7, -12.}, {21.7, -11.908}, {
+          12.5, -11.908}, {12.5, -12.}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -12.}, {12.5, -12.}, {
+          12.5, -11.908}, {-0.75, -11.908}, {-0.75, -12.}}]}}, {
+        {GrayLevel[0.85], 
+         PolygonBox[{{12.5, -11.77}, {20.7, -11.77}, {20.7, -11.678}, {
+          12.5, -11.678}, {12.5, -11.77}}]}, 
+        {GrayLevel[0.6], 
+         PolygonBox[{{-0.75, -11.77}, {12.5, -11.77}, {
+          12.5, -11.678}, {-0.75, -11.678}, {-0.75, -11.77}}]}}, {
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{12.5, -11.54}, {19.7, -11.54}, {19.7, -11.448}, {
+          12.5, -11.448}, {12.5, -11.54}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -11.54}, {12.5, -11.54}, {
+          12.5, -11.448}, {-0.75, -11.448}, {-0.75, -11.54}}]}}}, 
+      {GrayLevel[0.3], 
+       PolygonBox[{{-0.75, -13.}, {13.5, -13.}, {
+        13.5, -12.908}, {-0.75, -12.908}, {-0.75, -13.}}]}, {{
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{14.5, -14.}, {24.7, -14.}, {24.7, -13.908}, {
+          14.5, -13.908}, {14.5, -14.}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -14.}, {14.5, -14.}, {
+          14.5, -13.908}, {-0.75, -13.908}, {-0.75, -14.}}]}}, {
+        {GrayLevel[0.85], 
+         PolygonBox[{{14.5, -13.77}, {23.7, -13.77}, {23.7, -13.678}, {
+          14.5, -13.678}, {14.5, -13.77}}]}, 
+        {GrayLevel[0.6], 
+         PolygonBox[{{-0.75, -13.77}, {14.5, -13.77}, {
+          14.5, -13.678}, {-0.75, -13.678}, {-0.75, -13.77}}]}}, {
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{14.5, -13.54}, {22.7, -13.54}, {22.7, -13.448}, {
+          14.5, -13.448}, {14.5, -13.54}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -13.54}, {14.5, -13.54}, {
+          14.5, -13.448}, {-0.75, -13.448}, {-0.75, -13.54}}]}}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        PolygonBox[{{15.5, -15.}, {25.7, -15.}, {25.7, -14.908}, {
+         15.5, -14.908}, {15.5, -15.}}]}, 
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -15.}, {15.5, -15.}, {
+         15.5, -14.908}, {-0.75, -14.908}, {-0.75, -15.}}]}}, {
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -16.}, {16.5, -16.}, {
+         16.5, -15.908}, {-0.75, -15.908}, {-0.75, -16.}}]}, 
+       {GrayLevel[0.6], 
+        PolygonBox[{{-0.75, -15.77}, {16.5, -15.77}, {
+         16.5, -15.678}, {-0.75, -15.678}, {-0.75, -15.77}}]}, 
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -15.54}, {16.5, -15.54}, {
+         16.5, -15.448}, {-0.75, -15.448}, {-0.75, -15.54}}]}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        PolygonBox[{{17.5, -17.}, {26.7, -17.}, {26.7, -16.908}, {
+         17.5, -16.908}, {17.5, -17.}}]}, 
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -17.}, {17.5, -17.}, {
+         17.5, -16.908}, {-0.75, -16.908}, {-0.75, -17.}}]}}, {{
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{18.5, -18.}, {29.7, -18.}, {29.7, -17.908}, {
+          18.5, -17.908}, {18.5, -18.}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -18.}, {18.5, -18.}, {
+          18.5, -17.908}, {-0.75, -17.908}, {-0.75, -18.}}]}}, {
+        {GrayLevel[0.85], 
+         PolygonBox[{{18.5, -17.77}, {28.7, -17.77}, {28.7, -17.678}, {
+          18.5, -17.678}, {18.5, -17.77}}]}, 
+        {GrayLevel[0.6], 
+         PolygonBox[{{-0.75, -17.77}, {18.5, -17.77}, {
+          18.5, -17.678}, {-0.75, -17.678}, {-0.75, -17.77}}]}}, {
+        {GrayLevel[-0.15000000000000002`], 
+         PolygonBox[{{18.5, -17.54}, {27.7, -17.54}, {27.7, -17.448}, {
+          18.5, -17.448}, {18.5, -17.54}}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[{{-0.75, -17.54}, {18.5, -17.54}, {
+          18.5, -17.448}, {-0.75, -17.448}, {-0.75, -17.54}}]}}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        PolygonBox[{{19.5, -19.}, {30.7, -19.}, {30.7, -18.908}, {
+         19.5, -18.908}, {19.5, -19.}}]}, 
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -19.}, {19.5, -19.}, {
+         19.5, -18.908}, {-0.75, -18.908}, {-0.75, -19.}}]}}, {
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -20.}, {20.5, -20.}, {
+         20.5, -19.908}, {-0.75, -19.908}, {-0.75, -20.}}]}, 
+       {GrayLevel[0.6], 
+        PolygonBox[{{-0.75, -19.77}, {20.5, -19.77}, {
+         20.5, -19.678}, {-0.75, -19.678}, {-0.75, -19.77}}]}, 
+       {GrayLevel[0.3], 
+        PolygonBox[{{-0.75, -19.54}, {20.5, -19.54}, {
+         20.5, -19.448}, {-0.75, -19.448}, {-0.75, -19.54}}]}}}, 
+     {EdgeForm[GrayLevel[0.15]], 
+      {GrayLevel[-0.15000000000000002`], RectangleBox[{1.3, 0}, {1.7, -1}]}, 
+      {GrayLevel[-0.15000000000000002`], RectangleBox[{2.3, -1}, {2.7, -2}]}, {
+       {GrayLevel[-0.15000000000000002`], RectangleBox[{3.3, -2}, {3.7, -3}]}, 
+       {GrayLevel[0.85], RectangleBox[{4.3, -2}, {4.7, -3}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{5.3, -2}, {5.7, -3}]}}, {
+       {GrayLevel[0.85], RectangleBox[{4.3, -3}, {4.7, -4}]}, 
+       {GrayLevel[-0.15000000000000002`], RectangleBox[{5.3, -3}, {5.7, -4}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{6.3, -3}, {6.7, -4}]}}, {
+       {GrayLevel[-0.15000000000000002`], RectangleBox[{5.3, -4}, {5.7, -5}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{6.3, -4}, {6.7, -5}]}}, {
+       {GrayLevel[-0.15000000000000002`], RectangleBox[{6.3, -5}, {6.7, -6}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{7.3, -5}, {7.7, -6}]}}, {
+       {GrayLevel[-0.15000000000000002`], RectangleBox[{7.3, -6}, {7.7, -7}]}, 
+       {GrayLevel[-0.15000000000000002`], RectangleBox[{8.3, -6}, {8.7, -7}]}, 
+       {GrayLevel[0.85], RectangleBox[{9.3, -6}, {9.7, -7}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{10.3, -6}, {10.7, -7}]}}, {
+       {GrayLevel[-0.15000000000000002`], RectangleBox[{8.3, -7}, {8.7, -8}]}, 
+       {GrayLevel[0.85], RectangleBox[{9.3, -7}, {9.7, -8}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{10.3, -7}, {10.7, -8}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{11.3, -7}, {11.7, -8}]}}, {
+       {GrayLevel[0.85], RectangleBox[{9.3, -8}, {9.7, -9}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{10.3, -8}, {10.7, -9}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{11.3, -8}, {11.7, -9}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{12.3, -8}, {12.7, -9}]}, 
+       {GrayLevel[0.85], RectangleBox[{13.3, -8}, {13.7, -9}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{14.3, -8}, {14.7, -9}]}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{10.3, -9}, {10.7, -10}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{11.3, -9}, {11.7, -10}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{12.3, -9}, {12.7, -10}]}, 
+       {GrayLevel[0.85], RectangleBox[{13.3, -9}, {13.7, -10}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{14.3, -9}, {14.7, -10}]}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{11.3, -10}, {11.7, -11}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{12.3, -10}, {12.7, -11}]}, 
+       {GrayLevel[0.85], RectangleBox[{13.3, -10}, {13.7, -11}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{14.3, -10}, {14.7, -11}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{15.3, -10}, {15.7, -11}]}, 
+       {GrayLevel[0.85], RectangleBox[{16.3, -10}, {16.7, -11}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{17.3, -10}, {17.7, -11}]}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{12.3, -11}, {12.7, -12}]}, 
+       {GrayLevel[0.85], RectangleBox[{13.3, -11}, {13.7, -12}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{14.3, -11}, {14.7, -12}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{15.3, -11}, {15.7, -12}]}, 
+       {GrayLevel[0.85], RectangleBox[{16.3, -11}, {16.7, -12}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{17.3, -11}, {17.7, -12}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{18.3, -11}, {18.7, -12}]}}, {
+       {GrayLevel[0.85], RectangleBox[{13.3, -12}, {13.7, -13}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{14.3, -12}, {14.7, -13}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{15.3, -12}, {15.7, -13}]}, 
+       {GrayLevel[0.85], RectangleBox[{16.3, -12}, {16.7, -13}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{17.3, -12}, {17.7, -13}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{18.3, -12}, {18.7, -13}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{19.3, -12}, {19.7, -13}]}, 
+       {GrayLevel[0.85], RectangleBox[{20.3, -12}, {20.7, -13}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{21.3, -12}, {21.7, -13}]}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{14.3, -13}, {14.7, -14}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{15.3, -13}, {15.7, -14}]}, 
+       {GrayLevel[0.85], RectangleBox[{16.3, -13}, {16.7, -14}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{17.3, -13}, {17.7, -14}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{18.3, -13}, {18.7, -14}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{19.3, -13}, {19.7, -14}]}, 
+       {GrayLevel[0.85], RectangleBox[{20.3, -13}, {20.7, -14}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{21.3, -13}, {21.7, -14}]}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{15.3, -14}, {15.7, -15}]}, 
+       {GrayLevel[0.85], RectangleBox[{16.3, -14}, {16.7, -15}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{17.3, -14}, {17.7, -15}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{18.3, -14}, {18.7, -15}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{19.3, -14}, {19.7, -15}]}, 
+       {GrayLevel[0.85], RectangleBox[{20.3, -14}, {20.7, -15}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{21.3, -14}, {21.7, -15}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{22.3, -14}, {22.7, -15}]}, 
+       {GrayLevel[0.85], RectangleBox[{23.3, -14}, {23.7, -15}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{24.3, -14}, {24.7, -15}]}}, {
+       {GrayLevel[0.85], RectangleBox[{16.3, -15}, {16.7, -16}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{17.3, -15}, {17.7, -16}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{18.3, -15}, {18.7, -16}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{19.3, -15}, {19.7, -16}]}, 
+       {GrayLevel[0.85], RectangleBox[{20.3, -15}, {20.7, -16}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{21.3, -15}, {21.7, -16}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{22.3, -15}, {22.7, -16}]}, 
+       {GrayLevel[0.85], RectangleBox[{23.3, -15}, {23.7, -16}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{24.3, -15}, {24.7, -16}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{25.3, -15}, {25.7, -16}]}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{17.3, -16}, {17.7, -17}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{18.3, -16}, {18.7, -17}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{19.3, -16}, {19.7, -17}]}, 
+       {GrayLevel[0.85], RectangleBox[{20.3, -16}, {20.7, -17}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{21.3, -16}, {21.7, -17}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{22.3, -16}, {22.7, -17}]}, 
+       {GrayLevel[0.85], RectangleBox[{23.3, -16}, {23.7, -17}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{24.3, -16}, {24.7, -17}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{25.3, -16}, {25.7, -17}]}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{18.3, -17}, {18.7, -18}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{19.3, -17}, {19.7, -18}]}, 
+       {GrayLevel[0.85], RectangleBox[{20.3, -17}, {20.7, -18}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{21.3, -17}, {21.7, -18}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{22.3, -17}, {22.7, -18}]}, 
+       {GrayLevel[0.85], RectangleBox[{23.3, -17}, {23.7, -18}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{24.3, -17}, {24.7, -18}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{25.3, -17}, {25.7, -18}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{26.3, -17}, {26.7, -18}]}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{19.3, -18}, {19.7, -19}]}, 
+       {GrayLevel[0.85], RectangleBox[{20.3, -18}, {20.7, -19}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{21.3, -18}, {21.7, -19}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{22.3, -18}, {22.7, -19}]}, 
+       {GrayLevel[0.85], RectangleBox[{23.3, -18}, {23.7, -19}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{24.3, -18}, {24.7, -19}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{25.3, -18}, {25.7, -19}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{26.3, -18}, {26.7, -19}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{27.3, -18}, {27.7, -19}]}, 
+       {GrayLevel[0.85], RectangleBox[{28.3, -18}, {28.7, -19}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{29.3, -18}, {29.7, -19}]}}, {
+       {GrayLevel[0.85], RectangleBox[{20.3, -19}, {20.7, -20}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{21.3, -19}, {21.7, -20}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{22.3, -19}, {22.7, -20}]}, 
+       {GrayLevel[0.85], RectangleBox[{23.3, -19}, {23.7, -20}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{24.3, -19}, {24.7, -20}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{25.3, -19}, {25.7, -20}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{26.3, -19}, {26.7, -20}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{27.3, -19}, {27.7, -20}]}, 
+       {GrayLevel[0.85], RectangleBox[{28.3, -19}, {28.7, -20}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{29.3, -19}, {29.7, -20}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{30.3, -19}, {30.7, -20}]}}, {
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{21.3, -20}, {21.7, -21}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{22.3, -20}, {22.7, -21}]}, 
+       {GrayLevel[0.85], RectangleBox[{23.3, -20}, {23.7, -21}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{24.3, -20}, {24.7, -21}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{25.3, -20}, {25.7, -21}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{26.3, -20}, {26.7, -21}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{27.3, -20}, {27.7, -21}]}, 
+       {GrayLevel[0.85], RectangleBox[{28.3, -20}, {28.7, -21}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{29.3, -20}, {29.7, -21}]}, 
+       {GrayLevel[-0.15000000000000002`], 
+        RectangleBox[{30.3, -20}, {30.7, -21}]}}}}, {{{1., 
+     0.}, {-0.15113521805829508`, 1.}}, {0., 0.}}]},
+  Frame->True,
+  FrameTicks->False,
+  ImageSize->Large]], "Output",
+ CellChangeTimes->{3.870446179445711*^9},
+ CellLabel->"Out[20]=",ExpressionUUID->"4d2587a3-97ae-495b-b551-d9fdd895ce0e"]
+}, Open  ]]
+},
+WindowSize->{808, 769},
+WindowMargins->{{137.5, Automatic}, {53, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"2792a3a0-13e6-427c-b326-71db1c1fe2d1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 11247, 274, 377, "Input",ExpressionUUID->"210e2db5-5b93-4480-b080-f7cecc6ac5b6"],
+Cell[11830, 298, 26187, 537, 476, "Output",ExpressionUUID->"4d2587a3-97ae-495b-b551-d9fdd895ce0e"]
+}, Open  ]]
+}
+]
+*)
+

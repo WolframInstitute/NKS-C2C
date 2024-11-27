@@ -1,0 +1,93 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2978,         85]
+NotebookOptionsPosition[      2627,         71]
+NotebookOutlinePosition[      3026,         87]
+CellTagsIndexPosition[      2983,         84]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"rule", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<A\>\"", "->", "\"\<A\>\""}], ",", 
+       RowBox[{"\"\<A\>\"", "->", "\"\<AA\>\""}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"Framed", "@", 
+    RowBox[{
+     RowBox[{"ResourceFunction", "[", "\"\<MultiwaySystem\>\"", "]"}], "[", 
+     RowBox[{
+     "rule", ",", "\"\<A\>\"", ",", "5", ",", "\"\<EvolutionGraph\>\"", ",", 
+      InterpretationBox[
+       DynamicModuleBox[{Typeset`open = False}, 
+        TemplateBox[{"Expression", "SequenceIcon", 
+          GridBox[{{
+             RowBox[{
+               TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+               TagBox["Sequence", "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+               TagBox["2", "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Byte count: \"", "IconizedLabel"], 
+               "\[InvisibleSpace]", 
+               TagBox["2136", "IconizedItem"]}]}}, 
+           GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+           "Column", 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+          Dynamic[Typeset`open]},
+         "IconizedObject"]],
+       Sequence[VertexShapeFunction -> (Inset[
+          ArrayPlot[{
+            StringSplit[
+             Values[#2], ""]}, 
+           ColorRules -> {"A" -> GrayLevel[0.85], "B" -> GrayLevel[0.15]}, 
+           Mesh -> True, MeshStyle -> Black], #, Center, {
+          Automatic, 0.25}]& ), Epilog -> Inset[
+          RulePlot[
+           SubstitutionSystem[$CellContext`rule], 
+           ColorRules -> {0 -> GrayLevel[0.85], 1 -> GrayLevel[0.15]}, 
+           MeshStyle -> Black, FrameStyle -> Black], {Right, Top}, {
+          Right, Top}, 
+          Scaled[0.25]]],
+       SelectWithContents->True,
+       Selectable->False]}], "]"}]}]}], "]"}]], "Input",ExpressionUUID->\
+"28a38d88-4ead-4c34-a89b-511d2871fe79"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{94, Automatic}, {136, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3e5ec9d9-f87b-4cc4-8994-298b6a9b84e5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2065, 49, 56, "Input",ExpressionUUID->"28a38d88-4ead-4c34-a89b-511d2871fe79"]
+}
+]
+*)
+

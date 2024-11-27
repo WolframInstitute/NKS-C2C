@@ -1,0 +1,334 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13024,        326]
+NotebookOptionsPosition[     12668,        312]
+NotebookOutlinePosition[     13069,        328]
+CellTagsIndexPosition[     13026,        325]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"rule", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", "0", "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", "0"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "0"}], "}"}]}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1"}], "}"}]}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"GraphicsRow", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"EdgeForm", "[", "Thin", "]"}], ",", 
+           RowBox[{"Scale", "[", 
+            RowBox[{
+             RowBox[{"With", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"flat", "=", 
+                 RowBox[{"Flatten", "/@", "#"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"GrayLevel", "[", 
+                    RowBox[{".85", "-", 
+                    RowBox[{"flat", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"y", ",", "x"}], "]"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"Rectangle", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"x", "-", "1"}], 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"flat", "[", 
+                    RowBox[{"[", "y", "]"}], "]"}], "]"}]], ",", 
+                    RowBox[{"y", "-", ".5"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    FractionBox["x", 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"flat", "[", 
+                    RowBox[{"[", "y", "]"}], "]"}], "]"}]], ",", " ", "y"}], 
+                    "}"}]}], "]"}]}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"y", ",", 
+                    RowBox[{"Length", "[", "#", "]"}]}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"x", ",", 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"flat", "[", 
+                    RowBox[{"[", "y", "]"}], "]"}], "]"}]}], "}"}]}], "]"}], 
+                 ",", 
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"x", "==", "1"}], ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "y"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"y", "+", ".5"}]}], "}"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"x", "-", "1"}], 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"flat", "[", 
+                    RowBox[{"[", "y", "]"}], "]"}], "]"}]], ",", " ", "y"}], 
+                    "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"Length", "@", 
+                    RowBox[{"Flatten", "@", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"y", "+", "1"}], ",", 
+                    RowBox[{";;", 
+                    RowBox[{"x", "-", "1"}]}]}], "]"}], "]"}]}]}], 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"flat", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"y", "+", "1"}], "]"}], "]"}], "]"}]], ",", 
+                    RowBox[{"y", "+", ".5"}]}], "}"}]}], "}"}], "]"}]}], 
+                    "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"y", ",", 
+                    RowBox[{
+                    RowBox[{"Length", "[", "#", "]"}], "-", "1"}]}], "}"}], 
+                   ",", 
+                   RowBox[{"{", 
+                    RowBox[{"x", ",", "1", ",", 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"flat", "[", 
+                    RowBox[{"[", "y", "]"}], "]"}], "]"}]}], "}"}]}], "]"}]}],
+                 "}"}]}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", 
+               RowBox[{"-", ".05"}]}], "}"}]}], "]"}]}], "}"}], "]"}], "&"}], 
+       "@", 
+       RowBox[{"NestList", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Partition", "[", 
+            RowBox[{
+             RowBox[{"Flatten", "@", "#"}], ",", "2", ",", "1"}], "]"}], "/.",
+            "rule"}], "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1", ",", "1", ",", "0"}], "}"}], ",", "8"}], 
+        "]"}]}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"GraphicsRow", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"With", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"statePlot", "=", 
+                RowBox[{"Function", "[", 
+                 RowBox[{
+                  RowBox[{"{", "stateString", "}"}], ",", 
+                  RowBox[{"ArrayPlot", "[", 
+                   RowBox[{
+                    RowBox[{"{", "stateString", "}"}], ",", 
+                    InterpretationBox[
+                    DynamicModuleBox[{Typeset`open = False}, 
+                    TemplateBox[{"Expression", "SequenceIcon", 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["5", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["712", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    Dynamic[Typeset`open]},
+                    "IconizedObject"]],
+                    Sequence[
+                    ColorRules -> {0 -> GrayLevel[0.85], 1 -> Black}, Mesh -> 
+                    True, MeshStyle -> Black, ImageSize -> {Automatic, 30}, 
+                    PlotRangePadding -> 0],
+                    SelectWithContents->True,
+                    Selectable->False]}], "]"}]}], "]"}]}], "}"}], ",", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"Inset", "[", 
+                   RowBox[{
+                    RowBox[{"statePlot", "[", 
+                    RowBox[{"Keys", "[", "#", "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Left", ",", "Bottom"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Automatic", ",", "1.1"}], "}"}]}], "]"}], ",", 
+                  RowBox[{"Line", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}], ",", 
+                  RowBox[{"Line", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Length", "[", 
+                    RowBox[{"Values", "[", "#", "]"}], "]"}], ",", 
+                    RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}], ",", 
+                  RowBox[{"Inset", "[", 
+                   RowBox[{
+                    RowBox[{"statePlot", "[", 
+                    RowBox[{"Values", "[", "#", "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"-", "2"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Left", ",", "Bottom"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Automatic", ",", "1.1"}], "}"}]}], "]"}]}], 
+                 "}"}], ",", 
+                InterpretationBox[
+                 DynamicModuleBox[{Typeset`open = False}, 
+                  TemplateBox[{"Expression", "SequenceIcon", 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["2", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["824", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    Dynamic[Typeset`open]},
+                   "IconizedObject"]],
+                 Sequence[PlotRange -> {{0, 
+                    Max[{
+                    Length[
+                    Keys[#]], 
+                    Length[
+                    Values[#]]}]}, {-2, 1}}, PlotRangePadding -> 0.5],
+                 SelectWithContents->True,
+                 Selectable->False]}], "]"}]}], "]"}], "&"}], "/@", "#"}], 
+          ",", 
+          InterpretationBox[
+           DynamicModuleBox[{Typeset`open = False}, 
+            TemplateBox[{"Expression", "SequenceIcon", 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                   TagBox["Sequence", "IconizedItem"]}]}, {
+                 RowBox[{
+                   TagBox["\"Length: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["2", "IconizedItem"]}]}, {
+                 RowBox[{
+                   TagBox["\"Byte count: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["240", "IconizedItem"]}]}}, 
+               GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+               "Column", 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+              Dynamic[Typeset`open]},
+             "IconizedObject"]],
+           Sequence[Frame -> All, ImageSize -> {Automatic, 50}],
+           SelectWithContents->True,
+           Selectable->False]}], "]"}], "&"}], "@", "rule"}]}], "}"}], 
+    "]"}]}], "]"}]], "Input",ExpressionUUID->"55594ce0-2cd7-4900-be4f-\
+5ef84ea8da32"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{127, Automatic}, {84.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c7317d2c-b5a6-4982-9f25-d4a1090fdae1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 12106, 290, 457, "Input",ExpressionUUID->"55594ce0-2cd7-4900-be4f-5ef84ea8da32"]
+}
+]
+*)
+
