@@ -1,0 +1,931 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     44476,        923]
+NotebookOptionsPosition[     43986,        906]
+NotebookOutlinePosition[     44388,        922]
+CellTagsIndexPosition[     44345,        919]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SeedRandom", "[", 
+   RowBox[{"3453", ",", 
+    RowBox[{"Method", "->", "\"\<Legacy\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"GraphicsGrid", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"ArrayPlot", "[", 
+        RowBox[{
+         RowBox[{"CellularAutomaton", "[", 
+          RowBox[{"0", ",", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"1", ",", "30"}], "]"}], ",", "15"}], "]"}], ",", 
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", "SequenceIcon", 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  
+                  TagBox["Sequence", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Length: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["2", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["240", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          Sequence[Mesh -> True, ImageSize -> {Automatic, 200}],
+          SelectWithContents->True,
+          Selectable->False]}], "]"}], ",", 
+       RowBox[{"ArrayPlot", "[", 
+        RowBox[{
+         RowBox[{"NestList", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{".8", " ", "#"}], "&"}], ",", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"2", "+", 
+                RowBox[{"Sin", "[", "x", "]"}], "+", 
+                RowBox[{"Sin", "[", 
+                 RowBox[{
+                  RowBox[{"Sqrt", "[", "2", "]"}], " ", "x"}], "]"}]}], ")"}],
+               "/", "4."}], ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", "0", ",", "30"}], "}"}]}], "]"}], ",", "15"}],
+           "]"}], ",", 
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", "SequenceIcon", 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  
+                  TagBox["Sequence", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Length: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["2", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["240", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          Sequence[Mesh -> True, ImageSize -> {Automatic, 200}],
+          SelectWithContents->True,
+          Selectable->False]}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"RulePlot", "[", 
+        RowBox[{
+         RowBox[{"CellularAutomaton", "[", "0", "]"}], ",", 
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", "SequenceIcon", 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  
+                  TagBox["Sequence", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Length: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["2", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["256", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          Sequence[ImageSize -> {Automatic, 30}, PlotRangePadding -> 0],
+          SelectWithContents->True,
+          Selectable->False]}], "]"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"GraphicsRow", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"GraphicsColumn", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Graphics", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"Raster", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"1", "-", "x"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", "0", ",", "1", ",", 
+                    RowBox[{"1", "/", "80"}]}], "}"}]}], "]"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "1"}], "}"}]}], "}"}]}], "]"}], "}"}], 
+                   ",", 
+                   InterpretationBox[
+                    DynamicModuleBox[{Typeset`open = False}, 
+                    TemplateBox[{"Expression", "SequenceIcon", 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["4", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["384", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    Dynamic[Typeset`open]},
+                    "IconizedObject"]],
+                    Sequence[
+                    PlotRangePadding -> 0, Frame -> True, FrameTicks -> None, 
+                    ImageSize -> {Automatic, 50}],
+                    SelectWithContents->True,
+                    Selectable->False]}], "]"}], ",", 
+                 RowBox[{"Graphics", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"Raster", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"1", "-", 
+                    RowBox[{"#", "[", "x", "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", "0", ",", "1", ",", 
+                    RowBox[{"1", "/", "80"}]}], "}"}]}], "]"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "1"}], "}"}]}], "}"}]}], "]"}], "}"}], 
+                   ",", 
+                   InterpretationBox[
+                    DynamicModuleBox[{Typeset`open = False}, 
+                    TemplateBox[{"Expression", "SequenceIcon", 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["4", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["384", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    Dynamic[Typeset`open]},
+                    "IconizedObject"]],
+                    Sequence[
+                    PlotRangePadding -> 0, Frame -> True, FrameTicks -> None, 
+                    ImageSize -> {Automatic, 50}],
+                    SelectWithContents->True,
+                    Selectable->False]}], "]"}]}], "}"}], ",", 
+               InterpretationBox[
+                DynamicModuleBox[{Typeset`open = False}, 
+                 TemplateBox[{"Expression", "SequenceIcon", 
+                   GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["3", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["504", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                   Dynamic[Typeset`open]},
+                  "IconizedObject"]],
+                Sequence[
+                Spacings -> {0, {0, 10, 0}}, PlotRangePadding -> 0, 
+                 ImageSize -> {Automatic, 100}],
+                SelectWithContents->True,
+                Selectable->False]}], "]"}], ",", 
+             RowBox[{"Plot", "[", 
+              RowBox[{
+               RowBox[{"#", "[", "x", "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+               InterpretationBox[
+                DynamicModuleBox[{Typeset`open = False}, 
+                 TemplateBox[{"Expression", "SequenceIcon", 
+                   GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["8", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["1496", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                   Dynamic[Typeset`open]},
+                  "IconizedObject"]],
+                Sequence[
+                PlotRange -> {0, 1}, AspectRatio -> 1, ImageSize -> 100, 
+                 ImagePadding -> 0, PlotRangePadding -> 0, PlotStyle -> Black,
+                  Frame -> True, FrameTicks -> ConstantArray[
+                   
+                   Table[{$CellContext`x, "", 0.02}, {$CellContext`x, 1/4, 3/
+                    4, 1/4}], 2]],
+                SelectWithContents->True,
+                Selectable->False]}], "]"}]}], "}"}], ",", 
+           InterpretationBox[
+            DynamicModuleBox[{Typeset`open = False}, 
+             TemplateBox[{"Expression", "SequenceIcon", 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["3", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["304", "IconizedItem"]}]}}, 
+                GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+                "Column", 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               Dynamic[Typeset`open]},
+              "IconizedObject"]],
+            Sequence[
+            Frame -> True, FrameTicks -> None, ImageSize -> {Automatic, 30}],
+            SelectWithContents->True,
+            Selectable->False]}], "]"}], "&"}], "[", 
+        RowBox[{
+         RowBox[{".8", " ", "#"}], "&"}], "]"}]}], "}"}]}], "}"}], ",", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", "SequenceIcon", 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["Sequence", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["3", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["248", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    Sequence[Spacings -> 0, Alignment -> Top, ImageSize -> Large],
+    SelectWithContents->True,
+    Selectable->False]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.870882487767438*^9, 3.870882490918396*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"db82b7ca-a2ba-4f21-a2ad-baeef7509e01"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{InsetBox[
+      GraphicsBox[{RasterBox[CompressedData["
+1:eJxTTMoPSmJiYGAQAGI5IGYcBUMcAKMQGI1gkgHChhDgqGUAAE7UA6k=
+         "], {{0, 0}, {30, 16}}, {0, 1}], {
+         {GrayLevel[
+           NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+          
+          StyleBox[
+           LineBox[{{{0, 16}, {30, 16}}, {{0, 15}, {30, 15}}, {{0, 14}, {30, 
+            14}}, {{0, 13}, {30, 13}}, {{0, 12}, {30, 12}}, {{0, 11}, {30, 
+            11}}, {{0, 10}, {30, 10}}, {{0, 9}, {30, 9}}, {{0, 8}, {30, 
+            8}}, {{0, 7}, {30, 7}}, {{0, 6}, {30, 6}}, {{0, 5}, {30, 5}}, {{0,
+             4}, {30, 4}}, {{0, 3}, {30, 3}}, {{0, 2}, {30, 2}}, {{0, 1}, {30,
+             1}}, {{0, 0}, {30, 0}}}],
+           Antialiasing->False]}, 
+         {GrayLevel[
+           NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+          
+          StyleBox[
+           LineBox[{{{0, 0}, {0, 16}}, {{1, 0}, {1, 16}}, {{2, 0}, {2, 
+            16}}, {{3, 0}, {3, 16}}, {{4, 0}, {4, 16}}, {{5, 0}, {5, 16}}, {{
+            6, 0}, {6, 16}}, {{7, 0}, {7, 16}}, {{8, 0}, {8, 16}}, {{9, 0}, {
+            9, 16}}, {{10, 0}, {10, 16}}, {{11, 0}, {11, 16}}, {{12, 0}, {12, 
+            16}}, {{13, 0}, {13, 16}}, {{14, 0}, {14, 16}}, {{15, 0}, {15, 
+            16}}, {{16, 0}, {16, 16}}, {{17, 0}, {17, 16}}, {{18, 0}, {18, 
+            16}}, {{19, 0}, {19, 16}}, {{20, 0}, {20, 16}}, {{21, 0}, {21, 
+            16}}, {{22, 0}, {22, 16}}, {{23, 0}, {23, 16}}, {{24, 0}, {24, 
+            16}}, {{25, 0}, {25, 16}}, {{26, 0}, {26, 16}}, {{27, 0}, {27, 
+            16}}, {{28, 0}, {28, 16}}, {{29, 0}, {29, 16}}, {{30, 0}, {30, 
+            16}}}],
+           Antialiasing->False]}}},
+       Frame->False,
+       FrameLabel->{None, None},
+       FrameTicks->{{None, None}, {None, None}},
+       GridLinesStyle->Directive[
+         GrayLevel[0.5, 0.4]],
+       ImageSize->{Automatic, 200},
+       Method->{
+        "DefaultBoundaryStyle" -> Automatic, 
+         "DefaultGraphicsInteraction" -> {
+          "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+           "Effects" -> {
+            "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2},
+              "Droplines" -> {
+              "freeformCursorMode" -> True, 
+               "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+         "DefaultPlotStyle" -> Automatic}], {187.30665119876252, 0}, 
+      ImageScaled[{0.5, 1}], {363.37209302325573, 200}], InsetBox[
+      GraphicsBox[{RasterBox[CompressedData["
+1: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
+UR4FMQ==
+         "], {{0, 0}, {31, 16}}, {0, 0.9573092327001581}], {
+         {GrayLevel[
+           NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+          
+          StyleBox[
+           LineBox[{{{0, 16}, {31, 16}}, {{0, 15}, {31, 15}}, {{0, 14}, {31, 
+            14}}, {{0, 13}, {31, 13}}, {{0, 12}, {31, 12}}, {{0, 11}, {31, 
+            11}}, {{0, 10}, {31, 10}}, {{0, 9}, {31, 9}}, {{0, 8}, {31, 
+            8}}, {{0, 7}, {31, 7}}, {{0, 6}, {31, 6}}, {{0, 5}, {31, 5}}, {{0,
+             4}, {31, 4}}, {{0, 3}, {31, 3}}, {{0, 2}, {31, 2}}, {{0, 1}, {31,
+             1}}, {{0, 0}, {31, 0}}}],
+           Antialiasing->False]}, 
+         {GrayLevel[
+           NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+          
+          StyleBox[
+           LineBox[{{{0, 0}, {0, 16}}, {{1, 0}, {1, 16}}, {{2, 0}, {2, 
+            16}}, {{3, 0}, {3, 16}}, {{4, 0}, {4, 16}}, {{5, 0}, {5, 16}}, {{
+            6, 0}, {6, 16}}, {{7, 0}, {7, 16}}, {{8, 0}, {8, 16}}, {{9, 0}, {
+            9, 16}}, {{10, 0}, {10, 16}}, {{11, 0}, {11, 16}}, {{12, 0}, {12, 
+            16}}, {{13, 0}, {13, 16}}, {{14, 0}, {14, 16}}, {{15, 0}, {15, 
+            16}}, {{16, 0}, {16, 16}}, {{17, 0}, {17, 16}}, {{18, 0}, {18, 
+            16}}, {{19, 0}, {19, 16}}, {{20, 0}, {20, 16}}, {{21, 0}, {21, 
+            16}}, {{22, 0}, {22, 16}}, {{23, 0}, {23, 16}}, {{24, 0}, {24, 
+            16}}, {{25, 0}, {25, 16}}, {{26, 0}, {26, 16}}, {{27, 0}, {27, 
+            16}}, {{28, 0}, {28, 16}}, {{29, 0}, {29, 16}}, {{30, 0}, {30, 
+            16}}, {{31, 0}, {31, 16}}}],
+           Antialiasing->False]}}},
+       Frame->False,
+       FrameLabel->{None, None},
+       FrameTicks->{{None, None}, {None, None}},
+       GridLinesStyle->Directive[
+         GrayLevel[0.5, 0.4]],
+       ImageSize->{Automatic, 200},
+       Method->{
+        "DefaultBoundaryStyle" -> Automatic, 
+         "DefaultGraphicsInteraction" -> {
+          "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+           "Effects" -> {
+            "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2},
+              "Droplines" -> {
+              "freeformCursorMode" -> True, 
+               "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+         "DefaultPlotStyle" -> Automatic}], {561.9199535962875, 0}, 
+      ImageScaled[{0.5, 1}], {374.61330239752505, 200}]}, {InsetBox[
+      GraphicsBox[{{InsetBox[
+          GraphicsBox[{
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[0], 
+              RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+             {GrayLevel[0], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+             {GrayLevel[0], 
+              RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[1], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+           PlotRange->NCache[{{-2, 2}, {
+               Rational[-7, 4], 
+               Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+          NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154, 
+           0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+          GraphicsBox[{
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[0], 
+              RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+             {GrayLevel[0], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+             {GrayLevel[1], 
+              RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[1], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+           PlotRange->NCache[{{-2, 2}, {
+               Rational[-7, 4], 
+               Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+          NCache[{1.8461538461538463`, Rational[1, 2]}, {1.8461538461538463`, 
+           0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+          GraphicsBox[{
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[0], 
+              RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+             {GrayLevel[1], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+             {GrayLevel[0], 
+              RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[1], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+           PlotRange->NCache[{{-2, 2}, {
+               Rational[-7, 4], 
+               Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+          NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+           0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+          GraphicsBox[{
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[0], 
+              RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+             {GrayLevel[1], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+             {GrayLevel[1], 
+              RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[1], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+           PlotRange->NCache[{{-2, 2}, {
+               Rational[-7, 4], 
+               Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+          NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+           0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+          GraphicsBox[{
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[1], 
+              RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+             {GrayLevel[0], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+             {GrayLevel[0], 
+              RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[1], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+           PlotRange->NCache[{{-2, 2}, {
+               Rational[-7, 4], 
+               Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+          NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+           0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+          GraphicsBox[{
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[1], 
+              RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+             {GrayLevel[0], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+             {GrayLevel[1], 
+              RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[1], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+           PlotRange->NCache[{{-2, 2}, {
+               Rational[-7, 4], 
+               Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+          NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+           0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+          GraphicsBox[{
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[1], 
+              RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+             {GrayLevel[1], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+             {GrayLevel[0], 
+              RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[1], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+           PlotRange->NCache[{{-2, 2}, {
+               Rational[-7, 4], 
+               Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+          NCache[{8., Rational[1, 2]}, {8., 0.5}], {
+          Center, Center}, {1.2307692307692317, 1}], InsetBox[
+          GraphicsBox[{
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[1], 
+              RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+             {GrayLevel[1], 
+              RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+             {GrayLevel[1], 
+              RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+            {EdgeForm[GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+             {GrayLevel[1], 
+              RectangleBox[
+               NCache[{Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+           PlotRange->NCache[{{-2, 2}, {
+               Rational[-7, 4], 
+               Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+          NCache[{9.230769230769232, Rational[1, 2]}, {9.230769230769232, 
+           0.5}], {Center, Center}, {1.23076923076923, 1}]}, 
+        {GrayLevel[
+         0.8], {LineBox[{{0, 0}, {0, 1}}], 
+          LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+          LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+          LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+          LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+          LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+          LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}], 
+          LineBox[{{8.615384615384617, 0}, {8.615384615384617, 1}}], 
+          LineBox[{{9.846153846153847, 0}, {9.846153846153847, 1}}]}, {
+          LineBox[{{0, 0}, {9.846153846153847, 0}}], 
+          LineBox[{{0, 1}, {9.846153846153847, 1}}]}}},
+       ImageSize->{Automatic, 30},
+       PlotRangePadding->0], {187.30665119876252, -200}, 
+      ImageScaled[{0.5, 1}], {295.3846153846154, 30}], InsetBox[
+      GraphicsBox[{{}, {InsetBox[
+          GraphicsBox[{{}, {InsetBox[
+              
+              GraphicsBox[
+               RasterBox[
+                NCache[{{
+                  1, Rational[79, 80], Rational[39, 40], Rational[77, 80], 
+                   Rational[19, 20], Rational[15, 16], Rational[37, 40], 
+                   Rational[73, 80], Rational[9, 10], Rational[71, 80], 
+                   Rational[7, 8], Rational[69, 80], Rational[17, 20], 
+                   Rational[67, 80], Rational[33, 40], Rational[13, 16], 
+                   Rational[4, 5], Rational[63, 80], Rational[31, 40], 
+                   Rational[61, 80], Rational[3, 4], Rational[59, 80], 
+                   Rational[29, 40], Rational[57, 80], Rational[7, 10], 
+                   Rational[11, 16], Rational[27, 40], Rational[53, 80], 
+                   Rational[13, 20], Rational[51, 80], Rational[5, 8], 
+                   Rational[49, 80], Rational[3, 5], Rational[47, 80], 
+                   Rational[23, 40], Rational[9, 16], Rational[11, 20], 
+                   Rational[43, 80], Rational[21, 40], Rational[41, 80], 
+                   Rational[1, 2], Rational[39, 80], Rational[19, 40], 
+                   Rational[37, 80], Rational[9, 20], Rational[7, 16], 
+                   Rational[17, 40], Rational[33, 80], Rational[2, 5], 
+                   Rational[31, 80], Rational[3, 8], Rational[29, 80], 
+                   Rational[7, 20], Rational[27, 80], Rational[13, 40], 
+                   Rational[5, 16], Rational[3, 10], Rational[23, 80], 
+                   Rational[11, 40], Rational[21, 80], Rational[1, 4], 
+                   Rational[19, 80], Rational[9, 40], Rational[17, 80], 
+                   Rational[1, 5], Rational[3, 16], Rational[7, 40], Rational[
+                   13, 80], Rational[3, 20], Rational[11, 80], Rational[1, 8],
+                    Rational[9, 80], Rational[1, 10], Rational[7, 80], 
+                   Rational[3, 40], Rational[1, 16], Rational[1, 20], 
+                   Rational[3, 80], Rational[1, 40], Rational[1, 80], 0}}, {{
+                  1, 0.9875, 0.975, 0.9625, 0.95, 0.9375, 0.925, 0.9125, 0.9, 
+                   0.8875, 0.875, 0.8625, 0.85, 0.8375, 0.825, 0.8125, 0.8, 
+                   0.7875, 0.775, 0.7625, 0.75, 0.7375, 0.725, 0.7125, 0.7, 
+                   0.6875, 0.675, 0.6625, 0.65, 0.6375, 0.625, 0.6125, 0.6, 
+                   0.5875, 0.575, 0.5625, 0.55, 0.5375, 0.525, 0.5125, 0.5, 
+                   0.4875, 0.475, 0.4625, 0.45, 0.4375, 0.425, 0.4125, 0.4, 
+                   0.3875, 0.375, 0.3625, 0.35, 0.3375, 0.325, 0.3125, 0.3, 
+                   0.2875, 0.275, 0.2625, 0.25, 0.2375, 0.225, 0.2125, 0.2, 
+                   0.1875, 0.175, 0.1625, 0.15, 0.1375, 0.125, 0.1125, 0.1, 
+                   0.0875, 0.075, 0.0625, 0.05, 0.0375, 0.025, 0.0125, 
+                   0}}], {{0, 0}, {5, 1}}],
+               DisplayFunction->Identity,
+               Frame->True,
+               FrameTicks->None,
+               ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+               ImageSize->{Automatic, 50},
+               PlotRangePadding->0], {125., -25}, 
+              ImageScaled[{0.5, 0.5}], {250., 50}], InsetBox[
+              GraphicsBox[RasterBox[CompressedData["
+1:eJw1kC1QAgEUhE+TQybj2NCoVdyIUcgkZ7Rqxir5jGpUM5mMSQccEPkRAe+O
+v+PuAAtm75b1zbz2zdv93s7pRfZs0zCMjXAzxv/8oJi28/HiEjmzvErmloi1
+Hy9TsSVKiYKfKS1wzlkgTnCB55Ayy3OEUEjOsR1hiTmqlWgCXBEMsMuDAXiu
+7YNYwccBx0eUmrY9MNb0wHMpDwGxGe7vopnhmOAMv1HsysUTg11kWdDF2sOV
+x1QeU3lM5TGRx0QeEzC2PJbHGMQSY1CjMgLr5UdgbHIkj6E8hvIYwiHoyMPB
+EYMdrHVtedjysOVhycOShyUPS/2/1XugvgP17KtfD3sEe7hm0Jd6dHHI/C5u
+mfupvA5OeLCjP7WxtRbSX1r6R1N/aMr/Ay1iDezTt4Ebgu/w6FeXVx0PLFiT
+R03939S7qj9WYPHwq/q94A/310QL
+                "], {{0, 0}, {5, 1}}],
+               DisplayFunction->Identity,
+               Frame->True,
+               FrameTicks->None,
+               ImagePadding->{{0.5, 0.5}, {0.5, 0.5}},
+               ImageSize->{Automatic, 50},
+               PlotRangePadding->0], {125., -85}, 
+              ImageScaled[{0.5, 0.5}], {250., 50}]}, {}},
+           DisplayFunction->Identity,
+           ImagePadding->{{0., 0.}, {0., 0.}},
+           ImageSize->{Automatic, 100},
+           PlotRange->{{0, 250.}, {-110, 0}},
+           PlotRangePadding->0], {119.0909090909091, -52.5}, 
+          ImageScaled[{0.5, 0.5}], {227.27272727272728, 100.}], InsetBox[
+          GraphicsBox[{{{}, {}, 
+             TagBox[
+              {GrayLevel[0], AbsoluteThickness[1.6], Opacity[1.], 
+               LineBox[CompressedData["
+1:eJwVj2s01HkAhhGpVQpTzCBn7LRbSTm21b03l0UulUtJK2wppRutUp3CdCiK
+TK2tGEroIsIUVkWE2rKmwbgbM2PMMD+3fwqzurD2w3uej8/zMvce99yvoaam
+5j69/+myX9lQSXZsyux/Fs6/5LFJ054RKqGvQojGgsonNCv8dOdW2lO6A8aN
+zhYm0TbDld/6JJ3ujQ3ZeUsiadvhE6Qqv04PgoS8DjpJC0TXykv2ifRw8BIa
+NcJoochYsO3iZXoMGOK2hmO0aLBnPf0xnp6M9zP9nh2lcbDL927Bh5FsGHS7
++ya+yoDOFNvPaVEBQq25PVqKh1jsMaysvlKEReFXhgTHCxHxfi1ujT7DRNhv
+U3nVRTAs0hOrq1cgb6muEZdfihKZfZ1gQxV8NIWO9BXlqApJN/YdrAE3znAh
+rbwSYz9snPf46N9QDVjNYb2sgsZE7nzjxbUQBO6ce66/BjZTgSVe+XW4bt13
+TTTyBnUxq96/WSZAaHp1mBb1FmacgYmc4XrU0fP8Thn+gwGVRNxs1Qj9T1O1
+FIOP7P4XtbpXhWjqCnDgbRFA1/QBJZc3oa0wNsH0r3okHCo+kMFqwUbmtdLe
+kgaMb86VH4xqRUCqeb9XXSPCrWuKFla3QfXq0J5fBEJI8muuNDA74PbRpqWj
+rwlfQpq4S892worKOef9pRkWttqTB16IEJ/aGOT5tQVOmcxgnqEYGVvZnqP6
+bYgwDTDv9pNgOU/BZhi2Y/ngDp1WdymcpJSYtbADBvM+zKr5LIWZUbStcFkn
+NCu4Bd+ndePo5GuFlqUIh1e9aJ/tKsPpoWtJIocu5G7Zm/FyXAb9nBnBN33E
+GBtgzO+90QNzA4voFh8Jir2cZiQ7yKGyOyIQ2UgR5Rx7p6hXjhRhehSnVApm
+l0tbVqwCbJdMx5LV3Vi3OiaZbt2Lt68Pzc9/1Q2/RYIJdWEvXIzmfAm2k2Gs
+NlEWyu6DxfEw5Se+DLc0/cM9WUo4pfPGbbf3wEBcnKlRo0QOr8ZYo74HWufZ
+3mvDCA7Xpton75ZDLce/QKbfj+DnrgnKTjlOpBYk6lf1oyq/olX3oALlFnGz
+9I4NICh+5roHIwrouZxYfkF3ELbrl5Srn+iFyLJeeKZsEOdH5tiv+NaLwttg
+yf2HMBpZR0yi+rCnwEbPdHIIvI/+D85P9iE69i5b9GgY/JCi4MI4JR4rTbm6
+bhRYz+XO92YTxKXHBoq3UtCO1GQodAiCPIcW53tQ6LdlDbB0CUzKygrdfSgU
+vtuXmK1PcDnp1zcJeylsaJc1ZBkTHLRJGfnuDAXvf6W7My0JzGNoztr3KVyw
+6Tpyx4Ngcs25ua0PKez//HWjxIugfain8X4uBeeXJvPMdhJwfJ7uceRRmOvo
+x7u9m2BqmefvsWUUUnZ0jqXvIxA1JN2eIZz2h7dHpp0kKL2o2idsppC8ZmKb
+KIIgeX3A0qw2ChFfjZgmZwlc760oshNP98XsquZGEjw/zX/HJhTe/tGqzb1E
+cMPy5ySPQQp5Pqq2jniCMFmaN5OicNXY8BEjgWCJ2xFJ5ej0n6ydbqkcAk31
+pmyOisLq4FOmHdcJpMXrQwI/U2BY3Bim/0lQFpK10uobhW/DxRW+NwlumumM
+TU1RkD5p5qSkEPwHqwd6SQ==
+                "]]},
+              Annotation[#, "Charting`Private`Tag$15090#1"]& ]}, {}},
+           AspectRatio->1,
+           Axes->{True, True},
+           AxesLabel->{None, None},
+           AxesOrigin->{0, 0},
+           DisplayFunction->Identity,
+           Frame->{{True, True}, {True, True}},
+           FrameLabel->{{None, None}, {None, None}},
+           FrameTicks->{{{{
+                NCache[
+                 Rational[1, 4], 0.25], 
+                FormBox["\"\"", TraditionalForm], 0.02}, {
+                NCache[
+                 Rational[1, 2], 0.5], 
+                FormBox["\"\"", TraditionalForm], 0.02}, {
+                NCache[
+                 Rational[3, 4], 0.75], 
+                FormBox["\"\"", TraditionalForm], 0.02}}, {{
+                NCache[
+                 Rational[1, 4], 0.25], 
+                FormBox["\"\"", TraditionalForm], 0.02}, {
+                NCache[
+                 Rational[1, 2], 0.5], 
+                FormBox["\"\"", TraditionalForm], 0.02}, {
+                NCache[
+                 Rational[3, 4], 0.75], 
+                FormBox["\"\"", TraditionalForm], 0.02}}}, {{{
+                NCache[
+                 Rational[1, 4], 0.25], 
+                FormBox["\"\"", TraditionalForm], 0.02}, {
+                NCache[
+                 Rational[1, 2], 0.5], 
+                FormBox["\"\"", TraditionalForm], 0.02}, {
+                NCache[
+                 Rational[3, 4], 0.75], 
+                FormBox["\"\"", TraditionalForm], 0.02}}, {{
+                NCache[
+                 Rational[1, 4], 0.25], 
+                FormBox["\"\"", TraditionalForm], 0.02}, {
+                NCache[
+                 Rational[1, 2], 0.5], 
+                FormBox["\"\"", TraditionalForm], 0.02}, {
+                NCache[
+                 Rational[3, 4], 0.75], 
+                FormBox["\"\"", TraditionalForm], 0.02}}}},
+           GridLines->{None, None},
+           GridLinesStyle->Directive[
+             GrayLevel[0.5, 0.4]],
+           ImagePadding->{{0., 0.}, {0., 0.}},
+           ImageSize->100,
+           
+           Method->{
+            "DefaultBoundaryStyle" -> Automatic, 
+             "DefaultGraphicsInteraction" -> {
+              "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+               "Effects" -> {
+                "Highlight" -> {"ratio" -> 2}, 
+                 "HighlightPoint" -> {"ratio" -> 2}, 
+                 "Droplines" -> {
+                  "freeformCursorMode" -> True, 
+                   "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+             "DefaultMeshStyle" -> AbsolutePointSize[6], "ScalingFunctions" -> 
+             None, "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+                 (Identity[#]& )[
+                  Part[#, 1]], 
+                 (Identity[#]& )[
+                  Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+                 (Identity[#]& )[
+                  Part[#, 1]], 
+                 (Identity[#]& )[
+                  Part[#, 2]]}& )}},
+           PlotRange->{{0., 0.9999999795918367}, {0., 1.}},
+           PlotRangeClipping->True,
+           PlotRangePadding->{{0, 0}, {0, 0}},
+           Ticks->{Automatic, Automatic}], {293.6363636363637, -52.5}, 
+          ImageScaled[{0.5, 0.5}], {100, 100.}]}, 
+        StyleBox[{{}, {LineBox[{{0, 0}, {0, -105.}}], 
+           LineBox[{{349.0909090909091, 0}, {349.0909090909091, -105.}}], 
+           LineBox[{{0, 0}, {238.1818181818182, 0}}], 
+           LineBox[{{238.1818181818182, 0}, {349.0909090909091, 0}}], 
+           LineBox[{{0, -105.}, {238.1818181818182, -105.}}], 
+           LineBox[{{238.1818181818182, -105.}, {349.0909090909091, -105.}}]}},
+         Antialiasing->False]},
+       FrameTicks->None,
+       ImageSize->{Automatic, 30},
+       PlotRange->{{0, 349.0909090909091}, {-105., 0}},
+       PlotRangePadding->{6, 5}], {561.9199535962875, -200}, 
+      ImageScaled[{0.5, 1}], {94.19762845849804, 30}]}}, {}},
+  ImageSize->Large,
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{3.870882492864193*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"46623a9e-4471-4540-811d-26e6d24def74"]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{126, Automatic}, {102.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b1576cb9-a737-494f-b329-d0edfc190bc2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 14798, 335, 218, "Input",ExpressionUUID->"db82b7ca-a2ba-4f21-a2ad-baeef7509e01"],
+Cell[15381, 359, 28589, 544, 199, "Output",ExpressionUUID->"46623a9e-4471-4540-811d-26e6d24def74"]
+}, Open  ]]
+}
+]
+*)
+

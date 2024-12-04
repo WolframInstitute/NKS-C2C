@@ -1,0 +1,125 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3700,        117]
+NotebookOptionsPosition[      3347,        103]
+NotebookOutlinePosition[      3747,        119]
+CellTagsIndexPosition[      3704,        116]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"AStep", "[", "c_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"MemberQ", "[", 
+         RowBox[{"c", ",", "#"}], "]"}]}], ",", 
+       RowBox[{"Append", "[", 
+        RowBox[{"c", ",", "#"}], "]"}], ",", 
+       RowBox[{"AStep", "[", "c", "]"}]}], "]"}], "&"}], "[", 
+    RowBox[{
+     RowBox[{"RandomChoice", "[", "c", "]"}], "+", 
+     RowBox[{"RandomChoice", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"AEvolveList", "[", "t_", "]"}], ":=", 
+    RowBox[{"NestList", "[", 
+     RowBox[{"AStep", ",", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}], "}"}], ",", "t"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"GraphicsRow", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ArrayPlot", "[", 
+     RowBox[{
+      RowBox[{"SparseArray", "[", 
+       RowBox[{
+        RowBox[{"Thread", "[", 
+         RowBox[{
+          RowBox[{"#", "+", "6"}], "->", "1"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"11", ",", "11"}], "}"}]}], "]"}], ",", 
+      InterpretationBox[
+       DynamicModuleBox[{Typeset`open = False}, 
+        TemplateBox[{"Expression", 
+          RowBox[{
+            DynamicBox[
+             FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+            "\[Rule]", 
+            DynamicBox[
+             FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+          GridBox[{{
+             RowBox[{
+               TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+               TagBox["Rule", "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Byte count: \"", "IconizedLabel"], 
+               "\[InvisibleSpace]", 
+               TagBox["56", "IconizedItem"]}]}}, 
+           GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+           "Column", 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+          Dynamic[Typeset`open]},
+         "IconizedObject"]],
+       Mesh -> True,
+       SelectWithContents->True,
+       Selectable->False]}], "]"}], "&"}], "/@", 
+   RowBox[{"AEvolveList", "[", "9", "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{
+  3.8701815425527987`*^9},ExpressionUUID->"60e399be-ec31-4db0-915f-\
+fb51040e39cc"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f093e068-d3ab-418b-bc87-050a0f27986c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2785, 81, 113, "Input",ExpressionUUID->"60e399be-ec31-4db0-915f-fb51040e39cc"]
+}
+]
+*)
+

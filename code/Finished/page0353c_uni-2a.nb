@@ -1,0 +1,859 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     41372,        851]
+NotebookOptionsPosition[     40887,        834]
+NotebookOutlinePosition[     41287,        850]
+CellTagsIndexPosition[     41244,        847]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SeedRandom", "[", 
+   RowBox[{"123524", ",", 
+    RowBox[{"Method", "->", "\"\<Legacy\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"GraphicsRow", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"GraphicsColumn", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"ArrayPlot", "[", 
+        RowBox[{
+         RowBox[{"CellularAutomaton", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{"RandomInteger", "[", 
+             RowBox[{"1", ",", "30"}], "]"}], "//", "BlockRandom"}], ",", 
+           "15"}], "]"}], ",", 
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", "SequenceIcon", 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  
+                  TagBox["Sequence", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Length: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["2", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["240", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          Sequence[Mesh -> True, ImageSize -> {Automatic, 200}],
+          SelectWithContents->True,
+          Selectable->False]}], "]"}], ",", 
+       RowBox[{"RulePlot", "[", 
+        RowBox[{
+         RowBox[{"CellularAutomaton", "[", "0", "]"}], ",", 
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", "SequenceIcon", 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  
+                  TagBox["Sequence", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Length: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["2", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["256", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          Sequence[ImageSize -> {Automatic, 30}, PlotRangePadding -> 0],
+          SelectWithContents->True,
+          Selectable->False]}], "]"}]}], "}"}], "]"}], "&"}], "/@", 
+   RowBox[{"{", 
+    RowBox[{"128", ",", "160", ",", "254"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{3.867835426533383*^9, 3.870882573765319*^9},
+ CellLabel->"In[12]:=",ExpressionUUID->"db636ba3-e950-4ce9-9a22-1f49c3649ff9"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {InsetBox[
+     GraphicsBox[{{}, {InsetBox[
+         GraphicsBox[{RasterBox[CompressedData["
+1:eJxTTMoPSmJiYGAQAGI5IGYcBYMO4I0UbHHGABaHSAJpBkYwAeYDAE4tA6U=
+
+            "], {{0, 0}, {30, 16}}, {0, 1}], {
+            {GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+             
+             StyleBox[
+              LineBox[{{{0, 16}, {30, 16}}, {{0, 15}, {30, 15}}, {{0, 14}, {
+               30, 14}}, {{0, 13}, {30, 13}}, {{0, 12}, {30, 12}}, {{0, 11}, {
+               30, 11}}, {{0, 10}, {30, 10}}, {{0, 9}, {30, 9}}, {{0, 8}, {30,
+                8}}, {{0, 7}, {30, 7}}, {{0, 6}, {30, 6}}, {{0, 5}, {30, 
+               5}}, {{0, 4}, {30, 4}}, {{0, 3}, {30, 3}}, {{0, 2}, {30, 
+               2}}, {{0, 1}, {30, 1}}, {{0, 0}, {30, 0}}}],
+              Antialiasing->False]}, 
+            {GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+             
+             StyleBox[
+              LineBox[{{{0, 0}, {0, 16}}, {{1, 0}, {1, 16}}, {{2, 0}, {2, 
+               16}}, {{3, 0}, {3, 16}}, {{4, 0}, {4, 16}}, {{5, 0}, {5, 
+               16}}, {{6, 0}, {6, 16}}, {{7, 0}, {7, 16}}, {{8, 0}, {8, 
+               16}}, {{9, 0}, {9, 16}}, {{10, 0}, {10, 16}}, {{11, 0}, {11, 
+               16}}, {{12, 0}, {12, 16}}, {{13, 0}, {13, 16}}, {{14, 0}, {14, 
+               16}}, {{15, 0}, {15, 16}}, {{16, 0}, {16, 16}}, {{17, 0}, {17, 
+               16}}, {{18, 0}, {18, 16}}, {{19, 0}, {19, 16}}, {{20, 0}, {20, 
+               16}}, {{21, 0}, {21, 16}}, {{22, 0}, {22, 16}}, {{23, 0}, {23, 
+               16}}, {{24, 0}, {24, 16}}, {{25, 0}, {25, 16}}, {{26, 0}, {26, 
+               16}}, {{27, 0}, {27, 16}}, {{28, 0}, {28, 16}}, {{29, 0}, {29, 
+               16}}, {{30, 0}, {30, 16}}}],
+              Antialiasing->False]}}},
+          DisplayFunction->Identity,
+          Frame->False,
+          FrameLabel->{None, None},
+          FrameTicks->{{None, None}, {None, None}},
+          GridLinesStyle->Directive[
+            GrayLevel[0.5, 0.4]],
+          ImagePadding->{{0.5, 0.49999999999994316`}, {0., 0.}},
+          ImageSize->{Automatic, 200},
+          
+          Method->{
+           "DefaultBoundaryStyle" -> Automatic, 
+            "DefaultGraphicsInteraction" -> {
+             "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+              "Effects" -> {
+               "Highlight" -> {"ratio" -> 2}, 
+                "HighlightPoint" -> {"ratio" -> 2}, 
+                "Droplines" -> {
+                 "freeformCursorMode" -> True, 
+                  "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+            "DefaultPlotStyle" -> Automatic}], {190.77034883720927, -103.83333333333333},
+          ImageScaled[{0.5, 0.5}], {363.37209302325573, 200}], InsetBox[
+         GraphicsBox[{{InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154,
+               0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{1.8461538461538463`, Rational[1, 2]}, {
+              1.8461538461538463`, 0.5}], {
+             Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+              0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+              0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+              0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+              0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{8., Rational[1, 2]}, {8., 0.5}], {
+             Center, Center}, {1.2307692307692317, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{9.230769230769232, Rational[1, 2]}, {9.230769230769232, 
+              0.5}], {Center, Center}, {1.23076923076923, 1}]}, 
+           {GrayLevel[
+            0.8], {LineBox[{{0, 0}, {0, 1}}], 
+             LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+             LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+             LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+             LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+             LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+             LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}], 
+             LineBox[{{8.615384615384617, 0}, {8.615384615384617, 1}}], 
+             LineBox[{{9.846153846153847, 0}, {9.846153846153847, 1}}]}, {
+             LineBox[{{0, 0}, {9.846153846153847, 0}}], 
+             LineBox[{{0, 1}, {9.846153846153847, 1}}]}}},
+          DisplayFunction->Identity,
+          ImagePadding->{{0.5, 0.49999999999994316`}, {0.5, 0.5}},
+          ImageSize->{Automatic, 30},
+          PlotRangePadding->0], {190.77034883720927, -226.5}, 
+         ImageScaled[{0.5, 0.5}], {363.37209302325573, 30}]}, {}},
+      DisplayFunction->Identity,
+      ImagePadding->{{8.881784197001252*^-16, 0.}, {2.842170943040401*^-14, 
+       1.4210854715202004`*^-14}},
+      ImageSize->{
+        UpTo[364], 
+        UpTo[230]},
+      PlotRange->{{0, 381.54069767441854`}, {-245.33333333333331`, 0}},
+      PlotRangePadding->{6, 5}], {190.275, -120.75}, 
+     ImageScaled[{0.5, 0.5}], {354, 230}], InsetBox[
+     GraphicsBox[{{}, {InsetBox[
+         GraphicsBox[{RasterBox[CompressedData["
+1:eJxTTMoPSmJiYGAQAGI5IGYcBTQCeIOWAZ80Az5pUJyBpRmQNYDEIZIQaagB
+DAwAS8sDnQ==
+            "], {{0, 0}, {30, 16}}, {0, 1}], {
+            {GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+             
+             StyleBox[
+              LineBox[{{{0, 16}, {30, 16}}, {{0, 15}, {30, 15}}, {{0, 14}, {
+               30, 14}}, {{0, 13}, {30, 13}}, {{0, 12}, {30, 12}}, {{0, 11}, {
+               30, 11}}, {{0, 10}, {30, 10}}, {{0, 9}, {30, 9}}, {{0, 8}, {30,
+                8}}, {{0, 7}, {30, 7}}, {{0, 6}, {30, 6}}, {{0, 5}, {30, 
+               5}}, {{0, 4}, {30, 4}}, {{0, 3}, {30, 3}}, {{0, 2}, {30, 
+               2}}, {{0, 1}, {30, 1}}, {{0, 0}, {30, 0}}}],
+              Antialiasing->False]}, 
+            {GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+             
+             StyleBox[
+              LineBox[{{{0, 0}, {0, 16}}, {{1, 0}, {1, 16}}, {{2, 0}, {2, 
+               16}}, {{3, 0}, {3, 16}}, {{4, 0}, {4, 16}}, {{5, 0}, {5, 
+               16}}, {{6, 0}, {6, 16}}, {{7, 0}, {7, 16}}, {{8, 0}, {8, 
+               16}}, {{9, 0}, {9, 16}}, {{10, 0}, {10, 16}}, {{11, 0}, {11, 
+               16}}, {{12, 0}, {12, 16}}, {{13, 0}, {13, 16}}, {{14, 0}, {14, 
+               16}}, {{15, 0}, {15, 16}}, {{16, 0}, {16, 16}}, {{17, 0}, {17, 
+               16}}, {{18, 0}, {18, 16}}, {{19, 0}, {19, 16}}, {{20, 0}, {20, 
+               16}}, {{21, 0}, {21, 16}}, {{22, 0}, {22, 16}}, {{23, 0}, {23, 
+               16}}, {{24, 0}, {24, 16}}, {{25, 0}, {25, 16}}, {{26, 0}, {26, 
+               16}}, {{27, 0}, {27, 16}}, {{28, 0}, {28, 16}}, {{29, 0}, {29, 
+               16}}, {{30, 0}, {30, 16}}}],
+              Antialiasing->False]}}},
+          DisplayFunction->Identity,
+          Frame->False,
+          FrameLabel->{None, None},
+          FrameTicks->{{None, None}, {None, None}},
+          GridLinesStyle->Directive[
+            GrayLevel[0.5, 0.4]],
+          ImagePadding->{{0.5, 0.49999999999994316`}, {0., 0.}},
+          ImageSize->{Automatic, 200},
+          
+          Method->{
+           "DefaultBoundaryStyle" -> Automatic, 
+            "DefaultGraphicsInteraction" -> {
+             "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+              "Effects" -> {
+               "Highlight" -> {"ratio" -> 2}, 
+                "HighlightPoint" -> {"ratio" -> 2}, 
+                "Droplines" -> {
+                 "freeformCursorMode" -> True, 
+                  "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+            "DefaultPlotStyle" -> Automatic}], {190.77034883720927, -103.83333333333333},
+          ImageScaled[{0.5, 0.5}], {363.37209302325573, 200}], InsetBox[
+         GraphicsBox[{{InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154,
+               0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{1.8461538461538463`, Rational[1, 2]}, {
+              1.8461538461538463`, 0.5}], {
+             Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+              0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+              0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+              0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+              0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{8., Rational[1, 2]}, {8., 0.5}], {
+             Center, Center}, {1.2307692307692317, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{9.230769230769232, Rational[1, 2]}, {9.230769230769232, 
+              0.5}], {Center, Center}, {1.23076923076923, 1}]}, 
+           {GrayLevel[
+            0.8], {LineBox[{{0, 0}, {0, 1}}], 
+             LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+             LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+             LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+             LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+             LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+             LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}], 
+             LineBox[{{8.615384615384617, 0}, {8.615384615384617, 1}}], 
+             LineBox[{{9.846153846153847, 0}, {9.846153846153847, 1}}]}, {
+             LineBox[{{0, 0}, {9.846153846153847, 0}}], 
+             LineBox[{{0, 1}, {9.846153846153847, 1}}]}}},
+          DisplayFunction->Identity,
+          ImagePadding->{{0.5, 0.49999999999994316`}, {0.5, 0.5}},
+          ImageSize->{Automatic, 30},
+          PlotRangePadding->0], {190.77034883720927, -226.5}, 
+         ImageScaled[{0.5, 0.5}], {363.37209302325573, 30}]}, {}},
+      DisplayFunction->Identity,
+      ImagePadding->{{8.881784197001252*^-16, 0.}, {2.842170943040401*^-14, 
+       1.4210854715202004`*^-14}},
+      ImageSize->{
+        UpTo[364], 
+        UpTo[230]},
+      PlotRange->{{0, 381.54069767441854`}, {-245.33333333333331`, 0}},
+      PlotRangePadding->{6, 5}], {570.825, -120.75}, 
+     ImageScaled[{0.5, 0.5}], {354, 230}], InsetBox[
+     GraphicsBox[{{}, {InsetBox[
+         GraphicsBox[{RasterBox[CompressedData["
+1:eJxTTMoPSmJiYGAQAGI5hlEwJAAjFEMIJHGwBJAEYQgBVsQIJsB8AI6vAew=
+
+            "], {{0, 0}, {30, 16}}, {0, 1}], {
+            {GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+             
+             StyleBox[
+              LineBox[{{{0, 16}, {30, 16}}, {{0, 15}, {30, 15}}, {{0, 14}, {
+               30, 14}}, {{0, 13}, {30, 13}}, {{0, 12}, {30, 12}}, {{0, 11}, {
+               30, 11}}, {{0, 10}, {30, 10}}, {{0, 9}, {30, 9}}, {{0, 8}, {30,
+                8}}, {{0, 7}, {30, 7}}, {{0, 6}, {30, 6}}, {{0, 5}, {30, 
+               5}}, {{0, 4}, {30, 4}}, {{0, 3}, {30, 3}}, {{0, 2}, {30, 
+               2}}, {{0, 1}, {30, 1}}, {{0, 0}, {30, 0}}}],
+              Antialiasing->False]}, 
+            {GrayLevel[
+              NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+             
+             StyleBox[
+              LineBox[{{{0, 0}, {0, 16}}, {{1, 0}, {1, 16}}, {{2, 0}, {2, 
+               16}}, {{3, 0}, {3, 16}}, {{4, 0}, {4, 16}}, {{5, 0}, {5, 
+               16}}, {{6, 0}, {6, 16}}, {{7, 0}, {7, 16}}, {{8, 0}, {8, 
+               16}}, {{9, 0}, {9, 16}}, {{10, 0}, {10, 16}}, {{11, 0}, {11, 
+               16}}, {{12, 0}, {12, 16}}, {{13, 0}, {13, 16}}, {{14, 0}, {14, 
+               16}}, {{15, 0}, {15, 16}}, {{16, 0}, {16, 16}}, {{17, 0}, {17, 
+               16}}, {{18, 0}, {18, 16}}, {{19, 0}, {19, 16}}, {{20, 0}, {20, 
+               16}}, {{21, 0}, {21, 16}}, {{22, 0}, {22, 16}}, {{23, 0}, {23, 
+               16}}, {{24, 0}, {24, 16}}, {{25, 0}, {25, 16}}, {{26, 0}, {26, 
+               16}}, {{27, 0}, {27, 16}}, {{28, 0}, {28, 16}}, {{29, 0}, {29, 
+               16}}, {{30, 0}, {30, 16}}}],
+              Antialiasing->False]}}},
+          DisplayFunction->Identity,
+          Frame->False,
+          FrameLabel->{None, None},
+          FrameTicks->{{None, None}, {None, None}},
+          GridLinesStyle->Directive[
+            GrayLevel[0.5, 0.4]],
+          ImagePadding->{{0.5, 0.49999999999994316`}, {0., 0.}},
+          ImageSize->{Automatic, 200},
+          
+          Method->{
+           "DefaultBoundaryStyle" -> Automatic, 
+            "DefaultGraphicsInteraction" -> {
+             "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+              "Effects" -> {
+               "Highlight" -> {"ratio" -> 2}, 
+                "HighlightPoint" -> {"ratio" -> 2}, 
+                "Droplines" -> {
+                 "freeformCursorMode" -> True, 
+                  "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+            "DefaultPlotStyle" -> Automatic}], {190.77034883720927, -103.83333333333333},
+          ImageScaled[{0.5, 0.5}], {363.37209302325573, 200}], InsetBox[
+         GraphicsBox[{{InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{0.6153846153846154, Rational[1, 2]}, {0.6153846153846154,
+               0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{1.8461538461538463`, Rational[1, 2]}, {
+              1.8461538461538463`, 0.5}], {
+             Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{3.076923076923077, Rational[1, 2]}, {3.076923076923077, 
+              0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{4.307692307692308, Rational[1, 2]}, {4.307692307692308, 
+              0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{5.538461538461538, Rational[1, 2]}, {5.538461538461538, 
+              0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{6.76923076923077, Rational[1, 2]}, {6.76923076923077, 
+              0.5}], {Center, Center}, {1.2307692307692308, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[0], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{8., Rational[1, 2]}, {8., 0.5}], {
+             Center, Center}, {1.2307692307692317, 1}], InsetBox[
+             GraphicsBox[{
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-3, 2], 0}, {-1.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[-1, 2], 0}, {-0.5, 0}]]}, 
+                {GrayLevel[1], 
+                 RectangleBox[NCache[{Rational[1, 2], 0}, {0.5, 0}]]}}, 
+               {EdgeForm[GrayLevel[
+                 NCache[-1 + GoldenRatio, 0.6180339887498949]]], 
+                {GrayLevel[1], 
+                 RectangleBox[
+                  NCache[{
+                   Rational[-1, 2], Rational[-5, 4]}, {-0.5, -1.25}]]}}},
+              PlotRange->NCache[{{-2, 2}, {
+                  Rational[-7, 4], 
+                  Rational[3, 2]}}, {{-2, 2}, {-1.75, 1.5}}]], 
+             NCache[{9.230769230769232, Rational[1, 2]}, {9.230769230769232, 
+              0.5}], {Center, Center}, {1.23076923076923, 1}]}, 
+           {GrayLevel[
+            0.8], {LineBox[{{0, 0}, {0, 1}}], 
+             LineBox[{{1.2307692307692308`, 0}, {1.2307692307692308`, 1}}], 
+             LineBox[{{2.4615384615384617`, 0}, {2.4615384615384617`, 1}}], 
+             LineBox[{{3.6923076923076925`, 0}, {3.6923076923076925`, 1}}], 
+             LineBox[{{4.923076923076923, 0}, {4.923076923076923, 1}}], 
+             LineBox[{{6.153846153846154, 0}, {6.153846153846154, 1}}], 
+             LineBox[{{7.384615384615385, 0}, {7.384615384615385, 1}}], 
+             LineBox[{{8.615384615384617, 0}, {8.615384615384617, 1}}], 
+             LineBox[{{9.846153846153847, 0}, {9.846153846153847, 1}}]}, {
+             LineBox[{{0, 0}, {9.846153846153847, 0}}], 
+             LineBox[{{0, 1}, {9.846153846153847, 1}}]}}},
+          DisplayFunction->Identity,
+          ImagePadding->{{0.5, 0.49999999999994316`}, {0.5, 0.5}},
+          ImageSize->{Automatic, 30},
+          PlotRangePadding->0], {190.77034883720927, -226.5}, 
+         ImageScaled[{0.5, 0.5}], {363.37209302325573, 30}]}, {}},
+      DisplayFunction->Identity,
+      ImagePadding->{{8.881784197001252*^-16, 0.}, {2.842170943040401*^-14, 
+       1.4210854715202004`*^-14}},
+      ImageSize->{
+        UpTo[364], 
+        UpTo[230]},
+      PlotRange->{{0, 381.54069767441854`}, {-245.33333333333331`, 0}},
+      PlotRangePadding->{6, 5}], {951.375, -120.75}, 
+     ImageScaled[{0.5, 0.5}], {354, 230}]}, {}},
+  ImageSize->{
+    UpTo[600], 
+    UpTo[231]},
+  PlotRange->{{0, 1141.65}, {-241.5, 0}},
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{3.87088257608556*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"67216d45-33a4-4ce0-87c7-e41276e423c3"]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{85, Automatic}, {83.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"75475e73-608e-40fd-b804-6d5e7587b284"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3218, 76, 100, "Input",ExpressionUUID->"db636ba3-e950-4ce9-9a22-1f49c3649ff9"],
+Cell[3801, 100, 37070, 731, 147, "Output",ExpressionUUID->"67216d45-33a4-4ce0-87c7-e41276e423c3"]
+}, Open  ]]
+}
+]
+*)
+

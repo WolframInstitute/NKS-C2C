@@ -1,0 +1,779 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     33882,        771]
+NotebookOptionsPosition[     33395,        754]
+NotebookOutlinePosition[     33795,        770]
+CellTagsIndexPosition[     33752,        767]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"RMCompile", "[", 
+    RowBox[{"_", "\[Rule]", 
+     RowBox[{"z", ":", 
+      RowBox[{"{", 
+       RowBox[{"_", ",", "_", ",", "1"}], "}"}]}]}], "]"}], ":=", 
+   RowBox[{"RMCompile0", "[", 
+    RowBox[{"z", ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"RMCompile", "[", 
+    RowBox[{"_", "\[Rule]", 
+     RowBox[{"z", ":", 
+      RowBox[{"{", 
+       RowBox[{"_", ",", "_", ",", 
+        RowBox[{"-", "1"}]}], "}"}]}]}], "]"}], ":=", 
+   RowBox[{"RMCompile0", "[", 
+    RowBox[{"z", ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "1"}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"RMCompile0", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"s_", ",", "a_", ",", "_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"ra_", ",", "rb_"}], "}"}]}], "]"}], ":=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"i", "[", "3", "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"ra", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"3", ",", "3"}], "]"}], ",", 
+       RowBox[{"i", "[", "ra", "]"}], ",", 
+       RowBox[{"i", "[", "ra", "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"3", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"a", "==", "1"}], ",", 
+         RowBox[{"i", "[", "ra", "]"}], ",", 
+         RowBox[{"{", "}"}]}], "]"}], ",", 
+       RowBox[{"i", "[", "3", "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"rb", ",", "5"}], "]"}], ",", 
+       RowBox[{"i", "[", "rb", "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"3", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"rb", ",", "1"}], "]"}], ",", 
+       RowBox[{"dm", "[", 
+        RowBox[{"rb", ",", 
+         RowBox[{"{", 
+          RowBox[{"s", ",", "0"}], "}"}]}], "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"rb", ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"i", "[", "rb", "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"3", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"dr", "[", 
+        RowBox[{"rb", ",", "1"}], "]"}], ",", 
+       RowBox[{"dm", "[", 
+        RowBox[{"rb", ",", 
+         RowBox[{"{", 
+          RowBox[{"s", ",", "1"}], "}"}]}], "]"}]}], "}"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"TMToRM", "[", "rules_", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"subs", ",", "adrs"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"subs", "=", 
+        RowBox[{"RMCompile", "/@", "rules"}]}], ";", 
+       RowBox[{"adrs", "=", 
+        RowBox[{"Thread", "[", 
+         RowBox[{
+          RowBox[{"First", "/@", "rules"}], "\[Rule]", 
+          RowBox[{"Most", "[", 
+           RowBox[{"FoldList", "[", 
+            RowBox[{"Plus", ",", "1", ",", 
+             RowBox[{"Length", "/@", "subs"}]}], "]"}], "]"}]}], "]"}]}], ";", 
+       RowBox[{
+        RowBox[{"MapIndexed", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"#1", "/.", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"dr", "[", 
+                RowBox[{"r_", ",", "n_"}], "]"}], "\[RuleDelayed]", 
+               RowBox[{"d", "[", 
+                RowBox[{"r", ",", 
+                 RowBox[{"n", "+", 
+                  RowBox[{"First", "[", "#2", "]"}]}]}], "]"}]}], ",", 
+              RowBox[{
+               RowBox[{"dm", "[", 
+                RowBox[{"r_", ",", "z_"}], "]"}], "\[RuleDelayed]", 
+               RowBox[{"d", "[", 
+                RowBox[{"r", ",", 
+                 RowBox[{"z", "/.", "adrs"}]}], "]"}]}]}], "}"}]}], "&"}], 
+          ",", 
+          RowBox[{"Flatten", "[", "subs", "]"}]}], "]"}], "/.", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"i", "\[Rule]", "List"}], ",", 
+          RowBox[{"d", "\[Rule]", "List"}]}], "|>"}]}]}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"RMStep", "[", 
+    RowBox[{"prog_", ",", 
+     RowBox[{"state", ":", 
+      RowBox[{"{", 
+       RowBox[{"Halted", ",", "_List"}], "}"}]}]}], "]"}], ":=", "state"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"RMStep", "[", 
+     RowBox[{"prog_", ",", 
+      RowBox[{"{", 
+       RowBox[{"instr_Integer", ",", "regs_List"}], "}"}]}], "]"}], ":=", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"instr", ">", 
+       RowBox[{"Length", "[", "prog", "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"Halted", ",", "regs"}], "}"}], ",", 
+      RowBox[{"With", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"t", "=", 
+          RowBox[{"prog", "[", 
+           RowBox[{"[", "instr", "]"}], "]"}]}], "}"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", "t", "]"}], "==", "1"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"instr", "+", "1"}], ",", 
+            RowBox[{"MapAt", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#1", "+", "1"}], "&"}], ",", "regs", ",", 
+              RowBox[{"First", "[", "t", "]"}]}], "]"}]}], "}"}], ",", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"regs", "[", 
+              RowBox[{"[", 
+               RowBox[{"First", "[", "t", "]"}], "]"}], "]"}], "==", "0"}], 
+            ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"instr", "+", "1"}], ",", "regs"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Last", "[", "t", "]"}], ",", 
+              RowBox[{"MapAt", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"#1", "-", "1"}], "&"}], ",", "regs", ",", 
+                RowBox[{"First", "[", "t", "]"}]}], "]"}]}], "}"}]}], "]"}]}],
+          "]"}]}], "]"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"RMEvolveList", "[", 
+     RowBox[{"prog_", ",", "regs_", ",", "n_Integer"}], "]"}], ":=", 
+    RowBox[{"NestList", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"RMStep", "[", 
+        RowBox[{"prog", ",", "#"}], "]"}], "&"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "regs"}], "}"}], ",", "n"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"RMGraphics", "[", 
+     RowBox[{"prog_List", ",", "history_"}], "]"}], ":=", 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"states", "=", 
+         RowBox[{"history", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
+        RowBox[{"regs", "=", 
+         RowBox[{"Transpose", "[", 
+          RowBox[{"history", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}]}]}], "}"}], ",", 
+      RowBox[{"GraphicsRow", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Graphics", "[", 
+           RowBox[{
+            RowBox[{"MapIndexed", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Disk", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"#1", ",", 
+                   RowBox[{"-", 
+                    RowBox[{"First", "[", "#2", "]"}]}]}], "}"}], ",", 
+                 ".35"}], "]"}], "&"}], ",", "states"}], "]"}], ",", 
+            InterpretationBox[
+             DynamicModuleBox[{Typeset`open = False}, 
+              TemplateBox[{"Expression", "SequenceIcon", 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["3", "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["992", "IconizedItem"]}]}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 DefaultBaseStyle -> "Column", 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                Dynamic[Typeset`open]},
+               "IconizedObject"]],
+             Sequence[PlotRange -> {{0, 
+                  Length[$CellContext`prog]} + 
+                0.5, {-Length[$CellContext`states], 0} - 0.5}, 
+              GridLines -> (Range[#, #2]& ), ImagePadding -> 0],
+             SelectWithContents->True,
+             Selectable->False]}], "]"}], ",", 
+          InterpretationBox[
+           DynamicModuleBox[{Typeset`open = False}, 
+            TemplateBox[{"Expression", 
+              RowBox[{"Graphics", "[", 
+                DynamicBox[
+                 FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+                "]"}], 
+              GridBox[{{
+                 RowBox[{
+                   TagBox["\"Byte count: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["576", "IconizedItem"]}]}}, 
+               GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+               "Column", 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+              Dynamic[Typeset`open]},
+             "IconizedObject"]],
+           Graphics[
+           Frame -> True, FrameTicks -> False, PlotRange -> {{0, 2}, {0, 
+               Length[$CellContext`history]}}, ImagePadding -> 0],
+           SelectWithContents->True,
+           Selectable->False], ",", 
+          RowBox[{"Splice", "[", 
+           RowBox[{"With", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"gfun", "=", 
+               RowBox[{"Interpolation", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", ".8"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Length", "[", "regs", "]"}], ",", ".5"}], 
+                    "}"}]}], "}"}], ",", 
+                 RowBox[{"InterpolationOrder", "->", "1"}]}], "]"}]}], "}"}], 
+             ",", 
+             RowBox[{"MapIndexed", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Graphics", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"EdgeForm", "[", 
+                    RowBox[{"GrayLevel", "[", ".15", "]"}], "]"}], ",", 
+                    RowBox[{"GrayLevel", "[", 
+                    RowBox[{"gfun", "[", 
+                    RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", 
+                    RowBox[{"MapIndexed", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Rectangle", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"-", 
+                    RowBox[{"First", "[", "#2", "]"}]}]}], "}"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", "#"}], "}"}]}], "]"}], "&"}], ",", 
+                    "#"}], "]"}]}], "}"}], ",", 
+                  RowBox[{"PlotRange", "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "Automatic"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"Length", "[", "#1", "]"}]}], ",", "0"}], "}"}]}],
+                     "}"}]}], ",", 
+                  RowBox[{"PlotRangePadding", "->", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{
+                    RowBox[{"Max", "[", "regs", "]"}], "/", "4"}]}], "}"}], 
+                    ",", "0"}], "}"}]}], ",", 
+                  RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+                  RowBox[{"FrameTicks", "\[Rule]", "False"}], ",", 
+                  RowBox[{"ImagePadding", "\[Rule]", "0"}]}], "]"}], "&"}], 
+               ",", "regs"}], "]"}]}], "]"}], "]"}]}], "}"}], ",", 
+        InterpretationBox[
+         DynamicModuleBox[{Typeset`open = False}, 
+          TemplateBox[{"Expression", "SequenceIcon", 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                 TagBox["Sequence", "IconizedItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                 TagBox["2", "IconizedItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Byte count: \"", "IconizedLabel"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["184", "IconizedItem"]}]}}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+             "Column", 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+            Dynamic[Typeset`open]},
+           "IconizedObject"]],
+         Sequence[Spacings -> 0, ImageSize -> Large],
+         SelectWithContents->True,
+         Selectable->False]}], "]"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"rule", "=", 
+     RowBox[{"TMToRM", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0"}], "}"}], "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", "1", ",", 
+           RowBox[{"-", "1"}]}], "}"}]}], ",", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1"}], "}"}], "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"2", ",", "0"}], "}"}], "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"2", ",", "1"}], "}"}], "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", "1", ",", 
+           RowBox[{"-", "1"}]}], "}"}]}]}], "}"}], "]"}]}], "}"}], ",", 
+   RowBox[{"RMGraphics", "[", 
+    RowBox[{"rule", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"With", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"p", "=", 
+             RowBox[{"Flatten", "[", 
+              RowBox[{"Position", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"_", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"_", ",", "_", ",", "0"}], "}"}]}], "}"}]}], "]"}],
+               "]"}]}], "}"}], ",", 
+           RowBox[{
+            RowBox[{"Complement", "[", 
+             RowBox[{"p", ",", 
+              RowBox[{"p", "-", "1"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{";;", ";;", "2"}], "]"}], "]"}]}], "]"}], "]"}], "]"}], 
+       "&"}], "@", 
+      RowBox[{"RMEvolveList", "[", 
+       RowBox[{"rule", ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", "1800"}], "]"}]}]}], 
+    "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8696635087880936`*^9, 3.8696635347913876`*^9}, 
+   3.869663698634398*^9, {3.8696637317103815`*^9, 3.869663792717868*^9}, {
+   3.869663859613593*^9, 3.8696638626203556`*^9}, {3.870343678511257*^9, 
+   3.870343701082145*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"d0a76b3e-c875-4392-8aa5-4ab8735ead72"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {InsetBox[
+     GraphicsBox[{DiskBox[{1, -1}, 0.35], DiskBox[{37, -2}, 0.35], 
+       DiskBox[{19, -3}, 0.35], DiskBox[{1, -4}, 0.35], 
+       DiskBox[{55, -5}, 0.35], DiskBox[{55, -6}, 0.35], 
+       DiskBox[{37, -7}, 0.35], DiskBox[{19, -8}, 0.35], 
+       DiskBox[{19, -9}, 0.35], DiskBox[{19, -10}, 0.35], 
+       DiskBox[{1, -11}, 0.35], DiskBox[{55, -12}, 0.35], 
+       DiskBox[{55, -13}, 0.35], DiskBox[{55, -14}, 0.35], 
+       DiskBox[{55, -15}, 0.35], DiskBox[{37, -16}, 0.35], 
+       DiskBox[{19, -17}, 0.35], DiskBox[{19, -18}, 0.35], 
+       DiskBox[{19, -19}, 0.35], DiskBox[{19, -20}, 0.35], 
+       DiskBox[{19, -21}, 0.35], DiskBox[{1, -22}, 0.35], 
+       DiskBox[{55, -23}, 0.35], DiskBox[{55, -24}, 0.35], 
+       DiskBox[{55, -25}, 0.35], DiskBox[{55, -26}, 0.35], 
+       DiskBox[{55, -27}, 0.35], DiskBox[{55, -28}, 0.35]},
+      DisplayFunction->Identity,
+      GridLines->FrontEndValueCache[Range[#, #2]& , {CompressedData["
+1:eJw1yTtKA2EAhdEJWKZKYWEhEySIiGh8xfdc30YTNVlBEKzdgkvJUlzKLMPS
+4j/e5vBx+x9f889OVVXj6n9tU/zlSopd9rjKNa6zzw0OuMktbnOHu8XvPQ65
+zwMe8ojHHPGEpzzjOS94ySs2xaT4w1xr5kYzt5q508y9Zh4086iZJ82MNfOs
+mRfNTDQz1cyrZt406/figku2rGd+LtmynucP+FFDGA==
+         "], {-28.5, -27.5, -26.5, -25.5, -24.5, -23.5, -22.5, -21.5, -20.5, \
+-19.5, -18.5, -17.5, -16.5, -15.5, -14.5, -13.5, -12.5, -11.5, -10.5, -9.5, \
+-8.5, -7.5, -6.5, -5.5, -4.5, -3.5, -2.5, -1.5, -0.5}}],
+      ImagePadding->{{0., 0.}, {0., 0.}},
+      PlotRange->{{0.5, 72.5}, {-28.5, -0.5}}], {83.19358074222667, -33.97071213640923},
+      ImageScaled[{0.5, 0.5}], {166.38716148445334, 64.7061183550652}], 
+    InsetBox[
+     GraphicsBox[{},
+      DisplayFunction->Identity,
+      Frame->True,
+      FrameTicks->False,
+      ImagePadding->{{0., 0.}, {0., 0.}},
+      PlotRange->{{0, 2}, {0, 28}}], {168.69809428284853, -33.97071213640923},
+      ImageScaled[{0.5, 0.5}], {4.6218655967903715, 64.7061183550652}], 
+    InsetBox[
+     GraphicsBox[
+      {GrayLevel[0.8], EdgeForm[GrayLevel[0.15]], {}, {}, 
+       RectangleBox[{1, -3}], {RectangleBox[{1, -4}], RectangleBox[{2, -4}], 
+        RectangleBox[{3, -4}]}, RectangleBox[{1, -5}], {}, {}, 
+       RectangleBox[{1, -8}], {RectangleBox[{1, -9}], RectangleBox[{2, -9}], 
+        RectangleBox[{3, -9}]}, {RectangleBox[{1, -10}], 
+        RectangleBox[{2, -10}], RectangleBox[{3, -10}], 
+        RectangleBox[{4, -10}], RectangleBox[{5, -10}], 
+        RectangleBox[{6, -10}], RectangleBox[{7, -10}]}, {
+        RectangleBox[{1, -11}], RectangleBox[{2, -11}], 
+        RectangleBox[{3, -11}], RectangleBox[{4, -11}], 
+        RectangleBox[{5, -11}], RectangleBox[{6, -11}], 
+        RectangleBox[{7, -11}], RectangleBox[{8, -11}], 
+        RectangleBox[{9, -11}], RectangleBox[{10, -11}], 
+        RectangleBox[{11, -11}], RectangleBox[{12, -11}], 
+        RectangleBox[{13, -11}], RectangleBox[{14, -11}], 
+        RectangleBox[{15, -11}]}, {RectangleBox[{1, -12}], 
+        RectangleBox[{2, -12}], RectangleBox[{3, -12}], 
+        RectangleBox[{4, -12}], RectangleBox[{5, -12}], 
+        RectangleBox[{6, -12}], RectangleBox[{7, -12}]}, {
+        RectangleBox[{1, -13}], RectangleBox[{2, -13}], 
+        RectangleBox[{3, -13}]}, RectangleBox[{1, -14}], {}, {}, 
+       RectangleBox[{1, -17}], {RectangleBox[{1, -18}], 
+        RectangleBox[{2, -18}], RectangleBox[{3, -18}]}, {
+        RectangleBox[{1, -19}], RectangleBox[{2, -19}], 
+        RectangleBox[{3, -19}], RectangleBox[{4, -19}], 
+        RectangleBox[{5, -19}], RectangleBox[{6, -19}], 
+        RectangleBox[{7, -19}]}, {RectangleBox[{1, -20}], 
+        RectangleBox[{2, -20}], RectangleBox[{3, -20}], 
+        RectangleBox[{4, -20}], RectangleBox[{5, -20}], 
+        RectangleBox[{6, -20}], RectangleBox[{7, -20}], 
+        RectangleBox[{8, -20}], RectangleBox[{9, -20}], 
+        RectangleBox[{10, -20}], RectangleBox[{11, -20}], 
+        RectangleBox[{12, -20}], RectangleBox[{13, -20}], 
+        RectangleBox[{14, -20}], RectangleBox[{15, -20}]}, {
+        RectangleBox[{1, -21}], RectangleBox[{2, -21}], 
+        RectangleBox[{3, -21}], RectangleBox[{4, -21}], 
+        RectangleBox[{5, -21}], RectangleBox[{6, -21}], 
+        RectangleBox[{7, -21}], RectangleBox[{8, -21}], 
+        RectangleBox[{9, -21}], RectangleBox[{10, -21}], 
+        RectangleBox[{11, -21}], RectangleBox[{12, -21}], 
+        RectangleBox[{13, -21}], RectangleBox[{14, -21}], 
+        RectangleBox[{15, -21}], RectangleBox[{16, -21}], 
+        RectangleBox[{17, -21}], RectangleBox[{18, -21}], 
+        RectangleBox[{19, -21}], RectangleBox[{20, -21}], 
+        RectangleBox[{21, -21}], RectangleBox[{22, -21}], 
+        RectangleBox[{23, -21}], RectangleBox[{24, -21}], 
+        RectangleBox[{25, -21}], RectangleBox[{26, -21}], 
+        RectangleBox[{27, -21}], RectangleBox[{28, -21}], 
+        RectangleBox[{29, -21}], RectangleBox[{30, -21}], 
+        RectangleBox[{31, -21}]}, {RectangleBox[{1, -22}], 
+        RectangleBox[{2, -22}], RectangleBox[{3, -22}], 
+        RectangleBox[{4, -22}], RectangleBox[{5, -22}], 
+        RectangleBox[{6, -22}], RectangleBox[{7, -22}], 
+        RectangleBox[{8, -22}], RectangleBox[{9, -22}], 
+        RectangleBox[{10, -22}], RectangleBox[{11, -22}], 
+        RectangleBox[{12, -22}], RectangleBox[{13, -22}], 
+        RectangleBox[{14, -22}], RectangleBox[{15, -22}], 
+        RectangleBox[{16, -22}], RectangleBox[{17, -22}], 
+        RectangleBox[{18, -22}], RectangleBox[{19, -22}], 
+        RectangleBox[{20, -22}], RectangleBox[{21, -22}], 
+        RectangleBox[{22, -22}], RectangleBox[{23, -22}], 
+        RectangleBox[{24, -22}], RectangleBox[{25, -22}], 
+        RectangleBox[{26, -22}], RectangleBox[{27, -22}], 
+        RectangleBox[{28, -22}], RectangleBox[{29, -22}], 
+        RectangleBox[{30, -22}], RectangleBox[{31, -22}], 
+        RectangleBox[{32, -22}], RectangleBox[{33, -22}], 
+        RectangleBox[{34, -22}], RectangleBox[{35, -22}], 
+        RectangleBox[{36, -22}], RectangleBox[{37, -22}], 
+        RectangleBox[{38, -22}], RectangleBox[{39, -22}], 
+        RectangleBox[{40, -22}], RectangleBox[{41, -22}], 
+        RectangleBox[{42, -22}], RectangleBox[{43, -22}], 
+        RectangleBox[{44, -22}], RectangleBox[{45, -22}], 
+        RectangleBox[{46, -22}], RectangleBox[{47, -22}], 
+        RectangleBox[{48, -22}], RectangleBox[{49, -22}], 
+        RectangleBox[{50, -22}], RectangleBox[{51, -22}], 
+        RectangleBox[{52, -22}], RectangleBox[{53, -22}], 
+        RectangleBox[{54, -22}], RectangleBox[{55, -22}], 
+        RectangleBox[{56, -22}], RectangleBox[{57, -22}], 
+        RectangleBox[{58, -22}], RectangleBox[{59, -22}], 
+        RectangleBox[{60, -22}], RectangleBox[{61, -22}], 
+        RectangleBox[{62, -22}], RectangleBox[{63, -22}]}, {
+        RectangleBox[{1, -23}], RectangleBox[{2, -23}], 
+        RectangleBox[{3, -23}], RectangleBox[{4, -23}], 
+        RectangleBox[{5, -23}], RectangleBox[{6, -23}], 
+        RectangleBox[{7, -23}], RectangleBox[{8, -23}], 
+        RectangleBox[{9, -23}], RectangleBox[{10, -23}], 
+        RectangleBox[{11, -23}], RectangleBox[{12, -23}], 
+        RectangleBox[{13, -23}], RectangleBox[{14, -23}], 
+        RectangleBox[{15, -23}], RectangleBox[{16, -23}], 
+        RectangleBox[{17, -23}], RectangleBox[{18, -23}], 
+        RectangleBox[{19, -23}], RectangleBox[{20, -23}], 
+        RectangleBox[{21, -23}], RectangleBox[{22, -23}], 
+        RectangleBox[{23, -23}], RectangleBox[{24, -23}], 
+        RectangleBox[{25, -23}], RectangleBox[{26, -23}], 
+        RectangleBox[{27, -23}], RectangleBox[{28, -23}], 
+        RectangleBox[{29, -23}], RectangleBox[{30, -23}], 
+        RectangleBox[{31, -23}]}, {RectangleBox[{1, -24}], 
+        RectangleBox[{2, -24}], RectangleBox[{3, -24}], 
+        RectangleBox[{4, -24}], RectangleBox[{5, -24}], 
+        RectangleBox[{6, -24}], RectangleBox[{7, -24}], 
+        RectangleBox[{8, -24}], RectangleBox[{9, -24}], 
+        RectangleBox[{10, -24}], RectangleBox[{11, -24}], 
+        RectangleBox[{12, -24}], RectangleBox[{13, -24}], 
+        RectangleBox[{14, -24}], RectangleBox[{15, -24}]}, {
+        RectangleBox[{1, -25}], RectangleBox[{2, -25}], 
+        RectangleBox[{3, -25}], RectangleBox[{4, -25}], 
+        RectangleBox[{5, -25}], RectangleBox[{6, -25}], 
+        RectangleBox[{7, -25}]}, {RectangleBox[{1, -26}], 
+        RectangleBox[{2, -26}], RectangleBox[{3, -26}]}, 
+       RectangleBox[{1, -27}], {}},
+      DisplayFunction->Identity,
+      Frame->True,
+      FrameTicks->False,
+      ImagePadding->{{0., 0.}, {0., 0.}},
+      PlotRange->{{1, Automatic}, {-28, 0}},
+      PlotRangePadding->NCache[{{0, 
+          Rational[63, 4]}, 0}, {{0, 15.75}, 0}]], {262.00200601805415, -33.97071213640923},
+      ImageScaled[{0.5, 0.5}], {181.98595787362086, 64.7061183550652}], 
+    InsetBox[
+     GraphicsBox[
+      {GrayLevel[0.65], EdgeForm[GrayLevel[0.15]], {}, 
+       RectangleBox[{1, -2}], {}, {}, 
+       RectangleBox[{1, -5}], {RectangleBox[{1, -6}], RectangleBox[{2, -6}], 
+        RectangleBox[{3, -6}]}, {RectangleBox[{1, -7}], RectangleBox[{2, -7}],
+         RectangleBox[{3, -7}], RectangleBox[{4, -7}], RectangleBox[{5, -7}], 
+        RectangleBox[{6, -7}], RectangleBox[{7, -7}]}, {RectangleBox[{1, -8}],
+         RectangleBox[{2, -8}], RectangleBox[{3, -8}]}, 
+       RectangleBox[{1, -9}], {}, {}, 
+       RectangleBox[{1, -12}], {RectangleBox[{1, -13}], 
+        RectangleBox[{2, -13}], RectangleBox[{3, -13}]}, {
+        RectangleBox[{1, -14}], RectangleBox[{2, -14}], 
+        RectangleBox[{3, -14}], RectangleBox[{4, -14}], 
+        RectangleBox[{5, -14}], RectangleBox[{6, -14}], 
+        RectangleBox[{7, -14}]}, {RectangleBox[{1, -15}], 
+        RectangleBox[{2, -15}], RectangleBox[{3, -15}], 
+        RectangleBox[{4, -15}], RectangleBox[{5, -15}], 
+        RectangleBox[{6, -15}], RectangleBox[{7, -15}], 
+        RectangleBox[{8, -15}], RectangleBox[{9, -15}], 
+        RectangleBox[{10, -15}], RectangleBox[{11, -15}], 
+        RectangleBox[{12, -15}], RectangleBox[{13, -15}], 
+        RectangleBox[{14, -15}], RectangleBox[{15, -15}]}, {
+        RectangleBox[{1, -16}], RectangleBox[{2, -16}], 
+        RectangleBox[{3, -16}], RectangleBox[{4, -16}], 
+        RectangleBox[{5, -16}], RectangleBox[{6, -16}], 
+        RectangleBox[{7, -16}], RectangleBox[{8, -16}], 
+        RectangleBox[{9, -16}], RectangleBox[{10, -16}], 
+        RectangleBox[{11, -16}], RectangleBox[{12, -16}], 
+        RectangleBox[{13, -16}], RectangleBox[{14, -16}], 
+        RectangleBox[{15, -16}], RectangleBox[{16, -16}], 
+        RectangleBox[{17, -16}], RectangleBox[{18, -16}], 
+        RectangleBox[{19, -16}], RectangleBox[{20, -16}], 
+        RectangleBox[{21, -16}], RectangleBox[{22, -16}], 
+        RectangleBox[{23, -16}], RectangleBox[{24, -16}], 
+        RectangleBox[{25, -16}], RectangleBox[{26, -16}], 
+        RectangleBox[{27, -16}], RectangleBox[{28, -16}], 
+        RectangleBox[{29, -16}], RectangleBox[{30, -16}], 
+        RectangleBox[{31, -16}]}, {RectangleBox[{1, -17}], 
+        RectangleBox[{2, -17}], RectangleBox[{3, -17}], 
+        RectangleBox[{4, -17}], RectangleBox[{5, -17}], 
+        RectangleBox[{6, -17}], RectangleBox[{7, -17}], 
+        RectangleBox[{8, -17}], RectangleBox[{9, -17}], 
+        RectangleBox[{10, -17}], RectangleBox[{11, -17}], 
+        RectangleBox[{12, -17}], RectangleBox[{13, -17}], 
+        RectangleBox[{14, -17}], RectangleBox[{15, -17}]}, {
+        RectangleBox[{1, -18}], RectangleBox[{2, -18}], 
+        RectangleBox[{3, -18}], RectangleBox[{4, -18}], 
+        RectangleBox[{5, -18}], RectangleBox[{6, -18}], 
+        RectangleBox[{7, -18}]}, {RectangleBox[{1, -19}], 
+        RectangleBox[{2, -19}], RectangleBox[{3, -19}]}, 
+       RectangleBox[{1, -20}], {}, {}, 
+       RectangleBox[{1, -23}], {RectangleBox[{1, -24}], 
+        RectangleBox[{2, -24}], RectangleBox[{3, -24}]}, {
+        RectangleBox[{1, -25}], RectangleBox[{2, -25}], 
+        RectangleBox[{3, -25}], RectangleBox[{4, -25}], 
+        RectangleBox[{5, -25}], RectangleBox[{6, -25}], 
+        RectangleBox[{7, -25}]}, {RectangleBox[{1, -26}], 
+        RectangleBox[{2, -26}], RectangleBox[{3, -26}], 
+        RectangleBox[{4, -26}], RectangleBox[{5, -26}], 
+        RectangleBox[{6, -26}], RectangleBox[{7, -26}], 
+        RectangleBox[{8, -26}], RectangleBox[{9, -26}], 
+        RectangleBox[{10, -26}], RectangleBox[{11, -26}], 
+        RectangleBox[{12, -26}], RectangleBox[{13, -26}], 
+        RectangleBox[{14, -26}], RectangleBox[{15, -26}]}, {
+        RectangleBox[{1, -27}], RectangleBox[{2, -27}], 
+        RectangleBox[{3, -27}], RectangleBox[{4, -27}], 
+        RectangleBox[{5, -27}], RectangleBox[{6, -27}], 
+        RectangleBox[{7, -27}], RectangleBox[{8, -27}], 
+        RectangleBox[{9, -27}], RectangleBox[{10, -27}], 
+        RectangleBox[{11, -27}], RectangleBox[{12, -27}], 
+        RectangleBox[{13, -27}], RectangleBox[{14, -27}], 
+        RectangleBox[{15, -27}], RectangleBox[{16, -27}], 
+        RectangleBox[{17, -27}], RectangleBox[{18, -27}], 
+        RectangleBox[{19, -27}], RectangleBox[{20, -27}], 
+        RectangleBox[{21, -27}], RectangleBox[{22, -27}], 
+        RectangleBox[{23, -27}], RectangleBox[{24, -27}], 
+        RectangleBox[{25, -27}], RectangleBox[{26, -27}], 
+        RectangleBox[{27, -27}], RectangleBox[{28, -27}], 
+        RectangleBox[{29, -27}], RectangleBox[{30, -27}], 
+        RectangleBox[{31, -27}]}, {RectangleBox[{1, -28}], 
+        RectangleBox[{2, -28}], RectangleBox[{3, -28}], 
+        RectangleBox[{4, -28}], RectangleBox[{5, -28}], 
+        RectangleBox[{6, -28}], RectangleBox[{7, -28}], 
+        RectangleBox[{8, -28}], RectangleBox[{9, -28}], 
+        RectangleBox[{10, -28}], RectangleBox[{11, -28}], 
+        RectangleBox[{12, -28}], RectangleBox[{13, -28}], 
+        RectangleBox[{14, -28}], RectangleBox[{15, -28}], 
+        RectangleBox[{16, -28}], RectangleBox[{17, -28}], 
+        RectangleBox[{18, -28}], RectangleBox[{19, -28}], 
+        RectangleBox[{20, -28}], RectangleBox[{21, -28}], 
+        RectangleBox[{22, -28}], RectangleBox[{23, -28}], 
+        RectangleBox[{24, -28}], RectangleBox[{25, -28}], 
+        RectangleBox[{26, -28}], RectangleBox[{27, -28}], 
+        RectangleBox[{28, -28}], RectangleBox[{29, -28}], 
+        RectangleBox[{30, -28}], RectangleBox[{31, -28}], 
+        RectangleBox[{32, -28}], RectangleBox[{33, -28}], 
+        RectangleBox[{34, -28}], RectangleBox[{35, -28}], 
+        RectangleBox[{36, -28}], RectangleBox[{37, -28}], 
+        RectangleBox[{38, -28}], RectangleBox[{39, -28}], 
+        RectangleBox[{40, -28}], RectangleBox[{41, -28}], 
+        RectangleBox[{42, -28}], RectangleBox[{43, -28}], 
+        RectangleBox[{44, -28}], RectangleBox[{45, -28}], 
+        RectangleBox[{46, -28}], RectangleBox[{47, -28}], 
+        RectangleBox[{48, -28}], RectangleBox[{49, -28}], 
+        RectangleBox[{50, -28}], RectangleBox[{51, -28}], 
+        RectangleBox[{52, -28}], RectangleBox[{53, -28}], 
+        RectangleBox[{54, -28}], RectangleBox[{55, -28}], 
+        RectangleBox[{56, -28}], RectangleBox[{57, -28}], 
+        RectangleBox[{58, -28}], RectangleBox[{59, -28}], 
+        RectangleBox[{60, -28}], RectangleBox[{61, -28}], 
+        RectangleBox[{62, -28}], RectangleBox[{63, -28}]}},
+      DisplayFunction->Identity,
+      Frame->True,
+      FrameTicks->False,
+      ImagePadding->{{0., 0.}, {0., 0.}},
+      PlotRange->{{1, Automatic}, {-28, 0}},
+      PlotRangePadding->NCache[{{0, 
+          Rational[63, 4]}, 0}, {{0, 15.75}, 0}]], {443.987963891675, -33.97071213640923},
+      ImageScaled[{0.5, 0.5}], {181.98595787362086, 64.7061183550652}], 
+    InsetBox[
+     GraphicsBox[
+      {GrayLevel[0.5], EdgeForm[GrayLevel[
+       0.15]], {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}},
+      DisplayFunction->Identity,
+      Frame->True,
+      FrameTicks->False,
+      ImagePadding->{{0., 5.684341886080802*^-14}, {0., 0.}},
+      PlotRange->{{1, Automatic}, {-28, 0}},
+      PlotRangePadding->NCache[{{0, 
+          Rational[63, 4]}, 0}, {{0, 15.75}, 0}]], {555.4904714142428, -33.97071213640923},
+      ImageScaled[{0.5, 0.5}], {41.01905717151461, 64.7061183550652}]}, {}},
+  ImageSize->Large,
+  PlotRange->{{0, 576.0000000000001}, {-67.94142427281847, 0}},
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{3.869663919797905*^9, 3.869663995251872*^9, 
+  3.870343702925953*^9},
+ CellLabel->"Out[85]=",ExpressionUUID->"aee9198d-8812-451d-8cfc-9b45a6cb22bf"]
+}, Open  ]]
+},
+WindowSize->{954.5, 1037.},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"91ecb5d1-90e6-494b-8425-25318056a116"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 16286, 433, 606, "Input",ExpressionUUID->"d0a76b3e-c875-4392-8aa5-4ab8735ead72"],
+Cell[16869, 457, 16510, 294, 93, "Output",ExpressionUUID->"aee9198d-8812-451d-8cfc-9b45a6cb22bf"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,720 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     34122,        712]
+NotebookOptionsPosition[     33634,        695]
+NotebookOutlinePosition[     34036,        711]
+CellTagsIndexPosition[     33993,        708]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"TS1ToCTS", "[", 
+     RowBox[{"{", 
+      RowBox[{"n_", ",", "rules_"}], "}"}], "]"}], ":=", 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"k", "=", 
+        RowBox[{"Length", "[", "rules", "]"}]}], "}"}], ",", 
+      RowBox[{"Join", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Flatten", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"j", "==", 
+                  RowBox[{"#", "+", "1"}]}], ",", "1", ",", "0"}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"j", ",", "k"}], "}"}]}], "]"}], "&"}], "/@", "#"}], 
+           "]"}], "&"}], "/@", 
+         RowBox[{"Values", "[", "rules", "]"}]}], ",", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"k", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "}"}]}], "]"}]}], "]"}]}], 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"GraphicsGrid", "[", 
+  RowBox[{
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"With", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"rule", "=", 
+         RowBox[{"TS1ToCTS", "[", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "_"}], "}"}], "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{"2", ",", "1"}], "}"}]}], ",", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"1", ",", "_"}], "}"}], "\[Rule]", 
+               RowBox[{"{", "0", "}"}]}], ",", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"2", ",", "_"}], "}"}], "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "2", ",", "1", ",", "2"}], "}"}]}]}], 
+             "}"}]}], "}"}], "]"}]}], "}"}], ",", 
+       RowBox[{"MapIndexed", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Show", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Graphics", "[", 
+              RowBox[{"Translate", "[", 
+               RowBox[{
+                RowBox[{"Scale", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"Black", ",", 
+                    RowBox[{"Circle", "[", "]"}], ",", 
+                    RowBox[{"Disk", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", "1", ",", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "\[Pi]"}], "}"}], "+", 
+                    FractionBox[
+                    RowBox[{"11", "\[Pi]"}], "6"], "-", 
+                    RowBox[{
+                    RowBox[{"First", "[", "#2", "]"}], " ", 
+                    FractionBox[
+                    RowBox[{"2", "\[Pi]"}], 
+                    RowBox[{"Length", "[", "rule", "]"}]]}]}]}], "]"}], ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"7", "/", "3"}], ",", "0"}], "}"}]}], "}"}], 
+                    "]"}]}], "}"}], ",", "10"}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "20"}], ",", 
+                  RowBox[{"-", "25"}]}], "}"}]}], "]"}], "]"}], ",", 
+             RowBox[{
+              RowBox[{
+              "ResourceFunction", "[", "\"\<TagSystemRulePlot\>\"", "]"}], 
+              "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"{", "1", "}"}], "->", "#1"}], ",", 
+                RowBox[{
+                 RowBox[{"{", "0", "}"}], "->", 
+                 RowBox[{"{", "}"}]}]}], "}"}], "]"}]}], "}"}], "]"}], "&"}], 
+         ",", "rule"}], "]"}]}], "]"}], ",", "3"}], "]"}], ",", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       RowBox[{
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+         "\[Rule]", 
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["Rule", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["56", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    Frame -> All,
+    SelectWithContents->True,
+    Selectable->False]}], "]"}]}], "Input",
+ CellLabel->"In[11]:=",ExpressionUUID->"11081563-fbdd-4700-9df5-0763f8dde744"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{InsetBox[
+      GraphicsBox[{GeometricTransformationBox[GeometricTransformationBox[
+          {GrayLevel[0], CircleBox[{0, 0}], 
+           DiskBox[{0, 0}, 1, 
+            NCache[{Rational[3, 2] Pi, Rational[5, 2] Pi}, {4.71238898038469, 
+             7.853981633974483}]], 
+           LineBox[NCache[{{1, 0}, {Rational[7, 3], 0}}, {{1, 0}, {
+              2.3333333333333335`, 0}}]]}, {{{10, 0}, {0, 10}}, 
+           Center}], {-20, -25}], {{}, {InsetBox[
+           GraphicsBox[{
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.], 
+               StyleBox[RectangleBox[{0, 0}],
+                FontColor->GrayLevel[0.]]}}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], RectangleBox[{1, 0}, {4, 1}]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{1.5, 0.5}, {2.5, 0.5}, {3.5, 0.5}}]}, 
+             {AbsoluteThickness[0.25], Arrowheads[Tiny], 
+              ArrowBox[{{1, 0}, {0, -0.45}}, 0.25], 
+              ArrowBox[{{4, 0}, {3, -0.45}}, 0.25]}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], 
+              RectangleBox[NCache[{0, Rational[-3, 2]}, {0, -1.5}], 
+               NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{0.5, -1}, {1.5, -1}, {2.5, -1}}]}, 
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{3, Rational[-3, 2]}, {3, -1.5}]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{4, Rational[-3, 2]}, {4, -1.5}]]}, 
+              {GrayLevel[0.], 
+               
+               StyleBox[RectangleBox[NCache[{5, Rational[-3, 2]}, {5, -1.5}]],
+                
+                FontColor->GrayLevel[0.]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{6, Rational[-3, 2]}, {6, -1.5}]]}, 
+              {GrayLevel[0.], 
+               
+               StyleBox[RectangleBox[NCache[{7, Rational[-3, 2]}, {7, -1.5}]],
+                
+                FontColor->GrayLevel[0.]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{8, Rational[-3, 2]}, {8, -1.5}]]}}},
+            DisplayFunction->Identity,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->NCache[{{0, 9}, {
+                Rational[-3, 2], 1}}, {{0, 9}, {-1.5, 1}}],
+            PlotRangePadding->0.5], {63.000000000000014, -22.050000000000004},
+            ImageScaled[{0.5, 0.5}], {120.00000000000003, 42.00000000000001}],
+           InsetBox[
+           GraphicsBox[{
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.85], RectangleBox[{0, 0}]}}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], RectangleBox[{1, 0}, {4, 1}]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{1.5, 0.5}, {2.5, 0.5}, {3.5, 0.5}}]}, 
+             {AbsoluteThickness[0.25], Arrowheads[Tiny], 
+              ArrowBox[{{1, 0}, {0, -0.45}}, 0.25], 
+              ArrowBox[{{4, 0}, {3, -0.45}}, 0.25]}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], 
+              RectangleBox[NCache[{0, Rational[-3, 2]}, {0, -1.5}], 
+               NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{0.5, -1}, {1.5, -1}, {2.5, -1}}]}, 
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}]}},
+            DisplayFunction->Identity,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->NCache[{{0, 4}, {
+                Rational[-3, 2], 1}}, {{0, 4}, {-1.5, 1}}],
+            PlotRangePadding->0.5], {159.00000000000006, -22.050000000000004},
+            ImageScaled[{0.5, 0.5}], \
+{60.000000000000014, 42.00000000000001}]}, 
+         {AbsoluteThickness[0.25], 
+          
+          StyleBox[{LineBox[{{0, 0}, {0, -44.10000000000001}}], 
+            LineBox[{{126.00000000000003`, 0}, {
+              126.00000000000003`, -44.10000000000001}}], 
+            LineBox[{{192.00000000000006`, 0}, {
+              192.00000000000006`, -44.10000000000001}}], 
+            LineBox[{{0, 0}, {126.00000000000003`, 0}}], 
+            LineBox[{{126.00000000000003`, 0}, {192.00000000000006`, 0}}], 
+            LineBox[{{0, -44.10000000000001}, {
+              126.00000000000003`, -44.10000000000001}}], 
+            LineBox[{{126.00000000000003`, -44.10000000000001}, {
+             192.00000000000006`, -44.10000000000001}}]},
+           Antialiasing->False]}}},
+       DisplayFunction->Identity,
+       ImagePadding->{{7.105427357601002*^-15, 5.684341886080802*^-14}, {
+        1.4210854715202004`*^-14, 7.105427357601002*^-15}}], {193.5, -52.19637894736842},
+       ImageScaled[{0.5, 0.5}], {360., 97.86821052631579}], InsetBox[
+      GraphicsBox[{GeometricTransformationBox[GeometricTransformationBox[
+          {GrayLevel[0], CircleBox[{0, 0}], 
+           DiskBox[{0, 0}, 1, 
+            NCache[{Rational[7, 6] Pi, Rational[13, 6] Pi}, {
+             3.6651914291880923`, 6.8067840827778845`}]], 
+           LineBox[NCache[{{1, 0}, {Rational[7, 3], 0}}, {{1, 0}, {
+              2.3333333333333335`, 0}}]]}, {{{10, 0}, {0, 10}}, 
+           Center}], {-20, -25}], {{}, {InsetBox[
+           GraphicsBox[{
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.], 
+               StyleBox[RectangleBox[{0, 0}],
+                FontColor->GrayLevel[0.]]}}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], RectangleBox[{1, 0}, {4, 1}]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{1.5, 0.5}, {2.5, 0.5}, {3.5, 0.5}}]}, 
+             {AbsoluteThickness[0.25], Arrowheads[Tiny], 
+              ArrowBox[{{1, 0}, {0, -0.45}}, 0.25], 
+              ArrowBox[{{4, 0}, {3, -0.45}}, 0.25]}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], 
+              RectangleBox[NCache[{0, Rational[-3, 2]}, {0, -1.5}], 
+               NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{0.5, -1}, {1.5, -1}, {2.5, -1}}]}, 
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.], 
+               
+               StyleBox[RectangleBox[NCache[{3, Rational[-3, 2]}, {3, -1.5}]],
+                
+                FontColor->GrayLevel[0.]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{4, Rational[-3, 2]}, {4, -1.5}]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{5, Rational[-3, 2]}, {5, -1.5}]]}}},
+            DisplayFunction->Identity,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->NCache[{{0, 6}, {
+                Rational[-3, 2], 1}}, {{0, 6}, {-1.5, 1}}],
+            PlotRangePadding->0.5], {55.5, -27.5625}, 
+           ImageScaled[{0.5, 0.5}], {105., 52.5}], InsetBox[
+           GraphicsBox[{
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.85], RectangleBox[{0, 0}]}}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], RectangleBox[{1, 0}, {4, 1}]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{1.5, 0.5}, {2.5, 0.5}, {3.5, 0.5}}]}, 
+             {AbsoluteThickness[0.25], Arrowheads[Tiny], 
+              ArrowBox[{{1, 0}, {0, -0.45}}, 0.25], 
+              ArrowBox[{{4, 0}, {3, -0.45}}, 0.25]}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], 
+              RectangleBox[NCache[{0, Rational[-3, 2]}, {0, -1.5}], 
+               NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{0.5, -1}, {1.5, -1}, {2.5, -1}}]}, 
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}]}},
+            DisplayFunction->Identity,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->NCache[{{0, 4}, {
+                Rational[-3, 2], 1}}, {{0, 4}, {-1.5, 1}}],
+            PlotRangePadding->0.5], {151.5, -27.5625}, 
+           ImageScaled[{0.5, 0.5}], {75., 52.5}]}, 
+         {AbsoluteThickness[0.25], 
+          
+          StyleBox[{LineBox[{{0, 0}, {0, -55.125}}], 
+            LineBox[{{111., 0}, {111., -55.125}}], 
+            LineBox[{{192., 0}, {192., -55.125}}], 
+            LineBox[{{0, 0}, {111., 0}}], LineBox[{{111., 0}, {192., 0}}], 
+            LineBox[{{0, -55.125}, {111., -55.125}}], 
+            LineBox[{{111., -55.125}, {192., -55.125}}]},
+           Antialiasing->False]}}},
+       DisplayFunction->Identity,
+       ImagePadding->{{7.105427357601002*^-15, 5.684341886080802*^-14}, {
+        1.4210854715202004`*^-14, 7.105427357601002*^-15}}], {580.5, -52.19637894736842},
+       ImageScaled[{0.5, 0.5}], {360., 97.86821052631579}], InsetBox[
+      GraphicsBox[{GeometricTransformationBox[GeometricTransformationBox[
+          {GrayLevel[0], CircleBox[{0, 0}], 
+           DiskBox[{0, 0}, 1, 
+            NCache[{Rational[5, 6] Pi, Rational[11, 6] Pi}, {
+             2.6179938779914944`, 5.759586531581287}]], 
+           LineBox[NCache[{{1, 0}, {Rational[7, 3], 0}}, {{1, 0}, {
+              2.3333333333333335`, 0}}]]}, {{{10, 0}, {0, 10}}, 
+           Center}], {-20, -25}], {{}, {InsetBox[
+           GraphicsBox[{
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.], 
+               StyleBox[RectangleBox[{0, 0}],
+                FontColor->GrayLevel[0.]]}}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], RectangleBox[{1, 0}, {4, 1}]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{1.5, 0.5}, {2.5, 0.5}, {3.5, 0.5}}]}, 
+             {AbsoluteThickness[0.25], Arrowheads[Tiny], 
+              ArrowBox[{{1, 0}, {0, -0.45}}, 0.25], 
+              ArrowBox[{{4, 0}, {3, -0.45}}, 0.25]}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], 
+              RectangleBox[NCache[{0, Rational[-3, 2]}, {0, -1.5}], 
+               NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{0.5, -1}, {1.5, -1}, {2.5, -1}}]}, 
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.], 
+               
+               StyleBox[RectangleBox[NCache[{3, Rational[-3, 2]}, {3, -1.5}]],
+                
+                FontColor->GrayLevel[0.]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{4, Rational[-3, 2]}, {4, -1.5}]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{5, Rational[-3, 2]}, {5, -1.5}]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{6, Rational[-3, 2]}, {6, -1.5}]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{7, Rational[-3, 2]}, {7, -1.5}]]}, 
+              {GrayLevel[0.], 
+               
+               StyleBox[RectangleBox[NCache[{8, Rational[-3, 2]}, {8, -1.5}]],
+                
+                FontColor->GrayLevel[0.]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{9, Rational[-3, 2]}, {9, -1.5}]]}, 
+              {GrayLevel[0.], 
+               
+               StyleBox[
+                RectangleBox[NCache[{10, Rational[-3, 2]}, {10, -1.5}]],
+                FontColor->GrayLevel[0.]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{11, Rational[-3, 2]}, {11, -1.5}]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{12, Rational[-3, 2]}, {12, -1.5}]]}, 
+              {GrayLevel[0.85], 
+               RectangleBox[NCache[{13, Rational[-3, 2]}, {13, -1.5}]]}, 
+              {GrayLevel[0.], 
+               
+               StyleBox[
+                RectangleBox[NCache[{14, Rational[-3, 2]}, {14, -1.5}]],
+                FontColor->GrayLevel[0.]]}}},
+            DisplayFunction->Identity,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->NCache[{{0, 15}, {
+                Rational[-3, 2], 1}}, {{0, 15}, {-1.5, 1}}],
+            PlotRangePadding->0.5], {71.57142857142857, -15.75}, 
+           ImageScaled[{0.5, 0.5}], {137.14285714285714, 30.}], InsetBox[
+           GraphicsBox[{
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.85], RectangleBox[{0, 0}]}}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], RectangleBox[{1, 0}, {4, 1}]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{1.5, 0.5}, {2.5, 0.5}, {3.5, 0.5}}]}, 
+             {AbsoluteThickness[0.25], Arrowheads[Tiny], 
+              ArrowBox[{{1, 0}, {0, -0.45}}, 0.25], 
+              ArrowBox[{{4, 0}, {3, -0.45}}, 0.25]}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], 
+              RectangleBox[NCache[{0, Rational[-3, 2]}, {0, -1.5}], 
+               NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{0.5, -1}, {1.5, -1}, {2.5, -1}}]}, 
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}]}},
+            DisplayFunction->Identity,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->NCache[{{0, 4}, {
+                Rational[-3, 2], 1}}, {{0, 4}, {-1.5, 1}}],
+            PlotRangePadding->0.5], {167.57142857142856, -15.75}, 
+           ImageScaled[{0.5, 0.5}], {42.85714285714286, 30.}]}, 
+         {AbsoluteThickness[0.25], 
+          
+          StyleBox[{LineBox[{{0, 0}, {0, -31.5}}], 
+            LineBox[{{143.14285714285714`, 0}, {143.14285714285714`, -31.5}}],
+             LineBox[{{192., 0}, {192., -31.5}}], 
+            LineBox[{{0, 0}, {143.14285714285714`, 0}}], 
+            LineBox[{{143.14285714285714`, 0}, {192., 0}}], 
+            LineBox[{{0, -31.5}, {143.14285714285714`, -31.5}}], 
+            LineBox[{{143.14285714285714`, -31.5}, {192., -31.5}}]},
+           Antialiasing->False]}}},
+       DisplayFunction->Identity,
+       ImagePadding->{{7.105427357601002*^-15, 5.684341886080802*^-14}, {
+        1.4210854715202004`*^-14, 7.105427357601002*^-15}}], {967.5, -52.19637894736842},
+       ImageScaled[{0.5, 0.5}], {360., 97.86821052631579}]}, {InsetBox[
+      GraphicsBox[{GeometricTransformationBox[GeometricTransformationBox[
+          {GrayLevel[0], CircleBox[{0, 0}], 
+           DiskBox[{0, 0}, 1, 
+            NCache[{Rational[1, 2] Pi, Rational[3, 2] Pi}, {
+             1.5707963267948966`, 4.71238898038469}]], 
+           LineBox[NCache[{{1, 0}, {Rational[7, 3], 0}}, {{1, 0}, {
+              2.3333333333333335`, 0}}]]}, {{{10, 0}, {0, 10}}, 
+           Center}], {-20, -25}], {{}, {InsetBox[
+           GraphicsBox[{
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.], 
+               StyleBox[RectangleBox[{0, 0}],
+                FontColor->GrayLevel[0.]]}}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], RectangleBox[{1, 0}, {4, 1}]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{1.5, 0.5}, {2.5, 0.5}, {3.5, 0.5}}]}, 
+             {AbsoluteThickness[0.25], Arrowheads[Tiny], 
+              ArrowBox[{{1, 0}, {0, -0.45}}, 0.25], 
+              ArrowBox[{{4, 0}, {3, -0.45}}, 0.25]}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], 
+              RectangleBox[NCache[{0, Rational[-3, 2]}, {0, -1.5}], 
+               NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{0.5, -1}, {1.5, -1}, {2.5, -1}}]}, 
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}]}},
+            DisplayFunction->Identity,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->NCache[{{0, 4}, {
+                Rational[-3, 2], 1}}, {{0, 4}, {-1.5, 1}}],
+            PlotRangePadding->0.5], {48.00000000000001, -33.075}, 
+           ImageScaled[{0.5, 0.5}], {90.00000000000001, 63.00000000000001}], 
+          InsetBox[
+           GraphicsBox[{
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.85], RectangleBox[{0, 0}]}}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], RectangleBox[{1, 0}, {4, 1}]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{1.5, 0.5}, {2.5, 0.5}, {3.5, 0.5}}]}, 
+             {AbsoluteThickness[0.25], Arrowheads[Tiny], 
+              ArrowBox[{{1, 0}, {0, -0.45}}, 0.25], 
+              ArrowBox[{{4, 0}, {3, -0.45}}, 0.25]}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], 
+              RectangleBox[NCache[{0, Rational[-3, 2]}, {0, -1.5}], 
+               NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{0.5, -1}, {1.5, -1}, {2.5, -1}}]}, 
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}]}},
+            DisplayFunction->Identity,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->NCache[{{0, 4}, {
+                Rational[-3, 2], 1}}, {{0, 4}, {-1.5, 1}}],
+            PlotRangePadding->0.5], {144.00000000000003, -33.075}, 
+           ImageScaled[{0.5, 0.5}], {90.00000000000001, 63.00000000000001}]}, \
+
+         {AbsoluteThickness[0.25], 
+          
+          StyleBox[{LineBox[{{0, 0}, {0, -66.15}}], 
+            LineBox[{{96.00000000000001, 0}, {96.00000000000001, -66.15}}], 
+            LineBox[{{192.00000000000003`, 0}, {
+              192.00000000000003`, -66.15}}], 
+            LineBox[{{0, 0}, {96.00000000000001, 0}}], 
+            LineBox[{{96.00000000000001, 0}, {192.00000000000003`, 0}}], 
+            LineBox[{{0, -66.15}, {96.00000000000001, -66.15}}], 
+            LineBox[{{96.00000000000001, -66.15}, {
+             192.00000000000003`, -66.15}}]},
+           Antialiasing->False]}}},
+       DisplayFunction->Identity,
+       ImagePadding->{{7.105427357601002*^-15, 5.684341886080802*^-14}, {
+        1.4210854715202004`*^-14, 7.105427357601002*^-15}}], {193.5, -156.58913684210526},
+       ImageScaled[{0.5, 0.5}], {360., 97.86821052631579}], InsetBox[
+      GraphicsBox[{GeometricTransformationBox[GeometricTransformationBox[
+          {GrayLevel[0], CircleBox[{0, 0}], 
+           DiskBox[{0, 0}, 1, 
+            NCache[{Rational[1, 6] Pi, Rational[7, 6] Pi}, {
+             0.5235987755982988, 3.6651914291880923`}]], 
+           LineBox[NCache[{{1, 0}, {Rational[7, 3], 0}}, {{1, 0}, {
+              2.3333333333333335`, 0}}]]}, {{{10, 0}, {0, 10}}, 
+           Center}], {-20, -25}], {{}, {InsetBox[
+           GraphicsBox[{
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.], 
+               StyleBox[RectangleBox[{0, 0}],
+                FontColor->GrayLevel[0.]]}}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], RectangleBox[{1, 0}, {4, 1}]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{1.5, 0.5}, {2.5, 0.5}, {3.5, 0.5}}]}, 
+             {AbsoluteThickness[0.25], Arrowheads[Tiny], 
+              ArrowBox[{{1, 0}, {0, -0.45}}, 0.25], 
+              ArrowBox[{{4, 0}, {3, -0.45}}, 0.25]}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], 
+              RectangleBox[NCache[{0, Rational[-3, 2]}, {0, -1.5}], 
+               NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{0.5, -1}, {1.5, -1}, {2.5, -1}}]}, 
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}]}},
+            DisplayFunction->Identity,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->NCache[{{0, 4}, {
+                Rational[-3, 2], 1}}, {{0, 4}, {-1.5, 1}}],
+            PlotRangePadding->0.5], {48.00000000000001, -33.075}, 
+           ImageScaled[{0.5, 0.5}], {90.00000000000001, 63.00000000000001}], 
+          InsetBox[
+           GraphicsBox[{
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.85], RectangleBox[{0, 0}]}}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], RectangleBox[{1, 0}, {4, 1}]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{1.5, 0.5}, {2.5, 0.5}, {3.5, 0.5}}]}, 
+             {AbsoluteThickness[0.25], Arrowheads[Tiny], 
+              ArrowBox[{{1, 0}, {0, -0.45}}, 0.25], 
+              ArrowBox[{{4, 0}, {3, -0.45}}, 0.25]}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], 
+              RectangleBox[NCache[{0, Rational[-3, 2]}, {0, -1.5}], 
+               NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{0.5, -1}, {1.5, -1}, {2.5, -1}}]}, 
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}]}},
+            DisplayFunction->Identity,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->NCache[{{0, 4}, {
+                Rational[-3, 2], 1}}, {{0, 4}, {-1.5, 1}}],
+            PlotRangePadding->0.5], {144.00000000000003, -33.075}, 
+           ImageScaled[{0.5, 0.5}], {90.00000000000001, 63.00000000000001}]}, \
+
+         {AbsoluteThickness[0.25], 
+          
+          StyleBox[{LineBox[{{0, 0}, {0, -66.15}}], 
+            LineBox[{{96.00000000000001, 0}, {96.00000000000001, -66.15}}], 
+            LineBox[{{192.00000000000003`, 0}, {
+              192.00000000000003`, -66.15}}], 
+            LineBox[{{0, 0}, {96.00000000000001, 0}}], 
+            LineBox[{{96.00000000000001, 0}, {192.00000000000003`, 0}}], 
+            LineBox[{{0, -66.15}, {96.00000000000001, -66.15}}], 
+            LineBox[{{96.00000000000001, -66.15}, {
+             192.00000000000003`, -66.15}}]},
+           Antialiasing->False]}}},
+       DisplayFunction->Identity,
+       ImagePadding->{{7.105427357601002*^-15, 5.684341886080802*^-14}, {
+        1.4210854715202004`*^-14, 7.105427357601002*^-15}}], {580.5, -156.58913684210526},
+       ImageScaled[{0.5, 0.5}], {360., 97.86821052631579}], InsetBox[
+      GraphicsBox[{GeometricTransformationBox[GeometricTransformationBox[
+          {GrayLevel[0], CircleBox[{0, 0}], 
+           DiskBox[{0, 0}, 1, 
+            NCache[{Rational[-1, 6] Pi, Rational[5, 6] 
+              Pi}, {-0.5235987755982988, 2.6179938779914944`}]], 
+           LineBox[NCache[{{1, 0}, {Rational[7, 3], 0}}, {{1, 0}, {
+              2.3333333333333335`, 0}}]]}, {{{10, 0}, {0, 10}}, 
+           Center}], {-20, -25}], {{}, {InsetBox[
+           GraphicsBox[{
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.], 
+               StyleBox[RectangleBox[{0, 0}],
+                FontColor->GrayLevel[0.]]}}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], RectangleBox[{1, 0}, {4, 1}]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{1.5, 0.5}, {2.5, 0.5}, {3.5, 0.5}}]}, 
+             {AbsoluteThickness[0.25], Arrowheads[Tiny], 
+              ArrowBox[{{1, 0}, {0, -0.45}}, 0.25], 
+              ArrowBox[{{4, 0}, {3, -0.45}}, 0.25]}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], 
+              RectangleBox[NCache[{0, Rational[-3, 2]}, {0, -1.5}], 
+               NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{0.5, -1}, {1.5, -1}, {2.5, -1}}]}, 
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}]}},
+            DisplayFunction->Identity,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->NCache[{{0, 4}, {
+                Rational[-3, 2], 1}}, {{0, 4}, {-1.5, 1}}],
+            PlotRangePadding->0.5], {48.00000000000001, -33.075}, 
+           ImageScaled[{0.5, 0.5}], {90.00000000000001, 63.00000000000001}], 
+          InsetBox[
+           GraphicsBox[{
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}], 
+              {GrayLevel[0.85], RectangleBox[{0, 0}]}}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], RectangleBox[{1, 0}, {4, 1}]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{1.5, 0.5}, {2.5, 0.5}, {3.5, 0.5}}]}, 
+             {AbsoluteThickness[0.25], Arrowheads[Tiny], 
+              ArrowBox[{{1, 0}, {0, -0.45}}, 0.25], 
+              ArrowBox[{{4, 0}, {3, -0.45}}, 0.25]}, 
+             {GrayLevel[1], EdgeForm[{GrayLevel[0.15], AbsoluteThickness[
+              0.25]}], 
+              RectangleBox[NCache[{0, Rational[-3, 2]}, {0, -1.5}], 
+               NCache[{3, Rational[-1, 2]}, {3, -0.5}]]}, 
+             {AbsolutePointSize[2], 
+              PointBox[{{0.5, -1}, {1.5, -1}, {2.5, -1}}]}, 
+             {EdgeForm[{GrayLevel[0.15], AbsoluteThickness[0.25]}]}},
+            DisplayFunction->Identity,
+            ImagePadding->{{0., 0.}, {0., 0.}},
+            PlotRange->NCache[{{0, 4}, {
+                Rational[-3, 2], 1}}, {{0, 4}, {-1.5, 1}}],
+            PlotRangePadding->0.5], {144.00000000000003, -33.075}, 
+           ImageScaled[{0.5, 0.5}], {90.00000000000001, 63.00000000000001}]}, \
+
+         {AbsoluteThickness[0.25], 
+          
+          StyleBox[{LineBox[{{0, 0}, {0, -66.15}}], 
+            LineBox[{{96.00000000000001, 0}, {96.00000000000001, -66.15}}], 
+            LineBox[{{192.00000000000003`, 0}, {
+              192.00000000000003`, -66.15}}], 
+            LineBox[{{0, 0}, {96.00000000000001, 0}}], 
+            LineBox[{{96.00000000000001, 0}, {192.00000000000003`, 0}}], 
+            LineBox[{{0, -66.15}, {96.00000000000001, -66.15}}], 
+            LineBox[{{96.00000000000001, -66.15}, {
+             192.00000000000003`, -66.15}}]},
+           Antialiasing->False]}}},
+       DisplayFunction->Identity,
+       ImagePadding->{{7.105427357601002*^-15, 5.684341886080802*^-14}, {
+        1.4210854715202004`*^-14, 7.105427357601002*^-15}}], {967.5, -156.58913684210526},
+       ImageScaled[{0.5, 0.5}], {360., 97.86821052631579}]}}, 
+   StyleBox[{{}, {LineBox[{{0, 0}, {0, -104.39275789473685`}}], 
+      LineBox[{{0, -104.39275789473685`}, {0, -208.7855157894737}}], 
+      LineBox[{{387., 0}, {387., -104.39275789473685`}}], 
+      LineBox[{{387., -104.39275789473685`}, {387., -208.7855157894737}}], 
+      LineBox[{{774., 0}, {774., -104.39275789473685`}}], 
+      LineBox[{{774., -104.39275789473685`}, {774., -208.7855157894737}}], 
+      LineBox[{{1161., 0}, {1161., -104.39275789473685`}}], 
+      LineBox[{{1161., -104.39275789473685`}, {1161., -208.7855157894737}}], 
+      LineBox[{{0, 0}, {387., 0}}], LineBox[{{387., 0}, {774., 0}}], 
+      LineBox[{{774., 0}, {1161., 0}}], 
+      LineBox[{{0, -104.39275789473685`}, {387., -104.39275789473685`}}], 
+      LineBox[{{387., -104.39275789473685`}, {774., -104.39275789473685`}}], 
+      LineBox[{{774., -104.39275789473685`}, {1161., -104.39275789473685`}}], 
+      LineBox[{{0, -208.7855157894737}, {387., -208.7855157894737}}], 
+      LineBox[{{387., -208.7855157894737}, {774., -208.7855157894737}}], 
+      LineBox[{{774., -208.7855157894737}, {1161., -208.7855157894737}}]}},
+    Antialiasing->False]},
+  ImageSize->{
+    UpTo[600], 
+    UpTo[195]},
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{3.8709585155356545`*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"88b42ee9-3983-4742-af14-21c33ad3fd44"]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{Automatic, 111}, {Automatic, 110.5}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6ce45333-0dc2-4a87-825d-b0c9208449f5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 5334, 144, 366, "Input",ExpressionUUID->"11081563-fbdd-4700-9df5-0763f8dde744"],
+Cell[5917, 168, 27701, 524, 128, "Output",ExpressionUUID->"88b42ee9-3983-4742-af14-21c33ad3fd44"]
+}, Open  ]]
+}
+]
+*)
+

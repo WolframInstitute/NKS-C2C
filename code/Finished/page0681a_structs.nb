@@ -1,0 +1,141 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5090,        133]
+NotebookOptionsPosition[      4738,        119]
+NotebookOutlinePosition[      5138,        135]
+CellTagsIndexPosition[      5095,        132]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"bkg", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "1", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "1", 
+            ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+            "0"}], "}"}], ",", "20"}], "]"}]}], ",", 
+       RowBox[{"off", "=", "#2"}]}], "}"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"ArrayPlot", "[", 
+        RowBox[{"#", ",", 
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", 
+             RowBox[{
+               DynamicBox[
+                FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+               "\[Rule]", 
+               DynamicBox[
+                FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  
+                  TagBox["Rule", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["640", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          PlotRange -> {All, {-250, 250} + Round[Length[
+                Part[#, 1]]/2] + $CellContext`off},
+          SelectWithContents->True,
+          Selectable->False]}], "]"}], "&"}], "@", 
+      RowBox[{"CellularAutomaton", "[", 
+       RowBox[{"110", ",", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"{", 
+          RowBox[{"bkg", ",", 
+           RowBox[{"IntegerDigits", "[", 
+            RowBox[{"#1", ",", "2"}], "]"}], ",", "bkg"}], "}"}], "]"}], ",", 
+        "260"}], "]"}]}]}], "]"}], "&"}], "@@@", 
+  InterpretationBox[
+   DynamicModuleBox[{Typeset`open = False}, 
+    TemplateBox[{"List", 
+      StyleBox[
+      "\"Structure Data\"", "IconizedCustomName", StripOnInput -> False], 
+      GridBox[{{
+         RowBox[{
+           TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["List", "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Dimensions: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox[
+            RowBox[{"{", 
+              RowBox[{"8", ",", "2"}], "}"}], "IconizedItem"]}]}, {
+         RowBox[{
+           TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+           TagBox["1392", "IconizedItem"]}]}}, 
+       GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+       "Column", 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+      Dynamic[Typeset`open]},
+     "IconizedObject"]],
+   {{178968876149829326616964422368547304454136, 0}, {
+    212218185236394157263981872061697544542968, 0}, {
+    27013499057804819105967412853733042645478976347717159707428969699890099081\
+790833967519011082650705449991564084980434075963530359288, -28}, {
+    72513809377374069757078747905320906048065953543126703250885220690001859049\
+51646385508185902236061141716316397924782917448371969203449492216, -28}, {
+    34055632767032451926595198886178767252317919465967315097846061659376552808\
+1900088488844959859011943160, -28}, {
+    20325045402922336367454393566263000283225458774086461700460535741965874354\
+071262796216135810040, -28}, {
+    52251740720154247174402919468073596666880216004927979156583258324809505847\
+353277407215378816125585225696904223322751184953333532221034693717621541002478\
+5656, 0}, {
+    31891931591891020003908035575608759147633345863926568162470633462527534442\
+665115690710634110786259089900877015219439673756518035947227276515569907410680\
+, -28}},
+   SelectWithContents->True,
+   Selectable->False]}]], "Input",ExpressionUUID->"18b0bb76-abdc-43be-b5e1-\
+63945f1b8c31"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7e553503-5ac8-4618-b902-55d0b3a709a6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4176, 97, 92, "Input",ExpressionUUID->"18b0bb76-abdc-43be-b5e1-63945f1b8c31"]
+}
+]
+*)
+

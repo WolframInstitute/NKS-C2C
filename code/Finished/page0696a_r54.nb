@@ -1,0 +1,73 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1938,         65]
+NotebookOptionsPosition[      1582,         51]
+NotebookOutlinePosition[      1986,         67]
+CellTagsIndexPosition[      1943,         64]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SeedRandom", "[", 
+   RowBox[{"43125", ",", 
+    RowBox[{"Method", "->", "\"\<Legacy\>\""}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"GraphicsColumn", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"ArrayPlot", "[", 
+     RowBox[{"CellularAutomaton", "[", 
+      RowBox[{"54", ",", 
+       RowBox[{"BlockRandom", "@", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"1", ",", "500"}], "]"}]}], ",", "220"}], "]"}], "]"}], ",", 
+    
+    RowBox[{"ArrayPlot", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"BlockMap", "[", 
+        RowBox[{"Total", ",", "#", ",", "2"}], "]"}], "&"}], "/@", 
+      RowBox[{"CellularAutomaton", "[", 
+       RowBox[{"54", ",", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"1", ",", "1000"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "440", ",", "2"}], "}"}], "}"}]}], "]"}]}], 
+     "]"}]}], "}"}], "]"}]}], "Input",ExpressionUUID->"aa81b6a1-b091-47ff-\
+bb7f-8586777fcede"]
+},
+WindowSize->{1920, 1048},
+WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d267f0b0-69b0-4397-8734-935a3ce84c88"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1020, 29, 48, "Input",ExpressionUUID->"aa81b6a1-b091-47ff-bb7f-8586777fcede"]
+}
+]
+*)
+

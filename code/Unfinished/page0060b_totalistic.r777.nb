@@ -1,0 +1,94 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2846,         86]
+NotebookOptionsPosition[      2491,         72]
+NotebookOutlinePosition[      2894,         88]
+CellTagsIndexPosition[      2851,         85]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Column", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"RulePlot", "[", 
+     RowBox[{
+      RowBox[{"CellularAutomaton", "[", 
+       RowBox[{"{", 
+        RowBox[{"777", ",", 
+         RowBox[{"{", 
+          RowBox[{"3", ",", "1"}], "}"}]}], "}"}], "]"}], ",", 
+      InterpretationBox[
+       DynamicModuleBox[{Typeset`open = False}, 
+        TemplateBox[{"Expression", 
+          RowBox[{
+            DynamicBox[
+             FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+            "\[Rule]", 
+            DynamicBox[
+             FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+          GridBox[{{
+             RowBox[{
+               TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+               TagBox["Rule", "IconizedItem"]}]}, {
+             RowBox[{
+               TagBox["\"Byte count: \"", "IconizedLabel"], 
+               "\[InvisibleSpace]", 
+               TagBox["72", "IconizedItem"]}]}}, 
+           GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+           "Column", 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+          Dynamic[Typeset`open]},
+         "IconizedObject"]],
+       ImageSize -> 300,
+       SelectWithContents->True,
+       Selectable->False]}], "]"}], ",", 
+    RowBox[{"Row", "[", 
+     RowBox[{
+      RowBox[{"Text", "/@", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"Append", "[", 
+         RowBox[{
+          RowBox[{"IntegerDigits", "[", 
+           RowBox[{"777", ",", "3"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"\"\<=\>\"", ",", "777"}], "}"}]}], "]"}], "]"}]}], ",", 
+      RowBox[{"Spacer", "[", "28", "]"}]}], "]"}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.866457365090644*^9, 3.866457380176682*^9}, 
+   3.8679575857003765`*^9},
+ CellLabel->"",ExpressionUUID->"59491b4f-84ab-4039-9ada-02e1dc72bdc4"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{91.5, Automatic}, {129.5, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"322dd01a-1b14-4565-9821-f39654a481a2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1929, 50, 64, "Input",ExpressionUUID->"59491b4f-84ab-4039-9ada-02e1dc72bdc4"]
+}
+]
+*)
+

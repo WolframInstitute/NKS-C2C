@@ -1,0 +1,165 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5973,        157]
+NotebookOptionsPosition[      5491,        140]
+NotebookOutlinePosition[      5891,        156]
+CellTagsIndexPosition[      5848,        153]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"GraphicsRow", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Graphics", "[", 
+      RowBox[{
+       RowBox[{"Flatten", "[", 
+        RowBox[{"MapIndexed", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"EdgeForm", "[", 
+              RowBox[{"GrayLevel", "[", ".15", "]"}], "]"}], ",", 
+             RowBox[{"GrayLevel", "[", 
+              RowBox[{"0.85", "-", "#1"}], "]"}], ",", 
+             RowBox[{"Rectangle", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"First", "[", "#2", "]"}], "-", "1"}], ",", "0"}], 
+               "}"}], "]"}]}], "}"}], "&"}], ",", "#"}], "]"}], "]"}], ",", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", 
+           RowBox[{
+             DynamicBox[
+              FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+             "\[Rule]", 
+             DynamicBox[
+              FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["Rule", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["72", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        ImagePadding -> 2,
+        SelectWithContents->True,
+        Selectable->False]}], "]"}], "&"}], "/@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "0"}], "}"}]}], "}"}]}], ",", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", "SequenceIcon", 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["Sequence", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["2", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["168", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    Sequence[ImageSize -> Tiny, Frame -> All],
+    SelectWithContents->True,
+    Selectable->False]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8701942512648096`*^9, 3.8701942570078044`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"372d16d8-b2ce-40e5-80cd-6fb1bbc7bd62"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {InsetBox[
+     GraphicsBox[{
+       {GrayLevel[-0.15000000000000002`], EdgeForm[GrayLevel[0.15]], 
+        RectangleBox[{0, 0}]}, 
+       {GrayLevel[-0.15000000000000002`], EdgeForm[GrayLevel[0.15]], 
+        RectangleBox[{1, 0}]}},
+      DisplayFunction->Identity,
+      ImagePadding->{{1.9999999999999973`, 2.}, {2., 2.000000000000014}}], {25.20857075643466, -13.875293657008617},
+      ImageScaled[{0.5, 0.5}], {47.26607016831499, 26.42913077525451}], 
+    InsetBox[
+     GraphicsBox[{
+       {GrayLevel[-0.15000000000000002`], EdgeForm[GrayLevel[0.15]], 
+        RectangleBox[{0, 0}]}, 
+       {GrayLevel[0.85], EdgeForm[GrayLevel[0.15]], RectangleBox[{1, 0}]}},
+      DisplayFunction->Identity,
+      ImagePadding->{{1.9999999999999973`, 2.}, {2., 2.000000000000014}}], {75.62571226930399, -13.875293657008617},
+      ImageScaled[{0.5, 0.5}], {47.26607016831499, 26.42913077525451}]}, 
+   StyleBox[{{}, {LineBox[{{0, 0}, {0, -27.750587314017235`}}], 
+      LineBox[{{50.41714151286932, 0}, {
+        50.41714151286932, -27.750587314017235`}}], 
+      LineBox[{{100.83428302573864`, 0}, {
+        100.83428302573864`, -27.750587314017235`}}], 
+      LineBox[{{0, 0}, {50.41714151286932, 0}}], 
+      LineBox[{{50.41714151286932, 0}, {100.83428302573864`, 0}}], 
+      LineBox[{{0, -27.750587314017235`}, {
+        50.41714151286932, -27.750587314017235`}}], 
+      LineBox[{{50.41714151286932, -27.750587314017235`}, {
+       100.83428302573864`, -27.750587314017235`}}]}},
+    Antialiasing->False]},
+  ImageSize->Tiny,
+  PlotRange->{{0, 100.83428302573864`}, {-27.750587314017235`, 0}},
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{3.8701942580841446`*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"2c088566-24a7-49c9-add6-408d62344742"]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{88.5, Automatic}, {73, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"66e19456-ad0c-46dd-914a-96f3fd19d5f5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3105, 79, 130, "Input",ExpressionUUID->"372d16d8-b2ce-40e5-80cd-6fb1bbc7bd62"],
+Cell[3688, 103, 1787, 34, 50, "Output",ExpressionUUID->"2c088566-24a7-49c9-add6-408d62344742"]
+}, Open  ]]
+}
+]
+*)
+

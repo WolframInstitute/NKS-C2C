@@ -1,0 +1,163 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5715,        155]
+NotebookOptionsPosition[      5361,        141]
+NotebookOutlinePosition[      5761,        157]
+CellTagsIndexPosition[      5718,        154]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"#", ",", 
+     InterpretationBox[
+      DynamicModuleBox[{Typeset`open = False}, 
+       TemplateBox[{"Expression", 
+         RowBox[{
+           DynamicBox[
+            FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+           "\[Rule]", 
+           DynamicBox[
+            FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+         GridBox[{{
+            RowBox[{
+              TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["Rule", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Byte count: \"", "IconizedLabel"], 
+              "\[InvisibleSpace]", 
+              TagBox["464", "IconizedItem"]}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+          "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+         Dynamic[Typeset`open]},
+        "IconizedObject"]],
+      ColorRules -> {0 -> White, 1 -> GrayLevel[0.85], 2 -> GrayLevel[0.15]},
+      SelectWithContents->True,
+      Selectable->False]}], "]"}], "&"}], "/@", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"PadRight", "[", 
+      RowBox[{"Sort", "[", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringSplit", "[", 
+            RowBox[{"#", ",", "\"\<\>\""}], "]"}], "&"}], "/@", 
+          RowBox[{"Last", "[", 
+           RowBox[{
+            RowBox[{"ResourceFunction", "[", "\"\<MultiwaySystem\>\"", "]"}], 
+            "[", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "]"}]}], ")"}], "/.", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<A\>\"", "->", "1"}], ",", 
+          RowBox[{"\"\<B\>\"", "->", "2"}]}], "}"}]}], "]"}], "]"}], "&"}], "/@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<BA\>\"", "\[Rule]", "\"\<AAA\>\""}], ",", 
+          RowBox[{"\"\<BA\>\"", "\[Rule]", "\"\<BBBB\>\""}], ",", 
+          RowBox[{"\"\<BAAAA\>\"", "\[Rule]", "\"\<\>\""}]}], "}"}], ",", 
+        "\"\<BBBBAAAA\>\"", ",", "75"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\"\<B\>\"", "\[Rule]", "\"\<AAB\>\""}], "}"}], ",", 
+        "\"\<BABBA\>\"", ",", "25"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<BA\>\"", "\[Rule]", "\"\<A\>\""}], ",", 
+          RowBox[{"\"\<ABBB\>\"", "\[Rule]", "\"\<A\>\""}], ",", 
+          RowBox[{"\"\<BA\>\"", "\[Rule]", "\"\<BBAA\>\""}]}], "}"}], ",", 
+        "\"\<ABBAB\>\"", ",", "60"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<AA\>\"", "\[Rule]", "\"\<BABBBBA\>\""}], ",", 
+          RowBox[{"\"\<BAB\>\"", "\[Rule]", "\"\<A\>\""}]}], "}"}], ",", 
+        "\"\<ABAAB\>\"", ",", "500"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<AAB\>\"", "\[Rule]", "\"\<A\>\""}], ",", 
+          RowBox[{"\"\<AB\>\"", "\[Rule]", "\"\<AAAA\>\""}], ",", 
+          RowBox[{"\"\<AAAB\>\"", "\[Rule]", "\"\<ABB\>\""}]}], "}"}], ",", 
+        "\"\<ABBAB\>\"", ",", "100"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<ABA\>\"", "\[Rule]", "\"\<BBAA\>\""}], ",", 
+          RowBox[{"\"\<BAA\>\"", "\[Rule]", "\"\<AAB\>\""}]}], "}"}], ",", 
+        "\"\<BABBAAB\>\"", ",", "250"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<BAAB\>\"", "\[Rule]", "\"\<BBA\>\""}], ",", 
+          RowBox[{"\"\<BBA\>\"", "\[Rule]", "\"\<BAAB\>\""}], ",", 
+          RowBox[{"\"\<AAB\>\"", "\[Rule]", "\"\<BBA\>\""}]}], "}"}], ",", 
+        "\"\<ABBAB\>\"", ",", "75"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<BAB\>\"", "\[Rule]", "\"\<A\>\""}], ",", 
+          RowBox[{"\"\<BAAA\>\"", "\[Rule]", "\"\<B\>\""}], ",", 
+          RowBox[{"\"\<BAAB\>\"", "\[Rule]", "\"\<BABBBAA\>\""}]}], "}"}], 
+        ",", "\"\<BAABBBA\>\"", ",", "400"}], "}"}]}], "\[IndentingNewLine]", 
+     "}"}]}], ")"}]}]], "Input",ExpressionUUID->"ca8f70eb-8ccc-4770-ad71-\
+c12ab9154019"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{316, Automatic}, {-80, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6c8282df-71a0-4455-81e7-41a4c1e2c89f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4799, 119, 247, "Input",ExpressionUUID->"ca8f70eb-8ccc-4770-ad71-c12ab9154019"]
+}
+]
+*)
+

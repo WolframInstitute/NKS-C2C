@@ -1,0 +1,121 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3892,        113]
+NotebookOptionsPosition[      3542,         99]
+NotebookOutlinePosition[      3940,        115]
+CellTagsIndexPosition[      3897,        112]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Column", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Row", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Graphics3D", "[", 
+        RowBox[{
+         RowBox[{"Flatten", "[", 
+          RowBox[{
+           RowBox[{"MapIndexed", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"#1", "==", "1"}], ",", 
+                RowBox[{"Cuboid", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"#2", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                   RowBox[{"#2", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], ",", 
+                   RowBox[{"#2", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}], "}"}], "]"}]}], "]"}], 
+              "&"}], ",", "#1", ",", 
+             RowBox[{"{", "3", "}"}]}], "]"}], ",", "2"}], "]"}], ",", 
+         InterpretationBox[
+          DynamicModuleBox[{Typeset`open = False}, 
+           TemplateBox[{"Expression", "SequenceIcon", 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                  
+                  TagBox["Sequence", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Length: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["2", "IconizedItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Byte count: \"", "IconizedLabel"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["944", "IconizedItem"]}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             Dynamic[Typeset`open]},
+            "IconizedObject"]],
+          Sequence[PlotRange -> Table[{1, Length[
+                Part[#, 1, 1]] + 1}, 3], ImageSize -> Length[
+               Part[#, 1, 1]] 8 + 36],
+          SelectWithContents->True,
+          Selectable->False]}], "]"}], "&"}], "/@", 
+      RowBox[{"CellularAutomaton", "[", 
+       RowBox[{
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"\"\<Dimension\>\"", "->", "3"}], ",", 
+          RowBox[{"\"\<Neighborhood\>\"", "->", "7"}], ",", 
+          RowBox[{"\"\<GrowthCases\>\"", "->", 
+           RowBox[{"{", "1", "}"}]}]}], "|>"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"{", 
+            RowBox[{"{", "1", "}"}], "}"}], "}"}], ",", "0"}], "}"}], ",", 
+        RowBox[{"{", "#", "}"}]}], "]"}]}], "]"}], "&"}], "/@", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"6", ",", "9"}], "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.8680431427083907`*^9},ExpressionUUID->"eacb073c-b7ba-4ab5-8ab2-\
+fa6efcf21e16"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{93, Automatic}, {71, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"114d7f60-fa80-472c-884a-b961b2141222"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2980, 77, 99, "Input",ExpressionUUID->"eacb073c-b7ba-4ab5-8ab2-fa6efcf21e16"]
+}
+]
+*)
+

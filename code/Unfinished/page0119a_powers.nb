@@ -1,0 +1,239 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9211,        229]
+NotebookOptionsPosition[      8860,        215]
+NotebookOutlinePosition[      9257,        231]
+CellTagsIndexPosition[      9214,        228]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"GraphicsRow", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ResourceFunction", "[", "\"\<RaggedDigitsPlot\>\"", "]"}], "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"IntegerDigits", "[", 
+          RowBox[{
+           RowBox[{"2", "^", "n"}], ",", "2"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"n", ",", "0", ",", "60"}], "}"}]}], "]"}], ",", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", "SequenceIcon", 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["Sequence", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["3", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["248", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Sequence[Frame -> True, FrameTicks -> None, PlotRangePadding -> 0.8],
+        SelectWithContents->True,
+        Selectable->False], ",", 
+       RowBox[{"Epilog", "->", 
+        RowBox[{"{", 
+         RowBox[{"Inset", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+            "ResourceFunction", "[", "\"\<RaggedDigitsPlot\>\"", "]"}], "[", 
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"IntegerDigits", "[", 
+                RowBox[{
+                 RowBox[{"2", "^", "n"}], ",", "2"}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"n", ",", "0", ",", "7"}], "}"}]}], "]"}], ",", 
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Expression", "SequenceIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["6", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["992", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Sequence["Label" -> True, Epilog -> Text[
+                 Style["n -> 2n", FontFamily -> "NewScienceSans", Italic, 
+                  GrayLevel[0.2], 12], {-6, -0.8}], Frame -> True, FrameTicks -> 
+               None, ImageSize -> {100, 250}, PlotRangePadding -> 0.35],
+              SelectWithContents->True,
+              Selectable->False]}], "]"}], ",", 
+           RowBox[{"Scaled", "[", 
+            RowBox[{"{", 
+             RowBox[{"0.19", ",", "0.81"}], "}"}], "]"}]}], "]"}], "}"}]}]}], 
+      "]"}], ",", 
+     RowBox[{
+      RowBox[{"ResourceFunction", "[", "\"\<RaggedDigitsPlot\>\"", "]"}], "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"IntegerDigits", "[", 
+          RowBox[{
+           RowBox[{"3", "^", "n"}], ",", "2"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"n", ",", "0", ",", "60"}], "}"}]}], "]"}], ",", 
+       InterpretationBox[
+        DynamicModuleBox[{Typeset`open = False}, 
+         TemplateBox[{"Expression", "SequenceIcon", 
+           GridBox[{{
+              RowBox[{
+                TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["Sequence", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                TagBox["3", "IconizedItem"]}]}, {
+              RowBox[{
+                TagBox["\"Byte count: \"", "IconizedLabel"], 
+                "\[InvisibleSpace]", 
+                TagBox["248", "IconizedItem"]}]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+           Dynamic[Typeset`open]},
+          "IconizedObject"]],
+        Sequence[Frame -> True, FrameTicks -> None, PlotRangePadding -> 0.8],
+        SelectWithContents->True,
+        Selectable->False], ",", 
+       RowBox[{"Epilog", "->", 
+        RowBox[{"{", 
+         RowBox[{"Inset", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+            "ResourceFunction", "[", "\"\<RaggedDigitsPlot\>\"", "]"}], "[", 
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"IntegerDigits", "[", 
+                RowBox[{
+                 RowBox[{"3", "^", "n"}], ",", "2"}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"n", ",", "0", ",", "7"}], "}"}]}], "]"}], ",", 
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Expression", "SequenceIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Sequence", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["6", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["992", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Sequence["Label" -> True, Epilog -> Text[
+                 Style["n -> 3n", FontFamily -> "NewScienceSans", Italic, 
+                  GrayLevel[0.2], 12], {-10, -0.8}], Frame -> True, 
+               FrameTicks -> None, ImageSize -> {150, 200}, PlotRangePadding -> 
+               0.35],
+              SelectWithContents->True,
+              Selectable->False]}], "]"}], ",", 
+           RowBox[{"Scaled", "[", 
+            RowBox[{"{", 
+             RowBox[{"0.18", ",", "0.805"}], "}"}], "]"}]}], "]"}], "}"}]}]}],
+       "]"}]}], "}"}], ",", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       RowBox[{
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], 
+         "\[Rule]", 
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]]}], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["Rule", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["72", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    ImageSize -> 900,
+    SelectWithContents->True,
+    Selectable->False]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8680220809333344`*^9, 
+  3.868022115437414*^9}},ExpressionUUID->"328bf814-65d8-4e72-9827-\
+77e7c31beb86"]
+},
+WindowSize->{959, 1037},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"831c8a96-4b23-492c-8812-d95ffbb8d3ff"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 8298, 193, 186, "Input",ExpressionUUID->"328bf814-65d8-4e72-9827-77e7c31beb86"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
