@@ -1,6 +1,6 @@
 # A New Kind of Science - Click 2 Copy Project - Wolfram Institute  
 
-Welcome to the **Click 2 Copy Project**, an initiative by the Wolfram Institute to modernize and enhance the accessibility of the code used to create the iconic figures from Stephen Wolfram’s *A New Kind of Science (NKS)*. This project empowers contributors to reproduce these figures using updated Wolfram Language code, making it easier to understand and explore the principles behind them.  
+Welcome to the **Click 2 Copy Project**, an initiative by the Wolfram Institute to modernize and enhance the accessibility of the code used to create the iconic figures from Stephen Wolfram’s *A New Kind of Science (NKS)*. This project empowers contributors to reproduce these figures using updated Wolfram Language code, making it easier to understand and explore the principles behind them. You can track all the NKS-C2C on the [NKS Click to Copy website](https://nksclicktocopy.com/).
 
 ---
 
